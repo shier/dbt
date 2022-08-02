@@ -1,0 +1,26 @@
+
+Select
+	IsActive IsActive,
+	IncludePrivate IncludePrivate,
+	IncludeDealer IncludeDealer,
+	IncludeAuction IncludeAuction,
+	PriceFrom PriceFrom,
+	PriceTo Priceto,
+	cast(ZipCode as nvarchar(4000)) ZipCode,
+	cast(SearchDescription as nvarchar(4000)) SearchDescription,
+	cast(SavedSearchName as nvarchar(4000)) SavedSearchName,
+	cast(Make as nvarchar(4000)) Make,
+	cast(Model as nvarchar(4000)) Model,
+	cast(Country as nvarchar(4000)) Country,
+	cast(State as nvarchar(4000)) State,
+	CreateDate CreateDate,
+	ModifyDate ModifyDate,
+	YearFrom YearFrom,
+	YearTo Yearto,
+	Distance Distance,
+	VehicleTypeId VehicleTypeID,
+	AlertModeId AlertModeID,
+	AlertFrequencyId AlertFrequencyID,
+	Id ID,
+	UserId UserID
+From CC_SavedSearches_Raw

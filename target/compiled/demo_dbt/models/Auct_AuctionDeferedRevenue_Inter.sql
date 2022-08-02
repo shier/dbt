@@ -1,0 +1,7 @@
+
+Select
+	DEFEREDPERCENTAGE DeferedPercentage,
+	DEFEREDAUCTIONID DeferedAuctionID,
+	GLACCOUNTNUMBER GlAccountNumber,
+	PARENTAUCTIONID ParentAuctionID
+From Auct_AuctionDeferedRevenue_Raw

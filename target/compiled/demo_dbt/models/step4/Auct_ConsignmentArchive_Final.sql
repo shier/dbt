@@ -1,0 +1,5 @@
+
+Select
+	[ConsignmentArchiveID],[IsOutTakeVehicle],[ReleasedForTransPort],[ReserveAmount],[CusTestimatedValue],[BJValue],[LotNumber],[ReserveTypeID],[ShortDescription],[LongDescription],[EMACCEventID],[EmashowEventID],[EmamercEventID],[EmalotID],[MarketingDescription],[StockNumber],[Completed],[Canceled],[OnSpeed],[OnHagerty],[EmainventoryID],[EMAEventID],[PhotosReceived],[Showcase],[CarCard],[Titlein],[OnSite],[CheckedIn],[ModifiedFields],[Created],[CreatedUTC],[ModifiedUTC],[ModifiedDateTime],[ConsignmentID],[RequestedAuctionID],[CreatedByUserID],[ModifiedByUserID],[ConsignmentNotifyBit],[LockMarketingDescription],[ReviewStateID],[DisplayStatusID],[AssignedtoUserID],[Priority],[Quality],[CarInfoID],[IsCharity],[AuthorizedWeb],[AuthorizedSocial],[AuthorizedMarketing],[AuthorizedCarList],[CustomerAccountID],[ItemID],[ConsignmentStatusID],[AuctionID],[UpdateEventID],[AddressID] 
+From stg.[Auct_ConsignmentArchive_Incr] 
+Where [dbt_valid_to] is null

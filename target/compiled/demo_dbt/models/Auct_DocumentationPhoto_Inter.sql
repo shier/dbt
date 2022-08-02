@@ -1,0 +1,27 @@
+
+Select
+	CREATED Created,
+	ITEMID ItemID,
+	PHOTOSIZE PhotoSize,
+	HEIGHT Height,
+	WIDTH Width,
+	UPDATEEVENTID UpdateEventID,
+	TBPHOTOSIZE TbPhotoSize,
+	DOCUMENTATIONPHOTOID DocumentationPhotoID,
+	PHOTOTYPEID PhotoTypeID,
+	PHOTOSTATUSID PhotoStatusID,
+	TBHEIGHT TbHeight,
+	TBWIDTH TbWidth,
+	WEBSITEORDER WebSiteOrder,
+	SHOWONWEB ShowonWeb,
+	ISMAINADVERTISING IsMainAdvertising,
+	cast(REJECTIONREASON as nvarchar(4000)) RejectionReason,
+	cast(FILENAME as nvarchar(4000)) FileName,
+	cast(UNCPATH as nvarchar(4000)) UncPath,
+	cast(TBFILENAME as nvarchar(4000)) TbFileName,
+	cast(TBUNCPATH as nvarchar(4000)) TbUncPath,
+	cast(FULLPATH as nvarchar(4000)) FullPath,
+	cast(TBFULLPATH as nvarchar(4000)) TbfullPath,
+	cast(WEBFILENAME as nvarchar(4000)) WebFileName,
+	cast(WEBUNCPATH as nvarchar(4000)) WebUncPath
+From Auct_DocumentationPhoto_Raw

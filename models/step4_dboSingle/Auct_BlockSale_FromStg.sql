@@ -1,0 +1,27 @@
+{{ config(materialized='table',schema='dbo')}}
+Select
+	cast([BlockSaleID] as int) [BlockSaleID],
+	cast([AuctionBidderID] as int) [AuctionBidderID],
+	cast([DocketID] as int) [DocketID],
+	cast([SaleStatusID] as int) [SaleStatusID],
+	cast([AuctioneerID] as int) [AuctioneerID],
+	cast([Comments] as varchar(512)) [Comments],
+	cast([Created] as datetime) [Created],
+	cast([UpdateEventID] as int) [UpdateEventID],
+	cast([BuyerCommOverride] as int) [BuyerCommOverride],
+	cast([SellerCommOverride] as int) [SellerCommOverride],
+	cast([RunDate] as datetime) [RunDate],
+	cast([TaxOverride] as int) [TaxOverride],
+	cast([TaxExemptCode] as varchar(4)) [TaxExemptCode],
+	cast([Price] as money) [Price],
+	cast([BuyerCommPerc] as numeric(18,6)) [BuyerCommPct],
+	cast([BuyerCommDollars] as money) [BuyerCommDollars],
+	cast([CommPerc] as numeric(18,6)) [CommPct],
+	cast([CityTaxRate] as numeric(18,6)) [CityTaxRate],
+	cast([CommDollars] as money) [CommDollars],
+	cast([StateTaxDollars] as money) [StateTaxDollars],
+	cast([StateTaxRate] as numeric(18,6)) [StateTaxRate],
+	cast([CountyTaxDollars] as money) [CountyTaxDollars],
+	cast([CountyTaxRate] as numeric(18,6)) [CountyTaxRate],
+	cast([CityTaxDollars] as money) [CityTaxDollars] 
+From stg.[Auct_BlockSale_FinalView]

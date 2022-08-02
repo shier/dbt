@@ -1,0 +1,6 @@
+create view "stg"."CC_ImportConfiguration_FinalView__dbt_tmp" as
+    
+Select
+	[CompanyID],[FileSize_kBytes],[Totalentries],[ValIDEntries],[Completedentries],[ActiveFromUTC],[ActivetOutC],[LastSuccessFileTimeStamp],[LastSuccessCompletedUTC],[FileTimeStamp],[CycleStart],[CycleEnd],[AllowLinksinDescriptions],[SkipMakeModelVerification],[FileName] 
+From stg.[CC_ImportConfiguration_Incr] 
+Where [dbt_valid_to] is null
