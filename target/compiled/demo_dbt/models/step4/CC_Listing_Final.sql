@@ -1,5 +1,0 @@
-
-Select
-	[ID],[City],[State],[Country],[SalesForceLeadID],[SalesForceOpportunityID],[ReNewalToken],[RestorationHistory],[ExteriorCondition],[SeatMaterial],[EngineHistory],[EngineCondition],[DriveTrain],[EngineSize],[Description],[StockNumber],[TrimLevel],[VIN],[TitleStatus],[ZipCode],[Make],[Model],[ExteriorColor],[InteriorColor],[TransMission],[ListingStatusID],[CompanyID],[Year],[PriceTypeID],[ODOMeter],[ODOMeterunitID],[VehicleTypeID],[ReNewalStatus],[ListingSourceFK],[CategoryID],[ProductType],[CreateDate],[ModifyDate],[FeaturedUntil],[FeaturedOn],[LastSalesForceActivityDate],[Shuffle_DateExpiresUTC],[IsActive],[Convertible],[Stroked],[Ported],[Crank],[Price],[Longitude],[Latitude],[FuelInjection],[SuPercharger],[Blower],[Turbo],[ElectronicIgnition],[Bored],[PowerSteering],[Alarm],[PowerLocks],[PowerWindows],[PowerSeats],[TiltWheel],[EightTrack],[CustomStereo],[TintedWindows],[BucketSeats],[CruiseControl],[PowerBrakes],[SHaved],[CdPlayer],[AirConditioning],[AmRadio],[AmfmRadio],[Cassette],[IsFeaturedListing],[SunRoof],[TTop],[AftermarketWheels],[VINylRoof],[Chopped] 
-From stg.[CC_Listing_Incr] 
-Where [dbt_valid_to] is null

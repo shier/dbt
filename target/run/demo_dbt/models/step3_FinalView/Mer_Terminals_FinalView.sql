@@ -1,6 +1,0 @@
-create view "stg"."Mer_Terminals_FinalView__dbt_tmp" as
-    
-Select
-	[ID],[BuilDType],[DeviceTypeName],[MerchantID],[Name],[Model],[Serial],[SecureID],[CreatedDate],[Updateddate],[RemovedDate],[PinDisabled],[OffLinePayments],[OffLinePaymentsall] 
-From stg.[Mer_Terminals_Incr] 
-Where [dbt_valid_to] is null
