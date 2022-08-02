@@ -1,0 +1,18 @@
+
+Select
+	STARTDATE StartDate,
+	ENDDATE EndDate,
+	CHECKINDATE CheckinDate,
+	CHECKOUTDATE CheckOutDate,
+	RESERVATIONID ReservationID,
+	CUSTOMERACCOUNTID CustomerAccountID,
+	RESERVATIONSTATUSID ReservationStatusID,
+	CHARGEID ChargeID,
+	OCCUPANTCUSTOMERACCOUNTID OccupantCustomerAccountID,
+	ADDRESSID AddressID,
+	PHONEID PhoneID,
+	SITECATEGORYID SiteCategoryID,
+	SITEID SiteID,
+	EVENTID EventID,
+	ISCHECKEDIN IsCheckedIn
+From Auct_Reservation_Raw

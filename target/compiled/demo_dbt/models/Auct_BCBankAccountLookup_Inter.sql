@@ -1,0 +1,10 @@
+
+Select
+	BCBANKACCOUNTLOOKUPID BCBankAccountLookupID,
+	BCBANKACCOUNTID BCBankAccountID,
+	AUCTIONID AuctionID,
+	FEECATEGORYID FeeCategoryID,
+	PAYMENTMETHODID PaymentMethodID,
+	BCPAYMENTTYPEID BCPaymentTypeID,
+	ITEMTYPEID ItemTypeID
+From Auct_BCBankAccountLookup_Raw

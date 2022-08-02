@@ -1,0 +1,11 @@
+
+Select
+	ODOMETERREADINGID ODOMeterReadingID,
+	CARID CarID,
+	READINGTYPEID ReadingTypeID,
+	READING Reading,
+	READBYCONTACTID ReadByContactID,
+	UPDATEEVENTID UpdateEventID,
+	DATEREAD DateRead,
+	CREATED Created
+From Auct_ODOMeterReading_Raw
