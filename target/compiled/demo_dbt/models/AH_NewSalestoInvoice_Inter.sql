@@ -1,0 +1,4 @@
+
+Select
+	LineItemId LineItemID
+From AH_NewSalestoInvoice_Raw

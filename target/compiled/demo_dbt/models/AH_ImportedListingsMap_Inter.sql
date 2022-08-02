@@ -1,0 +1,5 @@
+
+Select
+	localListingId LoCallistingID,
+	foreignListingId ForeignListingID
+From AH_ImportedListingsMap_Raw

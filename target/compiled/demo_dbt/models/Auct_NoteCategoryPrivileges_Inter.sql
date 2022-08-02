@@ -1,0 +1,5 @@
+
+Select
+	NOTECATEGORYID NoteCategoryID,
+	PRIVILEGEID PrivilegeID
+From Auct_NoteCategoryPrivileges_Raw
