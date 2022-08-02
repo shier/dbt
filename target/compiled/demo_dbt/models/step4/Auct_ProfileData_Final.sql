@@ -1,5 +1,0 @@
-
-Select
-	[ProfileID],[WizardColor],[TextColor],[WizardText],[BidderPhoto],[UserTimeOut],[CustListall],[BgColor],[CustsumDisplay],[CustContact],[DefaultAuctionID],[PulseQueueID] 
-From stg.[Auct_ProfileData_Incr] 
-Where [dbt_valid_to] is null

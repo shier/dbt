@@ -1,6 +1,0 @@
-create view "stg"."Auct_Docket_FinalView__dbt_tmp" as
-    
-Select
-	[DocketID],[ConsignmentID],[LotStatus],[TargetTime],[ActualTime],[Created],[UpdateEventID],[LaneNumber] 
-From stg.[Auct_Docket_Incr] 
-Where [dbt_valid_to] is null
