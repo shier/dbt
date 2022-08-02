@@ -1,5 +1,0 @@
-
-Select
-	[ConsignmentID],[AuthorizedWeb],[AuthorizedSocial],[AuthorizedMarketing],[AuthorizedCarList],[LockMarketingDescription],[UpdateEventID],[AddressID],[CarInfoID],[IsCharity],[ConsignmentNotifyBit],[CustomerAccountID],[ItemID],[ConsignmentStatusID],[AuctionID],[CreatedByUserID],[ModifiedByUserID],[ConsignmentCompleteStatusBit],[PaymentStatusBit],[OnlineauctonItemID],[OnlineAuctionauctionItemID],[ReviewStateID],[DisplayStatusID],[AssignedtoUserID],[Priority],[Quality],[RequestedAuctionID],[ModifiedDateTime],[ModifiedDetailsUTC],[ModifiedDocketUTC],[Created],[CreatedUTC],[ModifiedUTC],[LotNumber],[ReserveAmount],[CusTestimatedValue],[BJValue],[EMACCEventID],[EmashowEventID],[EmamercEventID],[EmalotID],[Completed],[Canceled],[OnSpeed],[OnHagerty],[EmainventoryID],[EMAEventID],[PhotosReceived],[Showcase],[CarCard],[Titlein],[OnSite],[CheckedIn],[MarketingDescription],[StockNumber],[ModifiedFields],[ReserveTypeID],[ShortDescription],[LongDescription],[IsOutTakeVehicle],[PaymentStatus],[ReleasedForTransPort] 
-From stg.[Auct_Consignment_Incr] 
-Where [dbt_valid_to] is null

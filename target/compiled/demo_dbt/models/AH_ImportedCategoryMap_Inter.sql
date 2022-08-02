@@ -1,5 +1,0 @@
-
-Select
-	localCategoryId LocalCategoryID,
-	foreignCategoryId ForeignCategoryID
-From AH_ImportedCategoryMap_Raw
