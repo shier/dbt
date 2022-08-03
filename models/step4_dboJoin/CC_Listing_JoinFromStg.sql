@@ -28,6 +28,6 @@ SELECT
 	cast(C_L.[Price] as money) [Price],
 	cast(C_VT.[Description] as nvarchar(1000)) [CarType]
 FROM [stg].[CC_Listing_FinalView] AS C_L 
-JOIN [stg].[CC_ListingCategory_FinalView] AS C_LC ON C_LC.[ID]=.[]
-JOIN [stg].[CC_ListingSources_FinalView] AS C_LS ON C_LS.[ListingSourcePK]=.[]
-JOIN [stg].[CC_VehicleType_FinalView] AS C_VT ON C_VT.[ID]=.[]
+JOIN [stg].[CC_ListingCategory_FinalView] AS C_LC ON C_LC.[ID]=C_L.[CategoryID]
+JOIN [stg].[CC_ListingSources_FinalView] AS C_LS ON C_LS.[ListingSourcePK]=C_L.[ListingSourceFK]
+JOIN [stg].[CC_VehicleType_FinalView] AS C_VT ON C_VT.[ID]=C_L.[VehicleTypeID]

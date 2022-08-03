@@ -76,9 +76,14 @@ SELECT
 	cast(H_U.[PasswordHash] as nvarchar(4000)) [PasswordHash],
 	cast(H_U.[SecURItyStamp] as nvarchar(4000)) [SecurityStamp],
 	cast(H_U.[PhoneNumber] as nvarchar(40)) [PhoneNumber]
-FROM [stg].[AH_Addresses_FinalView] AS H_A 
-JOIN [stg].[AH_Countries_FinalView] AS H_C ON H_C.[ID]=.[]
-JOIN [stg].[AH_Roles_FinalView] AS H_R ON H_R.[ID]=.[]
-JOIN [stg].[AH_Userproperties_FinalView] AS H_UP ON H_UP.[ID]=.[]
-JOIN [stg].[AH_UserRoles_FinalView] AS H_UR ON H_UR.[ID]=.[]
-JOIN [stg].[AH_Users_FinalView] AS H_U ON H_U.[ID]=.[]
+FROM [stg].[AH_Users_FinalView] AS H_U
+JOIN [stg].[AH_Addresses_FinalView] AS H_A ON H_A.[ID]=H_U.[BillingAddressID]
+JOIN [stg].[AH_Countries_FinalView] AS H_C ON H_C.[ID]=H_A.[CountryID]
+JOIN [stg].[AH_UserRoles_FinalView] AS H_UR ON H_UR.[UserID]=H_U.[ID]
+JOIN [stg].[AH_Roles_FinalView] AS H_R ON H_R.[ID]=H_UR.[RoleID]
+JOIN [stg].[AH_Userproperties_FinalView] AS H_UP ON H_UP.[UserID]=H_U.[ID]
+
+
+-- RWX_Addresses.Id = RWX_CreditCards.AddressId
+-- RWX_Countries.Id = RWX_States.CountryId RWX_Countries.Id = RWX_Addresses.CountryId
+-- RWX_Roles.Id = RWX_UserRoles.RoleId

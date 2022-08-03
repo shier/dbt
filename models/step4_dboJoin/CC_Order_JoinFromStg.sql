@@ -25,5 +25,5 @@ SELECT
 	cast(C_P.[CreateDate] as datetime) [Created_Product],
 	cast(C_P.[ModifyDate] as datetime) [ModifiedDate_Product]
 FROM [stg].[CC_Order_FinalView] AS C_O 
-JOIN [stg].[CC_OrderItem_FinalView] AS C_OI ON C_OI.[ID]=.[]
-JOIN [stg].[CC_Product_FinalView] AS C_P ON C_P.[ID]=.[]
+JOIN [stg].[CC_OrderItem_FinalView] AS C_OI ON C_OI.[OrderID]=C_O.[ID]
+JOIN [stg].[CC_Product_FinalView] AS C_P ON C_P.[ID]=C_OI.[ProductID]
