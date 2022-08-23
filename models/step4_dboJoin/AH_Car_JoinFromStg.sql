@@ -32,7 +32,6 @@ SELECT
 	H_LP.[DateTimenativeValue] [DateTimeNativeValue],
 	H_LP.[BoolnativeValue] [HasBoolNativeValue],
 	H_LP.[IntnativeValue] [IntNativeValue],
-	H_LP.[ListingID],
-	H_LP.[CustomFieldID]
+	H_LP.[ListingID]
 FROM [stg].[AH_CustomFields_FinalView] AS H_CF 
 JOIN [stg].[AH_Listingproperties_FinalView] AS H_LP ON H_LP.[CustomFieldID]=H_CF.[ID]

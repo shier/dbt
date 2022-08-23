@@ -1,0 +1,13 @@
+19:31:14  Running with dbt=1.0.8
+19:31:16  Found 2036 models, 0 tests, 587 snapshots, 0 analyses, 251 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+19:31:16  
+19:31:17  Concurrency: 1 threads (target='dev')
+19:31:17  
+19:31:17  1 of 1 START table model dbo.Auct_Consignment_FromStg........................... [RUN]
+19:31:26  1 of 1 OK created table model dbo.Auct_Consignment_FromStg...................... [OK in 9.04s]
+19:31:26  
+19:31:26  Finished running 1 table model in 10.18s.
+19:31:26  
+19:31:26  Completed successfully
+19:31:26  
+19:31:26  Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1

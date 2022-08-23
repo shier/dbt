@@ -34,7 +34,6 @@ SELECT
 	cast(C_C.[State] as nvarchar(50)) [State],
 	cast(C_C.[ZipCode] as nvarchar(50)) [PostalCode],
 	C_U.[ID] [UserID],
-	C_U.[CompanyID],
 	C_U.[UserCreationSourceID],
 	cast(C_U.[CreateDate] as datetime) [Created_User],
 	cast(C_U.[ModifyDate] as datetime) [ModifiedDate_User],

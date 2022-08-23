@@ -1,2 +1,1 @@
-dbt snapshot
-dbt run --models step3.*
+dbt run --models tmp
