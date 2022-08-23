@@ -33,3 +33,20 @@ Try running the following commands:
  1023  git add *
  1024  git commit -m "new"
  1025  git push
+
+
+----------------------------
+
+Initialized by Azure Synapse Workspace!
+
+git clone https://github.com/beam-data/barrett-jackson-DW.git
+
+cd barrett-jackson-DW
+
+git checkout -b shawn_dbt   remotes/origin/shawn_dbt
+
+AH_Reports
+
+CC_CallSourceLog
+
+
