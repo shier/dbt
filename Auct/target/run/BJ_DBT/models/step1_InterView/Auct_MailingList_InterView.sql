@@ -1,4 +1,4 @@
-create view "dbo_stg"."Auct_MailingList_InterView__dbt_tmp" as
+create view "stg"."Auct_MailingList_InterView__dbt_tmp" as
     
 Select
 	cast([TRANSACTIONID] as nvarchar(4000)) [TransactionID],

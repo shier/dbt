@@ -1,4 +1,4 @@
-create view "dbo_stg"."Auct_NavisionCustomerBuffer_InterView__dbt_tmp" as
+create view "stg"."Auct_NavisionCustomerBuffer_InterView__dbt_tmp" as
     
 Select
 	cast([NO] as nvarchar(4000)) [No],

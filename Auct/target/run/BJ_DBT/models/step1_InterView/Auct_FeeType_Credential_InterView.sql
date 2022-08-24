@@ -1,4 +1,4 @@
-create view "dbo_stg"."Auct_FeeType_Credential_InterView__dbt_tmp" as
+create view "stg"."Auct_FeeType_Credential_InterView__dbt_tmp" as
     
 Select
 	[CREDENTIALID] [CredentialID],

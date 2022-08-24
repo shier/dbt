@@ -23,12 +23,12 @@
     CONVERT(VARCHAR(32), HashBytes(''MD5'', 
         coalesce(cast(ID as varchar(max)), '''')  + ''|'' + 
     
-        coalesce(cast(CONVERT(DATETIME2, ''2022-08-24 12:28:08.375690'') as varchar(max)), '''') 
+        coalesce(cast(CONVERT(DATETIME2, ''2022-08-24 16:19:04.595300'') as varchar(max)), '''') 
     ), 2)
  as dbt_scd_id,
-        CONVERT(DATETIME2, ''2022-08-24 12:28:08.375690'') as dbt_updated_at,
-        CONVERT(DATETIME2, ''2022-08-24 12:28:08.375690'') as dbt_valid_from,
-        nullif(CONVERT(DATETIME2, ''2022-08-24 12:28:08.375690''), CONVERT(DATETIME2, ''2022-08-24 12:28:08.375690'')) as dbt_valid_to
+        CONVERT(DATETIME2, ''2022-08-24 16:19:04.595300'') as dbt_updated_at,
+        CONVERT(DATETIME2, ''2022-08-24 16:19:04.595300'') as dbt_valid_from,
+        nullif(CONVERT(DATETIME2, ''2022-08-24 16:19:04.595300''), CONVERT(DATETIME2, ''2022-08-24 16:19:04.595300'')) as dbt_valid_to
     from (
         
 	

@@ -1,4 +1,4 @@
-create view "dbo_stg"."Auct_TaxProcessor_InterView__dbt_tmp" as
+create view "stg"."Auct_TaxProcessor_InterView__dbt_tmp" as
     
 Select
 	cast([NEXUSSTATE] as nvarchar(4000)) [NexusState],

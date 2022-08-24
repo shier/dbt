@@ -1,4 +1,4 @@
-create view "dbo_stg"."Auct_Tmp_ActiveEmails_InterView__dbt_tmp" as
+create view "stg"."Auct_Tmp_ActiveEmails_InterView__dbt_tmp" as
     
 Select
 	cast([email] as nvarchar(4000)) [Email],

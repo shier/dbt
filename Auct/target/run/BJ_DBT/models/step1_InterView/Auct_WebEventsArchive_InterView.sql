@@ -1,4 +1,4 @@
-create view "dbo_stg"."Auct_WebEventsArchive_InterView__dbt_tmp" as
+create view "stg"."Auct_WebEventsArchive_InterView__dbt_tmp" as
     
 Select
 	cast([EventArchiveID] as nvarchar(4000)) [EventArchiveID],

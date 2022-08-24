@@ -1,4 +1,4 @@
-create view "dbo_stg"."Auct_Lead_Categories_InterView__dbt_tmp" as
+create view "stg"."Auct_Lead_Categories_InterView__dbt_tmp" as
     
 Select
 	[LEAD_CATEGORY_ID] [Lead_Category_ID],

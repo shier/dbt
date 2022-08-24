@@ -1,4 +1,4 @@
-create view "dbo_stg"."Auct_CustomerAccount_InterView__dbt_tmp" as
+create view "stg"."Auct_CustomerAccount_InterView__dbt_tmp" as
     
 Select
 	[CUSTOMERACCOUNTID] [CustomerAccountID],

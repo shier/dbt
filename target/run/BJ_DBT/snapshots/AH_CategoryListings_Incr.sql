@@ -1,58 +1,21 @@
 
-      
-  
-  if object_id ('"stg"."AH_CategoryListings_Incr_temp_view"','V') is not null
-    begin
-    drop view "stg"."AH_CategoryListings_Incr_temp_view"
-    end
+      EXEC('
+           BEGIN TRANSACTION
+           update "BJAC_DW_PROD"."stg"."AH_CategoryListings_Incr"
+          set dbt_valid_to = TMP.dbt_valid_to
+          from "BJAC_DW_PROD"."stg"."#AH_CategoryListings_Incr__dbt_tmp" TMP
+          where "BJAC_DW_PROD"."stg"."AH_CategoryListings_Incr".dbt_scd_id = TMP.dbt_scd_id
+            and TMP.dbt_change_type in (''update'', ''delete'')
+            and "BJAC_DW_PROD"."stg"."AH_CategoryListings_Incr".dbt_valid_to is null;
 
-
-   
-    
-  if object_id ('"stg"."AH_CategoryListings_Incr"','U') is not null
-    begin
-    drop table "stg"."AH_CategoryListings_Incr"
-    end
-
-
-   EXEC('create view stg.AH_CategoryListings_Incr_temp_view as
-    
-
-    select *,
-        
-    CONVERT(VARCHAR(32), HashBytes(''MD5'', 
-        coalesce(cast(ID as varchar(max)), '''')  + ''|'' + 
-    
-        coalesce(cast(CONVERT(DATETIME2, ''2022-08-24 12:26:26.062425'') as varchar(max)), '''') 
-    ), 2)
- as dbt_scd_id,
-        CONVERT(DATETIME2, ''2022-08-24 12:26:26.062425'') as dbt_updated_at,
-        CONVERT(DATETIME2, ''2022-08-24 12:26:26.062425'') as dbt_valid_from,
-        nullif(CONVERT(DATETIME2, ''2022-08-24 12:26:26.062425''), CONVERT(DATETIME2, ''2022-08-24 12:26:26.062425'')) as dbt_valid_to
-    from (
-        
-	
-	SELECT * from stg.[AH_CategoryListings_InterView]
-    ) sbq
-
-
-
-    ');
-
-  CREATE TABLE "stg"."AH_CategoryListings_Incr"
-    WITH(
-      DISTRIBUTION = ROUND_ROBIN,
-      CLUSTERED COLUMNSTORE INDEX
-      )
-    AS (SELECT * FROM stg.AH_CategoryListings_Incr_temp_view)
-
-   
-  
-  if object_id ('"stg"."AH_CategoryListings_Incr_temp_view"','V') is not null
-    begin
-    drop view "stg"."AH_CategoryListings_Incr_temp_view"
-    end
-
+            insert into "BJAC_DW_PROD"."stg"."AH_CategoryListings_Incr" (
+                  "ID", "DeletedOn", "CreatedOn", "UpdatedOn", "ListingID", "CategoryID", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
+                  )
+            select "ID", "DeletedOn", "CreatedOn", "UpdatedOn", "ListingID", "CategoryID", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
+            from "BJAC_DW_PROD"."stg"."#AH_CategoryListings_Incr__dbt_tmp" 
+            where dbt_change_type = ''insert'' ; 
+           COMMIT TRANSACTION;
+           ');
 
 
   

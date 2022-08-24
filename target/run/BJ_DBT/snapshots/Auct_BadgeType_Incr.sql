@@ -1,58 +1,21 @@
 
-      
-  
-  if object_id ('"stg"."Auct_BadgeType_Incr_temp_view"','V') is not null
-    begin
-    drop view "stg"."Auct_BadgeType_Incr_temp_view"
-    end
+      EXEC('
+           BEGIN TRANSACTION
+           update "BJAC_DW_PROD"."stg"."Auct_BadgeType_Incr"
+          set dbt_valid_to = TMP.dbt_valid_to
+          from "BJAC_DW_PROD"."stg"."#Auct_BadgeType_Incr__dbt_tmp" TMP
+          where "BJAC_DW_PROD"."stg"."Auct_BadgeType_Incr".dbt_scd_id = TMP.dbt_scd_id
+            and TMP.dbt_change_type in (''update'', ''delete'')
+            and "BJAC_DW_PROD"."stg"."Auct_BadgeType_Incr".dbt_valid_to is null;
 
-
-   
-    
-  if object_id ('"stg"."Auct_BadgeType_Incr"','U') is not null
-    begin
-    drop table "stg"."Auct_BadgeType_Incr"
-    end
-
-
-   EXEC('create view stg.Auct_BadgeType_Incr_temp_view as
-    
-
-    select *,
-        
-    CONVERT(VARCHAR(32), HashBytes(''MD5'', 
-        coalesce(cast(BadgeTypeID as varchar(max)), '''')  + ''|'' + 
-    
-        coalesce(cast(CONVERT(DATETIME2, ''2022-08-24 12:37:55.644260'') as varchar(max)), '''') 
-    ), 2)
- as dbt_scd_id,
-        CONVERT(DATETIME2, ''2022-08-24 12:37:55.644260'') as dbt_updated_at,
-        CONVERT(DATETIME2, ''2022-08-24 12:37:55.644260'') as dbt_valid_from,
-        nullif(CONVERT(DATETIME2, ''2022-08-24 12:37:55.644260''), CONVERT(DATETIME2, ''2022-08-24 12:37:55.644260'')) as dbt_valid_to
-    from (
-        
-	
-	SELECT * from stg.[Auct_BadgeType_InterView]
-    ) sbq
-
-
-
-    ');
-
-  CREATE TABLE "stg"."Auct_BadgeType_Incr"
-    WITH(
-      DISTRIBUTION = ROUND_ROBIN,
-      CLUSTERED COLUMNSTORE INDEX
-      )
-    AS (SELECT * FROM stg.Auct_BadgeType_Incr_temp_view)
-
-   
-  
-  if object_id ('"stg"."Auct_BadgeType_Incr_temp_view"','V') is not null
-    begin
-    drop view "stg"."Auct_BadgeType_Incr_temp_view"
-    end
-
+            insert into "BJAC_DW_PROD"."stg"."Auct_BadgeType_Incr" (
+                  "BadgeTypeID", "Name", "Created", "UpdateEventID", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
+                  )
+            select "BadgeTypeID", "Name", "Created", "UpdateEventID", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
+            from "BJAC_DW_PROD"."stg"."#Auct_BadgeType_Incr__dbt_tmp" 
+            where dbt_change_type = ''insert'' ; 
+           COMMIT TRANSACTION;
+           ');
 
 
   

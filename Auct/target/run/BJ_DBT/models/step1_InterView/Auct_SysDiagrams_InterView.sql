@@ -1,4 +1,4 @@
-create view "dbo_stg"."Auct_SysDiagrams_InterView__dbt_tmp" as
+create view "stg"."Auct_SysDiagrams_InterView__dbt_tmp" as
     
 Select
 	cast([name] as nvarchar(4000)) [Name],

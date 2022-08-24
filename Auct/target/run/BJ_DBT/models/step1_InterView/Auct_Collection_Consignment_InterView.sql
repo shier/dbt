@@ -1,4 +1,4 @@
-create view "dbo_stg"."Auct_Collection_Consignment_InterView__dbt_tmp" as
+create view "stg"."Auct_Collection_Consignment_InterView__dbt_tmp" as
     
 Select
 	[COLLECTIONID] [CollectionID],

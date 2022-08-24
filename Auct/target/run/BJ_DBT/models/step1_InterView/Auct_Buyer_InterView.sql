@@ -1,4 +1,4 @@
-create view "dbo_stg"."Auct_Buyer_InterView__dbt_tmp" as
+create view "stg"."Auct_Buyer_InterView__dbt_tmp" as
     
 Select
 	[BUYERID] [BuyerID],

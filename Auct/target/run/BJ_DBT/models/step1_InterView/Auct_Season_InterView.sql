@@ -1,4 +1,4 @@
-create view "dbo_stg"."Auct_Season_InterView__dbt_tmp" as
+create view "stg"."Auct_Season_InterView__dbt_tmp" as
     
 Select
 	[SEASONID] [SeasonID],

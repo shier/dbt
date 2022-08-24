@@ -1,4 +1,4 @@
-create view "dbo_stg"."Auct_SysSubScriptions_InterView__dbt_tmp" as
+create view "stg"."Auct_SysSubScriptions_InterView__dbt_tmp" as
     
 Select
 	[loopback_detection] [Loopback_Detection],

@@ -1,4 +1,4 @@
-create view "dbo_stg"."Auct_Media_InterView__dbt_tmp" as
+create view "stg"."Auct_Media_InterView__dbt_tmp" as
     
 Select
 	[MEDIAID] [MediaID],

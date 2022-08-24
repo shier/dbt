@@ -1,4 +1,4 @@
-create view "dbo_stg"."Auct_SysArticles_InterView__dbt_tmp" as
+create view "stg"."Auct_SysArticles_InterView__dbt_tmp" as
     
 Select
 	[fire_triggers_on_snapshot] [Fire_Triggers_On_Snapshot],

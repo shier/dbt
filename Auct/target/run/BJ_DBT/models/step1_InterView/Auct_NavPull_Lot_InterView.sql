@@ -1,4 +1,4 @@
-create view "dbo_stg"."Auct_NavPull_Lot_InterView__dbt_tmp" as
+create view "stg"."Auct_NavPull_Lot_InterView__dbt_tmp" as
     
 Select
 	[NAVPULL_LOT_ID] [NavPull_Lot_ID],

@@ -1,4 +1,4 @@
-create view "dbo_stg"."Auct_Sale_InterView__dbt_tmp" as
+create view "stg"."Auct_Sale_InterView__dbt_tmp" as
     
 Select
 	[SALEID] [SaleID],

@@ -61,7 +61,6 @@ stg2 AS(
 FROM 
     stg1
 )
-
 SELECT
     EmailID,
     CASE

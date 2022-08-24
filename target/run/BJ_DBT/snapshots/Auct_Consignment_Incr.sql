@@ -1,58 +1,21 @@
 
-      
-  
-  if object_id ('"stg"."Auct_Consignment_Incr_temp_view"','V') is not null
-    begin
-    drop view "stg"."Auct_Consignment_Incr_temp_view"
-    end
+      EXEC('
+           BEGIN TRANSACTION
+           update "BJAC_DW_PROD"."stg"."Auct_Consignment_Incr"
+          set dbt_valid_to = TMP.dbt_valid_to
+          from "BJAC_DW_PROD"."stg"."#Auct_Consignment_Incr__dbt_tmp" TMP
+          where "BJAC_DW_PROD"."stg"."Auct_Consignment_Incr".dbt_scd_id = TMP.dbt_scd_id
+            and TMP.dbt_change_type in (''update'', ''delete'')
+            and "BJAC_DW_PROD"."stg"."Auct_Consignment_Incr".dbt_valid_to is null;
 
-
-   
-    
-  if object_id ('"stg"."Auct_Consignment_Incr"','U') is not null
-    begin
-    drop table "stg"."Auct_Consignment_Incr"
-    end
-
-
-   EXEC('create view stg.Auct_Consignment_Incr_temp_view as
-    
-
-    select *,
-        
-    CONVERT(VARCHAR(32), HashBytes(''MD5'', 
-        coalesce(cast(ConsignmentID as varchar(max)), '''')  + ''|'' + 
-    
-        coalesce(cast(CONVERT(DATETIME2, ''2022-08-24 12:40:43.364259'') as varchar(max)), '''') 
-    ), 2)
- as dbt_scd_id,
-        CONVERT(DATETIME2, ''2022-08-24 12:40:43.364259'') as dbt_updated_at,
-        CONVERT(DATETIME2, ''2022-08-24 12:40:43.364259'') as dbt_valid_from,
-        nullif(CONVERT(DATETIME2, ''2022-08-24 12:40:43.364259''), CONVERT(DATETIME2, ''2022-08-24 12:40:43.364259'')) as dbt_valid_to
-    from (
-        
-	
-	SELECT * from stg.[Auct_Consignment_InterView]
-    ) sbq
-
-
-
-    ');
-
-  CREATE TABLE "stg"."Auct_Consignment_Incr"
-    WITH(
-      DISTRIBUTION = ROUND_ROBIN,
-      CLUSTERED COLUMNSTORE INDEX
-      )
-    AS (SELECT * FROM stg.Auct_Consignment_Incr_temp_view)
-
-   
-  
-  if object_id ('"stg"."Auct_Consignment_Incr_temp_view"','V') is not null
-    begin
-    drop view "stg"."Auct_Consignment_Incr_temp_view"
-    end
-
+            insert into "BJAC_DW_PROD"."stg"."Auct_Consignment_Incr" (
+                  "ConsignmentID", "CustomerAccountID", "ItemID", "ConsignmentStatusID", "AuctionID", "ReserveTypeID", "ShortDescription", "LongDescription", "PhotosReceived", "Showcase", "Created", "UpdateEventID", "CarCard", "Titlein", "OnSite", "CheckedIn", "Completed", "Canceled", "AddressID", "CarInfoID", "OnSpeed", "OnHagerty", "IsCharity", "CreatedUTC", "ModifiedUTC", "EmainventoryID", "EMAEventID", "EMACCEventID", "EmashowEventID", "EmamercEventID", "EmalotID", "MarketingDescription", "AuthorizedWeb", "AuthorizedSocial", "AuthorizedMarketing", "AuthorizedCarList", "LockMarketingDescription", "ReviewStateID", "DisplayStatusID", "AssignedtoUserID", "Priority", "Quality", "RequestedAuctionID", "StockNumber", "CreatedByUserID", "ModifiedByUserID", "ModifiedDateTime", "ModifiedFields", "ConsignmentCompleteStatusBit", "ModifiedDetailsUTC", "ModifiedDocketUTC", "PaymentStatusBit", "OnlineauctonItemID", "OnlineAuctionauctionItemID", "ConsignmentNotifyBit", "ReserveAmount", "CusTestimatedValue", "BJValue", "LotNumber", "IsOutTakeVehicle", "PaymentStatus", "ReleasedForTransPort", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
+                  )
+            select "ConsignmentID", "CustomerAccountID", "ItemID", "ConsignmentStatusID", "AuctionID", "ReserveTypeID", "ShortDescription", "LongDescription", "PhotosReceived", "Showcase", "Created", "UpdateEventID", "CarCard", "Titlein", "OnSite", "CheckedIn", "Completed", "Canceled", "AddressID", "CarInfoID", "OnSpeed", "OnHagerty", "IsCharity", "CreatedUTC", "ModifiedUTC", "EmainventoryID", "EMAEventID", "EMACCEventID", "EmashowEventID", "EmamercEventID", "EmalotID", "MarketingDescription", "AuthorizedWeb", "AuthorizedSocial", "AuthorizedMarketing", "AuthorizedCarList", "LockMarketingDescription", "ReviewStateID", "DisplayStatusID", "AssignedtoUserID", "Priority", "Quality", "RequestedAuctionID", "StockNumber", "CreatedByUserID", "ModifiedByUserID", "ModifiedDateTime", "ModifiedFields", "ConsignmentCompleteStatusBit", "ModifiedDetailsUTC", "ModifiedDocketUTC", "PaymentStatusBit", "OnlineauctonItemID", "OnlineAuctionauctionItemID", "ConsignmentNotifyBit", "ReserveAmount", "CusTestimatedValue", "BJValue", "LotNumber", "IsOutTakeVehicle", "PaymentStatus", "ReleasedForTransPort", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
+            from "BJAC_DW_PROD"."stg"."#Auct_Consignment_Incr__dbt_tmp" 
+            where dbt_change_type = ''insert'' ; 
+           COMMIT TRANSACTION;
+           ');
 
 
   

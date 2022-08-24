@@ -1,4 +1,4 @@
-create view "dbo_stg"."Auct_ReportLogging_InterView__dbt_tmp" as
+create view "stg"."Auct_ReportLogging_InterView__dbt_tmp" as
     
 Select
 	cast([ID] as nvarchar(4000)) [ID],

@@ -1,4 +1,4 @@
-create view "dbo_stg"."Auct_Mspub_IDEntity_Range_InterView__dbt_tmp" as
+create view "stg"."Auct_Mspub_IDEntity_Range_InterView__dbt_tmp" as
     
 Select
 	[objid] [OBJID],

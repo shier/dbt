@@ -1,4 +1,4 @@
-create view "dbo_stg"."Auct_MSPeer_ConflictDetectionConfigResponse_InterView__dbt_tmp" as
+create view "stg"."Auct_MSPeer_ConflictDetectionConfigResponse_InterView__dbt_tmp" as
     
 Select
 	[is_peer] [Is_Peer],

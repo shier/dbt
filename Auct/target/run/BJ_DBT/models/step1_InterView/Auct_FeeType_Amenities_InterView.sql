@@ -1,4 +1,4 @@
-create view "dbo_stg"."Auct_FeeType_Amenities_InterView__dbt_tmp" as
+create view "stg"."Auct_FeeType_Amenities_InterView__dbt_tmp" as
     
 Select
 	[FEETYPE_AMENITYID] [FeeType_AmenityID],

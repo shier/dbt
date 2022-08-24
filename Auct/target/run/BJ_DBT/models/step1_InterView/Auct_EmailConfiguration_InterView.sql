@@ -1,4 +1,4 @@
-create view "dbo_stg"."Auct_EmailConfiguration_InterView__dbt_tmp" as
+create view "stg"."Auct_EmailConfiguration_InterView__dbt_tmp" as
     
 Select
 	cast([HOST] as nvarchar(4000)) [Host],

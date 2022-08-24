@@ -1,4 +1,4 @@
-create view "dbo_stg"."Auct_PaymentOverride_InterView__dbt_tmp" as
+create view "stg"."Auct_PaymentOverride_InterView__dbt_tmp" as
     
 Select
 	[PAYMENTOVERRIDE_ID] [PaymentOverride_ID],

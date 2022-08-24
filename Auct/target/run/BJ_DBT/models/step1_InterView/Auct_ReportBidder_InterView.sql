@@ -1,4 +1,4 @@
-create view "dbo_stg"."Auct_ReportBidder_InterView__dbt_tmp" as
+create view "stg"."Auct_ReportBidder_InterView__dbt_tmp" as
     
 Select
 	[REPORTID] [ReportID],

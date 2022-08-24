@@ -1,4 +1,4 @@
-create view "dbo_stg"."Auct_CarMake_InterView__dbt_tmp" as
+create view "stg"."Auct_CarMake_InterView__dbt_tmp" as
     
 Select
 	[CARMAKEID] [CarMakeID],

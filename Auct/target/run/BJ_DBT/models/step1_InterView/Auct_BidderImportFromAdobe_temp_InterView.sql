@@ -1,4 +1,4 @@
-create view "dbo_stg"."Auct_BidderImportFromAdobe_temp_InterView__dbt_tmp" as
+create view "stg"."Auct_BidderImportFromAdobe_temp_InterView__dbt_tmp" as
     
 Select
 	[Created_Date] [Created_Date],

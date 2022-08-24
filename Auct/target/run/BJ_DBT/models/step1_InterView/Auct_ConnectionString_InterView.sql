@@ -1,4 +1,4 @@
-create view "dbo_stg"."Auct_ConnectionString_InterView__dbt_tmp" as
+create view "stg"."Auct_ConnectionString_InterView__dbt_tmp" as
     
 Select
 	cast([TYPENAME] as nvarchar(4000)) [TypeName],

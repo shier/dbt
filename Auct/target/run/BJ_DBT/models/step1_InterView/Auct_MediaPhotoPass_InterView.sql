@@ -1,4 +1,4 @@
-create view "dbo_stg"."Auct_MediaPhotoPass_InterView__dbt_tmp" as
+create view "stg"."Auct_MediaPhotoPass_InterView__dbt_tmp" as
     
 Select
 	[MEDIAPHOTOPASSID] [MediaPhotoPassID],

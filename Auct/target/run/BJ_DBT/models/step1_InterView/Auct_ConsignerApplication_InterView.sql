@@ -1,4 +1,4 @@
-create view "dbo_stg"."Auct_ConsignerApplication_InterView__dbt_tmp" as
+create view "stg"."Auct_ConsignerApplication_InterView__dbt_tmp" as
     
 Select
 	[CONSIGNERAPPLICTIONID] [ConsignerApplictionID],

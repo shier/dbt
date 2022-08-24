@@ -1,4 +1,4 @@
-create view "dbo_stg"."Auct_AbsenteeBidType_InterView__dbt_tmp" as
+create view "stg"."Auct_AbsenteeBidType_InterView__dbt_tmp" as
     
 Select
 	[ABSENTEEBIDTYPEID] [AbsenteeBidTypeID],

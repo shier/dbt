@@ -1,4 +1,4 @@
-create view "dbo_stg"."Auct_2018PurchaserList_tim_InterView__dbt_tmp" as
+create view "stg"."Auct_2018PurchaserList_tim_InterView__dbt_tmp" as
     
 Select
 	cast([First_Name] as nvarchar(4000)) [First_Name],

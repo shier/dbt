@@ -1,4 +1,4 @@
-create view "dbo_stg"."Auct_SecretQuestions_InterView__dbt_tmp" as
+create view "stg"."Auct_SecretQuestions_InterView__dbt_tmp" as
     
 Select
 	[QUESTIONID] [QuestionID],

@@ -1,58 +1,21 @@
 
-      
-  
-  if object_id ('"stg"."Auct_ContactRequest_Incr_temp_view"','V') is not null
-    begin
-    drop view "stg"."Auct_ContactRequest_Incr_temp_view"
-    end
+      EXEC('
+           BEGIN TRANSACTION
+           update "BJAC_DW_PROD"."stg"."Auct_ContactRequest_Incr"
+          set dbt_valid_to = TMP.dbt_valid_to
+          from "BJAC_DW_PROD"."stg"."#Auct_ContactRequest_Incr__dbt_tmp" TMP
+          where "BJAC_DW_PROD"."stg"."Auct_ContactRequest_Incr".dbt_scd_id = TMP.dbt_scd_id
+            and TMP.dbt_change_type in (''update'', ''delete'')
+            and "BJAC_DW_PROD"."stg"."Auct_ContactRequest_Incr".dbt_valid_to is null;
 
-
-   
-    
-  if object_id ('"stg"."Auct_ContactRequest_Incr"','U') is not null
-    begin
-    drop table "stg"."Auct_ContactRequest_Incr"
-    end
-
-
-   EXEC('create view stg.Auct_ContactRequest_Incr_temp_view as
-    
-
-    select *,
-        
-    CONVERT(VARCHAR(32), HashBytes(''MD5'', 
-        coalesce(cast(ContactRequestID as varchar(max)), '''')  + ''|'' + 
-    
-        coalesce(cast(CONVERT(DATETIME2, ''2022-08-24 12:41:03.411364'') as varchar(max)), '''') 
-    ), 2)
- as dbt_scd_id,
-        CONVERT(DATETIME2, ''2022-08-24 12:41:03.411364'') as dbt_updated_at,
-        CONVERT(DATETIME2, ''2022-08-24 12:41:03.411364'') as dbt_valid_from,
-        nullif(CONVERT(DATETIME2, ''2022-08-24 12:41:03.411364''), CONVERT(DATETIME2, ''2022-08-24 12:41:03.411364'')) as dbt_valid_to
-    from (
-        
-	
-	SELECT * from stg.[Auct_ContactRequest_InterView]
-    ) sbq
-
-
-
-    ');
-
-  CREATE TABLE "stg"."Auct_ContactRequest_Incr"
-    WITH(
-      DISTRIBUTION = ROUND_ROBIN,
-      CLUSTERED COLUMNSTORE INDEX
-      )
-    AS (SELECT * FROM stg.Auct_ContactRequest_Incr_temp_view)
-
-   
-  
-  if object_id ('"stg"."Auct_ContactRequest_Incr_temp_view"','V') is not null
-    begin
-    drop view "stg"."Auct_ContactRequest_Incr_temp_view"
-    end
-
+            insert into "BJAC_DW_PROD"."stg"."Auct_ContactRequest_Incr" (
+                  "ContactRequestID", "FromContactID", "RequestTypeID", "AssignedContactID", "CompanyID", "PhoneID", "AddressID", "EmailAddress", "RequestFulfilled", "DateFulfilled", "SuBJect", "CustomerComments", "RequestNotes", "AppointmentTimeStamp", "Created", "UpdateEventID", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
+                  )
+            select "ContactRequestID", "FromContactID", "RequestTypeID", "AssignedContactID", "CompanyID", "PhoneID", "AddressID", "EmailAddress", "RequestFulfilled", "DateFulfilled", "SuBJect", "CustomerComments", "RequestNotes", "AppointmentTimeStamp", "Created", "UpdateEventID", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
+            from "BJAC_DW_PROD"."stg"."#Auct_ContactRequest_Incr__dbt_tmp" 
+            where dbt_change_type = ''insert'' ; 
+           COMMIT TRANSACTION;
+           ');
 
 
   

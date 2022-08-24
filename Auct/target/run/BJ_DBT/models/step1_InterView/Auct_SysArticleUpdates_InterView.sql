@@ -1,4 +1,4 @@
-create view "dbo_stg"."Auct_SysArticleUpdates_InterView__dbt_tmp" as
+create view "stg"."Auct_SysArticleUpdates_InterView__dbt_tmp" as
     
 Select
 	[identity_support] [IDEntity_Support],

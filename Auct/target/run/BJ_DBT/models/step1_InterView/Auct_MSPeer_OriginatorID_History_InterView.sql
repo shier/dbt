@@ -1,4 +1,4 @@
-create view "dbo_stg"."Auct_MSPeer_OriginatorID_History_InterView__dbt_tmp" as
+create view "stg"."Auct_MSPeer_OriginatorID_History_InterView__dbt_tmp" as
     
 Select
 	[originator_id] [Originator_ID],

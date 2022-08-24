@@ -1,4 +1,4 @@
-create view "dbo_stg"."Auct_EmailProcessors_InterView__dbt_tmp" as
+create view "stg"."Auct_EmailProcessors_InterView__dbt_tmp" as
     
 Select
 	[EMAILPROCESSORID] [EmailProcessorID],

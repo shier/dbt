@@ -1,4 +1,4 @@
-create view "dbo_stg"."Auct_Event_CredentialGroup_InterView__dbt_tmp" as
+create view "stg"."Auct_Event_CredentialGroup_InterView__dbt_tmp" as
     
 Select
 	[CREDENTIALGROUPID] [CredentialGroupID],

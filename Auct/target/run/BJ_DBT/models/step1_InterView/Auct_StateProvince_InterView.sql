@@ -1,4 +1,4 @@
-create view "dbo_stg"."Auct_StateProvince_InterView__dbt_tmp" as
+create view "stg"."Auct_StateProvince_InterView__dbt_tmp" as
     
 Select
 	cast([ABBREVIATION] as nvarchar(4000)) [Abbreviation],

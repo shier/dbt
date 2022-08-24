@@ -1,4 +1,4 @@
-create view "dbo_stg"."Auct_Awsdms_Truncation_Safeguard_InterView__dbt_tmp" as
+create view "stg"."Auct_Awsdms_Truncation_Safeguard_InterView__dbt_tmp" as
     
 Select
 	cast([latchTaskName] as nvarchar(4000)) [LatchTaskName],

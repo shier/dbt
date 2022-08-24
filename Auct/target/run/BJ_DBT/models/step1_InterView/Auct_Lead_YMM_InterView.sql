@@ -1,4 +1,4 @@
-create view "dbo_stg"."Auct_Lead_YMM_InterView__dbt_tmp" as
+create view "stg"."Auct_Lead_YMM_InterView__dbt_tmp" as
     
 Select
 	[LEAD_YMM_ID] [Lead_YMM_ID],
