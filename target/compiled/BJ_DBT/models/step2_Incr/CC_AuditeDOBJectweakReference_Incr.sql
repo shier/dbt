@@ -6,3 +6,10 @@ With hashData as (
 		From stg.[CC_AuditeDOBJectweakReference_InterView]
 	)
 Select * From hashData
+
+	where not exists 
+	(
+		select hashValue 
+		from "BJAC_DW_PROD"."stg"."CC_AuditeDOBJectweakReference_Incr" compareData
+		where hashData.hashValue=compareData.hashValue
+	)

@@ -1,46 +1,11 @@
 
       
   
-  if object_id ('"stg"."Auct_UserPrivileges_Incr_temp_view"','V') is not null
-    begin
-    drop view "stg"."Auct_UserPrivileges_Incr_temp_view"
-    end
 
-
-   
-    
-  if object_id ('"stg"."Auct_UserPrivileges_Incr"','U') is not null
-    begin
-    drop table "stg"."Auct_UserPrivileges_Incr"
-    end
-
-
-   EXEC('create view stg.Auct_UserPrivileges_Incr_temp_view as
-    
-With hashData as (
-		Select
-			HASHBYTES(''SHA2_256'', concat(Cast([UsersID] as varchar), Cast([PrivilegeID] as varchar))) as hashValue,
-			CURRENT_TIMESTAMP as effectiveTime, *
-		From stg.[Auct_UserPrivileges_InterView]
-	)
-Select * From hashData
-
-    ');
-
-  CREATE TABLE "stg"."Auct_UserPrivileges_Incr"
-    WITH(
-      DISTRIBUTION = ROUND_ROBIN,
-      CLUSTERED COLUMNSTORE INDEX
-      )
-    AS (SELECT * FROM stg.Auct_UserPrivileges_Incr_temp_view)
-
-   
-  
-  if object_id ('"stg"."Auct_UserPrivileges_Incr_temp_view"','V') is not null
-    begin
-    drop view "stg"."Auct_UserPrivileges_Incr_temp_view"
-    end
-
-
+    insert into "BJAC_DW_PROD"."stg"."Auct_UserPrivileges_Incr" ("hashValue", "effectiveTime", "UsersID", "PrivilegeID")
+    (
+        select "hashValue", "effectiveTime", "UsersID", "PrivilegeID"
+        from "BJAC_DW_PROD"."stg"."#Auct_UserPrivileges_Incr__dbt_tmp"
+    );
 
   

@@ -1,46 +1,11 @@
 
       
   
-  if object_id ('"stg"."CC_SecURItySystemRoleParentroles_Securitysystemrolechildroles_Incr_temp_view"','V') is not null
-    begin
-    drop view "stg"."CC_SecURItySystemRoleParentroles_Securitysystemrolechildroles_Incr_temp_view"
-    end
 
-
-   
-    
-  if object_id ('"stg"."CC_SecURItySystemRoleParentroles_Securitysystemrolechildroles_Incr"','U') is not null
-    begin
-    drop table "stg"."CC_SecURItySystemRoleParentroles_Securitysystemrolechildroles_Incr"
-    end
-
-
-   EXEC('create view stg.CC_SecURItySystemRoleParentroles_Securitysystemrolechildroles_Incr_temp_view as
-    
-With hashData as (
-		Select
-			HASHBYTES(''SHA2_256'', concat([ChildRoles], [ParentRoles], [OID], Cast([OptimisticLockField] as varchar))) as hashValue,
-			CURRENT_TIMESTAMP as effectiveTime, *
-		From stg.[CC_SecURItySystemRoleParentroles_Securitysystemrolechildroles_InterView]
-	)
-Select * From hashData
-
-    ');
-
-  CREATE TABLE "stg"."CC_SecURItySystemRoleParentroles_Securitysystemrolechildroles_Incr"
-    WITH(
-      DISTRIBUTION = ROUND_ROBIN,
-      CLUSTERED COLUMNSTORE INDEX
-      )
-    AS (SELECT * FROM stg.CC_SecURItySystemRoleParentroles_Securitysystemrolechildroles_Incr_temp_view)
-
-   
-  
-  if object_id ('"stg"."CC_SecURItySystemRoleParentroles_Securitysystemrolechildroles_Incr_temp_view"','V') is not null
-    begin
-    drop view "stg"."CC_SecURItySystemRoleParentroles_Securitysystemrolechildroles_Incr_temp_view"
-    end
-
-
+    insert into "BJAC_DW_PROD"."stg"."CC_SecURItySystemRoleParentroles_Securitysystemrolechildroles_Incr" ("hashValue", "effectiveTime", "ChildRoles", "ParentRoles", "OID", "OptimisticLockField")
+    (
+        select "hashValue", "effectiveTime", "ChildRoles", "ParentRoles", "OID", "OptimisticLockField"
+        from "BJAC_DW_PROD"."stg"."#CC_SecURItySystemRoleParentroles_Securitysystemrolechildroles_Incr__dbt_tmp"
+    );
 
   

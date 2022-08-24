@@ -6,3 +6,10 @@ With hashData as (
 		From stg.[AH_UnProcessedQueueMessages_InterView]
 	)
 Select * From hashData
+
+	where not exists 
+	(
+		select hashValue 
+		from "BJAC_DW_PROD"."stg"."AH_UnProcessedQueueMessages_Incr" compareData
+		where hashData.hashValue=compareData.hashValue
+	)

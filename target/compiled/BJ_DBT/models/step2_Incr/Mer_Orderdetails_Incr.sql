@@ -6,3 +6,10 @@ With hashData as (
 		From stg.[Mer_Orderdetails_InterView]
 	)
 Select * From hashData
+
+	where not exists 
+	(
+		select hashValue 
+		from "BJAC_DW_PROD"."stg"."Mer_Orderdetails_Incr" compareData
+		where hashData.hashValue=compareData.hashValue
+	)

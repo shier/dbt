@@ -1,0 +1,99 @@
+
+03:31:07  Completed with 23 errors and 0 warnings:
+03:31:07  
+03:31:07  Database Error in model Auct_ReservationStatus_InterView (models/step1_InterView/Auct_ReservationStatus_InterView.sql)
+03:31:07    ('HY000', "[HY000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Database 'BJAC_DW_PROD' on server 'synapsebj.sql.azuresynapse.net' is not currently available.  Please retry the connection later.  If the problem persists, contact customer support, and provide them the session tracing ID of '{74701AFA-91C0-45F6-9888-503ACC38DF46}'. (40613) (SQLDriverConnect)")
+03:31:07    compiled SQL at target/run/BJ_DBT/models/step1_InterView/Auct_ReservationStatus_InterView.sql
+03:31:07  
+03:31:07  Database Error in model CC_ErrorLog_InterView (models/step1_InterView/CC_ErrorLog_InterView.sql)
+03:31:07    ('42S02', "[42S02] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid object name 'stg.CC_ErrorLog_Raw'. (208) (SQLExecDirectW)")
+03:31:07    compiled SQL at target/run/BJ_DBT/models/step1_InterView/CC_ErrorLog_InterView.sql
+03:31:07  
+03:31:07  Database Error in model CC_Favorites_InterView (models/step1_InterView/CC_Favorites_InterView.sql)
+03:31:07    ('42S02', "[42S02] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid object name 'stg.CC_Favorites_Raw'. (208) (SQLExecDirectW)")
+03:31:07    compiled SQL at target/run/BJ_DBT/models/step1_InterView/CC_Favorites_InterView.sql
+03:31:07  
+03:31:07  Database Error in model CC_Feature_InterView (models/step1_InterView/CC_Feature_InterView.sql)
+03:31:07    ('42S02', "[42S02] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid object name 'stg.CC_Feature_Raw'. (208) (SQLExecDirectW)")
+03:31:07    compiled SQL at target/run/BJ_DBT/models/step1_InterView/CC_Feature_InterView.sql
+03:31:07  
+03:31:07  Database Error in model CC_FavoritesUnsubscribe_InterView (models/step1_InterView/CC_FavoritesUnsubscribe_InterView.sql)
+03:31:07    ('42S02', "[42S02] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid object name 'stg.CC_FavoritesUnsubscribe_Raw'. (208) (SQLExecDirectW)")
+03:31:07    compiled SQL at target/run/BJ_DBT/models/step1_InterView/CC_FavoritesUnsubscribe_InterView.sql
+03:31:07  
+03:31:07  Database Error in model CC_HCategory_InterView (models/step1_InterView/CC_HCategory_InterView.sql)
+03:31:07    ('42S02', "[42S02] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid object name 'stg.CC_HCategory_Raw'. (208) (SQLExecDirectW)")
+03:31:07    compiled SQL at target/run/BJ_DBT/models/step1_InterView/CC_HCategory_InterView.sql
+03:31:07  
+03:31:07  Database Error in model CC_ImportConfiguration_InterView (models/step1_InterView/CC_ImportConfiguration_InterView.sql)
+03:31:07    ('42S02', "[42S02] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid object name 'stg.CC_ImportConfiguration_Raw'. (208) (SQLExecDirectW)")
+03:31:07    compiled SQL at target/run/BJ_DBT/models/step1_InterView/CC_ImportConfiguration_InterView.sql
+03:31:07  
+03:31:07  Database Error in model CC_InmemorySearchEngineLogging_InterView (models/step1_InterView/CC_InmemorySearchEngineLogging_InterView.sql)
+03:31:07    ('42S02', "[42S02] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid object name 'stg.CC_InmemorySearchEngineLogging_Raw'. (208) (SQLExecDirectW)")
+03:31:07    compiled SQL at target/run/BJ_DBT/models/step1_InterView/CC_InmemorySearchEngineLogging_InterView.sql
+03:31:07  
+03:31:07  Database Error in model CC_ListingCategory_InterView (models/step1_InterView/CC_ListingCategory_InterView.sql)
+03:31:07    ('42S02', "[42S02] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid object name 'stg.CC_ListingCategory_Raw'. (208) (SQLExecDirectW)")
+03:31:07    compiled SQL at target/run/BJ_DBT/models/step1_InterView/CC_ListingCategory_InterView.sql
+03:31:07  
+03:31:07  Database Error in model CC_ListingAutohunterNominations_InterView (models/step1_InterView/CC_ListingAutohunterNominations_InterView.sql)
+03:31:07    ('42S02', "[42S02] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid object name 'stg.CC_ListingAutohunterNominations_Raw'. (208) (SQLExecDirectW)")
+03:31:07    compiled SQL at target/run/BJ_DBT/models/step1_InterView/CC_ListingAutohunterNominations_InterView.sql
+03:31:07  
+03:31:07  Database Error in model CC_ListingAudit_InterView (models/step1_InterView/CC_ListingAudit_InterView.sql)
+03:31:07    ('42S02', "[42S02] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid object name 'stg.CC_ListingAudit_Raw'. (208) (SQLExecDirectW)")
+03:31:07    compiled SQL at target/run/BJ_DBT/models/step1_InterView/CC_ListingAudit_InterView.sql
+03:31:07  
+03:31:07  Database Error in model CC_ListingImageDefinition_InterView (models/step1_InterView/CC_ListingImageDefinition_InterView.sql)
+03:31:07    ('42S02', "[42S02] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid object name 'stg.CC_ListingImageDefinition_Raw'. (208) (SQLExecDirectW)")
+03:31:07    compiled SQL at target/run/BJ_DBT/models/step1_InterView/CC_ListingImageDefinition_InterView.sql
+03:31:07  
+03:31:07  Database Error in model CC_ListingImage_InterView (models/step1_InterView/CC_ListingImage_InterView.sql)
+03:31:07    ('42S02', "[42S02] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid object name 'stg.CC_ListingImage_Raw'. (208) (SQLExecDirectW)")
+03:31:07    compiled SQL at target/run/BJ_DBT/models/step1_InterView/CC_ListingImage_InterView.sql
+03:31:07  
+03:31:07  Database Error in model CC_ListingReadOnly_InterView (models/step1_InterView/CC_ListingReadOnly_InterView.sql)
+03:31:07    ('42S02', "[42S02] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid object name 'stg.CC_ListingReadOnly_Raw'. (208) (SQLExecDirectW)")
+03:31:07    compiled SQL at target/run/BJ_DBT/models/step1_InterView/CC_ListingReadOnly_InterView.sql
+03:31:07  
+03:31:07  Database Error in model CC_ListingPaymentType_InterView (models/step1_InterView/CC_ListingPaymentType_InterView.sql)
+03:31:07    ('42S02', "[42S02] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid object name 'stg.CC_ListingPaymentType_Raw'. (208) (SQLExecDirectW)")
+03:31:07    compiled SQL at target/run/BJ_DBT/models/step1_InterView/CC_ListingPaymentType_InterView.sql
+03:31:07  
+03:31:07  Database Error in model CC_ListingStatus_InterView (models/step1_InterView/CC_ListingStatus_InterView.sql)
+03:31:07    ('42S02', "[42S02] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid object name 'stg.CC_ListingStatus_Raw'. (208) (SQLExecDirectW)")
+03:31:07    compiled SQL at target/run/BJ_DBT/models/step1_InterView/CC_ListingStatus_InterView.sql
+03:31:07  
+03:31:07  Database Error in model CC_LoginPassword_InterView (models/step1_InterView/CC_LoginPassword_InterView.sql)
+03:31:07    ('42S02', "[42S02] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid object name 'stg.CC_LoginPassword_Raw'. (208) (SQLExecDirectW)")
+03:31:07    compiled SQL at target/run/BJ_DBT/models/step1_InterView/CC_LoginPassword_InterView.sql
+03:31:07  
+03:31:07  Database Error in model CC_Lookup_PopularMakes_InterView (models/step1_InterView/CC_Lookup_PopularMakes_InterView.sql)
+03:31:07    ('42S02', "[42S02] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid object name 'stg.CC_Lookup_PopularMakes_Raw'. (208) (SQLExecDirectW)")
+03:31:07    compiled SQL at target/run/BJ_DBT/models/step1_InterView/CC_Lookup_PopularMakes_InterView.sql
+03:31:07  
+03:31:07  Database Error in model CC_LoginSocial_InterView (models/step1_InterView/CC_LoginSocial_InterView.sql)
+03:31:07    ('42S02', "[42S02] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid object name 'stg.CC_LoginSocial_Raw'. (208) (SQLExecDirectW)")
+03:31:07    compiled SQL at target/run/BJ_DBT/models/step1_InterView/CC_LoginSocial_InterView.sql
+03:31:07  
+03:31:07  Database Error in model CC_MakeModelCorrection_InterView (models/step1_InterView/CC_MakeModelCorrection_InterView.sql)
+03:31:07    ('42S02', "[42S02] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid object name 'stg.CC_MakeModelCorrection_Raw'. (208) (SQLExecDirectW)")
+03:31:07    compiled SQL at target/run/BJ_DBT/models/step1_InterView/CC_MakeModelCorrection_InterView.sql
+03:31:07  
+03:31:07  Database Error in model CC_MakeModelTags_InterView (models/step1_InterView/CC_MakeModelTags_InterView.sql)
+03:31:07    ('42S02', "[42S02] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid object name 'stg.CC_MakeModelTags_Raw'. (208) (SQLExecDirectW)")
+03:31:07    compiled SQL at target/run/BJ_DBT/models/step1_InterView/CC_MakeModelTags_InterView.sql
+03:31:07  
+03:31:07  Database Error in model CC_MakeModelcache_InterView (models/step1_InterView/CC_MakeModelcache_InterView.sql)
+03:31:07    ('42S02', "[42S02] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid object name 'stg.CC_MakeModelcache_Raw'. (208) (SQLExecDirectW)")
+03:31:07    compiled SQL at target/run/BJ_DBT/models/step1_InterView/CC_MakeModelcache_InterView.sql
+03:31:07  
+03:31:07  Database Error in model CC_MakeModel_InterView (models/step1_InterView/CC_MakeModel_InterView.sql)
+03:31:07    ('42S02', "[42S02] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid object name 'stg.CC_MakeModel_Raw'. (208) (SQLExecDirectW)")
+03:31:07    compiled SQL at target/run/BJ_DBT/models/step1_InterView/CC_MakeModel_InterView.sql
+03:31:07  
+03:31:07  Done. PASS=633 WARN=0 ERROR=23 SKIP=0 TOTAL=656
+03:31:09  Running with dbt=1.0.0
+03:31:10  [WARNING]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:

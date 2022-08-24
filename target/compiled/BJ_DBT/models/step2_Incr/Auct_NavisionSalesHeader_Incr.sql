@@ -6,3 +6,10 @@ With hashData as (
 		From stg.[Auct_NavisionSalesHeader_InterView]
 	)
 Select * From hashData
+
+	where not exists 
+	(
+		select hashValue 
+		from "BJAC_DW_PROD"."stg"."Auct_NavisionSalesHeader_Incr" compareData
+		where hashData.hashValue=compareData.hashValue
+	)
