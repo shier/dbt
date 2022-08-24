@@ -1,58 +1,21 @@
 
-      
-  
-  if object_id ('"stg"."Auct_Car_Incr_temp_view"','V') is not null
-    begin
-    drop view "stg"."Auct_Car_Incr_temp_view"
-    end
+      EXEC('
+           BEGIN TRANSACTION
+           update "DedicatedSQLpoolBJ"."stg"."Auct_Car_Incr"
+          set dbt_valid_to = TMP.dbt_valid_to
+          from "DedicatedSQLpoolBJ"."stg"."#Auct_Car_Incr__dbt_tmp" TMP
+          where "DedicatedSQLpoolBJ"."stg"."Auct_Car_Incr".dbt_scd_id = TMP.dbt_scd_id
+            and TMP.dbt_change_type in (''update'', ''delete'')
+            and "DedicatedSQLpoolBJ"."stg"."Auct_Car_Incr".dbt_valid_to is null;
 
-
-   
-    
-  if object_id ('"stg"."Auct_Car_Incr"','U') is not null
-    begin
-    drop table "stg"."Auct_Car_Incr"
-    end
-
-
-   EXEC('create view stg.Auct_Car_Incr_temp_view as
-    
-
-    select *,
-        
-    CONVERT(VARCHAR(32), HashBytes(''MD5'', 
-        coalesce(cast(CarID as varchar(max)), '''')  + ''|'' + 
-    
-        coalesce(cast(CONVERT(DATETIME2, ''2022-07-29 18:14:39.992708'') as varchar(max)), '''') 
-    ), 2)
- as dbt_scd_id,
-        CONVERT(DATETIME2, ''2022-07-29 18:14:39.992708'') as dbt_updated_at,
-        CONVERT(DATETIME2, ''2022-07-29 18:14:39.992708'') as dbt_valid_from,
-        nullif(CONVERT(DATETIME2, ''2022-07-29 18:14:39.992708''), CONVERT(DATETIME2, ''2022-07-29 18:14:39.992708'')) as dbt_valid_to
-    from (
-        
-	
-	SELECT * from stg.[Auct_Car_Inter]
-    ) sbq
-
-
-
-    ');
-
-  CREATE TABLE "stg"."Auct_Car_Incr"
-    WITH(
-      DISTRIBUTION = ROUND_ROBIN,
-      CLUSTERED COLUMNSTORE INDEX
-      )
-    AS (SELECT * FROM stg.Auct_Car_Incr_temp_view)
-
-   
-  
-  if object_id ('"stg"."Auct_Car_Incr_temp_view"','V') is not null
-    begin
-    drop view "stg"."Auct_Car_Incr_temp_view"
-    end
-
+            insert into "DedicatedSQLpoolBJ"."stg"."Auct_Car_Incr" (
+                  "CarID", "VIN", "Year", "ItemID", "CarMakeID", "CarModelID", "CarTypeID", "CarStyleID", "CarTrimID", "CarTransMissionID", "CarConditionID", "OriginalEngine", "ExteriorColor", "InteriorColor", "InteriorMaterial", "ConditionDescription", "NumbersMatching", "OriginalTires", "TireManufacturerID", "FrontTireSize", "RearTireSize", "Created", "UpdateEventID", "DriverSIDE", "AuthenticStatusID", "Engine", "Displacement", "Cylinders", "HorsepowerType", "PowerSteering", "PowerBrakes", "AirConditioning", "OtherFeature", "HasHighPerFormance", "HighPerFormanceDocumented", "Make", "Model", "Style", "ExtraData", "Titledto", "PowerWindows", "ModifiedByUserName", "ModifiedDateTime", "Mileage", "CheckinMileage", "Horsepower", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
+                  )
+            select "CarID", "VIN", "Year", "ItemID", "CarMakeID", "CarModelID", "CarTypeID", "CarStyleID", "CarTrimID", "CarTransMissionID", "CarConditionID", "OriginalEngine", "ExteriorColor", "InteriorColor", "InteriorMaterial", "ConditionDescription", "NumbersMatching", "OriginalTires", "TireManufacturerID", "FrontTireSize", "RearTireSize", "Created", "UpdateEventID", "DriverSIDE", "AuthenticStatusID", "Engine", "Displacement", "Cylinders", "HorsepowerType", "PowerSteering", "PowerBrakes", "AirConditioning", "OtherFeature", "HasHighPerFormance", "HighPerFormanceDocumented", "Make", "Model", "Style", "ExtraData", "Titledto", "PowerWindows", "ModifiedByUserName", "ModifiedDateTime", "Mileage", "CheckinMileage", "Horsepower", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
+            from "DedicatedSQLpoolBJ"."stg"."#Auct_Car_Incr__dbt_tmp" 
+            where dbt_change_type = ''insert'' ; 
+           COMMIT TRANSACTION;
+           ');
 
 
   

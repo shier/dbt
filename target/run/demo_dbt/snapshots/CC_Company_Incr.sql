@@ -1,58 +1,21 @@
 
-      
-  
-  if object_id ('"stg"."CC_Company_Incr_temp_view"','V') is not null
-    begin
-    drop view "stg"."CC_Company_Incr_temp_view"
-    end
+      EXEC('
+           BEGIN TRANSACTION
+           update "DedicatedSQLpoolBJ"."stg"."CC_Company_Incr"
+          set dbt_valid_to = TMP.dbt_valid_to
+          from "DedicatedSQLpoolBJ"."stg"."#CC_Company_Incr__dbt_tmp" TMP
+          where "DedicatedSQLpoolBJ"."stg"."CC_Company_Incr".dbt_scd_id = TMP.dbt_scd_id
+            and TMP.dbt_change_type in (''update'', ''delete'')
+            and "DedicatedSQLpoolBJ"."stg"."CC_Company_Incr".dbt_valid_to is null;
 
-
-   
-    
-  if object_id ('"stg"."CC_Company_Incr"','U') is not null
-    begin
-    drop table "stg"."CC_Company_Incr"
-    end
-
-
-   EXEC('create view stg.CC_Company_Incr_temp_view as
-    
-
-    select *,
-        
-    CONVERT(VARCHAR(32), HashBytes(''MD5'', 
-        coalesce(cast(ID as varchar(max)), '''')  + ''|'' + 
-    
-        coalesce(cast(CONVERT(DATETIME2, ''2022-07-29 18:33:02.643289'') as varchar(max)), '''') 
-    ), 2)
- as dbt_scd_id,
-        CONVERT(DATETIME2, ''2022-07-29 18:33:02.643289'') as dbt_updated_at,
-        CONVERT(DATETIME2, ''2022-07-29 18:33:02.643289'') as dbt_valid_from,
-        nullif(CONVERT(DATETIME2, ''2022-07-29 18:33:02.643289''), CONVERT(DATETIME2, ''2022-07-29 18:33:02.643289'')) as dbt_valid_to
-    from (
-        
-	
-	SELECT * from stg.[CC_Company_Inter]
-    ) sbq
-
-
-
-    ');
-
-  CREATE TABLE "stg"."CC_Company_Incr"
-    WITH(
-      DISTRIBUTION = ROUND_ROBIN,
-      CLUSTERED COLUMNSTORE INDEX
-      )
-    AS (SELECT * FROM stg.CC_Company_Incr_temp_view)
-
-   
-  
-  if object_id ('"stg"."CC_Company_Incr_temp_view"','V') is not null
-    begin
-    drop view "stg"."CC_Company_Incr_temp_view"
-    end
-
+            insert into "DedicatedSQLpoolBJ"."stg"."CC_Company_Incr" (
+                  "ID", "IsActive", "OptinThirdParty", "DisableImmediateSavedSearches", "BlacklistedForAHNominations", "DisabledailySavedSearches", "DisableFirstAlerts", "BuyerInquiry_IncludeADF", "DashboardLock", "WhiteListedForAHNominations", "OptOutAHNominationAlerts", "Latitude", "Longitude", "CreateDate", "ModifyDate", "BuyerInquiry_AdfOptionID", "CompanyTypeID", "MaxActiveListings", "MaxFeaturedListings", "ImageSortType", "ListingPaymentType", "OverrideMAxActiveAlertCount", "CompanyName", "TelePhone", "Country", "Aboutus", "LogoURL", "CompanyURL", "BuyerInquiryEmailAddress", "CompanyDescription", "Email", "Address1", "Address2", "City", "State", "ZipCode", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
+                  )
+            select "ID", "IsActive", "OptinThirdParty", "DisableImmediateSavedSearches", "BlacklistedForAHNominations", "DisabledailySavedSearches", "DisableFirstAlerts", "BuyerInquiry_IncludeADF", "DashboardLock", "WhiteListedForAHNominations", "OptOutAHNominationAlerts", "Latitude", "Longitude", "CreateDate", "ModifyDate", "BuyerInquiry_AdfOptionID", "CompanyTypeID", "MaxActiveListings", "MaxFeaturedListings", "ImageSortType", "ListingPaymentType", "OverrideMAxActiveAlertCount", "CompanyName", "TelePhone", "Country", "Aboutus", "LogoURL", "CompanyURL", "BuyerInquiryEmailAddress", "CompanyDescription", "Email", "Address1", "Address2", "City", "State", "ZipCode", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
+            from "DedicatedSQLpoolBJ"."stg"."#CC_Company_Incr__dbt_tmp" 
+            where dbt_change_type = ''insert'' ; 
+           COMMIT TRANSACTION;
+           ');
 
 
   

@@ -39,7 +39,5 @@ Select
 	[DOCUMENTATIONBIT] [DocumentationBit],
 	[AUCTIONBIDDERSOURCEID] [AuctionBidderSourceID],
 	[REGISTEREDONLINEBIT] [RegisteredOnlineBit],
-	[CHARGECOUNT] [ChargeCount],
-	[AuctionBidderPackageStatusId] [AuctionBidderPackageStatusID],
-	[PACKETPICKUPDATETIME] [PacketPickUpdateTime]
+	[CHARGECOUNT] [ChargeCount]
 From stg.[Auct_AuctionBidder_Raw]

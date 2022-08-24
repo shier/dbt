@@ -39,7 +39,5 @@ Select
 	cast([DocumentationBit] as int) [DocumentationBIT],
 	cast([AuctionBidderSourceID] as int) [AuctionBidderSourceID],
 	cast([RegisteredOnlineBit] as int) [RegisteredOnlineBIT],
-	cast([ChargeCount] as int) [ChargeCount],
-	cast([AuctionBidderPackageStatusID] as int) [AuctionBidderPackageStatusID],
-	cast([PacketPickUpdateTime] as datetime) [PackagePickupUpdateTime] 
+	cast([ChargeCount] as int) [ChargeCount] 
 From stg.[Auct_AuctionBidder_FinalView]

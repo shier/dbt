@@ -1,58 +1,21 @@
 
-      
-  
-  if object_id ('"stg"."Auct_Reservation_Incr_temp_view"','V') is not null
-    begin
-    drop view "stg"."Auct_Reservation_Incr_temp_view"
-    end
+      EXEC('
+           BEGIN TRANSACTION
+           update "DedicatedSQLpoolBJ"."stg"."Auct_Reservation_Incr"
+          set dbt_valid_to = TMP.dbt_valid_to
+          from "DedicatedSQLpoolBJ"."stg"."#Auct_Reservation_Incr__dbt_tmp" TMP
+          where "DedicatedSQLpoolBJ"."stg"."Auct_Reservation_Incr".dbt_scd_id = TMP.dbt_scd_id
+            and TMP.dbt_change_type in (''update'', ''delete'')
+            and "DedicatedSQLpoolBJ"."stg"."Auct_Reservation_Incr".dbt_valid_to is null;
 
-
-   
-    
-  if object_id ('"stg"."Auct_Reservation_Incr"','U') is not null
-    begin
-    drop table "stg"."Auct_Reservation_Incr"
-    end
-
-
-   EXEC('create view stg.Auct_Reservation_Incr_temp_view as
-    
-
-    select *,
-        
-    CONVERT(VARCHAR(32), HashBytes(''MD5'', 
-        coalesce(cast(ReservationID as varchar(max)), '''')  + ''|'' + 
-    
-        coalesce(cast(CONVERT(DATETIME2, ''2022-07-29 18:26:49.306067'') as varchar(max)), '''') 
-    ), 2)
- as dbt_scd_id,
-        CONVERT(DATETIME2, ''2022-07-29 18:26:49.306067'') as dbt_updated_at,
-        CONVERT(DATETIME2, ''2022-07-29 18:26:49.306067'') as dbt_valid_from,
-        nullif(CONVERT(DATETIME2, ''2022-07-29 18:26:49.306067''), CONVERT(DATETIME2, ''2022-07-29 18:26:49.306067'')) as dbt_valid_to
-    from (
-        
-	
-	SELECT * from stg.[Auct_Reservation_Inter]
-    ) sbq
-
-
-
-    ');
-
-  CREATE TABLE "stg"."Auct_Reservation_Incr"
-    WITH(
-      DISTRIBUTION = ROUND_ROBIN,
-      CLUSTERED COLUMNSTORE INDEX
-      )
-    AS (SELECT * FROM stg.Auct_Reservation_Incr_temp_view)
-
-   
-  
-  if object_id ('"stg"."Auct_Reservation_Incr_temp_view"','V') is not null
-    begin
-    drop view "stg"."Auct_Reservation_Incr_temp_view"
-    end
-
+            insert into "DedicatedSQLpoolBJ"."stg"."Auct_Reservation_Incr" (
+                  "ReservationID", "CustomerAccountID", "AddressID", "PhoneID", "SiteCategoryID", "SiteID", "EventID", "StartDate", "EndDate", "IsCheckedIn", "CheckinDate", "CheckOutDate", "ReservationStatusID", "ChargeID", "OccupantCustomerAccountID", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
+                  )
+            select "ReservationID", "CustomerAccountID", "AddressID", "PhoneID", "SiteCategoryID", "SiteID", "EventID", "StartDate", "EndDate", "IsCheckedIn", "CheckinDate", "CheckOutDate", "ReservationStatusID", "ChargeID", "OccupantCustomerAccountID", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
+            from "DedicatedSQLpoolBJ"."stg"."#Auct_Reservation_Incr__dbt_tmp" 
+            where dbt_change_type = ''insert'' ; 
+           COMMIT TRANSACTION;
+           ');
 
 
   

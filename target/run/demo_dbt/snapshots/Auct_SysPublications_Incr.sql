@@ -1,58 +1,21 @@
 
-      
-  
-  if object_id ('"stg"."Auct_SysPublications_Incr_temp_view"','V') is not null
-    begin
-    drop view "stg"."Auct_SysPublications_Incr_temp_view"
-    end
+      EXEC('
+           BEGIN TRANSACTION
+           update "DedicatedSQLpoolBJ"."stg"."Auct_SysPublications_Incr"
+          set dbt_valid_to = TMP.dbt_valid_to
+          from "DedicatedSQLpoolBJ"."stg"."#Auct_SysPublications_Incr__dbt_tmp" TMP
+          where "DedicatedSQLpoolBJ"."stg"."Auct_SysPublications_Incr".dbt_scd_id = TMP.dbt_scd_id
+            and TMP.dbt_change_type in (''update'', ''delete'')
+            and "DedicatedSQLpoolBJ"."stg"."Auct_SysPublications_Incr".dbt_valid_to is null;
 
-
-   
-    
-  if object_id ('"stg"."Auct_SysPublications_Incr"','U') is not null
-    begin
-    drop table "stg"."Auct_SysPublications_Incr"
-    end
-
-
-   EXEC('create view stg.Auct_SysPublications_Incr_temp_view as
-    
-
-    select *,
-        
-    CONVERT(VARCHAR(32), HashBytes(''MD5'', 
-        coalesce(cast(PubID as varchar(max)), '''')  + ''|'' + 
-    
-        coalesce(cast(CONVERT(DATETIME2, ''2022-07-29 18:28:18.530674'') as varchar(max)), '''') 
-    ), 2)
- as dbt_scd_id,
-        CONVERT(DATETIME2, ''2022-07-29 18:28:18.530674'') as dbt_updated_at,
-        CONVERT(DATETIME2, ''2022-07-29 18:28:18.530674'') as dbt_valid_from,
-        nullif(CONVERT(DATETIME2, ''2022-07-29 18:28:18.530674''), CONVERT(DATETIME2, ''2022-07-29 18:28:18.530674'')) as dbt_valid_to
-    from (
-        
-	
-	SELECT * from stg.[Auct_SysPublications_Inter]
-    ) sbq
-
-
-
-    ');
-
-  CREATE TABLE "stg"."Auct_SysPublications_Incr"
-    WITH(
-      DISTRIBUTION = ROUND_ROBIN,
-      CLUSTERED COLUMNSTORE INDEX
-      )
-    AS (SELECT * FROM stg.Auct_SysPublications_Incr_temp_view)
-
-   
-  
-  if object_id ('"stg"."Auct_SysPublications_Incr_temp_view"','V') is not null
-    begin
-    drop view "stg"."Auct_SysPublications_Incr_temp_view"
-    end
-
+            insert into "DedicatedSQLpoolBJ"."stg"."Auct_SysPublications_Incr" (
+                  "PubID", "Description", "Name", "Repl_Freq", "Status", "Sync_Method", "Snapshot_JobID", "Retention", "Alt_Snapshot_Folder", "Pre_Snapshot_Script", "Post_Snapshot_Script", "Ftp_Address", "Ftp_Port", "Ftp_SubDirectory", "Ftp_Login", "Ftp_Password", "Conflict_Retention", "Conflict_Policy", "Queue_Type", "Ad_GUIDName", "Backward_Comp_Level", "Min_AutonoSync_lsn", "Replicate_Ddl", "Options", "Originator_ID", "IndepEndent_Agent", "Allow_SubScription_Copy", "Centralized_Conflicts", "Allow_Initialize_From_Backup", "Allow_Sync_Tran", "Autogen_Sync_Procs", "Allow_Queued_Tran", "Snapshot_In_DefaultFolder", "Compress_Snapshot", "Allow_Dts", "Immediate_Sync", "Enabled_For_Internet", "Allow_Push", "Allow_Pull", "Allow_Anonymous", "Immediate_Sync_Ready", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
+                  )
+            select "PubID", "Description", "Name", "Repl_Freq", "Status", "Sync_Method", "Snapshot_JobID", "Retention", "Alt_Snapshot_Folder", "Pre_Snapshot_Script", "Post_Snapshot_Script", "Ftp_Address", "Ftp_Port", "Ftp_SubDirectory", "Ftp_Login", "Ftp_Password", "Conflict_Retention", "Conflict_Policy", "Queue_Type", "Ad_GUIDName", "Backward_Comp_Level", "Min_AutonoSync_lsn", "Replicate_Ddl", "Options", "Originator_ID", "IndepEndent_Agent", "Allow_SubScription_Copy", "Centralized_Conflicts", "Allow_Initialize_From_Backup", "Allow_Sync_Tran", "Autogen_Sync_Procs", "Allow_Queued_Tran", "Snapshot_In_DefaultFolder", "Compress_Snapshot", "Allow_Dts", "Immediate_Sync", "Enabled_For_Internet", "Allow_Push", "Allow_Pull", "Allow_Anonymous", "Immediate_Sync_Ready", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
+            from "DedicatedSQLpoolBJ"."stg"."#Auct_SysPublications_Incr__dbt_tmp" 
+            where dbt_change_type = ''insert'' ; 
+           COMMIT TRANSACTION;
+           ');
 
 
   
