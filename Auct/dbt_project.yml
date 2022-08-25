@@ -6,6 +6,16 @@ name: 'BJ_DBT'
 version: '1.0.0'
 config-version: 2
 
+vars:
+  # The `start_date` variable will be accessible in all resources
+  BidderContactType: 'Bidder'
+  ConsignorContactType: 'Consignor'
+  MaxValidDate: '9999-12-31'
+  MinValidDate: '1753-01-01'
+  # The `platforms` variable is only accessible to resources in the my_dbt_project project
+  # my_dbt_project:
+  #   platforms: ['web', 'mobile']
+    
 # This setting configures which "profile" dbt uses for this project.
 profile: 'BJ_DBT'
 

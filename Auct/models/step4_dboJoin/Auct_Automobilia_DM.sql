@@ -1,8 +1,7 @@
 {{ config(materialized='table',schema='dbo')}}
 with Auct_Automobilia_Ex as (
     Select
-    -- [AutomobiliaConditionID],[Description],
-    [AutomobiliaID],[ItemID],[AutomobiliaTypeID],[Created],[UpdateEventID],[LotNumber],[CustomerAccountID],[AuctionID],[Comments]
+    *
     From stg.[Auct_Automobilia_FinalView] 
 ),
 Auct_Item_Ex as(

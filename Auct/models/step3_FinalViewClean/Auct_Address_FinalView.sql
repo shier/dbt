@@ -38,10 +38,9 @@ state_cte AS
         and Auct_Address_Ex.City in 
             (select distinct city from Lookup_ZipUS_Ex) 
         then CURRENT_TIMESTAMP 
-        else null end as address_clean_datetime,
-	[WeBaddressID]
+        else null end as address_clean_datetime
     FROM 
-        [dbo].[Auct_Address_Ex]
+        [Auct_Address_Ex]
     left join Lookup_ZipUS_Ex
                 on PostalCode = Lookup_ZipUS_Ex.zip
                 and lower(Lookup_ZipUS_Ex.city) = lower(Auct_Address_Ex.city)
@@ -73,7 +72,6 @@ country_cte as
     UpdateEventID,
     CareOf,
     IsActive,
-	WeBaddressID
     case when Country is null  
         and (City is not null and PostalCode is not null and State is not null) 
         and len(State)=2 and len(PostalCode)=5 
@@ -110,8 +108,7 @@ city_cte as
     ,
     case when country_cte.city is null or country_cte.city = ''
         then CURRENT_TIMESTAMP 
-        else null end as address_clean_datetime,
-	WeBaddressID
+        else null end as address_clean_datetime
     FROM country_cte
     left join Lookup_ZipUS_Ex
         on PostalCode = Lookup_ZipUS_Ex.zip
@@ -139,24 +136,22 @@ cte_fix_null as
         or CountryID = ''
         or CareOf = ''
         then concat(address_clean_reason,'fix empty strings to null;')
-        else address_clean_reason end as address_clean_reason,
-	WeBaddressID
+        else address_clean_reason end as address_clean_reason
 from city_cte)
 
 select
     [AddressID],
     [Address1],
     [Address2],
-    [new_city] as [City],
-    [State] as [StateProvince],
+    new_city as [City],
+    [State]  as [StateProvince],
+    [County],
     [PostalCode],
     [CountryID] as [Country],
     [Created],
     [UpdateEventID],
     [CareOf],
     [IsActive] as [Active],
-	[County],
-	[WeBaddressID]
     [address_clean_reason],
     case when 
         address_clean_reason is not null
@@ -164,3 +159,4 @@ select
         else null
     end as address_clean_datetime
 from cte_fix_null;
+

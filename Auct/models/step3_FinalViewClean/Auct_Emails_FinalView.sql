@@ -1,7 +1,7 @@
 {{ config(materialized='view',schema='stg')}}
 With Auct_Emails_Ex As(
 	Select
-	[EmailID],[EmailAddress],[ContactID],[CustomerAccountID],[Use],[Created],[UpdateEventID],[EmailBlastOptin],
+	[EmailID],[EmailAddress],[ContactID],[CustomerAccountID],[Use_C] as [Use],[Created],[UpdateEventID],[EmailBlastOptin],
 	[EmailBlastOptinPartners],[Active] 
 	From stg.[Auct_Emails_Incr] 
 	Where [dbt_valid_to] is null

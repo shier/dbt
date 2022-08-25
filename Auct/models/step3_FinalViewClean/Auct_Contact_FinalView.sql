@@ -275,9 +275,6 @@ FROM
     stg1
 )
 
-	
-	[PartnerName],[HasAccountigLink],[AccountingID],[VendorAccountingID],
-	[CommonID],[BCCustomerID],[BCVendorID],
 SELECT
     [ContactID],[Name],[SalutationID],[FirstName],[MiddleInitial],[LastName],[ContactSuffixID],[ShortNote],
     UserID as [UsersID],
@@ -301,16 +298,3 @@ SELECT
     BCVendorID   
 FROM stg2
 
-SELECT
-	[ContactID],[Name],[SalutationID],[FirstName],[MiddleInitial],[LastName],[ContactSuffixID],[ShortNote],[UsersID],[ContactStatusID],
-	[PreferredContactMethodID],[PreferredContactTime],[SourceID],[Created],[UpdateEventID],[DlNumber],[DlState],[SSN],[DOB],
-	[PassportNumber],[PassportCountry],[LegacyID],[IDRef],[Active],[PartnerName],[HasAccountigLink],[AccountingID],[VendorAccountingID],
-	[CommonID],[BCCustomerID],[BCVendorID],
-    CASE
-        WHEN Email LIKE '%cc:%'
-        THEN REPLACE(Email, 'cc:', '')
-        WHEN Email LIKE '%business:%'
-        THEN REPLACE(Email, 'business:', '')
-        ELSE LOWER(Email)
-    END AS EmailAddress
-FROM stg2
