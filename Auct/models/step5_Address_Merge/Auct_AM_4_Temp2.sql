@@ -1,46 +1,6 @@
-{{ config(materialized='view',schema='stg')}}
-SELECT 
-        [CustomerAccountID],
-        [CurrentCompanyID],
-        [AddressID],
-        [Address],
-        [City],
-        [StateProvince],
-        [PostalCode],
-        [Country],
-        [AddressType],
-        [AddressStatus],
-        [IsDefaultAddress],
-        [IsActiveAddress],
-        [EffectiveStartDate],
-        ISNULL([EffectiveEndDate], '{{ var('MaxValidDate') }}') AS [EffectiveEndDate]
-    FROM (
-        SELECT     
-            [CustomerAccountID],
-            [CurrentCompanyID],
-            [AddressID],
-            [Address],
-            [City],
-            [StateProvince],
-            [PostalCode],
-            [Country],
-            [AddressType],
-            [AddressStatus],
-            [IsDefaultAddress],
-            [IsActiveAddress],
-            [CreatedAddress] AS [EffectiveStartDate],
-            CASE WHEN [CustomerAccountID] IS NOT NULL
-                THEN LEAD([CreatedAddress]) OVER(
-                        PARTITION BY [CustomerAccountID], [AddressID], [AddressType]
-                        ORDER BY [CustomerAccountID], [AddressID], [AddressType], [CreatedAddress]
-                    ) 
-            ELSE LEAD([CreatedAddress]) OVER(
-                        PARTITION BY [AddressID], [AddressType]
-                        ORDER BY [AddressID], [AddressType], [CreatedAddress]
-                    ) 
-            END AS [EffectiveEndDate]
-        FROM ( 
-            SELECT
+{{ config(materialized='table',schema='stg')}}
+
+ SELECT
                 [CustomerAccountID],
                 [CurrentCompanyID],
                 [AddressID],
@@ -102,6 +62,4 @@ SELECT
                 -- (Comment) SELECT COUNT(*) FROM Address_merged; -- 243041 
                 -- (Comment) SELECT COUNT(DISTINCT [AddressID]) FROM Address_merged; -- 243041
                 ) AS temp1
-            ) AS temp2
-        WHERE [RowNumber]=1
-        ) AS temp3
+            

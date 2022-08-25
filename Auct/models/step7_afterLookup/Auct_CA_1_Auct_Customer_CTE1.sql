@@ -1,4 +1,4 @@
-{{ config(materialized='view',schema='stg')}}
+{{ config(materialized='table',schema='stg')}}
 With ValidDates AS (
     SELECT [CustomerAccountID], [EffectiveStartDate] AS [Date] FROM [stg].[Auct_Email_Merge]
     UNION

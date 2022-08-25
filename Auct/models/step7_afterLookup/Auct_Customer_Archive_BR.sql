@@ -129,4 +129,4 @@
             THEN '1'
         ELSE '0'
         END AS [IsCurrent] 
-    FROM Auct_CA_2_Temp2
+    FROM Auct_CA_3_Temp2

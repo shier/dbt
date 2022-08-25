@@ -90,7 +90,7 @@ SELECT
                     [IsActiveAddress],
                     [EffectiveStartDate],
                     [EffectiveEndDate]
-                FROM Address_merged1
+                FROM Auct_AM_5_Address_Merged1
                 ) AS SRC1
             ) AS SRC2
             PIVOT (MAX(Val) FOR Col IN ([home_Address], [business_Address], [local_Address], [dealer_Address], [mailing_Address])) AS PVT

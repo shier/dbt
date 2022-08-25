@@ -1,4 +1,4 @@
-{{ config(materialized='view',schema='stg')}}
+{{ config(materialized='table',schema='stg')}}
 
   SELECT 
         [AddressID],

@@ -1,4 +1,4 @@
-{{ config(materialized='view',schema='stg')}}
+{{ config(materialized='table',schema='stg')}}
 
 SELECT 
                 cxstg1.[CustomerAccountID],
@@ -128,5 +128,4 @@ SELECT
                 ON cxstg1.[CustomerAccountID]=conmrg.[CustomerAccountID]
                     -- AND cxstg1.[ContactID]=conmrg.[ContactID] -- WRONG! E.x. [CustomerAccountID] IN (28827)
         
-            GROUP BY [CustomerAccountID], [CurrentCompanyID], [PresumedCustomerType], [ContactID], [Name], [Email], [IsActiveEmail], [EmailBlastOptIn], [AddressID], [HomeAddress], [BusinessAddress], [LocalAddress], [DealerAddress], [MailingAddress], [City], [State], [PostalCode], [Country], [AddressStatus], [IsDefaultAddress], [IsActiveAddress], [EffectiveStartDate], [EffectiveEndDate]
             
