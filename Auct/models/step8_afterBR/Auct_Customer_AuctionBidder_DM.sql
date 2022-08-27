@@ -10,7 +10,7 @@ WITH  Auct_Customer_AuctionBidder_CTE AS (
         cxarchive.[PresumedCustomerType], 
         cxarchive.[ContactID], 
         cxarchive.[Name], 
-        cxarchive.[Email], 
+        cxarchive.[EmailAddress], 
         cxarchive.[IsActiveEmail], 
         cxarchive.[EmailBlastOptIn], 
         -- [PhoneID], 
@@ -143,7 +143,7 @@ WITH  Auct_Customer_AuctionBidder_CTE AS (
         ON aucbid.[BidderID]=bid.[BidderID] 
     LEFT JOIN [dbo].[Auct_Auction_DM] auc 
         ON aucbid.[AuctionID]=auc.[AuctionID]
-    LEFT JOIN [dbo].[Auct_Customer_Archive_BR] cxarchive
+    LEFT JOIN [dbo].[Auct_Customer_Archive_BR_Full] cxarchive
         ON bid.[CustomerAccountID]=cxarchive.[CustomerAccountID]
             AND aucbid.[ShippingAddressID]=cxarchive.[AddressID]
     LEFT JOIN [stg].[Auct_Customer_ContactType_lookup] conty 
@@ -175,7 +175,7 @@ SELECT
     [AuctionBidderFlag], 
     [ContactID], 
     [Name], 
-    [Email], 
+    [EmailAddress], 
     [IsActiveEmail], 
     [EmailBlastOptIn], 
     -- [PhoneID], 

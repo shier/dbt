@@ -16,10 +16,6 @@
 
    EXEC('create view dbo.Auct_Customer_Archive_BR__dbt_tmp_temp_view as
     
-DECLARE @MinValidDate AS DATETIME, @MaxValidDate AS DATETIME;
-SET @MinValidDate=''1753-01-01'';
-SET @MaxValidDate=''9999-12-31'';
-
 With ValidDates AS (
     SELECT [CustomerAccountID], [EffectiveStartDate] AS [Date] FROM [stg].[Auct_Email_Merge]
     UNION
@@ -54,7 +50,7 @@ With ValidDates AS (
     SELECT 
         addrmrg.[CustomerAccountID],
         emailmrg.[ContactID],
-        emailmrg.[Email],
+        emailmrg.[EmailAddress],
         emailmrg.[IsActiveEmail],
         emailmrg.[EmailBlastOptIn],
         -- phmrg.[PhoneID],
@@ -182,7 +178,7 @@ With ValidDates AS (
         ON vdrstg.[CustomerAccountID]=phmrg.[CustomerAccountID]
             AND phmrg.[EffectiveEndDate]>vdrstg.[EffectiveStartDate]
             AND  phmrg.[EffectiveStartDate]<vdrstg.[EffectiveEndDate] 
-    WHERE COALESCE(emailmrg.[Email], phmrg.[MobilePhone_PhoneNumber], phmrg.[DirectPhone_PhoneNumber], phmrg.[HomePhone_PhoneNumber], phmrg.[HomeFax_PhoneNumber], phmrg.[DealerMobile_PhoneNumber], phmrg.[DealerPhone_PhoneNumber], phmrg.[DealerFax_PhoneNumber], phmrg.[BusinessPhone_PhoneNumber], phmrg.[BusinessFax_PhoneNumber], phmrg.[BusinessMobile_PhoneNumber], phmrg.[VendorPhone_PhoneNumber], phmrg.[VendorFax_PhoneNumber], phmrg.[RequestNumber_PhoneNumber], phmrg.[RequestFax_PhoneNumber], phmrg.[LocalPhone_PhoneNumber], phmrg.[Pager_PhoneNumber], phmrg.[UnknownPhoneType_PhoneNumber], addrmrg.[HomeAddress], addrmrg.[BusinessAddress], addrmrg.[LocalAddress], addrmrg.[DealerAddress], addrmrg.[MailingAddress]) IS NOT NULL
+    WHERE COALESCE(emailmrg.[EmailAddress], phmrg.[MobilePhone_PhoneNumber], phmrg.[DirectPhone_PhoneNumber], phmrg.[HomePhone_PhoneNumber], phmrg.[HomeFax_PhoneNumber], phmrg.[DealerMobile_PhoneNumber], phmrg.[DealerPhone_PhoneNumber], phmrg.[DealerFax_PhoneNumber], phmrg.[BusinessPhone_PhoneNumber], phmrg.[BusinessFax_PhoneNumber], phmrg.[BusinessMobile_PhoneNumber], phmrg.[VendorPhone_PhoneNumber], phmrg.[VendorFax_PhoneNumber], phmrg.[RequestNumber_PhoneNumber], phmrg.[RequestFax_PhoneNumber], phmrg.[LocalPhone_PhoneNumber], phmrg.[Pager_PhoneNumber], phmrg.[UnknownPhoneType_PhoneNumber], addrmrg.[HomeAddress], addrmrg.[BusinessAddress], addrmrg.[LocalAddress], addrmrg.[DealerAddress], addrmrg.[MailingAddress]) IS NOT NULL
 )
 , Auct_Customer AS (
     SELECT 
@@ -191,7 +187,7 @@ With ValidDates AS (
         [PresumedCustomerType],
         [ContactID],
         [Name],
-        [Email],
+        [EmailAddress],
         [IsActiveEmail],
         [EmailBlastOptIn],
         -- [PhoneID],
@@ -315,7 +311,7 @@ With ValidDates AS (
             [PresumedCustomerType],
             [ContactID],
             [Name],
-            [Email],
+            [EmailAddress],
             [IsActiveEmail],
             [EmailBlastOptIn],
             -- [PhoneID],
@@ -441,7 +437,7 @@ With ValidDates AS (
                 END AS [PresumedCustomerType],
                 COALESCE(conmrg.[ContactID], cxstg1.[ContactID]) AS [ContactID],
                 conmrg.[Name],
-                cxstg1.[Email],
+                cxstg1.[EmailAddress],
                 cxstg1.[IsActiveEmail],
                 cxstg1.[EmailBlastOptIn],
                 -- cxstg1.[PhoneID],
@@ -559,7 +555,7 @@ With ValidDates AS (
                 ON cxstg1.[CustomerAccountID]=conmrg.[CustomerAccountID]
                     -- AND cxstg1.[ContactID]=conmrg.[ContactID] -- WRONG! E.x. [CustomerAccountID] IN (28827)
                 ) AS temp1
-            GROUP BY [CustomerAccountID], [CurrentCompanyID], [PresumedCustomerType], [ContactID], [Name], [Email], [IsActiveEmail], [EmailBlastOptIn], [AddressID], [HomeAddress], [BusinessAddress], [LocalAddress], [DealerAddress], [MailingAddress], [City], [State], [PostalCode], [Country], [AddressStatus], [IsDefaultAddress], [IsActiveAddress], [EffectiveStartDate], [EffectiveEndDate]
+            GROUP BY [CustomerAccountID], [CurrentCompanyID], [PresumedCustomerType], [ContactID], [Name], [EmailAddress], [IsActiveEmail], [EmailBlastOptIn], [AddressID], [HomeAddress], [BusinessAddress], [LocalAddress], [DealerAddress], [MailingAddress], [City], [State], [PostalCode], [Country], [AddressStatus], [IsDefaultAddress], [IsActiveAddress], [EffectiveStartDate], [EffectiveEndDate]
             ) AS temp2
 )
 SELECT 
@@ -575,7 +571,7 @@ SELECT
     [PresumedCustomerType],
     [ContactID],
     [Name],
-    [Email],
+    [EmailAddress],
     [IsActiveEmail],
     [EmailBlastOptIn],
     -- [PhoneID],

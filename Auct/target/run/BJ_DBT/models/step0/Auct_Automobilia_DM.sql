@@ -45,7 +45,7 @@ SELECT
 	autom.[AUTOMOBILIACONDITIONID],
 	autom.[ITEMID],
 	ISNULL(itemty.[NAME], ''Car'') AS [ITEMTYPE],
-	NULLIF(item.[DESCR], '''') AS [ITEMDESCR],
+	NULLIF(item.[DESCR], '''') AS [ItemDescription],
 	-- autom.[DESCRIPTION],
 	autom.[CREATED],
 	autom.[UPDATEEVENTID],

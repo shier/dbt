@@ -10,6 +10,7 @@ Auct_ItemType_Ex as (
 ),
 Auct_Car_stg AS (
 	SELECT 
+		
 		car.[CARID],
 		car.[VIN],
 		car.[YEAR],
@@ -80,7 +81,7 @@ SELECT
 	[YEAR],
 	[ITEMID],
 	[ITEMTYPE],
-	[ITEMDESCR],
+	[ITEMDESCR] as [ItemDescription],
 	[CARMAKEID],
 	[CARMODELID],
 	[CARTYPEID],

@@ -18,8 +18,7 @@
     
 with Auct_Automobilia_Ex as (
     Select
-    -- [AutomobiliaConditionID],[Description],
-    [AutomobiliaID],[ItemID],[AutomobiliaTypeID],[Created],[UpdateEventID],[LotNumber],[CustomerAccountID],[AuctionID],[Comments]
+    *
     From stg.[Auct_Automobilia_FinalView] 
 ),
 Auct_Item_Ex as(
@@ -46,7 +45,7 @@ SELECT
 	autom.[AUTOMOBILIACONDITIONID],
 	autom.[ITEMID],
 	ISNULL(itemty.[NAME], ''Car'') AS [ITEMTYPE],
-	NULLIF(item.[DESCR], '''') AS [ITEMDESCR],
+	NULLIF(item.[DESCR], '''') AS [ItemDescription],
 	-- autom.[DESCRIPTION],
 	autom.[CREATED],
 	autom.[UPDATEEVENTID],

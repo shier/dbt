@@ -23,7 +23,7 @@ Email_merged_CTE AS (
     SELECT 
         [CustomerAccountID],
         [ContactID],
-        [Email],
+        [EmailAddress],
         [IsActiveEmail],
         [EmailBlastOptIn],
         [EffectiveStartDate], 
@@ -36,7 +36,7 @@ Email_merged_CTE AS (
         SELECT 
             [CustomerAccountID],
             [ContactID],
-            [Email],
+            [EmailAddress],
             [IsActiveEmail],
             [EmailBlastOptIn],
             [EffectiveStartDate],
@@ -49,7 +49,7 @@ Email_merged_CTE AS (
             SELECT 
                 [CustomerAccountID],
                 [ContactID],
-                [Email],
+                [EmailAddress],
                 [IsActiveEmail],
                 NULLIF([EmailBlastOptIn], '') AS [EmailBlastOptIn],
                 [Created] AS [EffectiveStartDate],
@@ -58,33 +58,33 @@ Email_merged_CTE AS (
                     ORDER BY [CustomerAccountID], [ContactID], [Created]
                 ) AS [EffectiveEndDate],
                 ROW_NUMBER() OVER(
-                    PARTITION BY [CustomerAccountID], [ContactID], [Email], [IsActiveEmail], NULLIF([EmailBlastOptIn], ''), [Created]
-                    ORDER BY [CustomerAccountID], [ContactID], [Email], [IsActiveEmail], NULLIF([EmailBlastOptIn], ''), [Created]
+                    PARTITION BY [CustomerAccountID], [ContactID], [EmailAddress], [IsActiveEmail], NULLIF([EmailBlastOptIn], ''), [Created]
+                    ORDER BY [CustomerAccountID], [ContactID], [EmailAddress], [IsActiveEmail], NULLIF([EmailBlastOptIn], ''), [Created]
                 ) AS [RowNumber]
             FROM (
                 SELECT 
                     cxacct.[CustomerAccountID], 
                     con.[ContactID],
-                    con.[Email] AS [Email], -- (Update) con.[Email], OR con.[EmailAddress] AS [Email], 
-                    con.[IsActive] AS [IsActiveEmail], -- (Update) con.[IsActive] AS [IsActiveEmail], OR con.[Active] AS [IsActiveEmail],
+                    con.[EmailAddress] AS [EmailAddress], -- (Update) con.[EmailAddress], OR con.[EmailAddress] AS [EmailAddress], 
+                    con.[Active] AS [IsActiveEmail], -- (Update) con.[IsActive] AS [IsActiveEmail], OR con.[Active] AS [IsActiveEmail],
                     ''[EmailBlastOptIn],
                     con.[Created]
-                FROM .[Auct_Contact_Ex] con -- FROM .[Auct_Contact_Ex] con -- (Update) need replace .[Auct_Contact_Ex] with .[Auct_Contact_Ex] !!!
-                LEFT JOIN .[Auct_CustomerAccount_Ex] cxacct -- (Update) need replace .[Auct_CustomerAccount_Ex] with .[Auct_CustomerAccount]
+                FROM [Auct_Contact_Ex] con -- FROM .[Auct_Contact_Ex] con -- (Update) need replace .[Auct_Contact_Ex] with .[Auct_Contact_Ex] !!!
+                LEFT JOIN [Auct_CustomerAccount_Ex] cxacct -- (Update) need replace .[Auct_CustomerAccount_Ex] with .[Auct_CustomerAccount]
                     ON con.[ContactID]=cxacct.[ContactID]
-                LEFT JOIN .[Auct_Invoice_Ex] inv -- (Update) need replace .[Auct_Invoice_Ex] with .[Auct_Invoice]
+                LEFT JOIN [Auct_Invoice_Ex] inv -- (Update) need replace .[Auct_Invoice_Ex] with .[Auct_Invoice]
                     ON cxacct.[ContactID]=inv.[ContactID]
-                WHERE NULLIF(con.[Email], '') IS NOT NULL -- (Update) WHERE NULLIF(con.[Email], '') IS NOT NULL OR NULLIF(con.[EmailAddress], '') IS NOT NULL
+                WHERE NULLIF(con.[EmailAddress], '') IS NOT NULL -- (Update) WHERE NULLIF(con.[EmailAddress], '') IS NOT NULL OR NULLIF(con.[EmailAddress], '') IS NOT NULL
                 UNION 
                 SELECT
                     email.[CustomerAccountID],
                     email.[ContactID],
-                    email.[Email], -- (Update) email.[Email], or email.[EmailAddress], 
-                    email.[IsActive], -- (Update) email.[IsActive], OR email.[Active],
+                    email.[EmailAddress], -- (Update) email.[EmailAddress], or email.[EmailAddress], 
+                    email.[Active], -- (Update) email.[IsActive], OR email.[Active],
                     email.[EmailBlastOptIn],
                     email.[Created]
-                FROM .[Auct_Emails_Ex] email -- need replace .[Auct_Emails_Ex] with .[Auct_Emails_Ex]
-                WHERE NULLIF(email.[Email], '') IS NOT NULL -- (Update) WHERE NULLIF(email.[Email], '') IS NOT NULL OR WHERE NULLIF(email.[EmailAddress], '') IS NOT NULL
+                FROM [Auct_Emails_Ex] email -- need replace .[Auct_Emails_Ex] with .[Auct_Emails_Ex]
+                WHERE NULLIF(email.[EmailAddress], '') IS NOT NULL -- (Update) WHERE NULLIF(email.[EmailAddress], '') IS NOT NULL OR WHERE NULLIF(email.[EmailAddress], '') IS NOT NULL
                 ) AS temp1
             ) AS temp2
         WHERE [RowNumber]=1
@@ -94,7 +94,7 @@ SELECT
     [CustomerAccountID],
     [ContactID],
     -- [Name],
-    [Email],
+    [EmailAddress],
     [IsActiveEmail],
     [EmailBlastOptIn],
     [EffectiveStartDate], 

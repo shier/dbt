@@ -1,16 +1,6 @@
 {{ config(materialized='table',schema='stg')}}
-With Auct_PhoneAssignments_Ex AS (
-	 select * from stg.[Auct_PhoneAssignments_FinalView]
-),
-Auct_PhoneStatus_Ex AS (
-	 select * from stg.[Auct_PhoneStatus_FinalView]
-),
-Auct_PhoneType_Ex AS (
-	 select * from stg.[Auct_PhoneType_FinalView]
-),
-Auct_Phone_Ex AS (
-	 select * from stg.[Auct_Phone_Finalview]
-),
+With 
+
 Phone_merged1 AS (
     SELECT 
         [CustomerAccountID],
@@ -21,7 +11,7 @@ Phone_merged1 AS (
         [IsDefaultPhone],
         [IsActivePhone],
         [EffectiveStartDate],
-        ISNULL([EffectiveEndDate], @MaxValidDate) AS [EffectiveEndDate]
+        ISNULL([EffectiveEndDate], '{{ var('MaxValidDate') }}') AS [EffectiveEndDate]
     FROM (
         SELECT 
             [CustomerAccountID],
@@ -72,15 +62,15 @@ Phone_merged1 AS (
                     NULLIF(phty.[Name], '[None]') AS [PhoneType], -- (Update) NULLIF(phty.[PhoneType], '[None]') AS [PhoneType],
                     phsts.[Name] AS [PhoneStatus], -- (Update) phsts.[PhoneStatus],
                     phasgmt.[IsDefault] AS [IsDefaultPhone],
-                    ph.[IsActive] AS [IsActivePhone], -- (Update) ph.[IsActive] AS [IsActivePhone], OR ph.[Active] AS [IsActivePhone],
+                    ph.[Active] AS [IsActivePhone], -- (Update) ph.[IsActive] AS [IsActivePhone], OR ph.[Active] AS [IsActivePhone],
                     ph.[Created] AS [CreatedPhone],
                     phasgmt.[Created] AS [CreatedPhoneAssignments] -- (Update) phasgmt.[Created] AS [CreatedPhoneAssignments]
-                FROM [dbo].[Auct_PhoneAssignments_Ex] phasgmt -- (Update) need replace [dbo].[Auct_PhoneAssignments_Ex] with [dbo].[Auct_PhoneAssignments]
-                FULL OUTER JOIN [dbo].[Auct_Phone_Ex] ph -- (Update) need replace [dbo].[Auct_Phone_Ex] with [dbo].[Auct_Phone_Ex]
+                FROM stg.[Auct_PhoneAssignments_FinalView] phasgmt -- (Update) need replace [dbo].[Auct_PhoneAssignments_Ex] with [dbo].[Auct_PhoneAssignments]
+                FULL OUTER JOIN stg.[Auct_Phone_Finalview] ph -- (Update) need replace [dbo].[Auct_Phone_Ex] with [dbo].[Auct_Phone_Ex]
                     ON phasgmt.[PhoneID]=ph.[PhoneID]
-                LEFT JOIN [dbo].[Auct_PhoneType_Ex] phty -- (Update) need replace [dbo].[Auct_PhoneType_Ex] with [dbo].[Auct_PhoneType]
+                LEFT JOIN stg.[Auct_PhoneType_FinalView] phty -- (Update) need replace [dbo].[Auct_PhoneType_Ex] with [dbo].[Auct_PhoneType]
                     ON phasgmt.[PhoneTypeID]=phty.[PhoneTypeID]
-                LEFT JOIN [dbo].[Auct_PhoneStatus_Ex] phsts -- (Update) need replace [dbo].[Auct_PhoneStatus_Ex] with [dbo].[Auct_PhoneStatus]
+                LEFT JOIN stg.[Auct_PhoneStatus_FinalView] phsts -- (Update) need replace [dbo].[Auct_PhoneStatus_Ex] with [dbo].[Auct_PhoneStatus]
                     ON phasgmt.[PhoneStatusID]=phsts.[PhoneStatusID]
                 WHERE (CASE WHEN ph.[AreaCode] IS NULL THEN ph.[PhoneNumber] WHEN ph.[AreaCode] IS NOT NULL THEN CONCAT(ph.[AreaCode], '-', ph.[PhoneNumber]) END) IS NOT NULL
                 ) AS temp1
@@ -102,11 +92,11 @@ Phone_merged1 AS (
             CASE WHEN [CustomerAccountID] IS NOT NULL
                 THEN ROW_NUMBER() OVER(
                     PARTITION BY [CustomerAccountID]
-                    ORDER BY [EffectiveStartDate] DESC, ISNULL([EffectiveEndDate], @MaxValidDate) DESC
+                    ORDER BY [EffectiveStartDate] DESC, ISNULL([EffectiveEndDate], '{{ var('MaxValidDate') }}') DESC
                     ) 
             ELSE ROW_NUMBER() OVER(
                 PARTITION BY [EffectiveStartDate]
-                ORDER BY [EffectiveStartDate] DESC, ISNULL([EffectiveEndDate], @MaxValidDate) DESC
+                ORDER BY [EffectiveStartDate] DESC, ISNULL([EffectiveEndDate], '{{ var('MaxValidDate') }}') DESC
                 )
             END AS [NewRowNumber]
         FROM (

@@ -16,29 +16,13 @@
 
    EXEC('create view dbo.Auct_Bidder_DM__dbt_tmp_temp_view as
     
-with Auct_Bidder_Ex (
-    select * from Auct_Bidder_FinalView
-)
+
 SELECT
    HASHBYTES(''SHA2_256'', 
         COALESCE(CAST([BIDDERID] AS VARCHAR(20)), '''')
     ) AS [Bidder_Skey],
-	[BIDDERID],
-	[BIDDERTYPEID],
-	[BIDDERSTATUSID],
-	[CUSTOMERACCOUNTID],
-	[BIDDERNUMBER],
-	[ANNIVERSARYDATE],
-	[APPROVEDBY],
-	[COMMENTS],
-	[CREATED],
-	[UPDATEEVENTID],
-	[BIDLIMIT],
-	[PAYMENTMETHODID],
-	[ADDRESSID],
-	[SHIPPINGADDRESSID],
-	[CONTACTPHONEID]
-FROM [Auct_Bidder_Ex]
+	*
+FROM stg.[Auct_Bidder_FinalView]
     ');
 
   CREATE TABLE "dbo"."Auct_Bidder_DM__dbt_tmp"
