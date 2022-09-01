@@ -1,0 +1,9 @@
+create view "stg"."Auct_Config_InterView__dbt_tmp" as
+    
+Select
+	[CONFIGID] [ConfigID],
+	cast([STUB1] as nvarchar(4000)) [Stub1],
+	cast([STUB2] as nvarchar(4000)) [Stub2],
+	[CREATED] [Created],
+	[UPDATEEVENTID] [UpdateEventID]
+From stg.[Auct_Config_Raw]
