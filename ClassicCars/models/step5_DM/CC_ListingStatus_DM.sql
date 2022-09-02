@@ -1,6 +1,6 @@
 {{ config(materialized='table',schema='dbo')}}
 
 SELECT
-	[Id] as [ListingStatus_Skey],
-	[Description] as [ListingStatus]
+	[Id] AS [ListingStatus_Skey],
+	[Description] AS [ListingStatus]
 FROM [stg].[CC_ListingStatus_FinalView]

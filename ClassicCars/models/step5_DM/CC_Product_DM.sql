@@ -1,11 +1,11 @@
 {{ config(materialized='table',schema='dbo')}}
 
 SELECT
-	[Id] as [Product_Skey],
+	[Id] AS [Product_Skey],
 	[IsActive],
 	[Price],
-    [Description],
+	[Description],
 	[DisplayDescription],
-    [CreateDate],
+	[CreateDate],
 	[ModifyDate]
 FROM [stg].[CC_Product_FinalView]

@@ -59,7 +59,7 @@ SELECT
     [RegisteredOnlineBIT],
     [ChargeCount]
     -- [AuctionBidderPackageStatusID],
-    -- [PacketPickupDateTime] as [PackagePickupDateTime]
+    -- [PacketPickupDateTime] as [PackagePickupDateTime] -- not exist for those two columns on parquet file, mark 2022-08-31 by shawn
 FROM [stg].[Auct_AuctionBidder_FinalView]
     ');
 

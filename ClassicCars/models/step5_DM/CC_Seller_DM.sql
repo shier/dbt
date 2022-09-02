@@ -5,30 +5,30 @@ WITH ConsignorFlag_CTE AS (
     SELECT 
         DISTINCT [CompanyId],
         1[ConsignorFlag]
-    FROM [dbo].[ClassicCars_Listing_Ex]
+    FROM [stg].[CC_Listing_FinalView]
 )
 -- , OrderItemFlag_CTE AS (
 --     SELECT 
 --         DISTINCT co.[Id] AS [CompanyId],
 --         1[OrderItemFlag]
 --     -- -- DIFFERENT APPROACH WILL LEAD TO DIFFERENT RESULT -- 1: 28279, 0: 897317
---     FROM [dbo].[ClassicCars_OrderItem_Ex] orderitem
---     LEFT JOIN [dbo].[ClassicCars_Order_Ex] orders 
+--     FROM [stg].[CC_OrderItem_FinalView] orderitem
+--     LEFT JOIN [stg].[CC_Order_FinalView] orders 
 --         ON orderitem.[OrderId]=orders.[Id]
---     LEFT JOIN [dbo].[ClassicCars_PaymentNew_Ex] pymtnew
+--     LEFT JOIN [stg].[CC_PaymentNew_FinalView] pymtnew
 --         ON orders.[PaymentId]=pymtnew.[Id]
---     LEFT JOIN [dbo].[ClassicCars_User_Ex] users
+--     LEFT JOIN [stg].[CC_User_FinalView] users
 --         ON pymtnew.[UserId]=users.[Id]
---     LEFT JOIN [dbo].[ClassicCars_Company_Ex] co 
+--     LEFT JOIN [stg].[CC_Company_FinalView] co 
 --         ON users.[CompanyId]=co.[Id]  
 
 --     -- -- DIFFERENT APPROACH WILL LEAD TO DIFFERENT RESULT -- 1: 25444, 0: 900152
---     -- FROM [dbo].[ClassicCars_OrderItem_Ex] orderitem
---     -- LEFT JOIN [dbo].[ClassicCars_Order_Ex] orders 
+--     -- FROM [stg].[CC_OrderItem_FinalView] orderitem
+--     -- LEFT JOIN [stg].[CC_Order_FinalView] orders 
 --     --     ON orderitem.[OrderId]=orders.[Id]
---     -- LEFT JOIN [dbo].[ClassicCars_User_Ex] users
+--     -- LEFT JOIN [stg].[CC_User_FinalView] users
 --     --     ON orders.[UserId]=users.[Id]
---     -- LEFT JOIN [dbo].[ClassicCars_Company_Ex] co 
+--     -- LEFT JOIN [stg].[CC_Company_FinalView] co 
 --     --     ON users.[CompanyId]=co.[Id]
 -- )
 , OrderFlag_CTE AS (
@@ -36,36 +36,36 @@ WITH ConsignorFlag_CTE AS (
         DISTINCT co.[Id] AS [CompanyId],
         1[OrderFlag]
      -- -- DIFFERENT APPROACH WILL LEAD TO DIFFERENT RESULT -- 1: 28279, 0: 897317
-    FROM [dbo].[ClassicCars_Order_Ex] orders 
-    LEFT JOIN [dbo].[ClassicCars_PaymentNew_Ex] pymtnew
+    FROM [stg].[CC_Order_FinalView] orders 
+    LEFT JOIN [stg].[CC_PaymentNew_FinalView] pymtnew
         ON orders.[PaymentId]=pymtnew.[Id]
-    LEFT JOIN [dbo].[ClassicCars_User_Ex] users
+    LEFT JOIN [stg].[CC_User_FinalView] users
         ON pymtnew.[UserId]=users.[Id]
-    LEFT JOIN [dbo].[ClassicCars_Company_Ex] co 
+    LEFT JOIN [stg].[CC_Company_FinalView] co 
         ON users.[CompanyId]=co.[Id]  
 
     -- -- DIFFERENT APPROACH WILL LEAD TO DIFFERENT RESULT -- 1: 25444, 0: 900152
-    -- FROM [dbo].[ClassicCars_Order_Ex] orders 
-    -- LEFT JOIN [dbo].[ClassicCars_User_Ex] users
+    -- FROM [stg].[CC_Order_FinalView] orders 
+    -- LEFT JOIN [stg].[CC_User_FinalView] users
     --     ON orders.[UserId]=users.[Id]
-    -- LEFT JOIN [dbo].[ClassicCars_Company_Ex] co 
+    -- LEFT JOIN [stg].[CC_Company_FinalView] co 
     --     ON users.[CompanyId]=co.[Id]   
 )
 , PaymentFlag_merged_CTE AS (
     SELECT 
         DISTINCT co.[Id] AS [CompanyId], 
         1[PaymentFlag]
-    FROM [dbo].[ClassicCars_Payment_Ex] pymt 
-    LEFT JOIN [dbo].[ClassicCars_Company_Ex] co 
+    FROM [stg].[CC_Payment_FinalView] pymt 
+    LEFT JOIN [stg].[CC_Company_FinalView] co 
         ON pymt.[Email]=co.[Email]
     UNION
     SELECT 
         DISTINCT co.[Id] AS [CompanyId], 
         1[PaymentFlag]
-    FROM [dbo].[ClassicCars_PaymentNew_Ex] AS pymtnew
-    LEFT JOIN [dbo].[ClassicCars_User_Ex] AS users
+    FROM [stg].[CC_PaymentNew_FinalView] AS pymtnew
+    LEFT JOIN [stg].[CC_User_FinalView] AS users
         ON pymtnew.[UserId]=users.[Id]
-    LEFT JOIN [dbo].[ClassicCars_Company_Ex] AS co
+    LEFT JOIN [stg].[CC_Company_FinalView] AS co
         ON users.[CompanyId]=co.[Id]
 )
 , Seller_CTE AS (
@@ -114,12 +114,12 @@ WITH ConsignorFlag_CTE AS (
         [BlacklistedForAHNominations], 
         [CreateDate], 
         [ModifyDate]
-    FROM [dbo].[ClassicCars_Company_Ex] AS co 
+    FROM [stg].[CC_Company_FinalView] AS co 
     -- FOR [ListingPaymentType]
-    LEFT JOIN [dbo].[ClassicCars_ListingPaymentType_Ex] AS pymtty
+    LEFT JOIN [stg].[CC_ListingPaymentType_FinalView] AS pymtty
         ON co.[ListingPaymentType]=pymtty.[Id]
     -- FOR [CompanyType]
-    LEFT JOIN [dbo].[ClassicCars_CompanyType_Ex] AS coty
+    LEFT JOIN [stg].[CC_CompanyType_FinalView] AS coty
         ON co.[CompanyTypeId]=coty.[Id]
     -- FOR [ConsignorFlag]
     LEFT JOIN ConsignorFlag_CTE AS listing
@@ -135,47 +135,44 @@ WITH ConsignorFlag_CTE AS (
         ON co.[Id]=pymt.[CompanyId]
 )
 
-SELECT 
-    [Id] as [Seller_Skey], 
-    [CompanyName], 
-    -- [CompanyTypeId], 
-    [CompanyType], 
-    [CompanyRepresentativeFlag], 
-    [IsActive], 
-    [CompanyDescription], 
-    [AboutUs], 
-    -- [ListingPaymentType], 
-    [ListingPaymentType], 
-    [Email], 
-    [Telephone], 
-    [Address], 
-    [City], 
-    [State], 
-    [ZipCode] as [PostalCode], 
-    [Country], 
-    [Latitude], 
-    [Longitude], 
-    [ConsignorFlag], 
-    -- [OrderItemFlag], 
-    [OrderFlag], 
-    [PaymentFlag], 
-    [LogoUrl], 
-    [CompanyUrl], 
-    [ImageSortType], 
-    [MaxActiveListings], 
-    [MaxFeaturedListings], 
-    [OptInThirdParty], 
-    [OverrideMaxActiveAlertCount], 
-    [DisableImmediateSavedSearches], 
-    [DisableDailySavedSearches], 
-    [DisableFirstAlerts], 
-    [BuyerInquiry_IncludeADF], 
-    [BuyerInquiry_ADFOptionID], 
-    [BuyerInquiryEmailAddress], 
-    [DashboardLock], 
-    [WhitelistedForAHNominations], 
-    [OptOutAHNominationAlerts], 
-    [BlacklistedForAHNominations], 
-    [CreateDate], 
-    [ModifyDate]
+SELECT
+	[Id] AS [Seller_Skey],
+	[CompanyName],
+	[CompanyType],
+	[CompanyRepresentativeFlag],
+	[IsActive],
+	[CompanyDescription],
+	[AboutUs],
+	[ListingPaymentType],
+	[Email],
+	[Telephone] AS [PhoneNumber],
+	[Address],
+	[City],
+	[State],
+	[ZipCode] AS [PostalCode],
+	[Country],
+	[Latitude],
+	[Longitude],
+	[ConsignorFlag],
+	[OrderFlag],
+	[PaymentFlag],
+	[LogoUrl] AS [LogoURL],
+	[CompanyUrl] AS [CompanyURL],
+	[ImageSortType],
+	[MaxActiveListings],
+	[MaxFeaturedListings],
+	[OptInThirdParty],
+	[OverrideMaxActiveAlertCount],
+	[DisableImmediateSavedSearches],
+	[DisableDailySavedSearches],
+	[DisableFirstAlerts],
+	[BuyerInquiry_IncludeADF],
+	[BuyerInquiry_ADFOptionID],
+	[BuyerInquiryEmailAddress],
+	[DashboardLock],
+	[WhitelistedForAHNominations],
+	[OptOutAHNominationAlerts],
+	[BlacklistedForAHNominations],
+	[CreateDate] AS [Created],
+	[ModifyDate] AS [ModifiedDate]
 FROM Seller_CTE
