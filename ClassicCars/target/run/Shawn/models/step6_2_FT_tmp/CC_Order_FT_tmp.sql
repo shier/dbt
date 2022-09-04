@@ -36,7 +36,7 @@ WITH CC_Order_CTE AS (
         ON orderstg.[PaymentID]=pymtnew.[Id]
     LEFT JOIN [stg].[CC_User_FinalView] users
         ON pymtnew.[UserId]=users.[Id]
-    LEFT JOIN [test].[CC_Seller_DM] seller 
+    LEFT JOIN [dbo].[CC_Seller_DM] seller 
         ON users.[CompanyId]=seller.[Seller_Skey]
     -- LEFT JOIN [stg].[CC_Company_FinalView] co 
     --     ON users.[CompanyId]=co.[Id]  

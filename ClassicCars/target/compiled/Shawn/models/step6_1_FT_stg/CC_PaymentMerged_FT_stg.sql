@@ -45,7 +45,7 @@ with oldPay as (
         [Email],
         [CustomerIP] AS [CustomerIPAddress],
         [LineItemDescription],
-        [GatewayMessage]，
+        [GatewayMessage],
         NULL as [ErrorCode],
         NULL as [ErrorTransactionID],
         NULL as [PaymentStatus]
@@ -68,21 +68,23 @@ newPay as (
         [OrderDiscount] AS [DiscountAmount],
         [ChargeAmount],
         [Success] AS [IsSuccess],
-        JSON_VALUE(CustomerInfo, '$.CardName') AS [CardName],
-        JSON_VALUE(CustomerInfo, '$.CardAddress1') AS [CardAddress],
-        JSON_VALUE(CustomerInfo, '$.CardCity') AS [CardCity],
-        JSON_VALUE(CustomerInfo, '$.CardState') AS [CardState],
-        JSON_VALUE(CustomerInfo, '$.CardCountry') AS [CardCountry],
-        JSON_VALUE(PaymentInfo, '$.ExpirationYear') AS [CardExpirationYear],
-        JSON_VALUE(PaymentInfo, '$.ExpirationMonth') AS [CardExpirationMonth],
-        JSON_VALUE(PaymentInfo, '$.CardLastFour') AS [CardLastFourDigit],
-        JSON_VALUE(PaymentInfo, '$.Token') AS [Token],
-        JSON_VALUE(PaymentInfo, '$.PayerId') AS [PayerID],
-        JSON_VALUE([TransactionInfo], '$.Approved') AS [IsApproved],
-        JSON_VALUE(TransactionInfo, '$.AuthorizationCode') AS [AuthorizationCode],
-        JSON_VALUE(TransactionInfo, '$.ResponseCode') AS [ResponseCode],
-        JSON_VALUE(TransactionInfo, '$.ResponseReasonCode') AS [ResponseReasonCode],
-        JSON_VALUE(TransactionInfo, '$.TransactionID') AS [TransactionID],
+        [CardName],
+        [CardAddress],
+        [CardCity],
+        [CardState],
+        [CardCountry],
+        [Year] as [CardExpirationYear],
+        [Month] as [CardExpirationMonth],
+        [CardLastFour] as [CardLastFourDigit],
+        [Token],
+        [PayerID],
+        [IsApproved],
+        [AuthorizationCode],
+        cast([ResponseCode] as nvarchar(4000)) as [ResponseCode],
+        cast([ResponseReasonCode] as nvarchar(4000)) as [ResponseReasonCode],
+        
+        
+        [TransactionID],
         NULL as [FirstName],
         NULL as [LastName],
         NULL as [Address1],
@@ -94,11 +96,12 @@ newPay as (
         NULL as [CustomerIPAddress],
         NULL as [LineItemDescription],
         NULL as [GatewayMessage],
-        JSON_VALUE(TransactionInfo, '$.errorCode') AS [ErrorCode],
-        JSON_VALUE(TransactionInfo, '$.transactionId') AS [ErrorTransactionID],
-        JSON_VALUE(TransactionInfo, '$.paymentStatus') AS [PaymentStatus]
+        [ErrorCode],
+        [ErrorTransactionID],
+        [PaymentStatus]
     FROM [stg].[CC_PaymentNew_FinalView]
 )
+
 
 select 
     [OldPaymentID],
@@ -126,8 +129,10 @@ select
     [PayerID],
     [IsApproved],
     [AuthorizationCode],
-    [ResponseCode],
-    [ResponseReasonCode],
+    cast([ResponseCode] as nvarchar(4000)) as [ResponseCode],
+    cast([ResponseReasonCode] as nvarchar(4000)) as [ResponseReasonCode],
+        
+        
     [TransactionID],
     [FirstName],
     [LastName],
@@ -142,7 +147,7 @@ select
     [GatewayMessage],
     [ErrorCode],
     [ErrorTransactionID],
-    [PaymentStatus]
+    cast([PaymentStatus] as nvarchar(4000)) [PaymentStatus]
 from oldPay
 
 UNION ALL
@@ -189,5 +194,6 @@ select
     [GatewayMessage],
     [ErrorCode],
     [ErrorTransactionID],
-    [PaymentStatus]
+    cast([PaymentStatus] as nvarchar(4000)) [PaymentStatus]
+
 from newPay

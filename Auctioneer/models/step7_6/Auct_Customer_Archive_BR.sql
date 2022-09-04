@@ -124,4 +124,4 @@ SELECT
     [EffectiveStartDate],
     [EffectiveEndDate],
     [IsCurrent]
-FROM stg.Auct_CA_Customer
+FROM stg.[Auct_Customer_Archive_BR_Step5]
