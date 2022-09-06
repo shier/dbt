@@ -20627,3 +20627,860 @@
 21:28:43.656162 [info ] [MainThread]: 
 21:28:43.656415 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
 21:28:43.656794 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2a6b823040>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2a6c0bf3a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2a6c0bf880>]}
+
+
+============================== 2022-09-06 02:09:05.993908 | c81608f9-d137-4a83-91a7-e873eb61dc37 ==============================
+02:09:05.993908 [info ] [MainThread]: Running with dbt=1.0.0
+02:09:05.995777 [debug] [MainThread]: running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=None, defer=None, event_buffer_size=None, exclude=None, fail_fast=None, full_refresh=False, log_cache_events=False, log_format=None, partial_parse=None, printer_width=None, profile=None, profiles_dir='/home/azureuser/.dbt', project_dir='/home/azureuser/shawn_dbt/Auctioneer', record_timing_info=None, rpc_method='run', select=['step5_0'], selector_name=None, send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, threads=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='run', write_json=None)
+02:09:05.996162 [debug] [MainThread]: Tracking: tracking
+02:09:05.996583 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9ecedd42e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9ecedd4520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9ecedd4910>]}
+02:09:06.549850 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+02:09:06.550404 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+02:09:06.636477 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c81608f9-d137-4a83-91a7-e873eb61dc37', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9ececc60d0>]}
+02:09:07.030914 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c81608f9-d137-4a83-91a7-e873eb61dc37', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9ece07d6a0>]}
+02:09:07.031474 [info ] [MainThread]: Found 1321 models, 0 tests, 355 snapshots, 0 analyses, 211 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+02:09:07.068210 [info ] [MainThread]: 
+02:09:07.069816 [debug] [MainThread]: Acquiring new synapse connection "master"
+02:09:07.071787 [debug] [ThreadPool]: Acquiring new synapse connection "list_BJAC_DW_PROD"
+02:09:07.081444 [debug] [ThreadPool]: Opening a new connection, currently in state init
+02:09:07.496178 [debug] [ThreadPool]: On list_BJAC_DW_PROD: Close
+02:09:07.572985 [debug] [ThreadPool]: Acquiring new synapse connection "list_BJAC_DW_PROD_stg"
+02:09:07.581773 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+02:09:07.582211 [debug] [ThreadPool]: Acquiring new synapse connection "list_BJAC_DW_PROD_dbo"
+02:09:07.584354 [debug] [ThreadPool]: Opening a new connection, currently in state init
+02:09:07.832737 [debug] [ThreadPool]: On list_BJAC_DW_PROD_dbo: ROLLBACK
+02:09:07.833227 [debug] [ThreadPool]: On list_BJAC_DW_PROD_dbo: Close
+02:09:08.034528 [debug] [ThreadPool]: On list_BJAC_DW_PROD_stg: ROLLBACK
+02:09:08.046926 [debug] [ThreadPool]: On list_BJAC_DW_PROD_stg: Close
+02:09:22.916640 [debug] [MainThread]: On master: COMMIT
+02:09:22.917377 [info ] [MainThread]: Concurrency: 4 threads (target='prod')
+02:09:22.918691 [info ] [MainThread]: 
+02:09:22.924220 [debug] [Thread-1  ]: Began running node model.Shawn.Auct_Address_Merge_Step1
+02:09:22.924546 [info ] [Thread-1  ]: 1 of 1 START table model stg.Auct_Address_Merge_Step1........................... [RUN]
+02:09:22.925755 [debug] [Thread-1  ]: Acquiring new synapse connection "model.Shawn.Auct_Address_Merge_Step1"
+02:09:22.925998 [debug] [Thread-1  ]: Began compiling node model.Shawn.Auct_Address_Merge_Step1
+02:09:22.926212 [debug] [Thread-1  ]: Compiling model.Shawn.Auct_Address_Merge_Step1
+02:09:22.929329 [debug] [Thread-1  ]: Writing injected SQL for node "model.Shawn.Auct_Address_Merge_Step1"
+02:09:22.929922 [debug] [Thread-1  ]: finished collecting timing info
+02:09:22.930191 [debug] [Thread-1  ]: Began executing node model.Shawn.Auct_Address_Merge_Step1
+02:09:23.018275 [debug] [Thread-1  ]: Writing runtime SQL for node "model.Shawn.Auct_Address_Merge_Step1"
+02:09:23.019134 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+02:09:29.060498 [debug] [Thread-1  ]: On model.Shawn.Auct_Address_Merge_Step1: COMMIT
+02:09:29.565175 [debug] [Thread-1  ]: finished collecting timing info
+02:09:29.565632 [debug] [Thread-1  ]: On model.Shawn.Auct_Address_Merge_Step1: Close
+02:09:29.566424 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c81608f9-d137-4a83-91a7-e873eb61dc37', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9eceb93310>]}
+02:09:29.566943 [info ] [Thread-1  ]: 1 of 1 OK created table model stg.Auct_Address_Merge_Step1...................... [[32mOK[0m in 6.64s]
+02:09:29.568487 [debug] [Thread-1  ]: Finished running node model.Shawn.Auct_Address_Merge_Step1
+02:09:29.569809 [debug] [MainThread]: Acquiring new synapse connection "master"
+02:09:29.570272 [debug] [MainThread]: On master: COMMIT
+02:09:29.570565 [info ] [MainThread]: 
+02:09:29.571444 [info ] [MainThread]: Finished running 1 table model in 22.50s.
+02:09:29.572340 [debug] [MainThread]: Connection 'master' was properly closed.
+02:09:29.572597 [debug] [MainThread]: Connection 'model.Shawn.Auct_Address_Merge_Step1' was properly closed.
+02:09:29.572791 [debug] [MainThread]: Connection 'list_BJAC_DW_PROD_dbo' was properly closed.
+02:09:29.791311 [info ] [MainThread]: 
+02:09:29.792486 [info ] [MainThread]: [32mCompleted successfully[0m
+02:09:29.793519 [info ] [MainThread]: 
+02:09:29.794437 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+02:09:29.795405 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9ecc7018b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9ecc7013a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9ecc7012b0>]}
+
+
+============================== 2022-09-06 02:10:08.195478 | 47767b5d-fb9b-4322-971c-9e983c8cdddd ==============================
+02:10:08.195478 [info ] [MainThread]: Running with dbt=1.0.0
+02:10:08.202859 [debug] [MainThread]: running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=None, defer=None, event_buffer_size=None, exclude=None, fail_fast=None, full_refresh=False, log_cache_events=False, log_format=None, partial_parse=None, printer_width=None, profile=None, profiles_dir='/home/azureuser/.dbt', project_dir='/home/azureuser/shawn_dbt/Auctioneer', record_timing_info=None, rpc_method='run', select=['step5_1'], selector_name=None, send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, threads=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='run', write_json=None)
+02:10:08.203213 [debug] [MainThread]: Tracking: tracking
+02:10:08.203616 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd47a6d10d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd47a6d1130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd47a6d1190>]}
+02:10:08.719467 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+02:10:08.720004 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+02:10:08.801930 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '47767b5d-fb9b-4322-971c-9e983c8cdddd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd47a598eb0>]}
+02:10:09.138364 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '47767b5d-fb9b-4322-971c-9e983c8cdddd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd479a55520>]}
+02:10:09.139424 [info ] [MainThread]: Found 1321 models, 0 tests, 355 snapshots, 0 analyses, 211 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+02:10:09.171343 [info ] [MainThread]: 
+02:10:09.172862 [debug] [MainThread]: Acquiring new synapse connection "master"
+02:10:09.174299 [debug] [ThreadPool]: Acquiring new synapse connection "list_BJAC_DW_PROD"
+02:10:09.183719 [debug] [ThreadPool]: Opening a new connection, currently in state init
+02:10:09.536072 [debug] [ThreadPool]: On list_BJAC_DW_PROD: Close
+02:10:09.613023 [debug] [ThreadPool]: Acquiring new synapse connection "list_BJAC_DW_PROD_dbo"
+02:10:09.621564 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+02:10:09.622037 [debug] [ThreadPool]: Acquiring new synapse connection "list_BJAC_DW_PROD_stg"
+02:10:09.624065 [debug] [ThreadPool]: Opening a new connection, currently in state init
+02:10:09.849153 [debug] [ThreadPool]: On list_BJAC_DW_PROD_dbo: ROLLBACK
+02:10:09.851953 [debug] [ThreadPool]: On list_BJAC_DW_PROD_dbo: Close
+02:10:10.078600 [debug] [ThreadPool]: On list_BJAC_DW_PROD_stg: ROLLBACK
+02:10:10.090885 [debug] [ThreadPool]: On list_BJAC_DW_PROD_stg: Close
+02:10:24.450664 [debug] [MainThread]: On master: COMMIT
+02:10:24.451408 [info ] [MainThread]: Concurrency: 4 threads (target='prod')
+02:10:24.452629 [info ] [MainThread]: 
+02:10:24.456929 [debug] [Thread-1  ]: Began running node model.Shawn.Auct_Address_Merge_Step2
+02:10:24.457256 [info ] [Thread-1  ]: 1 of 1 START table model stg.Auct_Address_Merge_Step2........................... [RUN]
+02:10:24.458367 [debug] [Thread-1  ]: Acquiring new synapse connection "model.Shawn.Auct_Address_Merge_Step2"
+02:10:24.458542 [debug] [Thread-1  ]: Began compiling node model.Shawn.Auct_Address_Merge_Step2
+02:10:24.458691 [debug] [Thread-1  ]: Compiling model.Shawn.Auct_Address_Merge_Step2
+02:10:24.461804 [debug] [Thread-1  ]: Writing injected SQL for node "model.Shawn.Auct_Address_Merge_Step2"
+02:10:24.462346 [debug] [Thread-1  ]: finished collecting timing info
+02:10:24.462612 [debug] [Thread-1  ]: Began executing node model.Shawn.Auct_Address_Merge_Step2
+02:10:24.549411 [debug] [Thread-1  ]: Writing runtime SQL for node "model.Shawn.Auct_Address_Merge_Step2"
+02:10:24.550191 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+02:11:02.908491 [debug] [Thread-1  ]: On model.Shawn.Auct_Address_Merge_Step2: COMMIT
+02:11:03.510920 [debug] [Thread-1  ]: finished collecting timing info
+02:11:03.511407 [debug] [Thread-1  ]: On model.Shawn.Auct_Address_Merge_Step2: Close
+02:11:03.512206 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '47767b5d-fb9b-4322-971c-9e983c8cdddd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd47a48a280>]}
+02:11:03.512743 [info ] [Thread-1  ]: 1 of 1 OK created table model stg.Auct_Address_Merge_Step2...................... [[32mOK[0m in 39.05s]
+02:11:03.514090 [debug] [Thread-1  ]: Finished running node model.Shawn.Auct_Address_Merge_Step2
+02:11:03.515413 [debug] [MainThread]: Acquiring new synapse connection "master"
+02:11:03.515865 [debug] [MainThread]: On master: COMMIT
+02:11:03.516176 [info ] [MainThread]: 
+02:11:03.517431 [info ] [MainThread]: Finished running 1 table model in 54.34s.
+02:11:03.518347 [debug] [MainThread]: Connection 'master' was properly closed.
+02:11:03.518582 [debug] [MainThread]: Connection 'list_BJAC_DW_PROD_dbo' was properly closed.
+02:11:03.518749 [debug] [MainThread]: Connection 'model.Shawn.Auct_Address_Merge_Step2' was properly closed.
+02:11:03.692027 [info ] [MainThread]: 
+02:11:03.693153 [info ] [MainThread]: [32mCompleted successfully[0m
+02:11:03.721911 [info ] [MainThread]: 
+02:11:03.722504 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+02:11:03.723228 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd47a1ea0d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd4737f3d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd4737f3490>]}
+
+
+============================== 2022-09-06 02:11:06.087095 | 9a30fb34-52b8-4ac1-ad80-ad9f991f2d6f ==============================
+02:11:06.087095 [info ] [MainThread]: Running with dbt=1.0.0
+02:11:06.090820 [debug] [MainThread]: running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=None, defer=None, event_buffer_size=None, exclude=None, fail_fast=None, full_refresh=False, log_cache_events=False, log_format=None, partial_parse=None, printer_width=None, profile=None, profiles_dir='/home/azureuser/.dbt', project_dir='/home/azureuser/shawn_dbt/Auctioneer', record_timing_info=None, rpc_method='run', select=['step5_2'], selector_name=None, send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, threads=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='run', write_json=None)
+02:11:06.092233 [debug] [MainThread]: Tracking: tracking
+02:11:06.092665 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eff90b20100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eff90b20160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eff90b201c0>]}
+02:11:06.584995 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+02:11:06.585528 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+02:11:06.665814 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '9a30fb34-52b8-4ac1-ad80-ad9f991f2d6f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eff909eaee0>]}
+02:11:06.956811 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '9a30fb34-52b8-4ac1-ad80-ad9f991f2d6f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eff8fdab550>]}
+02:11:06.957334 [info ] [MainThread]: Found 1321 models, 0 tests, 355 snapshots, 0 analyses, 211 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+02:11:06.988983 [info ] [MainThread]: 
+02:11:06.990239 [debug] [MainThread]: Acquiring new synapse connection "master"
+02:11:06.991869 [debug] [ThreadPool]: Acquiring new synapse connection "list_BJAC_DW_PROD"
+02:11:07.002147 [debug] [ThreadPool]: Opening a new connection, currently in state init
+02:11:07.352417 [debug] [ThreadPool]: On list_BJAC_DW_PROD: Close
+02:11:07.427506 [debug] [ThreadPool]: Acquiring new synapse connection "list_BJAC_DW_PROD_stg"
+02:11:07.435828 [debug] [ThreadPool]: Acquiring new synapse connection "list_BJAC_DW_PROD_dbo"
+02:11:07.439908 [debug] [ThreadPool]: Opening a new connection, currently in state init
+02:11:07.440293 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+02:11:07.713666 [debug] [ThreadPool]: On list_BJAC_DW_PROD_dbo: ROLLBACK
+02:11:07.734205 [debug] [ThreadPool]: On list_BJAC_DW_PROD_dbo: Close
+02:11:07.935379 [debug] [ThreadPool]: On list_BJAC_DW_PROD_stg: ROLLBACK
+02:11:07.935703 [debug] [ThreadPool]: On list_BJAC_DW_PROD_stg: Close
+02:11:21.032372 [debug] [MainThread]: On master: COMMIT
+02:11:21.033129 [info ] [MainThread]: Concurrency: 4 threads (target='prod')
+02:11:21.034701 [info ] [MainThread]: 
+02:11:21.039544 [debug] [Thread-1  ]: Began running node model.Shawn.Auct_Address_Merge_Step3
+02:11:21.039889 [info ] [Thread-1  ]: 1 of 1 START table model stg.Auct_Address_Merge_Step3........................... [RUN]
+02:11:21.040999 [debug] [Thread-1  ]: Acquiring new synapse connection "model.Shawn.Auct_Address_Merge_Step3"
+02:11:21.041244 [debug] [Thread-1  ]: Began compiling node model.Shawn.Auct_Address_Merge_Step3
+02:11:21.041460 [debug] [Thread-1  ]: Compiling model.Shawn.Auct_Address_Merge_Step3
+02:11:21.044727 [debug] [Thread-1  ]: Writing injected SQL for node "model.Shawn.Auct_Address_Merge_Step3"
+02:11:21.045269 [debug] [Thread-1  ]: finished collecting timing info
+02:11:21.045500 [debug] [Thread-1  ]: Began executing node model.Shawn.Auct_Address_Merge_Step3
+02:11:21.132492 [debug] [Thread-1  ]: Writing runtime SQL for node "model.Shawn.Auct_Address_Merge_Step3"
+02:11:21.133269 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+02:11:26.383325 [debug] [Thread-1  ]: On model.Shawn.Auct_Address_Merge_Step3: COMMIT
+02:11:26.831867 [debug] [Thread-1  ]: finished collecting timing info
+02:11:26.832315 [debug] [Thread-1  ]: On model.Shawn.Auct_Address_Merge_Step3: Close
+02:11:26.833069 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9a30fb34-52b8-4ac1-ad80-ad9f991f2d6f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eff908ca310>]}
+02:11:26.833585 [info ] [Thread-1  ]: 1 of 1 OK created table model stg.Auct_Address_Merge_Step3...................... [[32mOK[0m in 5.79s]
+02:11:26.834791 [debug] [Thread-1  ]: Finished running node model.Shawn.Auct_Address_Merge_Step3
+02:11:26.836526 [debug] [MainThread]: Acquiring new synapse connection "master"
+02:11:26.836979 [debug] [MainThread]: On master: COMMIT
+02:11:26.837306 [info ] [MainThread]: 
+02:11:26.838068 [info ] [MainThread]: Finished running 1 table model in 19.85s.
+02:11:26.839097 [debug] [MainThread]: Connection 'master' was properly closed.
+02:11:26.839361 [debug] [MainThread]: Connection 'model.Shawn.Auct_Address_Merge_Step3' was properly closed.
+02:11:26.839536 [debug] [MainThread]: Connection 'list_BJAC_DW_PROD_dbo' was properly closed.
+02:11:26.996963 [info ] [MainThread]: 
+02:11:26.998193 [info ] [MainThread]: [32mCompleted successfully[0m
+02:11:26.999322 [info ] [MainThread]: 
+02:11:27.000010 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+02:11:27.001041 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eff90655970>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eff8dc50e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eff8dc50fa0>]}
+
+
+============================== 2022-09-06 02:11:29.285374 | fe9594aa-159c-44fd-ad21-5d3446ee864c ==============================
+02:11:29.285374 [info ] [MainThread]: Running with dbt=1.0.0
+02:11:29.291048 [debug] [MainThread]: running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=None, defer=None, event_buffer_size=None, exclude=None, fail_fast=None, full_refresh=False, log_cache_events=False, log_format=None, partial_parse=None, printer_width=None, profile=None, profiles_dir='/home/azureuser/.dbt', project_dir='/home/azureuser/shawn_dbt/Auctioneer', record_timing_info=None, rpc_method='run', select=['step5_3'], selector_name=None, send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, threads=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='run', write_json=None)
+02:11:29.291400 [debug] [MainThread]: Tracking: tracking
+02:11:29.291816 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fde0ecf71c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fde0ecf7220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fde0ecf7280>]}
+02:11:29.849371 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+02:11:29.849939 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+02:11:29.933247 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'fe9594aa-159c-44fd-ad21-5d3446ee864c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fde0ebc50d0>]}
+02:11:30.236979 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'fe9594aa-159c-44fd-ad21-5d3446ee864c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fde0dfbf6a0>]}
+02:11:30.237756 [info ] [MainThread]: Found 1321 models, 0 tests, 355 snapshots, 0 analyses, 211 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+02:11:30.270235 [info ] [MainThread]: 
+02:11:30.271865 [debug] [MainThread]: Acquiring new synapse connection "master"
+02:11:30.273362 [debug] [ThreadPool]: Acquiring new synapse connection "list_BJAC_DW_PROD"
+02:11:30.283110 [debug] [ThreadPool]: Opening a new connection, currently in state init
+02:11:30.574053 [debug] [ThreadPool]: On list_BJAC_DW_PROD: Close
+02:11:30.650241 [debug] [ThreadPool]: Acquiring new synapse connection "list_BJAC_DW_PROD_dbo"
+02:11:30.659028 [debug] [ThreadPool]: Acquiring new synapse connection "list_BJAC_DW_PROD_stg"
+02:11:30.660907 [debug] [ThreadPool]: Opening a new connection, currently in state init
+02:11:30.662996 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+02:11:30.932489 [debug] [ThreadPool]: On list_BJAC_DW_PROD_dbo: ROLLBACK
+02:11:30.932954 [debug] [ThreadPool]: On list_BJAC_DW_PROD_dbo: Close
+02:11:31.143793 [debug] [ThreadPool]: On list_BJAC_DW_PROD_stg: ROLLBACK
+02:11:31.154902 [debug] [ThreadPool]: On list_BJAC_DW_PROD_stg: Close
+02:11:44.545725 [debug] [MainThread]: On master: COMMIT
+02:11:44.546467 [info ] [MainThread]: Concurrency: 4 threads (target='prod')
+02:11:44.547760 [info ] [MainThread]: 
+02:11:44.552094 [debug] [Thread-1  ]: Began running node model.Shawn.Auct_Address_Merge_Step4
+02:11:44.552424 [info ] [Thread-1  ]: 1 of 1 START table model stg.Auct_Address_Merge_Step4........................... [RUN]
+02:11:44.553591 [debug] [Thread-1  ]: Acquiring new synapse connection "model.Shawn.Auct_Address_Merge_Step4"
+02:11:44.553865 [debug] [Thread-1  ]: Began compiling node model.Shawn.Auct_Address_Merge_Step4
+02:11:44.554086 [debug] [Thread-1  ]: Compiling model.Shawn.Auct_Address_Merge_Step4
+02:11:44.557403 [debug] [Thread-1  ]: Writing injected SQL for node "model.Shawn.Auct_Address_Merge_Step4"
+02:11:44.558108 [debug] [Thread-1  ]: finished collecting timing info
+02:11:44.558340 [debug] [Thread-1  ]: Began executing node model.Shawn.Auct_Address_Merge_Step4
+02:11:44.646488 [debug] [Thread-1  ]: Writing runtime SQL for node "model.Shawn.Auct_Address_Merge_Step4"
+02:11:44.648115 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+02:11:47.554938 [debug] [Thread-1  ]: On model.Shawn.Auct_Address_Merge_Step4: COMMIT
+02:11:48.097623 [debug] [Thread-1  ]: finished collecting timing info
+02:11:48.098127 [debug] [Thread-1  ]: On model.Shawn.Auct_Address_Merge_Step4: Close
+02:11:48.099401 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fe9594aa-159c-44fd-ad21-5d3446ee864c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fde0ea89430>]}
+02:11:48.099965 [info ] [Thread-1  ]: 1 of 1 OK created table model stg.Auct_Address_Merge_Step4...................... [[32mOK[0m in 3.55s]
+02:11:48.101128 [debug] [Thread-1  ]: Finished running node model.Shawn.Auct_Address_Merge_Step4
+02:11:48.102475 [debug] [MainThread]: Acquiring new synapse connection "master"
+02:11:48.102916 [debug] [MainThread]: On master: COMMIT
+02:11:48.103224 [info ] [MainThread]: 
+02:11:48.104163 [info ] [MainThread]: Finished running 1 table model in 17.83s.
+02:11:48.105090 [debug] [MainThread]: Connection 'master' was properly closed.
+02:11:48.105311 [debug] [MainThread]: Connection 'list_BJAC_DW_PROD_dbo' was properly closed.
+02:11:48.105478 [debug] [MainThread]: Connection 'model.Shawn.Auct_Address_Merge_Step4' was properly closed.
+02:11:48.315273 [info ] [MainThread]: 
+02:11:48.316589 [info ] [MainThread]: [32mCompleted successfully[0m
+02:11:48.317444 [info ] [MainThread]: 
+02:11:48.318171 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+02:11:48.319167 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fde0e8251c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fde0c5e74c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fde0c5e7460>]}
+
+
+============================== 2022-09-06 02:11:50.628977 | eee4027a-7aac-4ac9-a1a6-265365eb10ad ==============================
+02:11:50.628977 [info ] [MainThread]: Running with dbt=1.0.0
+02:11:50.635035 [debug] [MainThread]: running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=None, defer=None, event_buffer_size=None, exclude=None, fail_fast=None, full_refresh=False, log_cache_events=False, log_format=None, partial_parse=None, printer_width=None, profile=None, profiles_dir='/home/azureuser/.dbt', project_dir='/home/azureuser/shawn_dbt/Auctioneer', record_timing_info=None, rpc_method='run', select=['step5_4'], selector_name=None, send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, threads=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='run', write_json=None)
+02:11:50.635403 [debug] [MainThread]: Tracking: tracking
+02:11:50.635820 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7a5e1b4100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7a5e1b4160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7a5e1b41c0>]}
+02:11:51.161841 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+02:11:51.162378 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+02:11:51.245153 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'eee4027a-7aac-4ac9-a1a6-265365eb10ad', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7a5e07bee0>]}
+02:11:51.570685 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'eee4027a-7aac-4ac9-a1a6-265365eb10ad', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7a5d43d550>]}
+02:11:51.571257 [info ] [MainThread]: Found 1321 models, 0 tests, 355 snapshots, 0 analyses, 211 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+02:11:51.602565 [info ] [MainThread]: 
+02:11:51.603897 [debug] [MainThread]: Acquiring new synapse connection "master"
+02:11:51.606289 [debug] [ThreadPool]: Acquiring new synapse connection "list_BJAC_DW_PROD"
+02:11:51.616389 [debug] [ThreadPool]: Opening a new connection, currently in state init
+02:11:51.897102 [debug] [ThreadPool]: On list_BJAC_DW_PROD: Close
+02:11:51.973213 [debug] [ThreadPool]: Acquiring new synapse connection "list_BJAC_DW_PROD_stg"
+02:11:51.981180 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+02:11:51.981572 [debug] [ThreadPool]: Acquiring new synapse connection "list_BJAC_DW_PROD_dbo"
+02:11:51.983543 [debug] [ThreadPool]: Opening a new connection, currently in state init
+02:11:52.210373 [debug] [ThreadPool]: On list_BJAC_DW_PROD_dbo: ROLLBACK
+02:11:52.213736 [debug] [ThreadPool]: On list_BJAC_DW_PROD_dbo: Close
+02:11:52.431422 [debug] [ThreadPool]: On list_BJAC_DW_PROD_stg: ROLLBACK
+02:11:52.431736 [debug] [ThreadPool]: On list_BJAC_DW_PROD_stg: Close
+02:12:05.657229 [debug] [MainThread]: On master: COMMIT
+02:12:05.658001 [info ] [MainThread]: Concurrency: 4 threads (target='prod')
+02:12:05.659612 [info ] [MainThread]: 
+02:12:05.663738 [debug] [Thread-1  ]: Began running node model.Shawn.Auct_Address_Merge_Step5
+02:12:05.664062 [info ] [Thread-1  ]: 1 of 1 START table model stg.Auct_Address_Merge_Step5........................... [RUN]
+02:12:05.665156 [debug] [Thread-1  ]: Acquiring new synapse connection "model.Shawn.Auct_Address_Merge_Step5"
+02:12:05.665404 [debug] [Thread-1  ]: Began compiling node model.Shawn.Auct_Address_Merge_Step5
+02:12:05.665618 [debug] [Thread-1  ]: Compiling model.Shawn.Auct_Address_Merge_Step5
+02:12:05.668746 [debug] [Thread-1  ]: Writing injected SQL for node "model.Shawn.Auct_Address_Merge_Step5"
+02:12:05.669297 [debug] [Thread-1  ]: finished collecting timing info
+02:12:05.669573 [debug] [Thread-1  ]: Began executing node model.Shawn.Auct_Address_Merge_Step5
+02:12:05.757984 [debug] [Thread-1  ]: Writing runtime SQL for node "model.Shawn.Auct_Address_Merge_Step5"
+02:12:05.759115 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+02:12:11.854522 [debug] [Thread-1  ]: On model.Shawn.Auct_Address_Merge_Step5: COMMIT
+02:12:12.372428 [debug] [Thread-1  ]: finished collecting timing info
+02:12:12.372909 [debug] [Thread-1  ]: On model.Shawn.Auct_Address_Merge_Step5: Close
+02:12:12.373730 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'eee4027a-7aac-4ac9-a1a6-265365eb10ad', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7a5df673d0>]}
+02:12:12.374269 [info ] [Thread-1  ]: 1 of 1 OK created table model stg.Auct_Address_Merge_Step5...................... [[32mOK[0m in 6.71s]
+02:12:12.375593 [debug] [Thread-1  ]: Finished running node model.Shawn.Auct_Address_Merge_Step5
+02:12:12.377316 [debug] [MainThread]: Acquiring new synapse connection "master"
+02:12:12.377866 [debug] [MainThread]: On master: COMMIT
+02:12:12.378270 [info ] [MainThread]: 
+02:12:12.379074 [info ] [MainThread]: Finished running 1 table model in 20.77s.
+02:12:12.380148 [debug] [MainThread]: Connection 'master' was properly closed.
+02:12:12.380377 [debug] [MainThread]: Connection 'model.Shawn.Auct_Address_Merge_Step5' was properly closed.
+02:12:12.380546 [debug] [MainThread]: Connection 'list_BJAC_DW_PROD_dbo' was properly closed.
+02:12:12.596013 [info ] [MainThread]: 
+02:12:12.597150 [info ] [MainThread]: [32mCompleted successfully[0m
+02:12:12.598267 [info ] [MainThread]: 
+02:12:12.599166 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+02:12:12.600181 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7a5725cee0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7a5725c220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7a5725c7c0>]}
+
+
+============================== 2022-09-06 02:12:14.969740 | 4405a9f8-1b64-4236-8ba1-45b0733ec883 ==============================
+02:12:14.969740 [info ] [MainThread]: Running with dbt=1.0.0
+02:12:14.971081 [debug] [MainThread]: running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=None, defer=None, event_buffer_size=None, exclude=None, fail_fast=None, full_refresh=False, log_cache_events=False, log_format=None, partial_parse=None, printer_width=None, profile=None, profiles_dir='/home/azureuser/.dbt', project_dir='/home/azureuser/shawn_dbt/Auctioneer', record_timing_info=None, rpc_method='run', select=['step5_5'], selector_name=None, send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, threads=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='run', write_json=None)
+02:12:14.971424 [debug] [MainThread]: Tracking: tracking
+02:12:14.971815 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa08afa3190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa08afa31f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa08afa3250>]}
+02:12:15.464027 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+02:12:15.464619 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+02:12:15.549918 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '4405a9f8-1b64-4236-8ba1-45b0733ec883', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa08ae6bf70>]}
+02:12:15.932042 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '4405a9f8-1b64-4236-8ba1-45b0733ec883', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa08a2eb5e0>]}
+02:12:15.932578 [info ] [MainThread]: Found 1321 models, 0 tests, 355 snapshots, 0 analyses, 211 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+02:12:15.962689 [info ] [MainThread]: 
+02:12:15.963930 [debug] [MainThread]: Acquiring new synapse connection "master"
+02:12:15.965550 [debug] [ThreadPool]: Acquiring new synapse connection "list_BJAC_DW_PROD"
+02:12:15.975001 [debug] [ThreadPool]: Opening a new connection, currently in state init
+02:12:16.317324 [debug] [ThreadPool]: On list_BJAC_DW_PROD: Close
+02:12:16.394603 [debug] [ThreadPool]: Acquiring new synapse connection "list_BJAC_DW_PROD_dbo"
+02:12:16.400794 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+02:12:16.401418 [debug] [ThreadPool]: Acquiring new synapse connection "list_BJAC_DW_PROD_stg"
+02:12:16.403567 [debug] [ThreadPool]: Opening a new connection, currently in state init
+02:12:16.615296 [debug] [ThreadPool]: On list_BJAC_DW_PROD_dbo: ROLLBACK
+02:12:16.615733 [debug] [ThreadPool]: On list_BJAC_DW_PROD_dbo: Close
+02:12:16.873413 [debug] [ThreadPool]: On list_BJAC_DW_PROD_stg: ROLLBACK
+02:12:16.873941 [debug] [ThreadPool]: On list_BJAC_DW_PROD_stg: Close
+02:12:30.195047 [debug] [MainThread]: On master: COMMIT
+02:12:30.195805 [info ] [MainThread]: Concurrency: 4 threads (target='prod')
+02:12:30.197074 [info ] [MainThread]: 
+02:12:30.201334 [debug] [Thread-1  ]: Began running node model.Shawn.Auct_Address_Merge_Step6
+02:12:30.201654 [info ] [Thread-1  ]: 1 of 1 START table model stg.Auct_Address_Merge_Step6........................... [RUN]
+02:12:30.202779 [debug] [Thread-1  ]: Acquiring new synapse connection "model.Shawn.Auct_Address_Merge_Step6"
+02:12:30.203027 [debug] [Thread-1  ]: Began compiling node model.Shawn.Auct_Address_Merge_Step6
+02:12:30.203242 [debug] [Thread-1  ]: Compiling model.Shawn.Auct_Address_Merge_Step6
+02:12:30.206959 [debug] [Thread-1  ]: Writing injected SQL for node "model.Shawn.Auct_Address_Merge_Step6"
+02:12:30.207526 [debug] [Thread-1  ]: finished collecting timing info
+02:12:30.207864 [debug] [Thread-1  ]: Began executing node model.Shawn.Auct_Address_Merge_Step6
+02:12:30.294944 [debug] [Thread-1  ]: Writing runtime SQL for node "model.Shawn.Auct_Address_Merge_Step6"
+02:12:30.295743 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+02:12:42.638936 [debug] [Thread-1  ]: On model.Shawn.Auct_Address_Merge_Step6: COMMIT
+02:12:43.302144 [debug] [Thread-1  ]: finished collecting timing info
+02:12:43.302609 [debug] [Thread-1  ]: On model.Shawn.Auct_Address_Merge_Step6: Close
+02:12:43.303339 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4405a9f8-1b64-4236-8ba1-45b0733ec883', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa08ac4c4c0>]}
+02:12:43.303859 [info ] [Thread-1  ]: 1 of 1 OK created table model stg.Auct_Address_Merge_Step6...................... [[32mOK[0m in 13.10s]
+02:12:43.305136 [debug] [Thread-1  ]: Finished running node model.Shawn.Auct_Address_Merge_Step6
+02:12:43.306445 [debug] [MainThread]: Acquiring new synapse connection "master"
+02:12:43.306884 [debug] [MainThread]: On master: COMMIT
+02:12:43.307192 [info ] [MainThread]: 
+02:12:43.308182 [info ] [MainThread]: Finished running 1 table model in 27.34s.
+02:12:43.309145 [debug] [MainThread]: Connection 'master' was properly closed.
+02:12:43.309375 [debug] [MainThread]: Connection 'list_BJAC_DW_PROD_dbo' was properly closed.
+02:12:43.309545 [debug] [MainThread]: Connection 'model.Shawn.Auct_Address_Merge_Step6' was properly closed.
+02:12:43.466071 [info ] [MainThread]: 
+02:12:43.467427 [info ] [MainThread]: [32mCompleted successfully[0m
+02:12:43.468484 [info ] [MainThread]: 
+02:12:43.469179 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+02:12:43.470200 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa08aab9190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa0880b9af0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa0880b9430>]}
+
+
+============================== 2022-09-06 02:12:45.709624 | b48f2744-b469-4e72-bd4c-3b0995c1fa11 ==============================
+02:12:45.709624 [info ] [MainThread]: Running with dbt=1.0.0
+02:12:45.715536 [debug] [MainThread]: running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=None, defer=None, event_buffer_size=None, exclude=None, fail_fast=None, full_refresh=False, log_cache_events=False, log_format=None, partial_parse=None, printer_width=None, profile=None, profiles_dir='/home/azureuser/.dbt', project_dir='/home/azureuser/shawn_dbt/Auctioneer', record_timing_info=None, rpc_method='run', select=['step5_6'], selector_name=None, send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, threads=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='run', write_json=None)
+02:12:45.715913 [debug] [MainThread]: Tracking: tracking
+02:12:45.716313 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5db93451c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5db9345220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5db9345280>]}
+02:12:46.217090 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+02:12:46.217628 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+02:12:46.300737 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b48f2744-b469-4e72-bd4c-3b0995c1fa11', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5db92130d0>]}
+02:12:46.663931 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b48f2744-b469-4e72-bd4c-3b0995c1fa11', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5db85cc6a0>]}
+02:12:46.664520 [info ] [MainThread]: Found 1321 models, 0 tests, 355 snapshots, 0 analyses, 211 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+02:12:46.696584 [info ] [MainThread]: 
+02:12:46.697939 [debug] [MainThread]: Acquiring new synapse connection "master"
+02:12:46.699651 [debug] [ThreadPool]: Acquiring new synapse connection "list_BJAC_DW_PROD"
+02:12:46.708938 [debug] [ThreadPool]: Opening a new connection, currently in state init
+02:12:47.014295 [debug] [ThreadPool]: On list_BJAC_DW_PROD: Close
+02:12:47.090361 [debug] [ThreadPool]: Acquiring new synapse connection "list_BJAC_DW_PROD_dbo"
+02:12:47.098450 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+02:12:47.098838 [debug] [ThreadPool]: Acquiring new synapse connection "list_BJAC_DW_PROD_stg"
+02:12:47.100781 [debug] [ThreadPool]: Opening a new connection, currently in state init
+02:12:47.354106 [debug] [ThreadPool]: On list_BJAC_DW_PROD_dbo: ROLLBACK
+02:12:47.354523 [debug] [ThreadPool]: On list_BJAC_DW_PROD_dbo: Close
+02:12:47.569156 [debug] [ThreadPool]: On list_BJAC_DW_PROD_stg: ROLLBACK
+02:12:47.569578 [debug] [ThreadPool]: On list_BJAC_DW_PROD_stg: Close
+02:13:00.676128 [debug] [MainThread]: On master: COMMIT
+02:13:00.676873 [info ] [MainThread]: Concurrency: 4 threads (target='prod')
+02:13:00.678174 [info ] [MainThread]: 
+02:13:00.683165 [debug] [Thread-1  ]: Began running node model.Shawn.Auct_Address_Merge_Step7
+02:13:00.683507 [info ] [Thread-1  ]: 1 of 1 START table model stg.Auct_Address_Merge_Step7........................... [RUN]
+02:13:00.684691 [debug] [Thread-1  ]: Acquiring new synapse connection "model.Shawn.Auct_Address_Merge_Step7"
+02:13:00.684934 [debug] [Thread-1  ]: Began compiling node model.Shawn.Auct_Address_Merge_Step7
+02:13:00.685163 [debug] [Thread-1  ]: Compiling model.Shawn.Auct_Address_Merge_Step7
+02:13:00.688811 [debug] [Thread-1  ]: Writing injected SQL for node "model.Shawn.Auct_Address_Merge_Step7"
+02:13:00.689359 [debug] [Thread-1  ]: finished collecting timing info
+02:13:00.689761 [debug] [Thread-1  ]: Began executing node model.Shawn.Auct_Address_Merge_Step7
+02:13:00.775277 [debug] [Thread-1  ]: Writing runtime SQL for node "model.Shawn.Auct_Address_Merge_Step7"
+02:13:00.775936 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+02:13:10.620061 [debug] [Thread-1  ]: On model.Shawn.Auct_Address_Merge_Step7: COMMIT
+02:13:11.100028 [debug] [Thread-1  ]: finished collecting timing info
+02:13:11.100516 [debug] [Thread-1  ]: On model.Shawn.Auct_Address_Merge_Step7: Close
+02:13:11.101307 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b48f2744-b469-4e72-bd4c-3b0995c1fa11', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5db63f7dc0>]}
+02:13:11.101881 [info ] [Thread-1  ]: 1 of 1 OK created table model stg.Auct_Address_Merge_Step7...................... [[32mOK[0m in 10.42s]
+02:13:11.103212 [debug] [Thread-1  ]: Finished running node model.Shawn.Auct_Address_Merge_Step7
+02:13:11.104940 [debug] [MainThread]: Acquiring new synapse connection "master"
+02:13:11.105400 [debug] [MainThread]: On master: COMMIT
+02:13:11.105813 [info ] [MainThread]: 
+02:13:11.106600 [info ] [MainThread]: Finished running 1 table model in 24.41s.
+02:13:11.107568 [debug] [MainThread]: Connection 'master' was properly closed.
+02:13:11.107821 [debug] [MainThread]: Connection 'list_BJAC_DW_PROD_dbo' was properly closed.
+02:13:11.107993 [debug] [MainThread]: Connection 'model.Shawn.Auct_Address_Merge_Step7' was properly closed.
+02:13:11.327443 [info ] [MainThread]: 
+02:13:11.328620 [info ] [MainThread]: [32mCompleted successfully[0m
+02:13:11.329760 [info ] [MainThread]: 
+02:13:11.330663 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+02:13:11.331683 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5db8e611c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5db8e78550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5db8e78700>]}
+
+
+============================== 2022-09-06 02:13:45.982706 | 515bbd6c-deb4-48be-ad0c-bcf4f8da4f8b ==============================
+02:13:45.982706 [info ] [MainThread]: Running with dbt=1.0.0
+02:13:45.986832 [debug] [MainThread]: running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=None, defer=None, event_buffer_size=None, exclude=None, fail_fast=None, full_refresh=False, log_cache_events=False, log_format=None, partial_parse=None, printer_width=None, profile=None, profiles_dir='/home/azureuser/.dbt', project_dir='/home/azureuser/shawn_dbt/Auctioneer', record_timing_info=None, rpc_method='run', select=['step6_0'], selector_name=None, send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, threads=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='run', write_json=None)
+02:13:45.988262 [debug] [MainThread]: Tracking: tracking
+02:13:45.988686 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7d578d08b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7d578af430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7d578affa0>]}
+02:13:46.501586 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+02:13:46.502132 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+02:13:46.586211 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '515bbd6c-deb4-48be-ad0c-bcf4f8da4f8b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7d577aee50>]}
+02:13:46.921487 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '515bbd6c-deb4-48be-ad0c-bcf4f8da4f8b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7d56c694c0>]}
+02:13:46.922301 [info ] [MainThread]: Found 1321 models, 0 tests, 355 snapshots, 0 analyses, 211 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+02:13:46.953514 [info ] [MainThread]: 
+02:13:46.954805 [debug] [MainThread]: Acquiring new synapse connection "master"
+02:13:46.956428 [debug] [ThreadPool]: Acquiring new synapse connection "list_BJAC_DW_PROD"
+02:13:46.965843 [debug] [ThreadPool]: Opening a new connection, currently in state init
+02:13:47.343731 [debug] [ThreadPool]: On list_BJAC_DW_PROD: Close
+02:13:47.420689 [debug] [ThreadPool]: Acquiring new synapse connection "list_BJAC_DW_PROD_stg"
+02:13:47.426926 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+02:13:47.427350 [debug] [ThreadPool]: Acquiring new synapse connection "list_BJAC_DW_PROD_dbo"
+02:13:47.429300 [debug] [ThreadPool]: Opening a new connection, currently in state init
+02:13:47.700070 [debug] [ThreadPool]: On list_BJAC_DW_PROD_dbo: ROLLBACK
+02:13:47.701159 [debug] [ThreadPool]: On list_BJAC_DW_PROD_dbo: Close
+02:13:48.124908 [debug] [ThreadPool]: On list_BJAC_DW_PROD_stg: ROLLBACK
+02:13:48.145824 [debug] [ThreadPool]: On list_BJAC_DW_PROD_stg: Close
+02:14:17.420811 [debug] [MainThread]: On master: COMMIT
+02:14:17.421549 [info ] [MainThread]: Concurrency: 4 threads (target='prod')
+02:14:17.429049 [info ] [MainThread]: 
+02:14:17.441008 [debug] [Thread-1  ]: Began running node model.Shawn.Auct_Contact_Merge
+02:14:17.441416 [info ] [Thread-1  ]: 1 of 2 START table model stg.Auct_Contact_Merge................................. [RUN]
+02:14:17.445784 [debug] [Thread-2  ]: Began running node model.Shawn.Auct_Email_Merge
+02:14:17.446077 [info ] [Thread-2  ]: 2 of 2 START table model stg.Auct_Email_Merge................................... [RUN]
+02:14:17.447254 [debug] [Thread-1  ]: Acquiring new synapse connection "model.Shawn.Auct_Contact_Merge"
+02:14:17.448484 [debug] [Thread-1  ]: Began compiling node model.Shawn.Auct_Contact_Merge
+02:14:17.448707 [debug] [Thread-1  ]: Compiling model.Shawn.Auct_Contact_Merge
+02:14:17.448294 [debug] [Thread-2  ]: Acquiring new synapse connection "model.Shawn.Auct_Email_Merge"
+02:14:17.457907 [debug] [Thread-2  ]: Began compiling node model.Shawn.Auct_Email_Merge
+02:14:17.458071 [debug] [Thread-2  ]: Compiling model.Shawn.Auct_Email_Merge
+02:14:17.461658 [debug] [Thread-2  ]: Writing injected SQL for node "model.Shawn.Auct_Email_Merge"
+02:14:17.451920 [debug] [Thread-1  ]: Writing injected SQL for node "model.Shawn.Auct_Contact_Merge"
+02:14:17.466443 [debug] [Thread-1  ]: finished collecting timing info
+02:14:17.466675 [debug] [Thread-1  ]: Began executing node model.Shawn.Auct_Contact_Merge
+02:14:17.473840 [debug] [Thread-2  ]: finished collecting timing info
+02:14:17.474003 [debug] [Thread-2  ]: Began executing node model.Shawn.Auct_Email_Merge
+02:14:17.930934 [debug] [Thread-1  ]: Writing runtime SQL for node "model.Shawn.Auct_Contact_Merge"
+02:14:17.932483 [debug] [Thread-2  ]: Writing runtime SQL for node "model.Shawn.Auct_Email_Merge"
+02:14:17.938403 [debug] [Thread-2  ]: Opening a new connection, currently in state closed
+02:14:17.940054 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+02:14:28.668556 [debug] [Thread-1  ]: On model.Shawn.Auct_Contact_Merge: COMMIT
+02:14:29.289390 [debug] [Thread-1  ]: finished collecting timing info
+02:14:29.294122 [debug] [Thread-1  ]: On model.Shawn.Auct_Contact_Merge: Close
+02:14:29.298413 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '515bbd6c-deb4-48be-ad0c-bcf4f8da4f8b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7d54998dc0>]}
+02:14:29.298941 [info ] [Thread-1  ]: 1 of 2 OK created table model stg.Auct_Contact_Merge............................ [[32mOK[0m in 11.85s]
+02:14:29.300087 [debug] [Thread-1  ]: Finished running node model.Shawn.Auct_Contact_Merge
+02:14:52.555557 [debug] [Thread-2  ]: On model.Shawn.Auct_Email_Merge: COMMIT
+02:14:53.115859 [debug] [Thread-2  ]: finished collecting timing info
+02:14:53.116297 [debug] [Thread-2  ]: On model.Shawn.Auct_Email_Merge: Close
+02:14:53.117023 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '515bbd6c-deb4-48be-ad0c-bcf4f8da4f8b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7d54963700>]}
+02:14:53.117534 [info ] [Thread-2  ]: 2 of 2 OK created table model stg.Auct_Email_Merge.............................. [[32mOK[0m in 35.67s]
+02:14:53.118765 [debug] [Thread-2  ]: Finished running node model.Shawn.Auct_Email_Merge
+02:14:53.120517 [debug] [MainThread]: Acquiring new synapse connection "master"
+02:14:53.120998 [debug] [MainThread]: On master: COMMIT
+02:14:53.121324 [info ] [MainThread]: 
+02:14:53.122147 [info ] [MainThread]: Finished running 2 table models in 66.17s.
+02:14:53.123084 [debug] [MainThread]: Connection 'master' was properly closed.
+02:14:53.123350 [debug] [MainThread]: Connection 'model.Shawn.Auct_Contact_Merge' was properly closed.
+02:14:53.123523 [debug] [MainThread]: Connection 'model.Shawn.Auct_Email_Merge' was properly closed.
+02:14:53.248185 [info ] [MainThread]: 
+02:14:53.249586 [info ] [MainThread]: [32mCompleted successfully[0m
+02:14:53.250536 [info ] [MainThread]: 
+02:14:53.251387 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+02:14:53.252196 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7d56c69040>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7d5743e0d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7d54989700>]}
+
+
+============================== 2022-09-06 02:14:57.505755 | b49b618c-cf74-4928-bcff-97682b2eb5c0 ==============================
+02:14:57.505755 [info ] [MainThread]: Running with dbt=1.0.0
+02:14:57.507533 [debug] [MainThread]: running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=None, defer=None, event_buffer_size=None, exclude=None, fail_fast=None, full_refresh=False, log_cache_events=False, log_format=None, partial_parse=None, printer_width=None, profile=None, profiles_dir='/home/azureuser/.dbt', project_dir='/home/azureuser/shawn_dbt/Auctioneer', record_timing_info=None, rpc_method='run', select=['step6_1'], selector_name=None, send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, threads=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='run', write_json=None)
+02:14:57.507882 [debug] [MainThread]: Tracking: tracking
+02:14:57.508259 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f69f1d351f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f69f1d35250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f69f1d352b0>]}
+02:14:58.012739 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+02:14:58.013251 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+02:14:58.095863 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b49b618c-cf74-4928-bcff-97682b2eb5c0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f69f1c03100>]}
+02:14:58.440407 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b49b618c-cf74-4928-bcff-97682b2eb5c0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f69f11826d0>]}
+02:14:58.440962 [info ] [MainThread]: Found 1321 models, 0 tests, 355 snapshots, 0 analyses, 211 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+02:14:58.490809 [info ] [MainThread]: 
+02:14:58.492261 [debug] [MainThread]: Acquiring new synapse connection "master"
+02:14:58.494572 [debug] [ThreadPool]: Acquiring new synapse connection "list_BJAC_DW_PROD"
+02:14:58.504166 [debug] [ThreadPool]: Opening a new connection, currently in state init
+02:14:58.852409 [debug] [ThreadPool]: On list_BJAC_DW_PROD: Close
+02:14:58.928228 [debug] [ThreadPool]: Acquiring new synapse connection "list_BJAC_DW_PROD_dbo"
+02:14:58.934219 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+02:14:58.934607 [debug] [ThreadPool]: Acquiring new synapse connection "list_BJAC_DW_PROD_stg"
+02:14:58.936603 [debug] [ThreadPool]: Opening a new connection, currently in state init
+02:14:59.224455 [debug] [ThreadPool]: On list_BJAC_DW_PROD_dbo: ROLLBACK
+02:14:59.230521 [debug] [ThreadPool]: On list_BJAC_DW_PROD_dbo: Close
+02:14:59.557659 [debug] [ThreadPool]: On list_BJAC_DW_PROD_stg: ROLLBACK
+02:14:59.564685 [debug] [ThreadPool]: On list_BJAC_DW_PROD_stg: Close
+02:15:15.814524 [debug] [MainThread]: On master: COMMIT
+02:15:15.815308 [info ] [MainThread]: Concurrency: 4 threads (target='prod')
+02:15:15.816557 [info ] [MainThread]: 
+02:15:15.820563 [debug] [Thread-1  ]: Began running node model.Shawn.Auct_Phone_Merge
+02:15:15.820885 [info ] [Thread-1  ]: 1 of 1 START table model stg.Auct_Phone_Merge................................... [RUN]
+02:15:15.821986 [debug] [Thread-1  ]: Acquiring new synapse connection "model.Shawn.Auct_Phone_Merge"
+02:15:15.822162 [debug] [Thread-1  ]: Began compiling node model.Shawn.Auct_Phone_Merge
+02:15:15.822309 [debug] [Thread-1  ]: Compiling model.Shawn.Auct_Phone_Merge
+02:15:15.828171 [debug] [Thread-1  ]: Writing injected SQL for node "model.Shawn.Auct_Phone_Merge"
+02:15:15.828746 [debug] [Thread-1  ]: finished collecting timing info
+02:15:15.828979 [debug] [Thread-1  ]: Began executing node model.Shawn.Auct_Phone_Merge
+02:15:15.918684 [debug] [Thread-1  ]: Writing runtime SQL for node "model.Shawn.Auct_Phone_Merge"
+02:15:15.920083 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+02:15:57.958184 [debug] [Thread-1  ]: On model.Shawn.Auct_Phone_Merge: COMMIT
+02:15:58.447193 [debug] [Thread-1  ]: finished collecting timing info
+02:15:58.447645 [debug] [Thread-1  ]: On model.Shawn.Auct_Phone_Merge: Close
+02:15:58.448414 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b49b618c-cf74-4928-bcff-97682b2eb5c0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f69f0840940>]}
+02:15:58.448947 [info ] [Thread-1  ]: 1 of 1 OK created table model stg.Auct_Phone_Merge.............................. [[32mOK[0m in 42.63s]
+02:15:58.450180 [debug] [Thread-1  ]: Finished running node model.Shawn.Auct_Phone_Merge
+02:15:58.451443 [debug] [MainThread]: Acquiring new synapse connection "master"
+02:15:58.451875 [debug] [MainThread]: On master: COMMIT
+02:15:58.452171 [info ] [MainThread]: 
+02:15:58.453151 [info ] [MainThread]: Finished running 1 table model in 59.96s.
+02:15:58.455310 [debug] [MainThread]: Connection 'master' was properly closed.
+02:15:58.455891 [debug] [MainThread]: Connection 'list_BJAC_DW_PROD_dbo' was properly closed.
+02:15:58.456094 [debug] [MainThread]: Connection 'model.Shawn.Auct_Phone_Merge' was properly closed.
+02:15:58.678077 [info ] [MainThread]: 
+02:15:58.679499 [info ] [MainThread]: [32mCompleted successfully[0m
+02:15:58.680356 [info ] [MainThread]: 
+02:15:58.681007 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+02:15:58.682041 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f69f11822e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f69f120b460>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f69f198d1f0>]}
+
+
+============================== 2022-09-06 02:16:01.044616 | 970142ef-da42-46fb-baf7-d1c8cd29aff8 ==============================
+02:16:01.044616 [info ] [MainThread]: Running with dbt=1.0.0
+02:16:01.050815 [debug] [MainThread]: running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=None, defer=None, event_buffer_size=None, exclude=None, fail_fast=None, full_refresh=False, log_cache_events=False, log_format=None, partial_parse=None, printer_width=None, profile=None, profiles_dir='/home/azureuser/.dbt', project_dir='/home/azureuser/shawn_dbt/Auctioneer', record_timing_info=None, rpc_method='run', select=['step6_2'], selector_name=None, send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, threads=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='run', write_json=None)
+02:16:01.051163 [debug] [MainThread]: Tracking: tracking
+02:16:01.051557 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f39bf258130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f39bf258190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f39bf2581f0>]}
+02:16:01.544933 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+02:16:01.545462 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+02:16:01.628419 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '970142ef-da42-46fb-baf7-d1c8cd29aff8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f39bf11ffd0>]}
+02:16:01.997630 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '970142ef-da42-46fb-baf7-d1c8cd29aff8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f39be59f580>]}
+02:16:01.998183 [info ] [MainThread]: Found 1321 models, 0 tests, 355 snapshots, 0 analyses, 211 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+02:16:02.028615 [info ] [MainThread]: 
+02:16:02.029957 [debug] [MainThread]: Acquiring new synapse connection "master"
+02:16:02.031551 [debug] [ThreadPool]: Acquiring new synapse connection "list_BJAC_DW_PROD"
+02:16:02.040752 [debug] [ThreadPool]: Opening a new connection, currently in state init
+02:16:02.361702 [debug] [ThreadPool]: On list_BJAC_DW_PROD: Close
+02:16:02.437639 [debug] [ThreadPool]: Acquiring new synapse connection "list_BJAC_DW_PROD_dbo"
+02:16:02.445531 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+02:16:02.445945 [debug] [ThreadPool]: Acquiring new synapse connection "list_BJAC_DW_PROD_stg"
+02:16:02.447903 [debug] [ThreadPool]: Opening a new connection, currently in state init
+02:16:02.713635 [debug] [ThreadPool]: On list_BJAC_DW_PROD_dbo: ROLLBACK
+02:16:02.727572 [debug] [ThreadPool]: On list_BJAC_DW_PROD_dbo: Close
+02:16:02.958363 [debug] [ThreadPool]: On list_BJAC_DW_PROD_stg: ROLLBACK
+02:16:02.966902 [debug] [ThreadPool]: On list_BJAC_DW_PROD_stg: Close
+02:16:16.384861 [debug] [MainThread]: On master: COMMIT
+02:16:16.385597 [info ] [MainThread]: Concurrency: 4 threads (target='prod')
+02:16:16.386920 [info ] [MainThread]: 
+02:16:16.391745 [debug] [Thread-1  ]: Began running node model.Shawn.Auct_Customer_HistoricalCompanyID_Lookup
+02:16:16.392106 [info ] [Thread-1  ]: 1 of 1 START table model stg.Auct_Customer_HistoricalCompanyID_Lookup........... [RUN]
+02:16:16.393149 [debug] [Thread-1  ]: Acquiring new synapse connection "model.Shawn.Auct_Customer_HistoricalCompanyID_Lookup"
+02:16:16.393396 [debug] [Thread-1  ]: Began compiling node model.Shawn.Auct_Customer_HistoricalCompanyID_Lookup
+02:16:16.393615 [debug] [Thread-1  ]: Compiling model.Shawn.Auct_Customer_HistoricalCompanyID_Lookup
+02:16:16.397016 [debug] [Thread-1  ]: Writing injected SQL for node "model.Shawn.Auct_Customer_HistoricalCompanyID_Lookup"
+02:16:16.397581 [debug] [Thread-1  ]: finished collecting timing info
+02:16:16.397894 [debug] [Thread-1  ]: Began executing node model.Shawn.Auct_Customer_HistoricalCompanyID_Lookup
+02:16:16.488257 [debug] [Thread-1  ]: Writing runtime SQL for node "model.Shawn.Auct_Customer_HistoricalCompanyID_Lookup"
+02:16:16.489315 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+02:16:19.408632 [debug] [Thread-1  ]: On model.Shawn.Auct_Customer_HistoricalCompanyID_Lookup: COMMIT
+02:16:19.777558 [debug] [Thread-1  ]: finished collecting timing info
+02:16:19.778035 [debug] [Thread-1  ]: On model.Shawn.Auct_Customer_HistoricalCompanyID_Lookup: Close
+02:16:19.778774 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '970142ef-da42-46fb-baf7-d1c8cd29aff8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f39bef3fbe0>]}
+02:16:19.779277 [info ] [Thread-1  ]: 1 of 1 OK created table model stg.Auct_Customer_HistoricalCompanyID_Lookup...... [[32mOK[0m in 3.39s]
+02:16:19.780470 [debug] [Thread-1  ]: Finished running node model.Shawn.Auct_Customer_HistoricalCompanyID_Lookup
+02:16:19.782175 [debug] [MainThread]: Acquiring new synapse connection "master"
+02:16:19.782631 [debug] [MainThread]: On master: COMMIT
+02:16:19.782934 [info ] [MainThread]: 
+02:16:19.783621 [info ] [MainThread]: Finished running 1 table model in 17.75s.
+02:16:19.784620 [debug] [MainThread]: Connection 'master' was properly closed.
+02:16:19.784849 [debug] [MainThread]: Connection 'list_BJAC_DW_PROD_dbo' was properly closed.
+02:16:19.785021 [debug] [MainThread]: Connection 'model.Shawn.Auct_Customer_HistoricalCompanyID_Lookup' was properly closed.
+02:16:20.005246 [info ] [MainThread]: 
+02:16:20.006426 [info ] [MainThread]: [32mCompleted successfully[0m
+02:16:20.007480 [info ] [MainThread]: 
+02:16:20.008352 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+02:16:20.009178 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f39bc30c220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f39bc364850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f39bc364250>]}
+
+
+============================== 2022-09-06 02:16:22.267531 | 2ed27d4f-c706-426b-8637-ec32c6b52f02 ==============================
+02:16:22.267531 [info ] [MainThread]: Running with dbt=1.0.0
+02:16:22.274758 [debug] [MainThread]: running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=None, defer=None, event_buffer_size=None, exclude=None, fail_fast=None, full_refresh=False, log_cache_events=False, log_format=None, partial_parse=None, printer_width=None, profile=None, profiles_dir='/home/azureuser/.dbt', project_dir='/home/azureuser/shawn_dbt/Auctioneer', record_timing_info=None, rpc_method='run', select=['step6_3'], selector_name=None, send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, threads=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='run', write_json=None)
+02:16:22.275112 [debug] [MainThread]: Tracking: tracking
+02:16:22.275537 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f19e7a03130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f19e7a03190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f19e7a031f0>]}
+02:16:22.824606 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+02:16:22.825156 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+02:16:22.905584 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '2ed27d4f-c706-426b-8637-ec32c6b52f02', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f19e78cafd0>]}
+02:16:23.262948 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '2ed27d4f-c706-426b-8637-ec32c6b52f02', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f19e6cc8580>]}
+02:16:23.263515 [info ] [MainThread]: Found 1321 models, 0 tests, 355 snapshots, 0 analyses, 211 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+02:16:23.295303 [info ] [MainThread]: 
+02:16:23.296677 [debug] [MainThread]: Acquiring new synapse connection "master"
+02:16:23.298101 [debug] [ThreadPool]: Acquiring new synapse connection "list_BJAC_DW_PROD"
+02:16:23.306531 [debug] [ThreadPool]: Acquiring new synapse connection "list_BJAC_DW_PROD"
+02:16:23.311635 [debug] [ThreadPool]: Opening a new connection, currently in state init
+02:16:23.313002 [debug] [ThreadPool]: Opening a new connection, currently in state init
+02:16:23.612529 [debug] [ThreadPool]: On list_BJAC_DW_PROD: Close
+02:16:23.614026 [debug] [ThreadPool]: On list_BJAC_DW_PROD: Close
+02:16:23.688303 [debug] [ThreadPool]: Acquiring new synapse connection "list_BJAC_DW_PROD_stg"
+02:16:23.694490 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+02:16:23.694813 [debug] [ThreadPool]: Acquiring new synapse connection "list_BJAC_DW_PROD_dbo"
+02:16:23.696440 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+02:16:23.925263 [debug] [ThreadPool]: On list_BJAC_DW_PROD_dbo: ROLLBACK
+02:16:23.927074 [debug] [ThreadPool]: On list_BJAC_DW_PROD_dbo: Close
+02:16:24.150424 [debug] [ThreadPool]: On list_BJAC_DW_PROD_stg: ROLLBACK
+02:16:24.159769 [debug] [ThreadPool]: On list_BJAC_DW_PROD_stg: Close
+02:16:37.506871 [debug] [MainThread]: On master: COMMIT
+02:16:37.507662 [info ] [MainThread]: Concurrency: 4 threads (target='prod')
+02:16:37.508920 [info ] [MainThread]: 
+02:16:37.513772 [debug] [Thread-1  ]: Began running node model.Shawn.Auct_Customer_ContactType_Lookup
+02:16:37.514128 [info ] [Thread-1  ]: 1 of 2 START table model stg.Auct_Customer_ContactType_Lookup................... [RUN]
+02:16:37.514803 [debug] [Thread-2  ]: Began running node model.Shawn.Auct_Item_BR
+02:16:37.515076 [info ] [Thread-2  ]: 2 of 2 START table model dbo.Auct_Item_BR....................................... [RUN]
+02:16:37.516181 [debug] [Thread-1  ]: Acquiring new synapse connection "model.Shawn.Auct_Customer_ContactType_Lookup"
+02:16:37.517199 [debug] [Thread-1  ]: Began compiling node model.Shawn.Auct_Customer_ContactType_Lookup
+02:16:37.517449 [debug] [Thread-1  ]: Compiling model.Shawn.Auct_Customer_ContactType_Lookup
+02:16:37.516815 [debug] [Thread-2  ]: Acquiring new synapse connection "model.Shawn.Auct_Item_BR"
+02:16:37.522850 [debug] [Thread-2  ]: Began compiling node model.Shawn.Auct_Item_BR
+02:16:37.522984 [debug] [Thread-2  ]: Compiling model.Shawn.Auct_Item_BR
+02:16:37.525305 [debug] [Thread-2  ]: Writing injected SQL for node "model.Shawn.Auct_Item_BR"
+02:16:37.522632 [debug] [Thread-1  ]: Writing injected SQL for node "model.Shawn.Auct_Customer_ContactType_Lookup"
+02:16:37.526218 [debug] [Thread-2  ]: finished collecting timing info
+02:16:37.526793 [debug] [Thread-2  ]: Began executing node model.Shawn.Auct_Item_BR
+02:16:37.526619 [debug] [Thread-1  ]: finished collecting timing info
+02:16:37.534922 [debug] [Thread-1  ]: Began executing node model.Shawn.Auct_Customer_ContactType_Lookup
+02:16:37.636064 [debug] [Thread-2  ]: Writing runtime SQL for node "model.Shawn.Auct_Item_BR"
+02:16:37.642413 [debug] [Thread-2  ]: Opening a new connection, currently in state closed
+02:16:37.686622 [debug] [Thread-1  ]: Writing runtime SQL for node "model.Shawn.Auct_Customer_ContactType_Lookup"
+02:16:37.693388 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+02:16:47.592759 [debug] [Thread-1  ]: On model.Shawn.Auct_Customer_ContactType_Lookup: COMMIT
+02:16:48.130494 [debug] [Thread-1  ]: finished collecting timing info
+02:16:48.140933 [debug] [Thread-1  ]: On model.Shawn.Auct_Customer_ContactType_Lookup: Close
+02:16:48.141600 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2ed27d4f-c706-426b-8637-ec32c6b52f02', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f19e4a5c370>]}
+02:16:48.142172 [info ] [Thread-1  ]: 1 of 2 OK created table model stg.Auct_Customer_ContactType_Lookup.............. [[32mOK[0m in 10.63s]
+02:16:48.143678 [debug] [Thread-1  ]: Finished running node model.Shawn.Auct_Customer_ContactType_Lookup
+02:16:48.215721 [debug] [Thread-2  ]: On model.Shawn.Auct_Item_BR: COMMIT
+02:16:48.570732 [debug] [Thread-2  ]: finished collecting timing info
+02:16:48.571204 [debug] [Thread-2  ]: On model.Shawn.Auct_Item_BR: Close
+02:16:48.571946 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2ed27d4f-c706-426b-8637-ec32c6b52f02', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f19e6dff9a0>]}
+02:16:48.572456 [info ] [Thread-2  ]: 2 of 2 OK created table model dbo.Auct_Item_BR.................................. [[32mOK[0m in 11.06s]
+02:16:48.573561 [debug] [Thread-2  ]: Finished running node model.Shawn.Auct_Item_BR
+02:16:48.575414 [debug] [MainThread]: Acquiring new synapse connection "master"
+02:16:48.575862 [debug] [MainThread]: On master: COMMIT
+02:16:48.576197 [info ] [MainThread]: 
+02:16:48.576981 [info ] [MainThread]: Finished running 2 table models in 25.28s.
+02:16:48.578015 [debug] [MainThread]: Connection 'master' was properly closed.
+02:16:48.578236 [debug] [MainThread]: Connection 'model.Shawn.Auct_Customer_ContactType_Lookup' was properly closed.
+02:16:48.578451 [debug] [MainThread]: Connection 'model.Shawn.Auct_Item_BR' was properly closed.
+02:16:48.672163 [info ] [MainThread]: 
+02:16:48.673477 [info ] [MainThread]: [32mCompleted successfully[0m
+02:16:48.674414 [info ] [MainThread]: 
+02:16:48.675089 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+02:16:48.676090 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f19e75338e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f19e75ed520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f19e6dff970>]}
+
+
+============================== 2022-09-06 02:16:51.051198 | 7d40316c-381b-4718-b932-8bfbdfb9d3a4 ==============================
+02:16:51.051198 [info ] [MainThread]: Running with dbt=1.0.0
+02:16:51.058791 [debug] [MainThread]: running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=None, defer=None, event_buffer_size=None, exclude=None, fail_fast=None, full_refresh=False, log_cache_events=False, log_format=None, partial_parse=None, printer_width=None, profile=None, profiles_dir='/home/azureuser/.dbt', project_dir='/home/azureuser/shawn_dbt/Auctioneer', record_timing_info=None, rpc_method='run', select=['step7_1'], selector_name=None, send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, threads=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='run', write_json=None)
+02:16:51.059121 [debug] [MainThread]: Tracking: tracking
+02:16:51.059503 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb60b8993d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb60b899b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb60b899550>]}
+02:16:51.553581 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+02:16:51.554168 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+02:16:51.634647 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7d40316c-381b-4718-b932-8bfbdfb9d3a4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb60b798f70>]}
+02:16:51.980216 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7d40316c-381b-4718-b932-8bfbdfb9d3a4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb60ab535e0>]}
+02:16:51.981000 [info ] [MainThread]: Found 1321 models, 0 tests, 355 snapshots, 0 analyses, 211 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+02:16:52.012134 [info ] [MainThread]: 
+02:16:52.013350 [debug] [MainThread]: Acquiring new synapse connection "master"
+02:16:52.015060 [debug] [ThreadPool]: Acquiring new synapse connection "list_BJAC_DW_PROD"
+02:16:52.024461 [debug] [ThreadPool]: Opening a new connection, currently in state init
+02:16:52.305951 [debug] [ThreadPool]: On list_BJAC_DW_PROD: Close
+02:16:52.382965 [debug] [ThreadPool]: Acquiring new synapse connection "list_BJAC_DW_PROD_stg"
+02:16:52.391147 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+02:16:52.391533 [debug] [ThreadPool]: Acquiring new synapse connection "list_BJAC_DW_PROD_dbo"
+02:16:52.393475 [debug] [ThreadPool]: Opening a new connection, currently in state init
+02:16:52.664198 [debug] [ThreadPool]: On list_BJAC_DW_PROD_dbo: ROLLBACK
+02:16:52.664622 [debug] [ThreadPool]: On list_BJAC_DW_PROD_dbo: Close
+02:16:52.846609 [debug] [ThreadPool]: On list_BJAC_DW_PROD_stg: ROLLBACK
+02:16:52.865210 [debug] [ThreadPool]: On list_BJAC_DW_PROD_stg: Close
+02:17:06.221418 [debug] [MainThread]: On master: COMMIT
+02:17:06.222170 [info ] [MainThread]: Concurrency: 4 threads (target='prod')
+02:17:06.223689 [info ] [MainThread]: 
+02:17:06.228304 [debug] [Thread-1  ]: Began running node model.Shawn.Auct_Customer_Archive_BR_Step1
+02:17:06.228632 [info ] [Thread-1  ]: 1 of 1 START table model stg.Auct_Customer_Archive_BR_Step1..................... [RUN]
+02:17:06.229731 [debug] [Thread-1  ]: Acquiring new synapse connection "model.Shawn.Auct_Customer_Archive_BR_Step1"
+02:17:06.229974 [debug] [Thread-1  ]: Began compiling node model.Shawn.Auct_Customer_Archive_BR_Step1
+02:17:06.230188 [debug] [Thread-1  ]: Compiling model.Shawn.Auct_Customer_Archive_BR_Step1
+02:17:06.233297 [debug] [Thread-1  ]: Writing injected SQL for node "model.Shawn.Auct_Customer_Archive_BR_Step1"
+02:17:06.233867 [debug] [Thread-1  ]: finished collecting timing info
+02:17:06.234132 [debug] [Thread-1  ]: Began executing node model.Shawn.Auct_Customer_Archive_BR_Step1
+02:17:06.322721 [debug] [Thread-1  ]: Writing runtime SQL for node "model.Shawn.Auct_Customer_Archive_BR_Step1"
+02:17:06.323464 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+02:17:15.348940 [debug] [Thread-1  ]: On model.Shawn.Auct_Customer_Archive_BR_Step1: COMMIT
+02:17:15.865735 [debug] [Thread-1  ]: finished collecting timing info
+02:17:15.866202 [debug] [Thread-1  ]: On model.Shawn.Auct_Customer_Archive_BR_Step1: Close
+02:17:15.866956 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7d40316c-381b-4718-b932-8bfbdfb9d3a4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb60b589a00>]}
+02:17:15.867475 [info ] [Thread-1  ]: 1 of 1 OK created table model stg.Auct_Customer_Archive_BR_Step1................ [[32mOK[0m in 9.64s]
+02:17:15.868760 [debug] [Thread-1  ]: Finished running node model.Shawn.Auct_Customer_Archive_BR_Step1
+02:17:15.870476 [debug] [MainThread]: Acquiring new synapse connection "master"
+02:17:15.870926 [debug] [MainThread]: On master: COMMIT
+02:17:15.871233 [info ] [MainThread]: 
+02:17:15.871935 [info ] [MainThread]: Finished running 1 table model in 23.86s.
+02:17:15.872819 [debug] [MainThread]: Connection 'master' was properly closed.
+02:17:15.873039 [debug] [MainThread]: Connection 'model.Shawn.Auct_Customer_Archive_BR_Step1' was properly closed.
+02:17:15.873230 [debug] [MainThread]: Connection 'list_BJAC_DW_PROD_dbo' was properly closed.
+02:17:16.103036 [info ] [MainThread]: 
+02:17:16.105007 [info ] [MainThread]: [32mCompleted successfully[0m
+02:17:16.106358 [info ] [MainThread]: 
+02:17:16.107098 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+02:17:16.108094 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb6089f3550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb6089f32b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb6089f35e0>]}
+
+
+============================== 2022-09-06 02:17:19.196182 | 0f385d2c-d4e1-4865-a13c-8969b93175f8 ==============================
+02:17:19.196182 [info ] [MainThread]: Running with dbt=1.0.0
+02:17:19.206759 [debug] [MainThread]: running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=None, defer=None, event_buffer_size=None, exclude=None, fail_fast=None, full_refresh=False, log_cache_events=False, log_format=None, partial_parse=None, printer_width=None, profile=None, profiles_dir='/home/azureuser/.dbt', project_dir='/home/azureuser/shawn_dbt/Auctioneer', record_timing_info=None, rpc_method='run', select=['step7_2'], selector_name=None, send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, threads=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='run', write_json=None)
+02:17:19.207116 [debug] [MainThread]: Tracking: tracking
+02:17:19.208388 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1d82131190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1d821311f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1d82131250>]}
+02:17:20.186225 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+02:17:20.186777 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+02:17:20.267937 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0f385d2c-d4e1-4865-a13c-8969b93175f8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1d81ff8f70>]}
+02:17:20.579231 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0f385d2c-d4e1-4865-a13c-8969b93175f8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1d813b35e0>]}
+02:17:20.579837 [info ] [MainThread]: Found 1321 models, 0 tests, 355 snapshots, 0 analyses, 211 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+02:17:20.612837 [info ] [MainThread]: 
+02:17:20.614406 [debug] [MainThread]: Acquiring new synapse connection "master"
+02:17:20.616249 [debug] [ThreadPool]: Acquiring new synapse connection "list_BJAC_DW_PROD"
+02:17:20.625852 [debug] [ThreadPool]: Opening a new connection, currently in state init
+02:17:20.951783 [debug] [ThreadPool]: On list_BJAC_DW_PROD: Close
+02:17:21.031313 [debug] [ThreadPool]: Acquiring new synapse connection "list_BJAC_DW_PROD_dbo"
+02:17:21.037284 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+02:17:21.037792 [debug] [ThreadPool]: Acquiring new synapse connection "list_BJAC_DW_PROD_stg"
+02:17:21.039734 [debug] [ThreadPool]: Opening a new connection, currently in state init
+02:17:21.256333 [debug] [ThreadPool]: On list_BJAC_DW_PROD_dbo: ROLLBACK
+02:17:21.259083 [debug] [ThreadPool]: On list_BJAC_DW_PROD_dbo: Close
+02:17:21.498509 [debug] [ThreadPool]: On list_BJAC_DW_PROD_stg: ROLLBACK
+02:17:21.508915 [debug] [ThreadPool]: On list_BJAC_DW_PROD_stg: Close
+02:17:35.868007 [debug] [MainThread]: On master: COMMIT
+02:17:35.868758 [info ] [MainThread]: Concurrency: 4 threads (target='prod')
+02:17:35.870014 [info ] [MainThread]: 
+02:17:35.874364 [debug] [Thread-1  ]: Began running node model.Shawn.Auct_Customer_Archive_BR_Step2
+02:17:35.874696 [info ] [Thread-1  ]: 1 of 1 START table model stg.Auct_Customer_Archive_BR_Step2..................... [RUN]
+02:17:35.875759 [debug] [Thread-1  ]: Acquiring new synapse connection "model.Shawn.Auct_Customer_Archive_BR_Step2"
+02:17:35.876004 [debug] [Thread-1  ]: Began compiling node model.Shawn.Auct_Customer_Archive_BR_Step2
+02:17:35.876219 [debug] [Thread-1  ]: Compiling model.Shawn.Auct_Customer_Archive_BR_Step2
+02:17:35.880065 [debug] [Thread-1  ]: Writing injected SQL for node "model.Shawn.Auct_Customer_Archive_BR_Step2"
+02:17:35.880622 [debug] [Thread-1  ]: finished collecting timing info
+02:17:35.880980 [debug] [Thread-1  ]: Began executing node model.Shawn.Auct_Customer_Archive_BR_Step2
+02:17:35.972247 [debug] [Thread-1  ]: Writing runtime SQL for node "model.Shawn.Auct_Customer_Archive_BR_Step2"
+02:17:35.973036 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+03:20:52.655453 [debug] [Thread-1  ]: On model.Shawn.Auct_Customer_Archive_BR_Step2: COMMIT
+03:20:53.614626 [debug] [Thread-1  ]: finished collecting timing info
+03:20:53.615060 [debug] [Thread-1  ]: On model.Shawn.Auct_Customer_Archive_BR_Step2: Close
+03:20:53.615802 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0f385d2c-d4e1-4865-a13c-8969b93175f8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1d81e30a60>]}
+03:20:53.616300 [info ] [Thread-1  ]: 1 of 1 OK created table model stg.Auct_Customer_Archive_BR_Step2................ [[32mOK[0m in 3797.74s]
+03:20:53.617474 [debug] [Thread-1  ]: Finished running node model.Shawn.Auct_Customer_Archive_BR_Step2
+03:20:53.618781 [debug] [MainThread]: Acquiring new synapse connection "master"
+03:20:53.619189 [debug] [MainThread]: On master: COMMIT
+03:20:53.619469 [info ] [MainThread]: 
+03:20:53.620484 [info ] [MainThread]: Finished running 1 table model in 3813.01s.
+03:20:53.621362 [debug] [MainThread]: Connection 'master' was properly closed.
+03:20:53.621578 [debug] [MainThread]: Connection 'list_BJAC_DW_PROD_dbo' was properly closed.
+03:20:53.621771 [debug] [MainThread]: Connection 'model.Shawn.Auct_Customer_Archive_BR_Step2' was properly closed.
+03:20:53.781207 [info ] [MainThread]: 
+03:20:53.782596 [info ] [MainThread]: [32mCompleted successfully[0m
+03:20:53.783454 [info ] [MainThread]: 
+03:20:53.784112 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+03:20:53.785144 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1d81c46190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1d800cbe50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1d800cb760>]}
+
+
+============================== 2022-09-06 03:20:56.014997 | 9b3ee493-4ede-43e6-b32c-82706ca2beb3 ==============================
+03:20:56.014997 [info ] [MainThread]: Running with dbt=1.0.0
+03:20:56.018882 [debug] [MainThread]: running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=None, defer=None, event_buffer_size=None, exclude=None, fail_fast=None, full_refresh=False, log_cache_events=False, log_format=None, partial_parse=None, printer_width=None, profile=None, profiles_dir='/home/azureuser/.dbt', project_dir='/home/azureuser/shawn_dbt/Auctioneer', record_timing_info=None, rpc_method='run', select=['step7_3'], selector_name=None, send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, threads=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='run', write_json=None)
+03:20:56.021829 [debug] [MainThread]: Tracking: tracking
+03:20:56.022313 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fed89d919a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fed89d71430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fed89d71e20>]}
+03:20:56.465883 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+03:20:56.466418 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+03:20:56.545210 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '9b3ee493-4ede-43e6-b32c-82706ca2beb3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fed89c70f70>]}
+03:20:56.769318 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '9b3ee493-4ede-43e6-b32c-82706ca2beb3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fed8902b5e0>]}
+03:20:56.770020 [info ] [MainThread]: Found 1321 models, 0 tests, 355 snapshots, 0 analyses, 211 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+03:20:56.800091 [info ] [MainThread]: 
+03:20:56.801330 [debug] [MainThread]: Acquiring new synapse connection "master"
+03:20:56.802966 [debug] [ThreadPool]: Acquiring new synapse connection "list_BJAC_DW_PROD"
+03:20:56.812184 [debug] [ThreadPool]: Opening a new connection, currently in state init
+03:20:57.196844 [debug] [ThreadPool]: On list_BJAC_DW_PROD: Close
+03:20:57.271874 [debug] [ThreadPool]: Acquiring new synapse connection "list_BJAC_DW_PROD_dbo"
+03:20:57.277841 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+03:20:57.278209 [debug] [ThreadPool]: Acquiring new synapse connection "list_BJAC_DW_PROD_stg"
+03:20:57.280155 [debug] [ThreadPool]: Opening a new connection, currently in state init
+03:20:57.494904 [debug] [ThreadPool]: On list_BJAC_DW_PROD_dbo: ROLLBACK
+03:20:57.497706 [debug] [ThreadPool]: On list_BJAC_DW_PROD_dbo: Close
+03:20:57.663253 [debug] [ThreadPool]: On list_BJAC_DW_PROD_stg: ROLLBACK
+03:20:57.663568 [debug] [ThreadPool]: On list_BJAC_DW_PROD_stg: Close
+03:21:10.737533 [debug] [MainThread]: On master: COMMIT
+03:21:10.738298 [info ] [MainThread]: Concurrency: 4 threads (target='prod')
+03:21:10.739513 [info ] [MainThread]: 
+03:21:10.743496 [debug] [Thread-1  ]: Began running node model.Shawn.Auct_Customer_Archive_BR_Step3
+03:21:10.743813 [info ] [Thread-1  ]: 1 of 1 START table model stg.Auct_Customer_Archive_BR_Step3..................... [RUN]
+03:21:10.744878 [debug] [Thread-1  ]: Acquiring new synapse connection "model.Shawn.Auct_Customer_Archive_BR_Step3"
+03:21:10.745055 [debug] [Thread-1  ]: Began compiling node model.Shawn.Auct_Customer_Archive_BR_Step3
+03:21:10.745203 [debug] [Thread-1  ]: Compiling model.Shawn.Auct_Customer_Archive_BR_Step3
+03:21:10.748799 [debug] [Thread-1  ]: Writing injected SQL for node "model.Shawn.Auct_Customer_Archive_BR_Step3"
+03:21:10.749350 [debug] [Thread-1  ]: finished collecting timing info
+03:21:10.749844 [debug] [Thread-1  ]: Began executing node model.Shawn.Auct_Customer_Archive_BR_Step3
+03:21:10.835455 [debug] [Thread-1  ]: Writing runtime SQL for node "model.Shawn.Auct_Customer_Archive_BR_Step3"
+03:21:10.836237 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+03:30:00.954819 [debug] [Thread-1  ]: On model.Shawn.Auct_Customer_Archive_BR_Step3: COMMIT
+03:30:02.531308 [debug] [Thread-1  ]: finished collecting timing info
+03:30:02.531753 [debug] [Thread-1  ]: On model.Shawn.Auct_Customer_Archive_BR_Step3: Close
+03:30:02.532494 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9b3ee493-4ede-43e6-b32c-82706ca2beb3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fed887efac0>]}
+03:30:02.532987 [info ] [Thread-1  ]: 1 of 1 OK created table model stg.Auct_Customer_Archive_BR_Step3................ [[32mOK[0m in 531.79s]
+03:30:02.534536 [debug] [Thread-1  ]: Finished running node model.Shawn.Auct_Customer_Archive_BR_Step3
+03:30:02.535799 [debug] [MainThread]: Acquiring new synapse connection "master"
+03:30:02.536228 [debug] [MainThread]: On master: COMMIT
+03:30:02.536524 [info ] [MainThread]: 
+03:30:02.537382 [info ] [MainThread]: Finished running 1 table model in 545.74s.
+03:30:02.538117 [debug] [MainThread]: Connection 'master' was properly closed.
+03:30:02.538345 [debug] [MainThread]: Connection 'list_BJAC_DW_PROD_dbo' was properly closed.
+03:30:02.538510 [debug] [MainThread]: Connection 'model.Shawn.Auct_Customer_Archive_BR_Step3' was properly closed.
+03:30:02.693375 [info ] [MainThread]: 
+03:30:02.694522 [info ] [MainThread]: [32mCompleted successfully[0m
+03:30:02.695573 [info ] [MainThread]: 
+03:30:02.696449 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+03:30:02.698081 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fed8993a190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fed86eb8040>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fed86eb89d0>]}
+
+
+============================== 2022-09-06 03:30:05.027977 | 3cd24e22-f851-4621-b1aa-32cc48552663 ==============================
+03:30:05.027977 [info ] [MainThread]: Running with dbt=1.0.0
+03:30:05.034839 [debug] [MainThread]: running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=None, defer=None, event_buffer_size=None, exclude=None, fail_fast=None, full_refresh=False, log_cache_events=False, log_format=None, partial_parse=None, printer_width=None, profile=None, profiles_dir='/home/azureuser/.dbt', project_dir='/home/azureuser/shawn_dbt/Auctioneer', record_timing_info=None, rpc_method='run', select=['step7_4'], selector_name=None, send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, threads=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='run', write_json=None)
+03:30:05.035232 [debug] [MainThread]: Tracking: tracking
+03:30:05.035664 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d739fc1c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d739fc220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d739fc280>]}
+03:30:05.466356 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+03:30:05.466878 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+03:30:05.546703 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '3cd24e22-f851-4621-b1aa-32cc48552663', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d738ca0d0>]}
+03:30:05.774348 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '3cd24e22-f851-4621-b1aa-32cc48552663', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d72d466a0>]}
+03:30:05.774864 [info ] [MainThread]: Found 1321 models, 0 tests, 355 snapshots, 0 analyses, 211 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+03:30:05.805234 [info ] [MainThread]: 
+03:30:05.806725 [debug] [MainThread]: Acquiring new synapse connection "master"
+03:30:05.808082 [debug] [ThreadPool]: Acquiring new synapse connection "list_BJAC_DW_PROD"
+03:30:05.817706 [debug] [ThreadPool]: Opening a new connection, currently in state init
+03:30:06.181101 [debug] [ThreadPool]: On list_BJAC_DW_PROD: Close
+03:30:06.256975 [debug] [ThreadPool]: Acquiring new synapse connection "list_BJAC_DW_PROD_dbo"
+03:30:06.262898 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+03:30:06.263280 [debug] [ThreadPool]: Acquiring new synapse connection "list_BJAC_DW_PROD_stg"
+03:30:06.265219 [debug] [ThreadPool]: Opening a new connection, currently in state init
+03:30:06.452105 [debug] [ThreadPool]: On list_BJAC_DW_PROD_dbo: ROLLBACK
+03:30:06.456206 [debug] [ThreadPool]: On list_BJAC_DW_PROD_dbo: Close
+03:30:06.615300 [debug] [ThreadPool]: On list_BJAC_DW_PROD_stg: ROLLBACK
+03:30:06.615617 [debug] [ThreadPool]: On list_BJAC_DW_PROD_stg: Close
+03:30:19.516718 [debug] [MainThread]: On master: COMMIT
+03:30:19.517395 [info ] [MainThread]: Concurrency: 4 threads (target='prod')
+03:30:19.518616 [info ] [MainThread]: 
+03:30:19.523443 [debug] [Thread-1  ]: Began running node model.Shawn.Auct_Customer_Archive_BR_Step4
+03:30:19.523766 [info ] [Thread-1  ]: 1 of 1 START table model stg.Auct_Customer_Archive_BR_Step4..................... [RUN]
+03:30:19.524845 [debug] [Thread-1  ]: Acquiring new synapse connection "model.Shawn.Auct_Customer_Archive_BR_Step4"
+03:30:19.525024 [debug] [Thread-1  ]: Began compiling node model.Shawn.Auct_Customer_Archive_BR_Step4
+03:30:19.525171 [debug] [Thread-1  ]: Compiling model.Shawn.Auct_Customer_Archive_BR_Step4
+03:30:19.528888 [debug] [Thread-1  ]: Writing injected SQL for node "model.Shawn.Auct_Customer_Archive_BR_Step4"
+03:30:19.529435 [debug] [Thread-1  ]: finished collecting timing info
+03:30:19.529801 [debug] [Thread-1  ]: Began executing node model.Shawn.Auct_Customer_Archive_BR_Step4
+03:30:19.615249 [debug] [Thread-1  ]: Writing runtime SQL for node "model.Shawn.Auct_Customer_Archive_BR_Step4"
+03:30:19.616100 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
