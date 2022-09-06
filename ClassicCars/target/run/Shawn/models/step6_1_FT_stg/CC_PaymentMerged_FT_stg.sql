@@ -148,8 +148,7 @@ select
     [AuthorizationCode],
     cast([ResponseCode] as nvarchar(4000)) as [ResponseCode],
     cast([ResponseReasonCode] as nvarchar(4000)) as [ResponseReasonCode],
-        
-        
+  
     [TransactionID],
     [FirstName],
     [LastName],

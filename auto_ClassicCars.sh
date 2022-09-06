@@ -1,7 +1,7 @@
 # dbt run --project-dir ClassicCars --models step1_InterView
 # dbt run --project-dir ClassicCars --models step1_InterView_Spec
-dbt run --project-dir ClassicCars --models step2_Incr
-dbt snapshot --project-dir ClassicCars 
+# dbt run --project-dir ClassicCars --models step2_Incr
+# dbt snapshot --project-dir ClassicCars 
 # dbt run --project-dir ClassicCars --models step3_FinalView
 # dbt run --project-dir ClassicCars --models step3_FinalView_Spec
 dbt run --project-dir ClassicCars --models step4_dboJoin
