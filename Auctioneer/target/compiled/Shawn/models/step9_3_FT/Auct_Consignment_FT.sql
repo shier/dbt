@@ -160,6 +160,7 @@ insertData as (
     where temp_ConsignmentID_DocketID not in (select  temp_ConsignmentID_DocketID from stg.Auct_Consignment_FT_stg) 
 )
 SELECT
+    [ConsignmentID],
     [Consignor_Skey],
     [Auction_Skey],
     [Item_Skey],
@@ -231,6 +232,7 @@ from updateData
 union all
 
 SELECT
+    [ConsignmentID],
     [Consignor_Skey],
     [Auction_Skey],
     [Item_Skey],
