@@ -8,10 +8,3 @@ With hashData as (
 		From stg.[CC_SavedSearchesAudit_InterView]
 	)
 Select * From hashData
-
-	where not exists 
-	(
-		select dbt_scd_id 
-		from "BJAC_DW_PROD"."stg"."CC_SavedSearchesAudit_Incr" compareData
-		where hashData.dbt_scd_id=compareData.dbt_scd_id
-	)
