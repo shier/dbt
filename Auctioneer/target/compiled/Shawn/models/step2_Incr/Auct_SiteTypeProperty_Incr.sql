@@ -1,15 +1,17 @@
 
 With hashData as (
 		Select
-			HASHBYTES('SHA2_256', concat(Cast([DynamicPropertyID] as varchar), Cast([SiteTypeID] as varchar), Cast([IsRequired] as varchar))) as hashValue,
-			CURRENT_TIMESTAMP as effectiveTime, *
+			*, HASHBYTES('SHA2_256', concat(Cast([DynamicPropertyID] as varchar), Cast([SiteTypeID] as varchar), Cast([IsRequired] as varchar))) as dbt_scd_id,
+			CURRENT_TIMESTAMP as dbt_updated_at, 
+			CURRENT_TIMESTAMP as dbt_valid_from, 
+			NULL as dbt_valid_to
 		From stg.[Auct_SiteTypeProperty_InterView]
 	)
 Select * From hashData
 
 	where not exists 
 	(
-		select hashValue 
+		select dbt_scd_id 
 		from "BJAC_DW_PROD"."stg"."Auct_SiteTypeProperty_Incr" compareData
-		where hashData.hashValue=compareData.hashValue
+		where hashData.dbt_scd_id=compareData.dbt_scd_id
 	)

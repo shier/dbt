@@ -1,15 +1,17 @@
 
 With hashData as (
 		Select
-			HASHBYTES('SHA2_256', concat(Cast([CommissionPercentage] as varchar), Cast([AutomobiliaCommissionPercentage] as varchar), Cast([AuctionID] as varchar), Cast([BidderStatusID] as varchar), Cast([FeeID] as varchar), Cast([RangeStart] as varchar), Cast([RangeEnd] as varchar))) as hashValue,
-			CURRENT_TIMESTAMP as effectiveTime, *
+			*, HASHBYTES('SHA2_256', concat(Cast([CommissionPercentage] as varchar), Cast([AutomobiliaCommissionPercentage] as varchar), Cast([AuctionID] as varchar), Cast([BidderStatusID] as varchar), Cast([FeeID] as varchar), Cast([RangeStart] as varchar), Cast([RangeEnd] as varchar))) as dbt_scd_id,
+			CURRENT_TIMESTAMP as dbt_updated_at, 
+			CURRENT_TIMESTAMP as dbt_valid_from, 
+			NULL as dbt_valid_to
 		From stg.[Auct_AuctionBidderStatus_InterView]
 	)
 Select * From hashData
 
 	where not exists 
 	(
-		select hashValue 
+		select dbt_scd_id 
 		from "BJAC_DW_PROD"."stg"."Auct_AuctionBidderStatus_Incr" compareData
-		where hashData.hashValue=compareData.hashValue
+		where hashData.dbt_scd_id=compareData.dbt_scd_id
 	)

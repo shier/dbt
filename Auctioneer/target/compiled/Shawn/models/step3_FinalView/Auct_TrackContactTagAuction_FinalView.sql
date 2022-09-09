@@ -1,4 +1,5 @@
 
 Select
 	[TagID],[ContactID],[PulseEventID],[CredentialTypeID] 
-From [Auct_TrackContactTagAuction_Incr]
+From [Auct_TrackContactTagAuction_Incr] 
+Where [dbt_valid_to] is null

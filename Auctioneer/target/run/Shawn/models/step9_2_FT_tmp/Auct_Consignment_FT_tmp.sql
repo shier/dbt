@@ -24,6 +24,7 @@ WITH Auct_Consignment_temp_CTE AS (
                 COALESCE(CAST(consgt.[DOCKETID] AS VARCHAR(20)), '''')
             )
         ) AS [temp_ConsignmentID_DocketID],
+
         cxconsgt.[Consignor_Skey],
         auc.[Auction_Skey],
         COALESCE(car.[Item_Skey], automobilia.[Item_Skey]) AS [Item_Skey],

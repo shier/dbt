@@ -12,6 +12,7 @@ dbt snapshot --project-dir Auctioneer
 # ---------------------------------------------------------------------------
 # dbt run --project-dir Auctioneer --models step3_FinalView
 # dbt run --project-dir Auctioneer --models step3_FinalViewClean
+# dbt run --project-dir Auctioneer --models step3_FinalView_Rename
 
 # This step, build table base on data map. skip this
 # ---------------------------------------------------------------------------

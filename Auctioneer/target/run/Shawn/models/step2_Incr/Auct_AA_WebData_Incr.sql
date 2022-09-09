@@ -1,10 +1,16 @@
 
       
   
+    delete from "BJAC_DW_PROD"."stg"."Auct_AA_WebData_Incr"
+    where (dbt_scd_id) in (
+        select (dbt_scd_id)
+        from "BJAC_DW_PROD"."stg"."#Auct_AA_WebData_Incr__dbt_tmp"
+    );
+    
 
-    insert into "BJAC_DW_PROD"."stg"."Auct_AA_WebData_Incr" ("hashValue", "effectiveTime", "CarInfoID", "Horsepower", "OriginalHorsepower")
+    insert into "BJAC_DW_PROD"."stg"."Auct_AA_WebData_Incr" ("CarInfoID", "Horsepower", "OriginalHorsepower", "dbt_scd_id", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to")
     (
-        select "hashValue", "effectiveTime", "CarInfoID", "Horsepower", "OriginalHorsepower"
+        select "CarInfoID", "Horsepower", "OriginalHorsepower", "dbt_scd_id", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to"
         from "BJAC_DW_PROD"."stg"."#Auct_AA_WebData_Incr__dbt_tmp"
     );
 

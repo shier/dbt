@@ -1,4 +1,5 @@
 
 Select
 	[EventID],[SiteID] 
-From [Auct_EventSite_Incr]
+From [Auct_EventSite_Incr] 
+Where [dbt_valid_to] is null

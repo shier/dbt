@@ -1,10 +1,16 @@
 
       
   
+    delete from "BJAC_DW_PROD"."stg"."CC_ModelDifferenceAspect_Incr"
+    where (dbt_scd_id) in (
+        select (dbt_scd_id)
+        from "BJAC_DW_PROD"."stg"."#CC_ModelDifferenceAspect_Incr__dbt_tmp"
+    );
+    
 
-    insert into "BJAC_DW_PROD"."stg"."CC_ModelDifferenceAspect_Incr" ("hashValue", "effectiveTime", "OID", "Name", "Xml", "Owner", "OptimisticLockField", "GcRecord")
+    insert into "BJAC_DW_PROD"."stg"."CC_ModelDifferenceAspect_Incr" ("OID", "Name", "Xml", "Owner", "OptimisticLockField", "GcRecord", "dbt_scd_id", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to")
     (
-        select "hashValue", "effectiveTime", "OID", "Name", "Xml", "Owner", "OptimisticLockField", "GcRecord"
+        select "OID", "Name", "Xml", "Owner", "OptimisticLockField", "GcRecord", "dbt_scd_id", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to"
         from "BJAC_DW_PROD"."stg"."#CC_ModelDifferenceAspect_Incr__dbt_tmp"
     );
 

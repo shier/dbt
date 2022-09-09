@@ -1,10 +1,16 @@
 
       
   
+    delete from "BJAC_DW_PROD"."stg"."CC_GeoLocation_Incr"
+    where (dbt_scd_id) in (
+        select (dbt_scd_id)
+        from "BJAC_DW_PROD"."stg"."#CC_GeoLocation_Incr__dbt_tmp"
+    );
+    
 
-    insert into "BJAC_DW_PROD"."stg"."CC_GeoLocation_Incr" ("hashValue", "effectiveTime", "GeoDataSource", "CreateDateUTC", "Latitude", "Longitude", "IpAddress", "CountryCode", "RegionCode", "RegionName", "City", "ZipCode")
+    insert into "BJAC_DW_PROD"."stg"."CC_GeoLocation_Incr" ("GeoDataSource", "CreateDateUTC", "Latitude", "Longitude", "IpAddress", "CountryCode", "RegionCode", "RegionName", "City", "ZipCode", "dbt_scd_id", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to")
     (
-        select "hashValue", "effectiveTime", "GeoDataSource", "CreateDateUTC", "Latitude", "Longitude", "IpAddress", "CountryCode", "RegionCode", "RegionName", "City", "ZipCode"
+        select "GeoDataSource", "CreateDateUTC", "Latitude", "Longitude", "IpAddress", "CountryCode", "RegionCode", "RegionName", "City", "ZipCode", "dbt_scd_id", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to"
         from "BJAC_DW_PROD"."stg"."#CC_GeoLocation_Incr__dbt_tmp"
     );
 
