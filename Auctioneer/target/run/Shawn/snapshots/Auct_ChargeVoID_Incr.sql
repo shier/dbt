@@ -12,8 +12,8 @@
                   "ChargeVoidID", "Amount", "UnitPrice", "ChargeID", "FeeTypeID", "Created", "UpdateEventID", "InvoiceID", "Comments", "IsTaxable", "ConsignmentID", "BidderID", "DealerID", "VendorID", "MediaID", "SponsorID", "UserID", "CanCancel", "CanceledByChargeID", "CanceledChargeID", "ReservationID", "PEndingNavision", "OverrideReason", "ApprovalStateID", "ApprovedByUserID", "RejectionReason", "ActionDate", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "ChargeVoidID", "Amount", "UnitPrice", "ChargeID", "FeeTypeID", "Created", "UpdateEventID", "InvoiceID", "Comments", "IsTaxable", "ConsignmentID", "BidderID", "DealerID", "VendorID", "MediaID", "SponsorID", "UserID", "CanCancel", "CanceledByChargeID", "CanceledChargeID", "ReservationID", "PEndingNavision", "OverrideReason", "ApprovalStateID", "ApprovedByUserID", "RejectionReason", "ActionDate", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#Auct_ChargeVoID_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#Auct_ChargeVoID_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

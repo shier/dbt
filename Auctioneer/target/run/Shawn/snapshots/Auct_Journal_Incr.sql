@@ -12,8 +12,8 @@
                   "JournalID", "AuctionID", "ProjectID", "Ln", "AccountID", "CustomerAccountID", "TimeCreated", "JournalType", "DepositID", "CarConsignmentID", "InvoiceID", "BidderID", "DealerID", "VendorID", "MediaID", "SponsorID", "VendorSpaceID", "InventoryID", "ContactName", "Address", "City", "StateProvince", "PostalCode", "Country", "Phoneac", "Phone", "Description", "PaymentMethod", "CheckNumber", "CreditCardNumber", "CreditCardExp", "Comments", "DateCreated", "CreatedBy", "DateModified", "ModifiedBy", "ServerCreatedBy", "ServerModifiedBy", "Status", "Credit", "Debit", "Rn", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "JournalID", "AuctionID", "ProjectID", "Ln", "AccountID", "CustomerAccountID", "TimeCreated", "JournalType", "DepositID", "CarConsignmentID", "InvoiceID", "BidderID", "DealerID", "VendorID", "MediaID", "SponsorID", "VendorSpaceID", "InventoryID", "ContactName", "Address", "City", "StateProvince", "PostalCode", "Country", "Phoneac", "Phone", "Description", "PaymentMethod", "CheckNumber", "CreditCardNumber", "CreditCardExp", "Comments", "DateCreated", "CreatedBy", "DateModified", "ModifiedBy", "ServerCreatedBy", "ServerModifiedBy", "Status", "Credit", "Debit", "Rn", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#Auct_Journal_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#Auct_Journal_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

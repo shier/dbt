@@ -12,8 +12,8 @@
                   "AddressID", "Address1", "Address2", "City", "StateProvince", "PostalCode", "Country", "Created", "UpdateEventID", "Careof", "Active", "County", "WeBaddressID", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "AddressID", "Address1", "Address2", "City", "StateProvince", "PostalCode", "Country", "Created", "UpdateEventID", "Careof", "Active", "County", "WeBaddressID", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#Auct_Address_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#Auct_Address_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

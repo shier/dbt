@@ -12,8 +12,8 @@
                   "EmailID", "EmailAddress", "ContactID", "CustomerAccountID", "Use_C", "Created", "UpdateEventID", "EmailBlastOptin", "EmailBlastOptinPartners", "Active", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "EmailID", "EmailAddress", "ContactID", "CustomerAccountID", "Use_C", "Created", "UpdateEventID", "EmailBlastOptin", "EmailBlastOptinPartners", "Active", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#Auct_Emails_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#Auct_Emails_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

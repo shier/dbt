@@ -12,8 +12,8 @@
                   "CarArchiveID", "Horsepower", "CarID", "VIN", "Year", "ItemID", "CarMakeID", "CarModelID", "CarTypeID", "CarStyleID", "CarTrimID", "CarTransMissionID", "CarConditionID", "OriginalEngine", "ExteriorColor", "InteriorColor", "InteriorMaterial", "ConditionDescription", "NumbersMatching", "OriginalTires", "TireManufacturerID", "FrontTireSize", "RearTireSize", "Created", "UpdateEventID", "DriverSIDE", "AuthenticStatusID", "Engine", "Displacement", "Cylinders", "HorsepowerType", "PowerSteering", "PowerBrakes", "AirConditioning", "OtherFeature", "HasHighPerFormance", "HighPerFormanceDocumented", "Make", "Model", "Style", "ExtraData", "Titledto", "PowerWindows", "ModifiedByUserName", "ModifiedDateTime", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "CarArchiveID", "Horsepower", "CarID", "VIN", "Year", "ItemID", "CarMakeID", "CarModelID", "CarTypeID", "CarStyleID", "CarTrimID", "CarTransMissionID", "CarConditionID", "OriginalEngine", "ExteriorColor", "InteriorColor", "InteriorMaterial", "ConditionDescription", "NumbersMatching", "OriginalTires", "TireManufacturerID", "FrontTireSize", "RearTireSize", "Created", "UpdateEventID", "DriverSIDE", "AuthenticStatusID", "Engine", "Displacement", "Cylinders", "HorsepowerType", "PowerSteering", "PowerBrakes", "AirConditioning", "OtherFeature", "HasHighPerFormance", "HighPerFormanceDocumented", "Make", "Model", "Style", "ExtraData", "Titledto", "PowerWindows", "ModifiedByUserName", "ModifiedDateTime", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#Auct_CarArchive_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#Auct_CarArchive_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

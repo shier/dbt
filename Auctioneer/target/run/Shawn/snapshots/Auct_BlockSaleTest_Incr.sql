@@ -12,8 +12,8 @@
                   "BlockSaleTestID", "Price", "BuyerCommPerc", "BuyerCommDollars", "CommPerc", "CityTaxRate", "CommDollars", "StateTaxDollars", "StateTaxRate", "CountyTaxDollars", "CountyTaxRate", "CityTaxDollars", "AuctionBidderID", "DocketID", "SaleStatusID", "AuctioneerID", "Comments", "Created", "UpdateEventID", "BuyerCommOverride", "SellerCommOverride", "RunDate", "TaxOverride", "TaxExemptCode", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "BlockSaleTestID", "Price", "BuyerCommPerc", "BuyerCommDollars", "CommPerc", "CityTaxRate", "CommDollars", "StateTaxDollars", "StateTaxRate", "CountyTaxDollars", "CountyTaxRate", "CityTaxDollars", "AuctionBidderID", "DocketID", "SaleStatusID", "AuctioneerID", "Comments", "Created", "UpdateEventID", "BuyerCommOverride", "SellerCommOverride", "RunDate", "TaxOverride", "TaxExemptCode", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#Auct_BlockSaleTest_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#Auct_BlockSaleTest_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

@@ -12,8 +12,8 @@
                   "PaymentID", "PaymentMethodID", "PaymentDate", "BankAccountID", "PaymentNumber", "PaymentCleared", "Comments", "Created", "UpdateEventID", "InvoiceID", "IsLotPayment", "ClearedDate", "RefundedByPaymentID", "RefundedPaymentID", "RefundApprovedByUserID", "AmountPaID", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "PaymentID", "PaymentMethodID", "PaymentDate", "BankAccountID", "PaymentNumber", "PaymentCleared", "Comments", "Created", "UpdateEventID", "InvoiceID", "IsLotPayment", "ClearedDate", "RefundedByPaymentID", "RefundedPaymentID", "RefundApprovedByUserID", "AmountPaID", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#Auct_Payment_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#Auct_Payment_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

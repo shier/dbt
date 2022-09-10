@@ -12,8 +12,8 @@
                   "ContactID", "Name", "SalutationID", "FirstName", "MiddleInitial", "LastName", "ContactSuffixID", "ShortNote", "UsersID", "ContactStatusID", "PreferredContactMethodID", "PreferredContactTime", "EmailAddress", "SourceID", "Created", "UpdateEventID", "DlNumber", "DlState", "SSN", "DOB", "PassportNumber", "PassportCountry", "LegacyID", "IDRef", "Active", "PartnerName", "HasAccountigLink", "AccountingID", "VendorAccountingID", "CommonID", "BCCustomerID", "BCVendorID", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "ContactID", "Name", "SalutationID", "FirstName", "MiddleInitial", "LastName", "ContactSuffixID", "ShortNote", "UsersID", "ContactStatusID", "PreferredContactMethodID", "PreferredContactTime", "EmailAddress", "SourceID", "Created", "UpdateEventID", "DlNumber", "DlState", "SSN", "DOB", "PassportNumber", "PassportCountry", "LegacyID", "IDRef", "Active", "PartnerName", "HasAccountigLink", "AccountingID", "VendorAccountingID", "CommonID", "BCCustomerID", "BCVendorID", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#Auct_Contact_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#Auct_Contact_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

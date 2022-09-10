@@ -12,8 +12,8 @@
                   "ID", "Publication", "Sent_Date", "TimeOut", "Modified_Date", "Progress_Phase", "Phase_Timed_Out", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "ID", "Publication", "Sent_Date", "TimeOut", "Modified_Date", "Progress_Phase", "Phase_Timed_Out", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#Auct_MSPeer_ConflictDetectionConfigRequest_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#Auct_MSPeer_ConflictDetectionConfigRequest_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

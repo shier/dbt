@@ -12,8 +12,8 @@
                   "DriverInFormationID", "ConsignmentID", "TentLocationID", "TentSpaceNumber", "DeLiveryCarrierID", "DeLiveryCarrierOther", "CheckedInUsersID", "SpareParts", "VINLocation", "CheckedOutUsersID", "ShippedCarrierID", "ShippedCarrierOther", "CheckedOutName", "BidderNumber", "LicenseNumber", "Created", "UpdateEventID", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "DriverInFormationID", "ConsignmentID", "TentLocationID", "TentSpaceNumber", "DeLiveryCarrierID", "DeLiveryCarrierOther", "CheckedInUsersID", "SpareParts", "VINLocation", "CheckedOutUsersID", "ShippedCarrierID", "ShippedCarrierOther", "CheckedOutName", "BidderNumber", "LicenseNumber", "Created", "UpdateEventID", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#Auct_DriverInFormation_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#Auct_DriverInFormation_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

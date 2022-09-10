@@ -12,8 +12,8 @@
                   "SaleArchiveID", "CountyTaxDollars", "CountyTaxRate", "CityTaxDollars", "CityTaxRate", "SteveCommDollars", "SteveCommPerc", "BuyerCommPerc", "BuyerCommDollars", "CommPerc", "CommDollars", "StateTaxDollars", "StateTaxRate", "AsSiterCommDollars", "AsSiterCommPerc", "Price", "SaleID", "BlockSaleID", "ShipDateVerified", "CarrierID", "Comments", "BuyerCustomerAccountID", "SellerCustomerAccountID", "ShiptoAddressID", "ShiptoContactID", "Created", "UpdateEventID", "BillofLading", "BillofLadingText", "BMA", "Legacy", "ShipDate", "Navision", "BuyerdealerID", "SellerAddressID", "SellerDealerID", "AlternateSaleType", "SaleStatusID", "AuctionBidderID", "TaxExemptCode", "ArBitrated", "AdjustmentReason", "AdjustedByUserName", "AdjustmentDate", "CarrierName", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "SaleArchiveID", "CountyTaxDollars", "CountyTaxRate", "CityTaxDollars", "CityTaxRate", "SteveCommDollars", "SteveCommPerc", "BuyerCommPerc", "BuyerCommDollars", "CommPerc", "CommDollars", "StateTaxDollars", "StateTaxRate", "AsSiterCommDollars", "AsSiterCommPerc", "Price", "SaleID", "BlockSaleID", "ShipDateVerified", "CarrierID", "Comments", "BuyerCustomerAccountID", "SellerCustomerAccountID", "ShiptoAddressID", "ShiptoContactID", "Created", "UpdateEventID", "BillofLading", "BillofLadingText", "BMA", "Legacy", "ShipDate", "Navision", "BuyerdealerID", "SellerAddressID", "SellerDealerID", "AlternateSaleType", "SaleStatusID", "AuctionBidderID", "TaxExemptCode", "ArBitrated", "AdjustmentReason", "AdjustedByUserName", "AdjustmentDate", "CarrierName", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#Auct_SaleArchive_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#Auct_SaleArchive_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

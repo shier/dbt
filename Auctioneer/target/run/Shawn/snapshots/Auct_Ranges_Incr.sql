@@ -12,8 +12,8 @@
                   "RangeID", "RangeName", "ContactTypeID", "AuctionID", "Created", "UpdateEventID", "ProjectedTime", "IsReserveLotFee", "RangeStart", "RangeEnd", "RangeNumber", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "RangeID", "RangeName", "ContactTypeID", "AuctionID", "Created", "UpdateEventID", "ProjectedTime", "IsReserveLotFee", "RangeStart", "RangeEnd", "RangeNumber", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#Auct_Ranges_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#Auct_Ranges_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

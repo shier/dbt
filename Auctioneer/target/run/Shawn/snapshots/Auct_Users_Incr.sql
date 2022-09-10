@@ -12,8 +12,8 @@
                   "UsersID", "Name", "EmailAddress", "Password", "QuestionID", "SecretAnswer", "LastLoggedin", "LastActivity", "Enabled", "Reason", "WinLogon", "WinDomain", "Created", "UpdateEventID", "SMSNotificationNumber", "SMSNotificationBit", "DepartmentID", "Phone1", "Phone2", "Title", "DeScripton", "Address", "City", "State", "PostalCode", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "UsersID", "Name", "EmailAddress", "Password", "QuestionID", "SecretAnswer", "LastLoggedin", "LastActivity", "Enabled", "Reason", "WinLogon", "WinDomain", "Created", "UpdateEventID", "SMSNotificationNumber", "SMSNotificationBit", "DepartmentID", "Phone1", "Phone2", "Title", "DeScripton", "Address", "City", "State", "PostalCode", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#Auct_Users_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#Auct_Users_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

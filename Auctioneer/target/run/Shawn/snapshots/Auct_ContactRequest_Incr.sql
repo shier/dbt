@@ -12,8 +12,8 @@
                   "ContactRequestID", "FromContactID", "RequestTypeID", "AssignedContactID", "CompanyID", "PhoneID", "AddressID", "EmailAddress", "RequestFulfilled", "DateFulfilled", "SuBJect", "CustomerComments", "RequestNotes", "AppointmentTimeStamp", "Created", "UpdateEventID", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "ContactRequestID", "FromContactID", "RequestTypeID", "AssignedContactID", "CompanyID", "PhoneID", "AddressID", "EmailAddress", "RequestFulfilled", "DateFulfilled", "SuBJect", "CustomerComments", "RequestNotes", "AppointmentTimeStamp", "Created", "UpdateEventID", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#Auct_ContactRequest_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#Auct_ContactRequest_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

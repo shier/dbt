@@ -12,8 +12,8 @@
                   "PaymentOverride_ID", "ConsignmentID", "ApproverUserID", "RequestUserID", "Description", "Created", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "PaymentOverride_ID", "ConsignmentID", "ApproverUserID", "RequestUserID", "Description", "Created", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#Auct_PaymentOverride_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#Auct_PaymentOverride_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

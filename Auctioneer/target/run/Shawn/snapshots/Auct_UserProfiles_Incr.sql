@@ -12,8 +12,8 @@
                   "UserProfileID", "UserName", "AuctionID", "SearchForID", "SearchByID", "DefaultConsignmentType", "UserID", "CurrentTaskCount", "Taskinterval", "PulseQueueID", "SearchCustomerText", "SearchConsignmentText", "Signature", "TaskautoUpdate", "Taskautoopen", "Taskplaysound", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "UserProfileID", "UserName", "AuctionID", "SearchForID", "SearchByID", "DefaultConsignmentType", "UserID", "CurrentTaskCount", "Taskinterval", "PulseQueueID", "SearchCustomerText", "SearchConsignmentText", "Signature", "TaskautoUpdate", "Taskautoopen", "Taskplaysound", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#Auct_UserProfiles_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#Auct_UserProfiles_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

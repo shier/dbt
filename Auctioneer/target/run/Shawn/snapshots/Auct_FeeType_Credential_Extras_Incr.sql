@@ -12,8 +12,8 @@
                   "FeeTypeCredentialExtraID", "Active", "Extra_Element_ID", "ExtraTag", "ExtraQuantity", "FeeType_Credential_ID", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "FeeTypeCredentialExtraID", "Active", "Extra_Element_ID", "ExtraTag", "ExtraQuantity", "FeeType_Credential_ID", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#Auct_FeeType_Credential_Extras_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#Auct_FeeType_Credential_Extras_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

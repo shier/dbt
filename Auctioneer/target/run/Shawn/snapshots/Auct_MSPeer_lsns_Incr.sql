@@ -12,8 +12,8 @@
                   "ID", "Last_Updated", "Originator", "Originator_Db", "Originator_Publication", "Originator_Publication_ID", "Originator_Db_Version", "Originator_lsn", "Originator_Version", "Originator_ID", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "ID", "Last_Updated", "Originator", "Originator_Db", "Originator_Publication", "Originator_Publication_ID", "Originator_Db_Version", "Originator_lsn", "Originator_Version", "Originator_ID", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#Auct_MSPeer_lsns_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#Auct_MSPeer_lsns_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

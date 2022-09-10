@@ -12,8 +12,8 @@
                   "BidderID", "BidderNumber", "BidLimit", "BidderTypeID", "BidderStatusID", "CustomerAccountID", "AnniversaryDate", "ApprovedBy", "Comments", "Created", "UpdateEventID", "PaymentMethodID", "AddressID", "ShippingAddressID", "ContactPhoneID", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "BidderID", "BidderNumber", "BidLimit", "BidderTypeID", "BidderStatusID", "CustomerAccountID", "AnniversaryDate", "ApprovedBy", "Comments", "Created", "UpdateEventID", "PaymentMethodID", "AddressID", "ShippingAddressID", "ContactPhoneID", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#Auct_Bidder_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#Auct_Bidder_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

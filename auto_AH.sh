@@ -23,3 +23,6 @@ dbt snapshot --project-dir AH
 # ---------------------------------------------------------------------------
 dbt run --project-dir AH --models step5_DM
 
+dbt run --project-dir AH --models step6_FT_1_stg
+dbt run --project-dir AH --models step6_FT_2_tmp
+dbt run --project-dir AH --models step6_FT_3

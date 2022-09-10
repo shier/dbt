@@ -12,8 +12,8 @@
                   "AuctionBidderID", "HoldPackageatWillCall", "AuctionID", "BidderID", "AuctionBidderNumber", "RegistrationDate", "Comments", "Created", "UpdateEventID", "BankAccountID", "Insurance", "DriverLicense", "DealerLicense", "TaxCertificate", "AuthBidLetter", "OwnershipLetter", "OtherLetter", "RockDoc", "InsuranceExpire", "InsuranceID", "MethODOfPayment", "RegistrationFee", "SignedAgreement", "PacketatWillCall", "CreatedByUserID", "SkyBoxPassCount", "BidLimit", "BidderStatusID", "CompleteStatusBit", "BidderRequestID", "ShippingAddressID", "ContactPhoneID", "PaymentMethodID", "AddressID", "BidLimiTestimate", "TrackingNumber", "DocumentationBit", "AuctionBidderSourceID", "RegisteredOnlineBit", "ChargeCount", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "AuctionBidderID", "HoldPackageatWillCall", "AuctionID", "BidderID", "AuctionBidderNumber", "RegistrationDate", "Comments", "Created", "UpdateEventID", "BankAccountID", "Insurance", "DriverLicense", "DealerLicense", "TaxCertificate", "AuthBidLetter", "OwnershipLetter", "OtherLetter", "RockDoc", "InsuranceExpire", "InsuranceID", "MethODOfPayment", "RegistrationFee", "SignedAgreement", "PacketatWillCall", "CreatedByUserID", "SkyBoxPassCount", "BidLimit", "BidderStatusID", "CompleteStatusBit", "BidderRequestID", "ShippingAddressID", "ContactPhoneID", "PaymentMethodID", "AddressID", "BidLimiTestimate", "TrackingNumber", "DocumentationBit", "AuctionBidderSourceID", "RegisteredOnlineBit", "ChargeCount", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#Auct_AuctionBidder_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#Auct_AuctionBidder_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

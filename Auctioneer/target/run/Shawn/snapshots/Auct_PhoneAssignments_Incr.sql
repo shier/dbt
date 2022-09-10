@@ -12,8 +12,8 @@
                   "PhoneAssignmentID", "CustomerAccountID", "PhoneID", "PhoneStatusID", "PhoneTypeID", "IsDefault", "Created", "UpdateEventID", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "PhoneAssignmentID", "CustomerAccountID", "PhoneID", "PhoneStatusID", "PhoneTypeID", "IsDefault", "Created", "UpdateEventID", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#Auct_PhoneAssignments_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#Auct_PhoneAssignments_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

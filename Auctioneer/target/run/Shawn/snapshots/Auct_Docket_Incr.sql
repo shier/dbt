@@ -12,8 +12,8 @@
                   "DocketID", "ConsignmentID", "LotStatus", "TargetTime", "ActualTime", "Created", "UpdateEventID", "LaneNumber", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "DocketID", "ConsignmentID", "LotStatus", "TargetTime", "ActualTime", "Created", "UpdateEventID", "LaneNumber", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#Auct_Docket_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#Auct_Docket_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

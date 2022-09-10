@@ -1,4 +1,4 @@
-{{ config(materialized='table',schema='stg')}}
+{{ config(materialized='table',schema='dbo')}}
 SELECT
 	[Id] AS [CurrencyId],
 	[ConversionToUSD],

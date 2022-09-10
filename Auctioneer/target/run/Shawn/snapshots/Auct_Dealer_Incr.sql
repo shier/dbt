@@ -12,8 +12,8 @@
                   "DealerID", "DealerNumber", "DealerState", "ReSaleNumber", "TaxIDNumber", "TaxIDsTage", "Created", "UpdateEventID", "DealerComment", "DealernumExpire", "DeAlerTaxExpire", "EmployeeIDNumber", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "DealerID", "DealerNumber", "DealerState", "ReSaleNumber", "TaxIDNumber", "TaxIDsTage", "Created", "UpdateEventID", "DealerComment", "DealernumExpire", "DeAlerTaxExpire", "EmployeeIDNumber", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#Auct_Dealer_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#Auct_Dealer_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

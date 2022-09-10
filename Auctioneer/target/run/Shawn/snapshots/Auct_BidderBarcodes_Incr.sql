@@ -12,8 +12,8 @@
                   "TicketID", "TransactionID", "EventName", "SectionName", "Seatrow", "Seatnum", "Barcode", "Length", "BidderID", "AuctionID", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "TicketID", "TransactionID", "EventName", "SectionName", "Seatrow", "Seatnum", "Barcode", "Length", "BidderID", "AuctionID", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#Auct_BidderBarcodes_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#Auct_BidderBarcodes_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

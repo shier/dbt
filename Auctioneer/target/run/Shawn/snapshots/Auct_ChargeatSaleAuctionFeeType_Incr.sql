@@ -12,8 +12,8 @@
                   "FeeTypeID", "Active", "AuctionID", "CreatedByUserID", "ItemTypeID", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "FeeTypeID", "Active", "AuctionID", "CreatedByUserID", "ItemTypeID", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#Auct_ChargeatSaleAuctionFeeType_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#Auct_ChargeatSaleAuctionFeeType_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

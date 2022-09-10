@@ -1,4 +1,4 @@
-{{ config(materialized='table',schema='stg')}}
+{{ config(materialized='table',schema='dbo')}}
 with UserProperties_temp as (
     select 
         t1.UserID,
@@ -87,6 +87,7 @@ DMstg as (
 )
 SELECT
 	[Consignor_SKey],
+    [UserID],
 	[UserName],
 	[Email],
 	[Comment],

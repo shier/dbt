@@ -12,8 +12,8 @@
                   "MilestoneID", "ConsignmentID", "MilestoneTime", "Created", "UpdateEventID", "MilestoneComments", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "MilestoneID", "ConsignmentID", "MilestoneTime", "Created", "UpdateEventID", "MilestoneComments", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#Auct_Milestones_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#Auct_Milestones_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

@@ -12,8 +12,8 @@
                   "BusinessCentralArchiveID", "BusinessCentralHelper_MethodName", "BusinessCentralHelper_ParaMeterTypeName", "BusinessCentralHelper_ParaMeterPayload", "InvoiceID", "BusinessCentral_Documentno", "Processed", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "BusinessCentralArchiveID", "BusinessCentralHelper_MethodName", "BusinessCentralHelper_ParaMeterTypeName", "BusinessCentralHelper_ParaMeterPayload", "InvoiceID", "BusinessCentral_Documentno", "Processed", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#Auct_BusinessCentralHelper_Archive_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#Auct_BusinessCentralHelper_Archive_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

@@ -12,8 +12,8 @@
                   "BidLimitDepositID", "Amount", "EnvelopeNumber", "PaymentMethodID", "PaymentDate", "PaymentNumber", "PaymentCleared", "ClearedDate", "Comments", "BidderID", "AuctionID", "Created", "UpdateEventID", "ConfirmIDEntification", "ReceivedSignature", "ConfirmedCount", "NoPurchase", "ReturnedOnSite", "Depositcashiering", "Depositmailed", "Mailedhome", "MailedBusiness", "MailedOther", "ReturnedOnSiteText", "DepositcashieringText", "ReturnedComments", "ReturnedDate", "ReturnedUsersID", "PaymentID", "InvoiceID", "RefundedByBidLimitDepositID", "RefundedBidLimitDepositID", "BidLimitDepositReturnTypeID", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "BidLimitDepositID", "Amount", "EnvelopeNumber", "PaymentMethodID", "PaymentDate", "PaymentNumber", "PaymentCleared", "ClearedDate", "Comments", "BidderID", "AuctionID", "Created", "UpdateEventID", "ConfirmIDEntification", "ReceivedSignature", "ConfirmedCount", "NoPurchase", "ReturnedOnSite", "Depositcashiering", "Depositmailed", "Mailedhome", "MailedBusiness", "MailedOther", "ReturnedOnSiteText", "DepositcashieringText", "ReturnedComments", "ReturnedDate", "ReturnedUsersID", "PaymentID", "InvoiceID", "RefundedByBidLimitDepositID", "RefundedBidLimitDepositID", "BidLimitDepositReturnTypeID", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#Auct_BidLimitDeposit_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#Auct_BidLimitDeposit_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

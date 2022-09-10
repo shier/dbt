@@ -12,8 +12,8 @@
                   "ReservationID", "CustomerAccountID", "AddressID", "PhoneID", "SiteCategoryID", "SiteID", "EventID", "StartDate", "EndDate", "IsCheckedIn", "CheckinDate", "CheckOutDate", "ReservationStatusID", "ChargeID", "OccupantCustomerAccountID", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "ReservationID", "CustomerAccountID", "AddressID", "PhoneID", "SiteCategoryID", "SiteID", "EventID", "StartDate", "EndDate", "IsCheckedIn", "CheckinDate", "CheckOutDate", "ReservationStatusID", "ChargeID", "OccupantCustomerAccountID", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#Auct_Reservation_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#Auct_Reservation_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

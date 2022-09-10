@@ -12,8 +12,8 @@
                   "EventID", "Name", "Code", "ProjectCode", "Year", "ParentEventID", "EventTypeID", "StartDate", "EndDate", "Created", "Active", "CreatedByUserID", "LocationAddressID", "ShippingAddressID", "BillingAddressID", "ImageURL", "VenueID", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "EventID", "Name", "Code", "ProjectCode", "Year", "ParentEventID", "EventTypeID", "StartDate", "EndDate", "Created", "Active", "CreatedByUserID", "LocationAddressID", "ShippingAddressID", "BillingAddressID", "ImageURL", "VenueID", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#Auct_Event_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#Auct_Event_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

@@ -12,8 +12,8 @@
                   "DocumentImageID", "Active", "CustomerAccountID", "DocumentImageTypeID", "UncPath", "FullPath", "AuctionID", "Expiration", "Created", "CreatedByUserID", "Height", "Width", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "DocumentImageID", "Active", "CustomerAccountID", "DocumentImageTypeID", "UncPath", "FullPath", "AuctionID", "Expiration", "Created", "CreatedByUserID", "Height", "Width", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#Auct_DocumentImage_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#Auct_DocumentImage_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

@@ -12,8 +12,8 @@
                   "OutgoingRequestQueueID", "URL", "HttpMethod", "HttpHeaders", "RequestPayload", "ResponsePayload", "ResponsehttpStatusCode", "Status", "StatusDate", "InvoiceID", "DocumentID", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "OutgoingRequestQueueID", "URL", "HttpMethod", "HttpHeaders", "RequestPayload", "ResponsePayload", "ResponsehttpStatusCode", "Status", "StatusDate", "InvoiceID", "DocumentID", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#Auct_OutgoingRequestQueue_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#Auct_OutgoingRequestQueue_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

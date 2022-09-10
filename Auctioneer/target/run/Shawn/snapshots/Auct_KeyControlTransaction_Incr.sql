@@ -12,8 +12,8 @@
                   "KeyControlTransactionID", "KeyControlID", "UserID", "RecipientName", "ConsignmentID", "KeyControlStatusID", "TransactionTime", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "KeyControlTransactionID", "KeyControlID", "UserID", "RecipientName", "ConsignmentID", "KeyControlStatusID", "TransactionTime", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#Auct_KeyControlTransaction_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#Auct_KeyControlTransaction_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

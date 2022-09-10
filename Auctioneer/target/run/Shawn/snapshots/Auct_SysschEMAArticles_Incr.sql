@@ -12,8 +12,8 @@
                   "ArtID", "Creation_Script", "Description", "Dest_OBJect", "Name", "OBJID", "PubID", "Pre_Creation_cmd", "Status", "Type", "SchEMA_Option", "Dest_Owner", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "ArtID", "Creation_Script", "Description", "Dest_OBJect", "Name", "OBJID", "PubID", "Pre_Creation_cmd", "Status", "Type", "SchEMA_Option", "Dest_Owner", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#Auct_SysschEMAArticles_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#Auct_SysschEMAArticles_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

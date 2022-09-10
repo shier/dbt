@@ -12,8 +12,8 @@
                   "BankAccountID", "AccountTypeID", "AddressID", "AccountNumber", "Expiration", "BankContact", "OwnerCustomerAccountID", "BankAccountStatusID", "Created", "UpdateEventID", "MbnaAccount1", "MbnaAccount2", "MbnaAccount3", "PhoneID", "FaxID", "BankName", "Active", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "BankAccountID", "AccountTypeID", "AddressID", "AccountNumber", "Expiration", "BankContact", "OwnerCustomerAccountID", "BankAccountStatusID", "Created", "UpdateEventID", "MbnaAccount1", "MbnaAccount2", "MbnaAccount3", "PhoneID", "FaxID", "BankName", "Active", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#Auct_BankAccount_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#Auct_BankAccount_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

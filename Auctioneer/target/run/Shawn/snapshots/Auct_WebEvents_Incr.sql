@@ -12,8 +12,8 @@
                   "EventID", "Latitude", "Longitude", "Address", "City", "State", "PostalCode", "SiteMapImageURL", "SiteMapPdfURL", "GooglEMapdirectionURL", "WeatherLocationID", "VenueName", "VenueStartDate", "VenueEndDate", "VenueImage", "VendorSiteMapPdfURL", "TicketPackageURL", "EventStatusBit", "EventName", "EventURLName", "HotelsForHopeID", "VipPackagePageName", "AuctionProject", "AcceptingApplicationsBit", "BlockLiveStreamID", "LivesTageStreamID", "BlockLiveStreamlsembedID", "LivesTageStreamlsembedID", "AcceptingConsignmentsMessage", "CDNBaseURL", "LivesTagePageURL", "ModifiedByUserName", "ModifiedDateTime", "License", "EventTypeID", "MapdirectionImageURL", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "EventID", "Latitude", "Longitude", "Address", "City", "State", "PostalCode", "SiteMapImageURL", "SiteMapPdfURL", "GooglEMapdirectionURL", "WeatherLocationID", "VenueName", "VenueStartDate", "VenueEndDate", "VenueImage", "VendorSiteMapPdfURL", "TicketPackageURL", "EventStatusBit", "EventName", "EventURLName", "HotelsForHopeID", "VipPackagePageName", "AuctionProject", "AcceptingApplicationsBit", "BlockLiveStreamID", "LivesTageStreamID", "BlockLiveStreamlsembedID", "LivesTageStreamlsembedID", "AcceptingConsignmentsMessage", "CDNBaseURL", "LivesTagePageURL", "ModifiedByUserName", "ModifiedDateTime", "License", "EventTypeID", "MapdirectionImageURL", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#Auct_WebEvents_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#Auct_WebEvents_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

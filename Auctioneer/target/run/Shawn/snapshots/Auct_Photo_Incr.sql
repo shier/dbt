@@ -12,8 +12,8 @@
                   "PhotoID", "PhotoTypeID", "PhotoStatusID", "ItemID", "FileName", "UncPath", "PhotoSize", "Height", "Width", "Created", "UpdateEventID", "TbFileName", "TbPhotoSize", "TbUncPath", "TbHeight", "TbWidth", "FullPath", "TbfullPath", "WebSiteOrder", "ShowonWeb", "WebFileName", "WebUncPath", "RejectionReason", "IsMainAdvertising", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "PhotoID", "PhotoTypeID", "PhotoStatusID", "ItemID", "FileName", "UncPath", "PhotoSize", "Height", "Width", "Created", "UpdateEventID", "TbFileName", "TbPhotoSize", "TbUncPath", "TbHeight", "TbWidth", "FullPath", "TbfullPath", "WebSiteOrder", "ShowonWeb", "WebFileName", "WebUncPath", "RejectionReason", "IsMainAdvertising", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#Auct_Photo_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#Auct_Photo_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

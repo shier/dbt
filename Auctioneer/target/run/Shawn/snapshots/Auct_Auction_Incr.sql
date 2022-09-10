@@ -12,8 +12,8 @@
                   "AuctionID", "ShowOnlineBidding", "AuctionCompanyID", "Year", "Code", "Name", "ReadOnly", "OnlineAuction", "CurrentAuction", "AuctionBegins", "AuctionEnds", "AuctionMode", "Created", "UpdateEventID", "Project", "NavPullTime", "BusinessUnit", "SeasonID", "ShowonWeb", "UseCDN", "EMAEventID", "EMACCEventID", "EmamercEventID", "EmashowEventID", "IsArchived", "CDNBaseURL", "AuctionStatusBit", "EmailNotificationBit", "CredentialGroupID", "BidderBadgeID", "PulseQueueID", "AuctionTypeID", "AuctionPickupCutoff", "OnlineCarAuctionID", "OnlineMercAuctionID", "MapImageURL", "NotifyCustomerAfterDate", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "AuctionID", "ShowOnlineBidding", "AuctionCompanyID", "Year", "Code", "Name", "ReadOnly", "OnlineAuction", "CurrentAuction", "AuctionBegins", "AuctionEnds", "AuctionMode", "Created", "UpdateEventID", "Project", "NavPullTime", "BusinessUnit", "SeasonID", "ShowonWeb", "UseCDN", "EMAEventID", "EMACCEventID", "EmamercEventID", "EmashowEventID", "IsArchived", "CDNBaseURL", "AuctionStatusBit", "EmailNotificationBit", "CredentialGroupID", "BidderBadgeID", "PulseQueueID", "AuctionTypeID", "AuctionPickupCutoff", "OnlineCarAuctionID", "OnlineMercAuctionID", "MapImageURL", "NotifyCustomerAfterDate", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#Auct_Auction_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#Auct_Auction_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 
