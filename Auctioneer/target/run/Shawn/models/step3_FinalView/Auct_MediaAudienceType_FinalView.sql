@@ -1,6 +1,0 @@
-create view "stg"."Auct_MediaAudienceType_FinalView__dbt_tmp" as
-    
-Select
-	[AudienceTypeID],[Name] 
-From stg.[Auct_MediaAudienceType_Incr] 
-Where [dbt_valid_to] is null

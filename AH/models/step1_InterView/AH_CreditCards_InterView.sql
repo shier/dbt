@@ -1,8 +1,8 @@
 {{ config(materialized='view',schema='stg')}}
 Select
 	[Id] [ID],
-	[ExpirationMonth] [ExpirationMonth],
-	[ExpirationYear] [ExpirationYear],
+	cast([ExpirationMonth] as nvarchar(4000)) [ExpirationMonth],
+	cast([ExpirationYear] as nvarchar(4000)) [ExpirationYear],
 	[CreditCardTypeId] [CreditCardTypeID],
 	[UserId] [UserID],
 	[AddressId] [AddressID],

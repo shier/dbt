@@ -113,7 +113,7 @@ SELECT
     [mailing_Address] as [MailingAddress],
     [City],
     [StateProvince] as [State],
-    [PostalCode],
+    [PostalCode] as [ZipCode],
     [Country],
     [AddressStatus],
     [IsDefaultAddress],

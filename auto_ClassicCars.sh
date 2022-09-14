@@ -1,4 +1,8 @@
 
+# This step, upload the log file to anayized then clean the log file on VM
+curl -F "file=@ClassicCars/logs/dbt.log" "http://shawngao.ca/weCloudData/res/saveLogFile.php"
+dbt clean --project-dir ClassicCars
+# rm ClassicCars/logs/*
 # This step, build view from Raw tabale , just need running once
 # ---------------------------------------------------------------------------
 # dbt run --project-dir ClassicCars --models step1_InterView
@@ -31,3 +35,4 @@ dbt run --project-dir ClassicCars --models step5_DM
 dbt run --project-dir ClassicCars --models step6_1_FT_stg
 dbt run --project-dir ClassicCars --models step6_2_FT_tmp
 dbt run --project-dir ClassicCars --models step6_3_FT
+

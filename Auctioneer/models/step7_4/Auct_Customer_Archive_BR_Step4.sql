@@ -7,7 +7,8 @@ SELECT
             [PresumedCustomerType],
             [ContactID],
             [Name],
-            [EmailAddress],
+            [Email],
+            [Email_Cleaned],
             [IsActiveEmail],
             [EmailBlastOptIn],
             -- [PhoneID],
@@ -111,7 +112,7 @@ SELECT
             [MailingAddress],
             [City],
             [State],
-            [PostalCode],
+            [ZipCode],
             [Country],
             [AddressStatus],
             [IsDefaultAddress],
@@ -123,5 +124,5 @@ SELECT
                 ORDER BY [EffectiveStartDate] DESC
             ) AS [RowNumber]
 FROM stg.[Auct_Customer_Archive_BR_Step3]
-GROUP BY [CustomerAccountID], [CurrentCompanyID], [PresumedCustomerType], [ContactID], [Name], [EmailAddress], [IsActiveEmail], [EmailBlastOptIn], [AddressID], [HomeAddress], [BusinessAddress], [LocalAddress], [DealerAddress], [MailingAddress], [City], [State], [PostalCode], [Country], [AddressStatus], [IsDefaultAddress], [IsActiveAddress], [EffectiveStartDate], [EffectiveEndDate]
+GROUP BY [CustomerAccountID], [CurrentCompanyID], [PresumedCustomerType], [ContactID], [Name], [Email], [Email_Cleaned], [IsActiveEmail], [EmailBlastOptIn], [AddressID], [HomeAddress], [BusinessAddress], [LocalAddress], [DealerAddress], [MailingAddress], [City], [State], [ZipCode], [Country], [AddressStatus], [IsDefaultAddress], [IsActiveAddress], [EffectiveStartDate], [EffectiveEndDate]
           

@@ -256,6 +256,17 @@ SELECT
     -- [PhoneStatus],
     -- [IsDefaultPhone],
     -- [IsActivePhone],
+  
+    -- HASHBYTES('SHA2_256', concat(
+    --         Cast([MobilePhone_PhoneID] as varchar),Cast([DirectPhone_PhoneID] as varchar), Cast([HomePhone_PhoneID] as varchar),
+    --             Cast([HomeFax_PhoneID] as varchar), Cast([DealerMobile_PhoneID] as varchar), Cast([DealerPhone_PhoneID] as varchar),
+    --             Cast([DealerFax_PhoneID] as varchar), Cast([BusinessPhone_PhoneID] as varchar), Cast([BusinessFax_PhoneID] as varchar),
+    --             Cast([BusinessMobile_PhoneID] as varchar),  Cast([VendorPhone_PhoneID] as varchar), Cast([VendorFax_PhoneID] as varchar),
+    --             Cast([RequestNumber_PhoneID] as varchar),  Cast([RequestFax_PhoneID] as varchar),  Cast([LocalPhone_PhoneID] as varchar),
+    --             Cast([Pager_PhoneID] as varchar), Cast([UnknownPhoneType_PhoneID] as varchar)
+    --         )
+    --     ) 
+    -- AS HashPhoneID,
     [MobilePhone_PhoneID], 
     [MobilePhone_PhoneNumber], 
     [MobilePhone_PhoneStatus], 

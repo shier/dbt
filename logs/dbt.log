@@ -1,0 +1,1217 @@
+
+
+============================== 2022-09-12 14:35:24.249625 | b399b209-e566-4fd6-8666-1517d4976aeb ==============================
+14:35:24.249625 [info ] [MainThread]: Running with dbt=1.0.0
+14:35:24.251186 [debug] [MainThread]: running dbt with arguments Namespace(cls=<class 'dbt.task.clean.CleanTask'>, debug=None, defer=None, event_buffer_size=None, fail_fast=None, log_cache_events=False, log_format=None, partial_parse=None, printer_width=None, profile=None, profiles_dir='/home/azureuser/.dbt', project_dir='/home/azureuser/shawn_dbt/ClassicCars', record_timing_info=None, rpc_method=None, send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='clean', write_json=None)
+14:35:24.251503 [debug] [MainThread]: Tracking: tracking
+14:35:24.251786 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb0328a34c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb0328a3b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb0328a3be0>]}
+14:35:24.315030 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb0328a3d00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb0328a3e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb0328a3e20>]}
+
+
+============================== 2022-09-12 14:36:31.276406 | 474bb5b7-d3f1-46ce-b4d3-b0d65af7b618 ==============================
+14:36:31.276406 [info ] [MainThread]: Running with dbt=1.0.0
+14:36:31.277756 [debug] [MainThread]: running dbt with arguments Namespace(cls=<class 'dbt.task.clean.CleanTask'>, debug=None, defer=None, event_buffer_size=None, fail_fast=None, log_cache_events=False, log_format=None, partial_parse=None, printer_width=None, profile=None, profiles_dir='/home/azureuser/.dbt', project_dir='/home/azureuser/shawn_dbt/ClassicCars', record_timing_info=None, rpc_method=None, send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='clean', write_json=None)
+14:36:31.278133 [debug] [MainThread]: Tracking: tracking
+14:36:31.278444 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f94e9ebe9a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f94e9ebea30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f94e9ebea60>]}
+14:36:31.286701 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f94e9ebedc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f94e9ebee20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f94e9ebee80>]}
+
+
+============================== 2022-09-12 14:37:11.999942 | 45d50f49-3720-4b88-b99e-b389547bd7b0 ==============================
+14:37:11.999942 [info ] [MainThread]: Running with dbt=1.0.0
+14:37:12.001255 [debug] [MainThread]: running dbt with arguments Namespace(cls=<class 'dbt.task.clean.CleanTask'>, debug=None, defer=None, event_buffer_size=None, fail_fast=None, log_cache_events=False, log_format=None, partial_parse=None, printer_width=None, profile=None, profiles_dir='/home/azureuser/.dbt', project_dir='/home/azureuser/shawn_dbt/ClassicCars', record_timing_info=None, rpc_method=None, send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='clean', write_json=None)
+14:37:12.001615 [debug] [MainThread]: Tracking: tracking
+14:37:12.001903 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2bda123ac0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2bda123b20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2bda123b50>]}
+14:37:12.009592 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2bda123eb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2bda123f10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2bda123f70>]}
+
+
+============================== 2022-09-12 15:22:57.525229 | 1987bd57-d580-4feb-9bbb-35ee55d036b3 ==============================
+15:22:57.525229 [info ] [MainThread]: Running with dbt=1.0.0
+15:22:57.526504 [debug] [MainThread]: running dbt with arguments Namespace(cls=<class 'dbt.task.clean.CleanTask'>, debug=None, defer=None, event_buffer_size=None, fail_fast=None, log_cache_events=False, log_format=None, partial_parse=None, printer_width=None, profile=None, profiles_dir='/home/azureuser/.dbt', project_dir='/home/azureuser/shawn_dbt/Auctioneer', record_timing_info=None, rpc_method=None, send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='clean', write_json=None)
+15:22:57.526850 [debug] [MainThread]: Tracking: tracking
+15:22:57.527124 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0461a79b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0461a79bb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0461a79be0>]}
+15:22:57.554728 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0461a79fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0461a79fa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0461a79ee0>]}
+
+
+============================== 2022-09-12 18:02:12.992005 | f50b6a44-d757-4e27-9e95-80343989245c ==============================
+18:02:12.992005 [info ] [MainThread]: Running with dbt=1.0.0
+18:02:12.993281 [debug] [MainThread]: running dbt with arguments Namespace(cls=<class 'dbt.task.clean.CleanTask'>, debug=None, defer=None, event_buffer_size=None, fail_fast=None, log_cache_events=False, log_format=None, partial_parse=None, printer_width=None, profile=None, profiles_dir='/home/azureuser/.dbt', project_dir='/home/azureuser/shawn_dbt/Auctioneer', record_timing_info=None, rpc_method=None, send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='clean', write_json=None)
+18:02:12.993633 [debug] [MainThread]: Tracking: tracking
+18:02:12.993930 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb40e8fb9a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb40e8fba00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb40e8fba90>]}
+18:02:13.025732 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb40e8fbb80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb40e8fbdf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb40e8fbe50>]}
+
+
+============================== 2022-09-12 18:03:26.199093 | 92881066-5cd0-4f52-9014-6702748a63cc ==============================
+18:03:26.199093 [info ] [MainThread]: Running with dbt=1.0.0
+18:03:26.200333 [debug] [MainThread]: running dbt with arguments Namespace(cls=<class 'dbt.task.clean.CleanTask'>, debug=None, defer=None, event_buffer_size=None, fail_fast=None, log_cache_events=False, log_format=None, partial_parse=None, printer_width=None, profile=None, profiles_dir='/home/azureuser/.dbt', project_dir='/home/azureuser/shawn_dbt/Auctioneer', record_timing_info=None, rpc_method=None, send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='clean', write_json=None)
+18:03:26.200685 [debug] [MainThread]: Tracking: tracking
+18:03:26.200969 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7c704afc40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7c704afc70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7c704afd00>]}
+18:03:26.228896 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7c704affa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7c704f7040>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7c704f70a0>]}
+
+
+============================== 2022-09-12 18:04:46.407574 | 233318a9-8a72-4c24-8c19-bbb1dad2b705 ==============================
+18:04:46.407574 [info ] [MainThread]: Running with dbt=1.0.0
+18:04:46.409288 [debug] [MainThread]: running dbt with arguments Namespace(cls=<class 'dbt.task.clean.CleanTask'>, debug=None, defer=None, event_buffer_size=None, fail_fast=None, log_cache_events=False, log_format=None, partial_parse=None, printer_width=None, profile=None, profiles_dir='/home/azureuser/.dbt', project_dir='/home/azureuser/shawn_dbt/Auctioneer', record_timing_info=None, rpc_method=None, send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='clean', write_json=None)
+18:04:46.409674 [debug] [MainThread]: Tracking: tracking
+18:04:46.409979 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe7c6ce2a60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe7c6ce2af0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe7c6ce2b20>]}
+18:04:46.443236 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe7c6ce2ee0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe7c6ce2f10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe7c6ce2f70>]}
+
+
+============================== 2022-09-12 19:38:17.373727 | 9362721f-13c2-46db-8d3f-edc54c2906bf ==============================
+19:38:17.373727 [info ] [MainThread]: Running with dbt=1.0.0
+19:38:17.375037 [debug] [MainThread]: running dbt with arguments Namespace(cls=<class 'dbt.task.clean.CleanTask'>, debug=None, defer=None, event_buffer_size=None, fail_fast=None, log_cache_events=False, log_format=None, partial_parse=None, printer_width=None, profile=None, profiles_dir='/home/azureuser/.dbt', project_dir='/home/azureuser/shawn_dbt/ClassicCars', record_timing_info=None, rpc_method=None, send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='clean', write_json=None)
+19:38:17.375424 [debug] [MainThread]: Tracking: tracking
+19:38:17.375738 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe6130dab50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe6130dabe0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe6130dac10>]}
+19:38:17.401414 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe6130daf40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe6130dafd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe6130daf70>]}
+
+
+============================== 2022-09-13 20:24:08.377599 | 5bdf81a9-9913-42c1-92f6-fdae65577122 ==============================
+20:24:08.377599 [info ] [MainThread]: Running with dbt=1.0.0
+20:24:08.379289 [debug] [MainThread]: running dbt with arguments Namespace(cls=<class 'dbt.task.clean.CleanTask'>, debug=None, defer=None, event_buffer_size=None, fail_fast=None, log_cache_events=False, log_format=None, partial_parse=None, printer_width=None, profile=None, profiles_dir='/home/azureuser/.dbt', project_dir='/home/azureuser/shawn_dbt/ClassicCars', record_timing_info=None, rpc_method=None, send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='clean', write_json=None)
+20:24:08.379641 [debug] [MainThread]: Tracking: tracking
+20:24:08.379934 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1ae29d8b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1ae29d8bb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1ae29d8c40>]}
+20:24:08.416526 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1ae29d8f10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1ae29d8ee0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1ae29d8e20>]}
+
+
+============================== 2022-09-13 20:51:50.452367 | ff3a70a9-1251-43cd-b342-6c722bbf5502 ==============================
+20:51:50.452367 [info ] [MainThread]: Running with dbt=1.0.0
+20:51:50.453473 [debug] [MainThread]: running dbt with arguments Namespace(cls=<class 'dbt.task.deps.DepsTask'>, debug=None, defer=None, event_buffer_size=None, fail_fast=None, log_cache_events=False, log_format=None, partial_parse=None, printer_width=None, profile=None, profiles_dir='/home/azureuser/.dbt', project_dir=None, record_timing_info=None, rpc_method='deps', send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='deps', write_json=None)
+20:51:50.453789 [debug] [MainThread]: Tracking: do not track
+20:51:50.464842 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-nfhdlxl8'
+20:51:50.465370 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/index.json
+20:51:50.583986 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/index.json 200
+20:51:50.584894 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables.json
+20:51:50.660352 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables.json 200
+20:51:50.664621 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables/0.8.0.json
+20:51:50.741691 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables/0.8.0.json 200
+20:51:50.742980 [debug] [MainThread]: Executing "git clone --depth 1 git@github.com:calogica/dbt-expectations.git 302c8ef7290af78b223a10403d76f27f"
+20:51:51.639051 [debug] [MainThread]: STDOUT: "b''"
+20:51:51.639581 [debug] [MainThread]: STDERR: "b"Cloning into '302c8ef7290af78b223a10403d76f27f'...\n""
+20:51:51.640085 [debug] [MainThread]: Pulling new dependency 302c8ef7290af78b223a10403d76f27f.
+20:51:51.640247 [debug] [MainThread]: Executing "git rev-parse HEAD"
+20:51:51.646248 [debug] [MainThread]: STDOUT: "b'0ad445448218330ee14658fe5fca4d18eaf1670c\n'"
+20:51:51.646888 [debug] [MainThread]: STDERR: "b''"
+20:51:51.647091 [debug] [MainThread]:   Checking out revision 0.5.8.
+20:51:51.647257 [debug] [MainThread]: Executing "git remote set-branches origin 0.5.8"
+20:51:51.652964 [debug] [MainThread]: STDOUT: "b''"
+20:51:51.653470 [debug] [MainThread]: STDERR: "b''"
+20:51:51.653612 [debug] [MainThread]: Executing "git fetch origin --depth 1 --tags 0.5.8"
+20:51:52.283626 [debug] [MainThread]: STDOUT: "b''"
+20:51:52.284157 [debug] [MainThread]: STDERR: "b'From github.com:calogica/dbt-expectations\n * tag               0.5.8      -> FETCH_HEAD\n * [new tag]         0.1        -> 0.1\n * [new tag]         0.1.2      -> 0.1.2\n * [new tag]         0.1.3      -> 0.1.3\n * [new tag]         0.1.4      -> 0.1.4\n * [new tag]         0.2.0      -> 0.2.0\n * [new tag]         0.2.1      -> 0.2.1\n * [new tag]         0.2.2      -> 0.2.2\n * [new tag]         0.2.3      -> 0.2.3\n * [new tag]         0.2.4      -> 0.2.4\n * [new tag]         0.2.5      -> 0.2.5\n * [new tag]         0.2.6      -> 0.2.6\n * [new tag]         0.2.7      -> 0.2.7\n * [new tag]         0.2.8      -> 0.2.8\n * [new tag]         0.2.9      -> 0.2.9\n * [new tag]         0.3.0      -> 0.3.0\n * [new tag]         0.3.1      -> 0.3.1\n * [new tag]         0.3.2      -> 0.3.2\n * [new tag]         0.3.3      -> 0.3.3\n * [new tag]         0.3.4      -> 0.3.4\n * [new tag]         0.3.5      -> 0.3.5\n * [new tag]         0.3.6      -> 0.3.6\n * [new tag]         0.3.7      -> 0.3.7\n * [new tag]         0.4.0      -> 0.4.0\n * [new tag]         0.4.1      -> 0.4.1\n * [new tag]         0.4.2      -> 0.4.2\n * [new tag]         0.4.3      -> 0.4.3\n * [new tag]         0.4.4      -> 0.4.4\n * [new tag]         0.4.5      -> 0.4.5\n * [new tag]         0.4.6      -> 0.4.6\n * [new tag]         0.4.7      -> 0.4.7\n * [new tag]         0.5.0      -> 0.5.0\n * [new tag]         0.5.1      -> 0.5.1\n * [new tag]         0.5.2      -> 0.5.2\n * [new tag]         0.5.3      -> 0.5.3\n * [new tag]         0.5.4      -> 0.5.4\n * [new tag]         0.5.5      -> 0.5.5\n * [new tag]         0.5.6      -> 0.5.6\n * [new tag]         0.5.7      -> 0.5.7\n * [new tag]         0.5.8      -> 0.5.8\n * [new tag]         0.6.0      -> 0.6.0\n'"
+20:51:52.284365 [debug] [MainThread]: Executing "git tag --list"
+20:51:52.289799 [debug] [MainThread]: STDOUT: "b'0.1\n0.1.2\n0.1.3\n0.1.4\n0.2.0\n0.2.1\n0.2.2\n0.2.3\n0.2.4\n0.2.5\n0.2.6\n0.2.7\n0.2.8\n0.2.9\n0.3.0\n0.3.1\n0.3.2\n0.3.3\n0.3.4\n0.3.5\n0.3.6\n0.3.7\n0.4.0\n0.4.1\n0.4.2\n0.4.3\n0.4.4\n0.4.5\n0.4.6\n0.4.7\n0.5.0\n0.5.1\n0.5.2\n0.5.3\n0.5.4\n0.5.5\n0.5.6\n0.5.7\n0.5.8\n0.6.0\n'"
+20:51:52.290264 [debug] [MainThread]: STDERR: "b''"
+20:51:52.290419 [debug] [MainThread]: Executing "git reset --hard tags/0.5.8"
+20:51:52.343795 [debug] [MainThread]: STDOUT: "b'HEAD is now at d1eaed8 Update CHANGELOG.md\n'"
+20:51:52.344310 [debug] [MainThread]: STDERR: "b''"
+20:51:52.344478 [debug] [MainThread]: Executing "git rev-parse HEAD"
+20:51:52.349761 [debug] [MainThread]: STDOUT: "b'd1eaed8e088c4252f80cfdd6ea94d41d2385ad9e\n'"
+20:51:52.350245 [debug] [MainThread]: STDERR: "b''"
+20:51:52.350421 [debug] [MainThread]:   Checked out at d1eaed8.
+20:51:52.361085 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json
+20:51:52.438795 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json 200
+20:51:52.448554 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_date/0.5.7.json
+20:51:52.522473 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_date/0.5.7.json 200
+20:51:52.523744 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+20:51:52.601303 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+20:51:52.628270 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils/0.8.6.json
+20:51:52.705174 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils/0.8.6.json 200
+20:51:52.706173 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables.json
+20:51:52.780739 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables.json 200
+20:51:52.784465 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json
+20:51:52.859522 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json 200
+20:51:52.867343 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+20:51:52.941737 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+20:51:52.966650 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables/0.8.0.json
+20:51:53.041577 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables/0.8.0.json 200
+20:51:53.042565 [debug] [MainThread]: Executing "git clone --depth 1 git@github.com:calogica/dbt-expectations.git 302c8ef7290af78b223a10403d76f27f"
+20:51:53.049269 [debug] [MainThread]: STDOUT: "b''"
+20:51:53.049714 [debug] [MainThread]: STDERR: "b"fatal: destination path '302c8ef7290af78b223a10403d76f27f' already exists and is not an empty directory.\n""
+20:51:53.049841 [debug] [MainThread]: command return code=128
+20:51:53.050455 [debug] [MainThread]: Updating existing dependency 302c8ef7290af78b223a10403d76f27f.
+20:51:53.050796 [debug] [MainThread]: Executing "git rev-parse HEAD"
+20:51:53.055247 [debug] [MainThread]: STDOUT: "b'd1eaed8e088c4252f80cfdd6ea94d41d2385ad9e\n'"
+20:51:53.055673 [debug] [MainThread]: STDERR: "b''"
+20:51:53.055831 [debug] [MainThread]:   Checking out revision 0.5.8.
+20:51:53.055974 [debug] [MainThread]: Executing "git remote set-branches origin 0.5.8"
+20:51:53.060534 [debug] [MainThread]: STDOUT: "b''"
+20:51:53.060962 [debug] [MainThread]: STDERR: "b''"
+20:51:53.061091 [debug] [MainThread]: Executing "git fetch origin --depth 1 --tags 0.5.8"
+20:51:53.455938 [debug] [MainThread]: STDOUT: "b''"
+20:51:53.456517 [debug] [MainThread]: STDERR: "b'From github.com:calogica/dbt-expectations\n * tag               0.5.8      -> FETCH_HEAD\n'"
+20:51:53.456732 [debug] [MainThread]: Executing "git tag --list"
+20:51:53.462146 [debug] [MainThread]: STDOUT: "b'0.1\n0.1.2\n0.1.3\n0.1.4\n0.2.0\n0.2.1\n0.2.2\n0.2.3\n0.2.4\n0.2.5\n0.2.6\n0.2.7\n0.2.8\n0.2.9\n0.3.0\n0.3.1\n0.3.2\n0.3.3\n0.3.4\n0.3.5\n0.3.6\n0.3.7\n0.4.0\n0.4.1\n0.4.2\n0.4.3\n0.4.4\n0.4.5\n0.4.6\n0.4.7\n0.5.0\n0.5.1\n0.5.2\n0.5.3\n0.5.4\n0.5.5\n0.5.6\n0.5.7\n0.5.8\n0.6.0\n'"
+20:51:53.462676 [debug] [MainThread]: STDERR: "b''"
+20:51:53.462853 [debug] [MainThread]: Executing "git reset --hard tags/0.5.8"
+20:51:53.468929 [debug] [MainThread]: STDOUT: "b'HEAD is now at d1eaed8 Update CHANGELOG.md\n'"
+20:51:53.469361 [debug] [MainThread]: STDERR: "b''"
+20:51:53.469512 [debug] [MainThread]: Executing "git rev-parse HEAD"
+20:51:53.473193 [debug] [MainThread]: STDOUT: "b'd1eaed8e088c4252f80cfdd6ea94d41d2385ad9e\n'"
+20:51:53.473610 [debug] [MainThread]: STDERR: "b''"
+20:51:53.473780 [debug] [MainThread]: Already at d1eaed8, nothing to do.
+20:51:53.483947 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_date/0.5.7.json
+20:51:53.561513 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_date/0.5.7.json 200
+20:51:53.562580 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils/0.8.6.json
+20:51:53.636817 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils/0.8.6.json 200
+20:51:53.637924 [info ] [MainThread]: Installing version 0.8.0
+20:51:53.854745 [info ] [MainThread]:   Installed from version 0.8.0
+20:51:53.855752 [info ] [MainThread]:   Up to date!
+20:51:53.859177 [info ] [MainThread]: Installing revision 0.5.8
+20:51:53.859852 [debug] [MainThread]: Executing "git clone --depth 1 git@github.com:calogica/dbt-expectations.git 302c8ef7290af78b223a10403d76f27f"
+20:51:53.867500 [debug] [MainThread]: STDOUT: "b''"
+20:51:53.867966 [debug] [MainThread]: STDERR: "b"fatal: destination path '302c8ef7290af78b223a10403d76f27f' already exists and is not an empty directory.\n""
+20:51:53.868086 [debug] [MainThread]: command return code=128
+20:51:53.868339 [debug] [MainThread]: Updating existing dependency 302c8ef7290af78b223a10403d76f27f.
+20:51:53.868469 [debug] [MainThread]: Executing "git rev-parse HEAD"
+20:51:53.872596 [debug] [MainThread]: STDOUT: "b'd1eaed8e088c4252f80cfdd6ea94d41d2385ad9e\n'"
+20:51:53.873021 [debug] [MainThread]: STDERR: "b''"
+20:51:53.873174 [debug] [MainThread]:   Checking out revision 0.5.8.
+20:51:53.873315 [debug] [MainThread]: Executing "git remote set-branches origin 0.5.8"
+20:51:53.877476 [debug] [MainThread]: STDOUT: "b''"
+20:51:53.877917 [debug] [MainThread]: STDERR: "b''"
+20:51:53.878050 [debug] [MainThread]: Executing "git fetch origin --depth 1 --tags 0.5.8"
+20:51:54.274336 [debug] [MainThread]: STDOUT: "b''"
+20:51:54.275413 [debug] [MainThread]: STDERR: "b'From github.com:calogica/dbt-expectations\n * tag               0.5.8      -> FETCH_HEAD\n'"
+20:51:54.275634 [debug] [MainThread]: Executing "git tag --list"
+20:51:54.281124 [debug] [MainThread]: STDOUT: "b'0.1\n0.1.2\n0.1.3\n0.1.4\n0.2.0\n0.2.1\n0.2.2\n0.2.3\n0.2.4\n0.2.5\n0.2.6\n0.2.7\n0.2.8\n0.2.9\n0.3.0\n0.3.1\n0.3.2\n0.3.3\n0.3.4\n0.3.5\n0.3.6\n0.3.7\n0.4.0\n0.4.1\n0.4.2\n0.4.3\n0.4.4\n0.4.5\n0.4.6\n0.4.7\n0.5.0\n0.5.1\n0.5.2\n0.5.3\n0.5.4\n0.5.5\n0.5.6\n0.5.7\n0.5.8\n0.6.0\n'"
+20:51:54.281610 [debug] [MainThread]: STDERR: "b''"
+20:51:54.281774 [debug] [MainThread]: Executing "git reset --hard tags/0.5.8"
+20:51:54.287538 [debug] [MainThread]: STDOUT: "b'HEAD is now at d1eaed8 Update CHANGELOG.md\n'"
+20:51:54.288029 [debug] [MainThread]: STDERR: "b''"
+20:51:54.288192 [debug] [MainThread]: Executing "git rev-parse HEAD"
+20:51:54.292153 [debug] [MainThread]: STDOUT: "b'd1eaed8e088c4252f80cfdd6ea94d41d2385ad9e\n'"
+20:51:54.292630 [debug] [MainThread]: STDERR: "b''"
+20:51:54.292794 [debug] [MainThread]: Already at d1eaed8, nothing to do.
+20:51:54.293022 [info ] [MainThread]:   Installed from revision 0.5.8
+20:51:54.294284 [info ] [MainThread]: Installing version 0.5.7
+20:51:54.362695 [info ] [MainThread]:   Installed from version 0.5.7
+20:51:54.365452 [info ] [MainThread]:   Updated version available: 0.6.0
+20:51:54.369161 [info ] [MainThread]: Installing version 0.8.6
+20:51:54.534811 [info ] [MainThread]:   Installed from version 0.8.6
+20:51:54.536260 [info ] [MainThread]:   Updated version available: 0.9.1
+20:51:54.537094 [info ] [MainThread]: 
+20:51:54.537642 [info ] [MainThread]: Updates available for packages: ['calogica/dbt_date', 'dbt-labs/dbt_utils']                 
+Update your versions in packages.yml, then run dbt deps
+
+
+============================== 2022-09-13 20:52:58.646767 | aa787c7b-b79b-4192-ad40-8e717be1fc12 ==============================
+20:52:58.646767 [info ] [MainThread]: Running with dbt=1.0.0
+20:52:58.648301 [debug] [MainThread]: running dbt with arguments Namespace(cls=<class 'dbt.task.deps.DepsTask'>, debug=None, defer=None, event_buffer_size=None, fail_fast=None, log_cache_events=False, log_format=None, partial_parse=None, printer_width=None, profile=None, profiles_dir='/home/azureuser/.dbt', project_dir=None, record_timing_info=None, rpc_method='deps', send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='deps', write_json=None)
+20:52:58.648625 [debug] [MainThread]: Tracking: do not track
+20:52:58.658964 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-qj3y4uuk'
+20:52:58.659535 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/index.json
+20:52:58.744388 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/index.json 200
+20:52:58.745357 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables.json
+20:52:58.774459 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables.json 200
+20:52:58.778204 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables/0.8.0.json
+20:52:58.807759 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables/0.8.0.json 200
+20:52:58.808735 [debug] [MainThread]: Executing "git clone --depth 1 git@github.com:calogica/dbt-expectations.git 302c8ef7290af78b223a10403d76f27f"
+20:52:59.594122 [debug] [MainThread]: STDOUT: "b''"
+20:52:59.594678 [debug] [MainThread]: STDERR: "b"Cloning into '302c8ef7290af78b223a10403d76f27f'...\n""
+20:52:59.595193 [debug] [MainThread]: Pulling new dependency 302c8ef7290af78b223a10403d76f27f.
+20:52:59.595355 [debug] [MainThread]: Executing "git rev-parse HEAD"
+20:52:59.600692 [debug] [MainThread]: STDOUT: "b'0ad445448218330ee14658fe5fca4d18eaf1670c\n'"
+20:52:59.601156 [debug] [MainThread]: STDERR: "b''"
+20:52:59.601349 [debug] [MainThread]:   Checking out revision 0.5.8.
+20:52:59.601509 [debug] [MainThread]: Executing "git remote set-branches origin 0.5.8"
+20:52:59.606296 [debug] [MainThread]: STDOUT: "b''"
+20:52:59.606803 [debug] [MainThread]: STDERR: "b''"
+20:52:59.606947 [debug] [MainThread]: Executing "git fetch origin --depth 1 --tags 0.5.8"
+20:53:00.225869 [debug] [MainThread]: STDOUT: "b''"
+20:53:00.226378 [debug] [MainThread]: STDERR: "b'From github.com:calogica/dbt-expectations\n * tag               0.5.8      -> FETCH_HEAD\n * [new tag]         0.1        -> 0.1\n * [new tag]         0.1.2      -> 0.1.2\n * [new tag]         0.1.3      -> 0.1.3\n * [new tag]         0.1.4      -> 0.1.4\n * [new tag]         0.2.0      -> 0.2.0\n * [new tag]         0.2.1      -> 0.2.1\n * [new tag]         0.2.2      -> 0.2.2\n * [new tag]         0.2.3      -> 0.2.3\n * [new tag]         0.2.4      -> 0.2.4\n * [new tag]         0.2.5      -> 0.2.5\n * [new tag]         0.2.6      -> 0.2.6\n * [new tag]         0.2.7      -> 0.2.7\n * [new tag]         0.2.8      -> 0.2.8\n * [new tag]         0.2.9      -> 0.2.9\n * [new tag]         0.3.0      -> 0.3.0\n * [new tag]         0.3.1      -> 0.3.1\n * [new tag]         0.3.2      -> 0.3.2\n * [new tag]         0.3.3      -> 0.3.3\n * [new tag]         0.3.4      -> 0.3.4\n * [new tag]         0.3.5      -> 0.3.5\n * [new tag]         0.3.6      -> 0.3.6\n * [new tag]         0.3.7      -> 0.3.7\n * [new tag]         0.4.0      -> 0.4.0\n * [new tag]         0.4.1      -> 0.4.1\n * [new tag]         0.4.2      -> 0.4.2\n * [new tag]         0.4.3      -> 0.4.3\n * [new tag]         0.4.4      -> 0.4.4\n * [new tag]         0.4.5      -> 0.4.5\n * [new tag]         0.4.6      -> 0.4.6\n * [new tag]         0.4.7      -> 0.4.7\n * [new tag]         0.5.0      -> 0.5.0\n * [new tag]         0.5.1      -> 0.5.1\n * [new tag]         0.5.2      -> 0.5.2\n * [new tag]         0.5.3      -> 0.5.3\n * [new tag]         0.5.4      -> 0.5.4\n * [new tag]         0.5.5      -> 0.5.5\n * [new tag]         0.5.6      -> 0.5.6\n * [new tag]         0.5.7      -> 0.5.7\n * [new tag]         0.5.8      -> 0.5.8\n * [new tag]         0.6.0      -> 0.6.0\n'"
+20:53:00.226829 [debug] [MainThread]: Executing "git tag --list"
+20:53:00.232293 [debug] [MainThread]: STDOUT: "b'0.1\n0.1.2\n0.1.3\n0.1.4\n0.2.0\n0.2.1\n0.2.2\n0.2.3\n0.2.4\n0.2.5\n0.2.6\n0.2.7\n0.2.8\n0.2.9\n0.3.0\n0.3.1\n0.3.2\n0.3.3\n0.3.4\n0.3.5\n0.3.6\n0.3.7\n0.4.0\n0.4.1\n0.4.2\n0.4.3\n0.4.4\n0.4.5\n0.4.6\n0.4.7\n0.5.0\n0.5.1\n0.5.2\n0.5.3\n0.5.4\n0.5.5\n0.5.6\n0.5.7\n0.5.8\n0.6.0\n'"
+20:53:00.232709 [debug] [MainThread]: STDERR: "b''"
+20:53:00.232872 [debug] [MainThread]: Executing "git reset --hard tags/0.5.8"
+20:53:00.283743 [debug] [MainThread]: STDOUT: "b'HEAD is now at d1eaed8 Update CHANGELOG.md\n'"
+20:53:00.284245 [debug] [MainThread]: STDERR: "b''"
+20:53:00.284411 [debug] [MainThread]: Executing "git rev-parse HEAD"
+20:53:00.291030 [debug] [MainThread]: STDOUT: "b'd1eaed8e088c4252f80cfdd6ea94d41d2385ad9e\n'"
+20:53:00.291496 [debug] [MainThread]: STDERR: "b''"
+20:53:00.291675 [debug] [MainThread]:   Checked out at d1eaed8.
+20:53:00.302120 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json
+20:53:00.332801 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json 200
+20:53:00.340756 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_date/0.5.7.json
+20:53:00.369678 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_date/0.5.7.json 200
+20:53:00.370816 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+20:53:00.410596 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+20:53:00.473802 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils/0.8.6.json
+20:53:00.518061 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils/0.8.6.json 200
+20:53:00.519016 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables.json
+20:53:00.547613 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables.json 200
+20:53:00.551627 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json
+20:53:00.580236 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json 200
+20:53:00.588996 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+20:53:00.618238 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+20:53:00.642995 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables/0.8.0.json
+20:53:00.671413 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables/0.8.0.json 200
+20:53:00.672282 [debug] [MainThread]: Executing "git clone --depth 1 git@github.com:calogica/dbt-expectations.git 302c8ef7290af78b223a10403d76f27f"
+20:53:00.677384 [debug] [MainThread]: STDOUT: "b''"
+20:53:00.677770 [debug] [MainThread]: STDERR: "b"fatal: destination path '302c8ef7290af78b223a10403d76f27f' already exists and is not an empty directory.\n""
+20:53:00.677900 [debug] [MainThread]: command return code=128
+20:53:00.678492 [debug] [MainThread]: Updating existing dependency 302c8ef7290af78b223a10403d76f27f.
+20:53:00.678825 [debug] [MainThread]: Executing "git rev-parse HEAD"
+20:53:00.682787 [debug] [MainThread]: STDOUT: "b'd1eaed8e088c4252f80cfdd6ea94d41d2385ad9e\n'"
+20:53:00.683162 [debug] [MainThread]: STDERR: "b''"
+20:53:00.683319 [debug] [MainThread]:   Checking out revision 0.5.8.
+20:53:00.683460 [debug] [MainThread]: Executing "git remote set-branches origin 0.5.8"
+20:53:00.687368 [debug] [MainThread]: STDOUT: "b''"
+20:53:00.687744 [debug] [MainThread]: STDERR: "b''"
+20:53:00.687868 [debug] [MainThread]: Executing "git fetch origin --depth 1 --tags 0.5.8"
+20:53:01.090844 [debug] [MainThread]: STDOUT: "b''"
+20:53:01.091424 [debug] [MainThread]: STDERR: "b'From github.com:calogica/dbt-expectations\n * tag               0.5.8      -> FETCH_HEAD\n'"
+20:53:01.091635 [debug] [MainThread]: Executing "git tag --list"
+20:53:01.097132 [debug] [MainThread]: STDOUT: "b'0.1\n0.1.2\n0.1.3\n0.1.4\n0.2.0\n0.2.1\n0.2.2\n0.2.3\n0.2.4\n0.2.5\n0.2.6\n0.2.7\n0.2.8\n0.2.9\n0.3.0\n0.3.1\n0.3.2\n0.3.3\n0.3.4\n0.3.5\n0.3.6\n0.3.7\n0.4.0\n0.4.1\n0.4.2\n0.4.3\n0.4.4\n0.4.5\n0.4.6\n0.4.7\n0.5.0\n0.5.1\n0.5.2\n0.5.3\n0.5.4\n0.5.5\n0.5.6\n0.5.7\n0.5.8\n0.6.0\n'"
+20:53:01.097592 [debug] [MainThread]: STDERR: "b''"
+20:53:01.097744 [debug] [MainThread]: Executing "git reset --hard tags/0.5.8"
+20:53:01.104099 [debug] [MainThread]: STDOUT: "b'HEAD is now at d1eaed8 Update CHANGELOG.md\n'"
+20:53:01.104536 [debug] [MainThread]: STDERR: "b''"
+20:53:01.104686 [debug] [MainThread]: Executing "git rev-parse HEAD"
+20:53:01.108426 [debug] [MainThread]: STDOUT: "b'd1eaed8e088c4252f80cfdd6ea94d41d2385ad9e\n'"
+20:53:01.108840 [debug] [MainThread]: STDERR: "b''"
+20:53:01.109012 [debug] [MainThread]: Already at d1eaed8, nothing to do.
+20:53:01.119466 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_date/0.5.7.json
+20:53:01.164552 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_date/0.5.7.json 200
+20:53:01.165359 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils/0.8.6.json
+20:53:01.194057 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils/0.8.6.json 200
+20:53:01.194934 [info ] [MainThread]: Installing version 0.8.0
+20:53:01.409002 [info ] [MainThread]:   Installed from version 0.8.0
+20:53:01.417153 [info ] [MainThread]:   Up to date!
+20:53:01.417864 [info ] [MainThread]: Installing revision 0.5.8
+20:53:01.438446 [debug] [MainThread]: Executing "git clone --depth 1 git@github.com:calogica/dbt-expectations.git 302c8ef7290af78b223a10403d76f27f"
+20:53:01.464163 [debug] [MainThread]: STDOUT: "b''"
+20:53:01.464666 [debug] [MainThread]: STDERR: "b"fatal: destination path '302c8ef7290af78b223a10403d76f27f' already exists and is not an empty directory.\n""
+20:53:01.464791 [debug] [MainThread]: command return code=128
+20:53:01.465054 [debug] [MainThread]: Updating existing dependency 302c8ef7290af78b223a10403d76f27f.
+20:53:01.465187 [debug] [MainThread]: Executing "git rev-parse HEAD"
+20:53:01.482961 [debug] [MainThread]: STDOUT: "b'd1eaed8e088c4252f80cfdd6ea94d41d2385ad9e\n'"
+20:53:01.483477 [debug] [MainThread]: STDERR: "b''"
+20:53:01.483647 [debug] [MainThread]:   Checking out revision 0.5.8.
+20:53:01.483796 [debug] [MainThread]: Executing "git remote set-branches origin 0.5.8"
+20:53:01.499042 [debug] [MainThread]: STDOUT: "b''"
+20:53:01.499551 [debug] [MainThread]: STDERR: "b''"
+20:53:01.499691 [debug] [MainThread]: Executing "git fetch origin --depth 1 --tags 0.5.8"
+20:53:01.966272 [debug] [MainThread]: STDOUT: "b''"
+20:53:01.966872 [debug] [MainThread]: STDERR: "b'From github.com:calogica/dbt-expectations\n * tag               0.5.8      -> FETCH_HEAD\n'"
+20:53:01.967066 [debug] [MainThread]: Executing "git tag --list"
+20:53:01.991014 [debug] [MainThread]: STDOUT: "b'0.1\n0.1.2\n0.1.3\n0.1.4\n0.2.0\n0.2.1\n0.2.2\n0.2.3\n0.2.4\n0.2.5\n0.2.6\n0.2.7\n0.2.8\n0.2.9\n0.3.0\n0.3.1\n0.3.2\n0.3.3\n0.3.4\n0.3.5\n0.3.6\n0.3.7\n0.4.0\n0.4.1\n0.4.2\n0.4.3\n0.4.4\n0.4.5\n0.4.6\n0.4.7\n0.5.0\n0.5.1\n0.5.2\n0.5.3\n0.5.4\n0.5.5\n0.5.6\n0.5.7\n0.5.8\n0.6.0\n'"
+20:53:01.991547 [debug] [MainThread]: STDERR: "b''"
+20:53:01.991718 [debug] [MainThread]: Executing "git reset --hard tags/0.5.8"
+20:53:02.015240 [debug] [MainThread]: STDOUT: "b'HEAD is now at d1eaed8 Update CHANGELOG.md\n'"
+20:53:02.015744 [debug] [MainThread]: STDERR: "b''"
+20:53:02.015921 [debug] [MainThread]: Executing "git rev-parse HEAD"
+20:53:02.036275 [debug] [MainThread]: STDOUT: "b'd1eaed8e088c4252f80cfdd6ea94d41d2385ad9e\n'"
+20:53:02.036767 [debug] [MainThread]: STDERR: "b''"
+20:53:02.036934 [debug] [MainThread]: Already at d1eaed8, nothing to do.
+20:53:02.037179 [info ] [MainThread]:   Installed from revision 0.5.8
+20:53:02.038671 [info ] [MainThread]: Installing version 0.5.7
+20:53:02.207773 [info ] [MainThread]:   Installed from version 0.5.7
+20:53:02.209230 [info ] [MainThread]:   Updated version available: 0.6.0
+20:53:02.210271 [info ] [MainThread]: Installing version 0.8.6
+20:53:02.420511 [info ] [MainThread]:   Installed from version 0.8.6
+20:53:02.426792 [info ] [MainThread]:   Updated version available: 0.9.1
+20:53:02.431117 [info ] [MainThread]: 
+20:53:02.432127 [info ] [MainThread]: Updates available for packages: ['calogica/dbt_date', 'dbt-labs/dbt_utils']                 
+Update your versions in packages.yml, then run dbt deps
+
+
+============================== 2022-09-13 20:56:13.657986 | 189a8a88-0bf1-48de-ac0b-9337a37bf942 ==============================
+20:56:13.657986 [info ] [MainThread]: Running with dbt=1.0.0
+20:56:13.659184 [debug] [MainThread]: running dbt with arguments Namespace(cls=<class 'dbt.task.deps.DepsTask'>, debug=None, defer=None, event_buffer_size=None, fail_fast=None, log_cache_events=False, log_format=None, partial_parse=None, printer_width=None, profile=None, profiles_dir='/home/azureuser/.dbt', project_dir=None, record_timing_info=None, rpc_method='deps', send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='deps', write_json=None)
+20:56:13.659536 [debug] [MainThread]: Tracking: do not track
+20:56:13.670535 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-rcs84exx'
+20:56:13.671232 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/index.json
+20:56:13.760422 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/index.json 200
+20:56:13.761361 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables.json
+20:56:13.838443 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables.json 200
+20:56:13.844206 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables/0.8.0.json
+20:56:13.920625 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables/0.8.0.json 200
+20:56:13.921840 [debug] [MainThread]: Executing "git clone --depth 1 git@github.com:calogica/dbt-expectations.git 302c8ef7290af78b223a10403d76f27f"
+20:56:14.751120 [debug] [MainThread]: STDOUT: "b''"
+20:56:14.751662 [debug] [MainThread]: STDERR: "b"Cloning into '302c8ef7290af78b223a10403d76f27f'...\n""
+20:56:14.752177 [debug] [MainThread]: Pulling new dependency 302c8ef7290af78b223a10403d76f27f.
+20:56:14.752334 [debug] [MainThread]: Executing "git rev-parse HEAD"
+20:56:14.757652 [debug] [MainThread]: STDOUT: "b'0ad445448218330ee14658fe5fca4d18eaf1670c\n'"
+20:56:14.758132 [debug] [MainThread]: STDERR: "b''"
+20:56:14.758324 [debug] [MainThread]:   Checking out revision 0.5.8.
+20:56:14.758475 [debug] [MainThread]: Executing "git remote set-branches origin 0.5.8"
+20:56:14.763773 [debug] [MainThread]: STDOUT: "b''"
+20:56:14.764233 [debug] [MainThread]: STDERR: "b''"
+20:56:14.764377 [debug] [MainThread]: Executing "git fetch origin --depth 1 --tags 0.5.8"
+20:56:15.379095 [debug] [MainThread]: STDOUT: "b''"
+20:56:15.379626 [debug] [MainThread]: STDERR: "b'From github.com:calogica/dbt-expectations\n * tag               0.5.8      -> FETCH_HEAD\n * [new tag]         0.1        -> 0.1\n * [new tag]         0.1.2      -> 0.1.2\n * [new tag]         0.1.3      -> 0.1.3\n * [new tag]         0.1.4      -> 0.1.4\n * [new tag]         0.2.0      -> 0.2.0\n * [new tag]         0.2.1      -> 0.2.1\n * [new tag]         0.2.2      -> 0.2.2\n * [new tag]         0.2.3      -> 0.2.3\n * [new tag]         0.2.4      -> 0.2.4\n * [new tag]         0.2.5      -> 0.2.5\n * [new tag]         0.2.6      -> 0.2.6\n * [new tag]         0.2.7      -> 0.2.7\n * [new tag]         0.2.8      -> 0.2.8\n * [new tag]         0.2.9      -> 0.2.9\n * [new tag]         0.3.0      -> 0.3.0\n * [new tag]         0.3.1      -> 0.3.1\n * [new tag]         0.3.2      -> 0.3.2\n * [new tag]         0.3.3      -> 0.3.3\n * [new tag]         0.3.4      -> 0.3.4\n * [new tag]         0.3.5      -> 0.3.5\n * [new tag]         0.3.6      -> 0.3.6\n * [new tag]         0.3.7      -> 0.3.7\n * [new tag]         0.4.0      -> 0.4.0\n * [new tag]         0.4.1      -> 0.4.1\n * [new tag]         0.4.2      -> 0.4.2\n * [new tag]         0.4.3      -> 0.4.3\n * [new tag]         0.4.4      -> 0.4.4\n * [new tag]         0.4.5      -> 0.4.5\n * [new tag]         0.4.6      -> 0.4.6\n * [new tag]         0.4.7      -> 0.4.7\n * [new tag]         0.5.0      -> 0.5.0\n * [new tag]         0.5.1      -> 0.5.1\n * [new tag]         0.5.2      -> 0.5.2\n * [new tag]         0.5.3      -> 0.5.3\n * [new tag]         0.5.4      -> 0.5.4\n * [new tag]         0.5.5      -> 0.5.5\n * [new tag]         0.5.6      -> 0.5.6\n * [new tag]         0.5.7      -> 0.5.7\n * [new tag]         0.5.8      -> 0.5.8\n * [new tag]         0.6.0      -> 0.6.0\n'"
+20:56:15.379853 [debug] [MainThread]: Executing "git tag --list"
+20:56:15.385453 [debug] [MainThread]: STDOUT: "b'0.1\n0.1.2\n0.1.3\n0.1.4\n0.2.0\n0.2.1\n0.2.2\n0.2.3\n0.2.4\n0.2.5\n0.2.6\n0.2.7\n0.2.8\n0.2.9\n0.3.0\n0.3.1\n0.3.2\n0.3.3\n0.3.4\n0.3.5\n0.3.6\n0.3.7\n0.4.0\n0.4.1\n0.4.2\n0.4.3\n0.4.4\n0.4.5\n0.4.6\n0.4.7\n0.5.0\n0.5.1\n0.5.2\n0.5.3\n0.5.4\n0.5.5\n0.5.6\n0.5.7\n0.5.8\n0.6.0\n'"
+20:56:15.385909 [debug] [MainThread]: STDERR: "b''"
+20:56:15.386082 [debug] [MainThread]: Executing "git reset --hard tags/0.5.8"
+20:56:15.437944 [debug] [MainThread]: STDOUT: "b'HEAD is now at d1eaed8 Update CHANGELOG.md\n'"
+20:56:15.438478 [debug] [MainThread]: STDERR: "b''"
+20:56:15.439369 [debug] [MainThread]: Executing "git rev-parse HEAD"
+20:56:15.444613 [debug] [MainThread]: STDOUT: "b'd1eaed8e088c4252f80cfdd6ea94d41d2385ad9e\n'"
+20:56:15.445005 [debug] [MainThread]: STDERR: "b''"
+20:56:15.445182 [debug] [MainThread]:   Checked out at d1eaed8.
+20:56:15.455879 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json
+20:56:15.533529 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json 200
+20:56:15.542884 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_date/0.5.7.json
+20:56:15.621583 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_date/0.5.7.json 200
+20:56:15.622832 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+20:56:15.700071 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+20:56:15.727651 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils/0.8.6.json
+20:56:15.804472 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils/0.8.6.json 200
+20:56:15.805466 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables.json
+20:56:15.882291 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables.json 200
+20:56:15.887238 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json
+20:56:15.964264 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json 200
+20:56:15.974705 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+20:56:16.050016 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+20:56:16.076232 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables/0.8.0.json
+20:56:16.152099 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables/0.8.0.json 200
+20:56:16.153166 [debug] [MainThread]: Executing "git clone --depth 1 git@github.com:calogica/dbt-expectations.git 302c8ef7290af78b223a10403d76f27f"
+20:56:16.158489 [debug] [MainThread]: STDOUT: "b''"
+20:56:16.158933 [debug] [MainThread]: STDERR: "b"fatal: destination path '302c8ef7290af78b223a10403d76f27f' already exists and is not an empty directory.\n""
+20:56:16.159066 [debug] [MainThread]: command return code=128
+20:56:16.159647 [debug] [MainThread]: Updating existing dependency 302c8ef7290af78b223a10403d76f27f.
+20:56:16.159798 [debug] [MainThread]: Executing "git rev-parse HEAD"
+20:56:16.163885 [debug] [MainThread]: STDOUT: "b'd1eaed8e088c4252f80cfdd6ea94d41d2385ad9e\n'"
+20:56:16.164341 [debug] [MainThread]: STDERR: "b''"
+20:56:16.164516 [debug] [MainThread]:   Checking out revision 0.5.8.
+20:56:16.164659 [debug] [MainThread]: Executing "git remote set-branches origin 0.5.8"
+20:56:16.169558 [debug] [MainThread]: STDOUT: "b''"
+20:56:16.170033 [debug] [MainThread]: STDERR: "b''"
+20:56:16.170184 [debug] [MainThread]: Executing "git fetch origin --depth 1 --tags 0.5.8"
+20:56:16.580175 [debug] [MainThread]: STDOUT: "b''"
+20:56:16.580757 [debug] [MainThread]: STDERR: "b'From github.com:calogica/dbt-expectations\n * tag               0.5.8      -> FETCH_HEAD\n'"
+20:56:16.580961 [debug] [MainThread]: Executing "git tag --list"
+20:56:16.587254 [debug] [MainThread]: STDOUT: "b'0.1\n0.1.2\n0.1.3\n0.1.4\n0.2.0\n0.2.1\n0.2.2\n0.2.3\n0.2.4\n0.2.5\n0.2.6\n0.2.7\n0.2.8\n0.2.9\n0.3.0\n0.3.1\n0.3.2\n0.3.3\n0.3.4\n0.3.5\n0.3.6\n0.3.7\n0.4.0\n0.4.1\n0.4.2\n0.4.3\n0.4.4\n0.4.5\n0.4.6\n0.4.7\n0.5.0\n0.5.1\n0.5.2\n0.5.3\n0.5.4\n0.5.5\n0.5.6\n0.5.7\n0.5.8\n0.6.0\n'"
+20:56:16.587779 [debug] [MainThread]: STDERR: "b''"
+20:56:16.587961 [debug] [MainThread]: Executing "git reset --hard tags/0.5.8"
+20:56:16.595801 [debug] [MainThread]: STDOUT: "b'HEAD is now at d1eaed8 Update CHANGELOG.md\n'"
+20:56:16.596330 [debug] [MainThread]: STDERR: "b''"
+20:56:16.596505 [debug] [MainThread]: Executing "git rev-parse HEAD"
+20:56:16.601744 [debug] [MainThread]: STDOUT: "b'd1eaed8e088c4252f80cfdd6ea94d41d2385ad9e\n'"
+20:56:16.602257 [debug] [MainThread]: STDERR: "b''"
+20:56:16.602443 [debug] [MainThread]: Already at d1eaed8, nothing to do.
+20:56:16.613467 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_date/0.5.7.json
+20:56:16.701831 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_date/0.5.7.json 200
+20:56:16.702737 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils/0.8.6.json
+20:56:16.779102 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils/0.8.6.json 200
+20:56:16.780222 [info ] [MainThread]: Installing version 0.8.0
+20:56:16.889921 [info ] [MainThread]:   Installed from version 0.8.0
+20:56:16.896636 [info ] [MainThread]:   Up to date!
+20:56:16.898188 [info ] [MainThread]: Installing revision 0.5.8
+20:56:16.922349 [debug] [MainThread]: Executing "git clone --depth 1 git@github.com:calogica/dbt-expectations.git 302c8ef7290af78b223a10403d76f27f"
+20:56:16.948666 [debug] [MainThread]: STDOUT: "b''"
+20:56:16.949195 [debug] [MainThread]: STDERR: "b"fatal: destination path '302c8ef7290af78b223a10403d76f27f' already exists and is not an empty directory.\n""
+20:56:16.949329 [debug] [MainThread]: command return code=128
+20:56:16.949612 [debug] [MainThread]: Updating existing dependency 302c8ef7290af78b223a10403d76f27f.
+20:56:16.949746 [debug] [MainThread]: Executing "git rev-parse HEAD"
+20:56:16.971105 [debug] [MainThread]: STDOUT: "b'd1eaed8e088c4252f80cfdd6ea94d41d2385ad9e\n'"
+20:56:16.971655 [debug] [MainThread]: STDERR: "b''"
+20:56:16.971836 [debug] [MainThread]:   Checking out revision 0.5.8.
+20:56:16.971988 [debug] [MainThread]: Executing "git remote set-branches origin 0.5.8"
+20:56:16.991261 [debug] [MainThread]: STDOUT: "b''"
+20:56:16.991794 [debug] [MainThread]: STDERR: "b''"
+20:56:16.991953 [debug] [MainThread]: Executing "git fetch origin --depth 1 --tags 0.5.8"
+20:56:17.421712 [debug] [MainThread]: STDOUT: "b''"
+20:56:17.422258 [debug] [MainThread]: STDERR: "b'From github.com:calogica/dbt-expectations\n * tag               0.5.8      -> FETCH_HEAD\n'"
+20:56:17.422454 [debug] [MainThread]: Executing "git tag --list"
+20:56:17.443104 [debug] [MainThread]: STDOUT: "b'0.1\n0.1.2\n0.1.3\n0.1.4\n0.2.0\n0.2.1\n0.2.2\n0.2.3\n0.2.4\n0.2.5\n0.2.6\n0.2.7\n0.2.8\n0.2.9\n0.3.0\n0.3.1\n0.3.2\n0.3.3\n0.3.4\n0.3.5\n0.3.6\n0.3.7\n0.4.0\n0.4.1\n0.4.2\n0.4.3\n0.4.4\n0.4.5\n0.4.6\n0.4.7\n0.5.0\n0.5.1\n0.5.2\n0.5.3\n0.5.4\n0.5.5\n0.5.6\n0.5.7\n0.5.8\n0.6.0\n'"
+20:56:17.443657 [debug] [MainThread]: STDERR: "b''"
+20:56:17.443834 [debug] [MainThread]: Executing "git reset --hard tags/0.5.8"
+20:56:17.467125 [debug] [MainThread]: STDOUT: "b'HEAD is now at d1eaed8 Update CHANGELOG.md\n'"
+20:56:17.467654 [debug] [MainThread]: STDERR: "b''"
+20:56:17.467830 [debug] [MainThread]: Executing "git rev-parse HEAD"
+20:56:17.483024 [debug] [MainThread]: STDOUT: "b'd1eaed8e088c4252f80cfdd6ea94d41d2385ad9e\n'"
+20:56:17.483553 [debug] [MainThread]: STDERR: "b''"
+20:56:17.483725 [debug] [MainThread]: Already at d1eaed8, nothing to do.
+20:56:17.483981 [info ] [MainThread]:   Installed from revision 0.5.8
+20:56:17.485631 [info ] [MainThread]: Installing version 0.5.7
+20:56:17.571907 [info ] [MainThread]:   Installed from version 0.5.7
+20:56:17.574727 [info ] [MainThread]:   Updated version available: 0.6.0
+20:56:17.575969 [info ] [MainThread]: Installing version 0.8.6
+20:56:17.758990 [info ] [MainThread]:   Installed from version 0.8.6
+20:56:17.761680 [info ] [MainThread]:   Updated version available: 0.9.1
+20:56:17.764603 [info ] [MainThread]: 
+20:56:17.766958 [info ] [MainThread]: Updates available for packages: ['calogica/dbt_date', 'dbt-labs/dbt_utils']                 
+Update your versions in packages.yml, then run dbt deps
+
+
+============================== 2022-09-13 20:59:28.474136 | ed98852b-2188-40b2-a1a0-daf6deebabed ==============================
+20:59:28.474136 [info ] [MainThread]: Running with dbt=1.0.0
+20:59:28.475312 [debug] [MainThread]: running dbt with arguments Namespace(cls=<class 'dbt.task.deps.DepsTask'>, debug=None, defer=None, event_buffer_size=None, fail_fast=None, log_cache_events=False, log_format=None, partial_parse=None, printer_width=None, profile=None, profiles_dir='/home/azureuser/.dbt', project_dir=None, record_timing_info=None, rpc_method='deps', send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='deps', write_json=None)
+20:59:28.475638 [debug] [MainThread]: Tracking: do not track
+20:59:28.486685 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-fx0odi4a'
+20:59:28.487338 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/index.json
+20:59:28.717850 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/index.json 200
+20:59:28.718837 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables.json
+20:59:28.794524 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables.json 200
+20:59:28.800346 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables/0.8.0.json
+20:59:28.875646 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables/0.8.0.json 200
+20:59:28.876761 [debug] [MainThread]: Executing "git clone --depth 1 git@github.com:calogica/dbt-expectations.git 302c8ef7290af78b223a10403d76f27f"
+20:59:29.699976 [debug] [MainThread]: STDOUT: "b''"
+20:59:29.700517 [debug] [MainThread]: STDERR: "b"Cloning into '302c8ef7290af78b223a10403d76f27f'...\n""
+20:59:29.701023 [debug] [MainThread]: Pulling new dependency 302c8ef7290af78b223a10403d76f27f.
+20:59:29.701183 [debug] [MainThread]: Executing "git rev-parse HEAD"
+20:59:29.706421 [debug] [MainThread]: STDOUT: "b'0ad445448218330ee14658fe5fca4d18eaf1670c\n'"
+20:59:29.707000 [debug] [MainThread]: STDERR: "b''"
+20:59:29.707185 [debug] [MainThread]:   Checking out revision 0.5.8.
+20:59:29.707344 [debug] [MainThread]: Executing "git remote set-branches origin 0.5.8"
+20:59:29.711946 [debug] [MainThread]: STDOUT: "b''"
+20:59:29.712394 [debug] [MainThread]: STDERR: "b''"
+20:59:29.712529 [debug] [MainThread]: Executing "git fetch origin --depth 1 --tags 0.5.8"
+20:59:30.351231 [debug] [MainThread]: STDOUT: "b''"
+20:59:30.351793 [debug] [MainThread]: STDERR: "b'From github.com:calogica/dbt-expectations\n * tag               0.5.8      -> FETCH_HEAD\n * [new tag]         0.1        -> 0.1\n * [new tag]         0.1.2      -> 0.1.2\n * [new tag]         0.1.3      -> 0.1.3\n * [new tag]         0.1.4      -> 0.1.4\n * [new tag]         0.2.0      -> 0.2.0\n * [new tag]         0.2.1      -> 0.2.1\n * [new tag]         0.2.2      -> 0.2.2\n * [new tag]         0.2.3      -> 0.2.3\n * [new tag]         0.2.4      -> 0.2.4\n * [new tag]         0.2.5      -> 0.2.5\n * [new tag]         0.2.6      -> 0.2.6\n * [new tag]         0.2.7      -> 0.2.7\n * [new tag]         0.2.8      -> 0.2.8\n * [new tag]         0.2.9      -> 0.2.9\n * [new tag]         0.3.0      -> 0.3.0\n * [new tag]         0.3.1      -> 0.3.1\n * [new tag]         0.3.2      -> 0.3.2\n * [new tag]         0.3.3      -> 0.3.3\n * [new tag]         0.3.4      -> 0.3.4\n * [new tag]         0.3.5      -> 0.3.5\n * [new tag]         0.3.6      -> 0.3.6\n * [new tag]         0.3.7      -> 0.3.7\n * [new tag]         0.4.0      -> 0.4.0\n * [new tag]         0.4.1      -> 0.4.1\n * [new tag]         0.4.2      -> 0.4.2\n * [new tag]         0.4.3      -> 0.4.3\n * [new tag]         0.4.4      -> 0.4.4\n * [new tag]         0.4.5      -> 0.4.5\n * [new tag]         0.4.6      -> 0.4.6\n * [new tag]         0.4.7      -> 0.4.7\n * [new tag]         0.5.0      -> 0.5.0\n * [new tag]         0.5.1      -> 0.5.1\n * [new tag]         0.5.2      -> 0.5.2\n * [new tag]         0.5.3      -> 0.5.3\n * [new tag]         0.5.4      -> 0.5.4\n * [new tag]         0.5.5      -> 0.5.5\n * [new tag]         0.5.6      -> 0.5.6\n * [new tag]         0.5.7      -> 0.5.7\n * [new tag]         0.5.8      -> 0.5.8\n * [new tag]         0.6.0      -> 0.6.0\n'"
+20:59:30.352011 [debug] [MainThread]: Executing "git tag --list"
+20:59:30.357781 [debug] [MainThread]: STDOUT: "b'0.1\n0.1.2\n0.1.3\n0.1.4\n0.2.0\n0.2.1\n0.2.2\n0.2.3\n0.2.4\n0.2.5\n0.2.6\n0.2.7\n0.2.8\n0.2.9\n0.3.0\n0.3.1\n0.3.2\n0.3.3\n0.3.4\n0.3.5\n0.3.6\n0.3.7\n0.4.0\n0.4.1\n0.4.2\n0.4.3\n0.4.4\n0.4.5\n0.4.6\n0.4.7\n0.5.0\n0.5.1\n0.5.2\n0.5.3\n0.5.4\n0.5.5\n0.5.6\n0.5.7\n0.5.8\n0.6.0\n'"
+20:59:30.358268 [debug] [MainThread]: STDERR: "b''"
+20:59:30.358428 [debug] [MainThread]: Executing "git reset --hard tags/0.5.8"
+20:59:30.411619 [debug] [MainThread]: STDOUT: "b'HEAD is now at d1eaed8 Update CHANGELOG.md\n'"
+20:59:30.412181 [debug] [MainThread]: STDERR: "b''"
+20:59:30.412358 [debug] [MainThread]: Executing "git rev-parse HEAD"
+20:59:30.417767 [debug] [MainThread]: STDOUT: "b'd1eaed8e088c4252f80cfdd6ea94d41d2385ad9e\n'"
+20:59:30.418262 [debug] [MainThread]: STDERR: "b''"
+20:59:30.418435 [debug] [MainThread]:   Checked out at d1eaed8.
+20:59:30.429331 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json
+20:59:30.526972 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json 200
+20:59:30.535169 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_date/0.5.7.json
+20:59:30.613753 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_date/0.5.7.json 200
+20:59:30.615091 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+20:59:30.692727 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+20:59:30.719988 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils/0.8.6.json
+20:59:30.796847 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils/0.8.6.json 200
+20:59:30.797838 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables.json
+20:59:30.873594 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables.json 200
+20:59:30.877332 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json
+20:59:30.955197 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json 200
+20:59:30.964164 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+20:59:31.041574 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+20:59:31.069343 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables/0.8.0.json
+20:59:31.147161 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables/0.8.0.json 200
+20:59:31.148234 [debug] [MainThread]: Executing "git clone --depth 1 git@github.com:calogica/dbt-expectations.git 302c8ef7290af78b223a10403d76f27f"
+20:59:31.155681 [debug] [MainThread]: STDOUT: "b''"
+20:59:31.156231 [debug] [MainThread]: STDERR: "b"fatal: destination path '302c8ef7290af78b223a10403d76f27f' already exists and is not an empty directory.\n""
+20:59:31.156370 [debug] [MainThread]: command return code=128
+20:59:31.157006 [debug] [MainThread]: Updating existing dependency 302c8ef7290af78b223a10403d76f27f.
+20:59:31.157176 [debug] [MainThread]: Executing "git rev-parse HEAD"
+20:59:31.163246 [debug] [MainThread]: STDOUT: "b'd1eaed8e088c4252f80cfdd6ea94d41d2385ad9e\n'"
+20:59:31.163796 [debug] [MainThread]: STDERR: "b''"
+20:59:31.163978 [debug] [MainThread]:   Checking out revision 0.5.8.
+20:59:31.164139 [debug] [MainThread]: Executing "git remote set-branches origin 0.5.8"
+20:59:31.170607 [debug] [MainThread]: STDOUT: "b''"
+20:59:31.171154 [debug] [MainThread]: STDERR: "b''"
+20:59:31.171299 [debug] [MainThread]: Executing "git fetch origin --depth 1 --tags 0.5.8"
+20:59:31.555517 [debug] [MainThread]: STDOUT: "b''"
+20:59:31.556133 [debug] [MainThread]: STDERR: "b'From github.com:calogica/dbt-expectations\n * tag               0.5.8      -> FETCH_HEAD\n'"
+20:59:31.556351 [debug] [MainThread]: Executing "git tag --list"
+20:59:31.562976 [debug] [MainThread]: STDOUT: "b'0.1\n0.1.2\n0.1.3\n0.1.4\n0.2.0\n0.2.1\n0.2.2\n0.2.3\n0.2.4\n0.2.5\n0.2.6\n0.2.7\n0.2.8\n0.2.9\n0.3.0\n0.3.1\n0.3.2\n0.3.3\n0.3.4\n0.3.5\n0.3.6\n0.3.7\n0.4.0\n0.4.1\n0.4.2\n0.4.3\n0.4.4\n0.4.5\n0.4.6\n0.4.7\n0.5.0\n0.5.1\n0.5.2\n0.5.3\n0.5.4\n0.5.5\n0.5.6\n0.5.7\n0.5.8\n0.6.0\n'"
+20:59:31.563532 [debug] [MainThread]: STDERR: "b''"
+20:59:31.563704 [debug] [MainThread]: Executing "git reset --hard tags/0.5.8"
+20:59:31.572148 [debug] [MainThread]: STDOUT: "b'HEAD is now at d1eaed8 Update CHANGELOG.md\n'"
+20:59:31.572711 [debug] [MainThread]: STDERR: "b''"
+20:59:31.572885 [debug] [MainThread]: Executing "git rev-parse HEAD"
+20:59:31.578802 [debug] [MainThread]: STDOUT: "b'd1eaed8e088c4252f80cfdd6ea94d41d2385ad9e\n'"
+20:59:31.579336 [debug] [MainThread]: STDERR: "b''"
+20:59:31.579523 [debug] [MainThread]: Already at d1eaed8, nothing to do.
+20:59:31.591190 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_date/0.5.7.json
+20:59:31.668885 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_date/0.5.7.json 200
+20:59:31.669842 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils/0.8.6.json
+20:59:31.745719 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils/0.8.6.json 200
+20:59:31.746765 [info ] [MainThread]: Installing version 0.8.0
+20:59:31.873549 [info ] [MainThread]:   Installed from version 0.8.0
+20:59:31.895376 [info ] [MainThread]:   Up to date!
+20:59:31.896147 [info ] [MainThread]: Installing revision 0.5.8
+20:59:31.922655 [debug] [MainThread]: Executing "git clone --depth 1 git@github.com:calogica/dbt-expectations.git 302c8ef7290af78b223a10403d76f27f"
+20:59:31.939076 [debug] [MainThread]: STDOUT: "b''"
+20:59:31.939596 [debug] [MainThread]: STDERR: "b"fatal: destination path '302c8ef7290af78b223a10403d76f27f' already exists and is not an empty directory.\n""
+20:59:31.939713 [debug] [MainThread]: command return code=128
+20:59:31.939979 [debug] [MainThread]: Updating existing dependency 302c8ef7290af78b223a10403d76f27f.
+20:59:31.940110 [debug] [MainThread]: Executing "git rev-parse HEAD"
+20:59:31.959034 [debug] [MainThread]: STDOUT: "b'd1eaed8e088c4252f80cfdd6ea94d41d2385ad9e\n'"
+20:59:31.959564 [debug] [MainThread]: STDERR: "b''"
+20:59:31.959732 [debug] [MainThread]:   Checking out revision 0.5.8.
+20:59:31.959891 [debug] [MainThread]: Executing "git remote set-branches origin 0.5.8"
+20:59:31.978883 [debug] [MainThread]: STDOUT: "b''"
+20:59:31.979417 [debug] [MainThread]: STDERR: "b''"
+20:59:31.979559 [debug] [MainThread]: Executing "git fetch origin --depth 1 --tags 0.5.8"
+20:59:32.428509 [debug] [MainThread]: STDOUT: "b''"
+20:59:32.429050 [debug] [MainThread]: STDERR: "b'From github.com:calogica/dbt-expectations\n * tag               0.5.8      -> FETCH_HEAD\n'"
+20:59:32.429240 [debug] [MainThread]: Executing "git tag --list"
+20:59:32.447076 [debug] [MainThread]: STDOUT: "b'0.1\n0.1.2\n0.1.3\n0.1.4\n0.2.0\n0.2.1\n0.2.2\n0.2.3\n0.2.4\n0.2.5\n0.2.6\n0.2.7\n0.2.8\n0.2.9\n0.3.0\n0.3.1\n0.3.2\n0.3.3\n0.3.4\n0.3.5\n0.3.6\n0.3.7\n0.4.0\n0.4.1\n0.4.2\n0.4.3\n0.4.4\n0.4.5\n0.4.6\n0.4.7\n0.5.0\n0.5.1\n0.5.2\n0.5.3\n0.5.4\n0.5.5\n0.5.6\n0.5.7\n0.5.8\n0.6.0\n'"
+20:59:32.447627 [debug] [MainThread]: STDERR: "b''"
+20:59:32.447798 [debug] [MainThread]: Executing "git reset --hard tags/0.5.8"
+20:59:32.471078 [debug] [MainThread]: STDOUT: "b'HEAD is now at d1eaed8 Update CHANGELOG.md\n'"
+20:59:32.471605 [debug] [MainThread]: STDERR: "b''"
+20:59:32.471763 [debug] [MainThread]: Executing "git rev-parse HEAD"
+20:59:32.487067 [debug] [MainThread]: STDOUT: "b'd1eaed8e088c4252f80cfdd6ea94d41d2385ad9e\n'"
+20:59:32.487604 [debug] [MainThread]: STDERR: "b''"
+20:59:32.487776 [debug] [MainThread]: Already at d1eaed8, nothing to do.
+20:59:32.488036 [info ] [MainThread]:   Installed from revision 0.5.8
+20:59:32.489675 [info ] [MainThread]: Installing version 0.5.7
+20:59:32.564416 [info ] [MainThread]:   Installed from version 0.5.7
+20:59:32.571144 [info ] [MainThread]:   Updated version available: 0.6.0
+20:59:32.575143 [info ] [MainThread]: Installing version 0.8.6
+20:59:32.799490 [info ] [MainThread]:   Installed from version 0.8.6
+20:59:32.800600 [info ] [MainThread]:   Updated version available: 0.9.1
+20:59:32.801847 [info ] [MainThread]: 
+20:59:32.805648 [info ] [MainThread]: Updates available for packages: ['calogica/dbt_date', 'dbt-labs/dbt_utils']                 
+Update your versions in packages.yml, then run dbt deps
+
+
+============================== 2022-09-13 21:01:22.673564 | f403442d-a2f1-457e-ae23-124a0eaa97c3 ==============================
+21:01:22.673564 [info ] [MainThread]: Running with dbt=1.0.0
+21:01:22.674638 [debug] [MainThread]: running dbt with arguments Namespace(cls=<class 'dbt.task.deps.DepsTask'>, debug=None, defer=None, event_buffer_size=None, fail_fast=None, log_cache_events=False, log_format=None, partial_parse=None, printer_width=None, profile=None, profiles_dir='/home/azureuser/.dbt', project_dir=None, record_timing_info=None, rpc_method='deps', send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='deps', write_json=None)
+21:01:22.674949 [debug] [MainThread]: Tracking: do not track
+21:01:22.685740 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-lnkg965v'
+21:01:22.686284 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/index.json
+21:01:22.752167 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/index.json 200
+21:01:22.753046 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables.json
+21:01:22.828429 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables.json 200
+21:01:22.832329 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables/0.8.0.json
+21:01:22.910225 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables/0.8.0.json 200
+21:01:22.911441 [debug] [MainThread]: Executing "git clone --depth 1 git@github.com:calogica/dbt-expectations.git 302c8ef7290af78b223a10403d76f27f"
+21:01:23.703938 [debug] [MainThread]: STDOUT: "b''"
+21:01:23.704456 [debug] [MainThread]: STDERR: "b"Cloning into '302c8ef7290af78b223a10403d76f27f'...\n""
+21:01:23.704964 [debug] [MainThread]: Pulling new dependency 302c8ef7290af78b223a10403d76f27f.
+21:01:23.705126 [debug] [MainThread]: Executing "git rev-parse HEAD"
+21:01:23.710238 [debug] [MainThread]: STDOUT: "b'0ad445448218330ee14658fe5fca4d18eaf1670c\n'"
+21:01:23.710778 [debug] [MainThread]: STDERR: "b''"
+21:01:23.710978 [debug] [MainThread]:   Checking out revision 0.5.8.
+21:01:23.711130 [debug] [MainThread]: Executing "git remote set-branches origin 0.5.8"
+21:01:23.715700 [debug] [MainThread]: STDOUT: "b''"
+21:01:23.716127 [debug] [MainThread]: STDERR: "b''"
+21:01:23.716263 [debug] [MainThread]: Executing "git fetch origin --depth 1 --tags 0.5.8"
+21:01:24.359687 [debug] [MainThread]: STDOUT: "b''"
+21:01:24.360220 [debug] [MainThread]: STDERR: "b'From github.com:calogica/dbt-expectations\n * tag               0.5.8      -> FETCH_HEAD\n * [new tag]         0.1        -> 0.1\n * [new tag]         0.1.2      -> 0.1.2\n * [new tag]         0.1.3      -> 0.1.3\n * [new tag]         0.1.4      -> 0.1.4\n * [new tag]         0.2.0      -> 0.2.0\n * [new tag]         0.2.1      -> 0.2.1\n * [new tag]         0.2.2      -> 0.2.2\n * [new tag]         0.2.3      -> 0.2.3\n * [new tag]         0.2.4      -> 0.2.4\n * [new tag]         0.2.5      -> 0.2.5\n * [new tag]         0.2.6      -> 0.2.6\n * [new tag]         0.2.7      -> 0.2.7\n * [new tag]         0.2.8      -> 0.2.8\n * [new tag]         0.2.9      -> 0.2.9\n * [new tag]         0.3.0      -> 0.3.0\n * [new tag]         0.3.1      -> 0.3.1\n * [new tag]         0.3.2      -> 0.3.2\n * [new tag]         0.3.3      -> 0.3.3\n * [new tag]         0.3.4      -> 0.3.4\n * [new tag]         0.3.5      -> 0.3.5\n * [new tag]         0.3.6      -> 0.3.6\n * [new tag]         0.3.7      -> 0.3.7\n * [new tag]         0.4.0      -> 0.4.0\n * [new tag]         0.4.1      -> 0.4.1\n * [new tag]         0.4.2      -> 0.4.2\n * [new tag]         0.4.3      -> 0.4.3\n * [new tag]         0.4.4      -> 0.4.4\n * [new tag]         0.4.5      -> 0.4.5\n * [new tag]         0.4.6      -> 0.4.6\n * [new tag]         0.4.7      -> 0.4.7\n * [new tag]         0.5.0      -> 0.5.0\n * [new tag]         0.5.1      -> 0.5.1\n * [new tag]         0.5.2      -> 0.5.2\n * [new tag]         0.5.3      -> 0.5.3\n * [new tag]         0.5.4      -> 0.5.4\n * [new tag]         0.5.5      -> 0.5.5\n * [new tag]         0.5.6      -> 0.5.6\n * [new tag]         0.5.7      -> 0.5.7\n * [new tag]         0.5.8      -> 0.5.8\n * [new tag]         0.6.0      -> 0.6.0\n'"
+21:01:24.360444 [debug] [MainThread]: Executing "git tag --list"
+21:01:24.365975 [debug] [MainThread]: STDOUT: "b'0.1\n0.1.2\n0.1.3\n0.1.4\n0.2.0\n0.2.1\n0.2.2\n0.2.3\n0.2.4\n0.2.5\n0.2.6\n0.2.7\n0.2.8\n0.2.9\n0.3.0\n0.3.1\n0.3.2\n0.3.3\n0.3.4\n0.3.5\n0.3.6\n0.3.7\n0.4.0\n0.4.1\n0.4.2\n0.4.3\n0.4.4\n0.4.5\n0.4.6\n0.4.7\n0.5.0\n0.5.1\n0.5.2\n0.5.3\n0.5.4\n0.5.5\n0.5.6\n0.5.7\n0.5.8\n0.6.0\n'"
+21:01:24.366421 [debug] [MainThread]: STDERR: "b''"
+21:01:24.366727 [debug] [MainThread]: Executing "git reset --hard tags/0.5.8"
+21:01:24.417379 [debug] [MainThread]: STDOUT: "b'HEAD is now at d1eaed8 Update CHANGELOG.md\n'"
+21:01:24.417894 [debug] [MainThread]: STDERR: "b''"
+21:01:24.418076 [debug] [MainThread]: Executing "git rev-parse HEAD"
+21:01:24.424949 [debug] [MainThread]: STDOUT: "b'd1eaed8e088c4252f80cfdd6ea94d41d2385ad9e\n'"
+21:01:24.425426 [debug] [MainThread]: STDERR: "b''"
+21:01:24.425604 [debug] [MainThread]:   Checked out at d1eaed8.
+21:01:24.436219 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json
+21:01:24.514570 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json 200
+21:01:24.524232 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_date/0.5.7.json
+21:01:24.600149 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_date/0.5.7.json 200
+21:01:24.601384 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+21:01:24.684714 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+21:01:24.709939 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils/0.8.6.json
+21:01:24.786826 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils/0.8.6.json 200
+21:01:24.787811 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables.json
+21:01:24.865055 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables.json 200
+21:01:24.870014 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json
+21:01:24.946158 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json 200
+21:01:24.954200 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+21:01:25.031932 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+21:01:25.058657 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables/0.8.0.json
+21:01:25.137146 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables/0.8.0.json 200
+21:01:25.138105 [debug] [MainThread]: Executing "git clone --depth 1 git@github.com:calogica/dbt-expectations.git 302c8ef7290af78b223a10403d76f27f"
+21:01:25.143541 [debug] [MainThread]: STDOUT: "b''"
+21:01:25.143946 [debug] [MainThread]: STDERR: "b"fatal: destination path '302c8ef7290af78b223a10403d76f27f' already exists and is not an empty directory.\n""
+21:01:25.144078 [debug] [MainThread]: command return code=128
+21:01:25.144681 [debug] [MainThread]: Updating existing dependency 302c8ef7290af78b223a10403d76f27f.
+21:01:25.144834 [debug] [MainThread]: Executing "git rev-parse HEAD"
+21:01:25.150324 [debug] [MainThread]: STDOUT: "b'd1eaed8e088c4252f80cfdd6ea94d41d2385ad9e\n'"
+21:01:25.150804 [debug] [MainThread]: STDERR: "b''"
+21:01:25.150975 [debug] [MainThread]:   Checking out revision 0.5.8.
+21:01:25.151120 [debug] [MainThread]: Executing "git remote set-branches origin 0.5.8"
+21:01:25.155815 [debug] [MainThread]: STDOUT: "b''"
+21:01:25.156253 [debug] [MainThread]: STDERR: "b''"
+21:01:25.156389 [debug] [MainThread]: Executing "git fetch origin --depth 1 --tags 0.5.8"
+21:01:25.546216 [debug] [MainThread]: STDOUT: "b''"
+21:01:25.546782 [debug] [MainThread]: STDERR: "b'From github.com:calogica/dbt-expectations\n * tag               0.5.8      -> FETCH_HEAD\n'"
+21:01:25.546992 [debug] [MainThread]: Executing "git tag --list"
+21:01:25.552474 [debug] [MainThread]: STDOUT: "b'0.1\n0.1.2\n0.1.3\n0.1.4\n0.2.0\n0.2.1\n0.2.2\n0.2.3\n0.2.4\n0.2.5\n0.2.6\n0.2.7\n0.2.8\n0.2.9\n0.3.0\n0.3.1\n0.3.2\n0.3.3\n0.3.4\n0.3.5\n0.3.6\n0.3.7\n0.4.0\n0.4.1\n0.4.2\n0.4.3\n0.4.4\n0.4.5\n0.4.6\n0.4.7\n0.5.0\n0.5.1\n0.5.2\n0.5.3\n0.5.4\n0.5.5\n0.5.6\n0.5.7\n0.5.8\n0.6.0\n'"
+21:01:25.552948 [debug] [MainThread]: STDERR: "b''"
+21:01:25.553114 [debug] [MainThread]: Executing "git reset --hard tags/0.5.8"
+21:01:25.559764 [debug] [MainThread]: STDOUT: "b'HEAD is now at d1eaed8 Update CHANGELOG.md\n'"
+21:01:25.560235 [debug] [MainThread]: STDERR: "b''"
+21:01:25.560404 [debug] [MainThread]: Executing "git rev-parse HEAD"
+21:01:25.564629 [debug] [MainThread]: STDOUT: "b'd1eaed8e088c4252f80cfdd6ea94d41d2385ad9e\n'"
+21:01:25.565062 [debug] [MainThread]: STDERR: "b''"
+21:01:25.565235 [debug] [MainThread]: Already at d1eaed8, nothing to do.
+21:01:25.575580 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_date/0.5.7.json
+21:01:25.654449 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_date/0.5.7.json 200
+21:01:25.655413 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils/0.8.6.json
+21:01:25.732850 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils/0.8.6.json 200
+21:01:25.733960 [info ] [MainThread]: Installing version 0.8.0
+21:01:25.841844 [info ] [MainThread]:   Installed from version 0.8.0
+21:01:25.849162 [info ] [MainThread]:   Up to date!
+21:01:25.850804 [info ] [MainThread]: Installing revision 0.5.8
+21:01:25.873431 [debug] [MainThread]: Executing "git clone --depth 1 git@github.com:calogica/dbt-expectations.git 302c8ef7290af78b223a10403d76f27f"
+21:01:25.899898 [debug] [MainThread]: STDOUT: "b''"
+21:01:25.900410 [debug] [MainThread]: STDERR: "b"fatal: destination path '302c8ef7290af78b223a10403d76f27f' already exists and is not an empty directory.\n""
+21:01:25.900538 [debug] [MainThread]: command return code=128
+21:01:25.900796 [debug] [MainThread]: Updating existing dependency 302c8ef7290af78b223a10403d76f27f.
+21:01:25.900920 [debug] [MainThread]: Executing "git rev-parse HEAD"
+21:01:25.918928 [debug] [MainThread]: STDOUT: "b'd1eaed8e088c4252f80cfdd6ea94d41d2385ad9e\n'"
+21:01:25.919432 [debug] [MainThread]: STDERR: "b''"
+21:01:25.919603 [debug] [MainThread]:   Checking out revision 0.5.8.
+21:01:25.919747 [debug] [MainThread]: Executing "git remote set-branches origin 0.5.8"
+21:01:25.942961 [debug] [MainThread]: STDOUT: "b''"
+21:01:25.943473 [debug] [MainThread]: STDERR: "b''"
+21:01:25.943623 [debug] [MainThread]: Executing "git fetch origin --depth 1 --tags 0.5.8"
+21:01:26.380764 [debug] [MainThread]: STDOUT: "b''"
+21:01:26.381314 [debug] [MainThread]: STDERR: "b'From github.com:calogica/dbt-expectations\n * tag               0.5.8      -> FETCH_HEAD\n'"
+21:01:26.381507 [debug] [MainThread]: Executing "git tag --list"
+21:01:26.399105 [debug] [MainThread]: STDOUT: "b'0.1\n0.1.2\n0.1.3\n0.1.4\n0.2.0\n0.2.1\n0.2.2\n0.2.3\n0.2.4\n0.2.5\n0.2.6\n0.2.7\n0.2.8\n0.2.9\n0.3.0\n0.3.1\n0.3.2\n0.3.3\n0.3.4\n0.3.5\n0.3.6\n0.3.7\n0.4.0\n0.4.1\n0.4.2\n0.4.3\n0.4.4\n0.4.5\n0.4.6\n0.4.7\n0.5.0\n0.5.1\n0.5.2\n0.5.3\n0.5.4\n0.5.5\n0.5.6\n0.5.7\n0.5.8\n0.6.0\n'"
+21:01:26.399669 [debug] [MainThread]: STDERR: "b''"
+21:01:26.399854 [debug] [MainThread]: Executing "git reset --hard tags/0.5.8"
+21:01:26.423935 [debug] [MainThread]: STDOUT: "b'HEAD is now at d1eaed8 Update CHANGELOG.md\n'"
+21:01:26.424469 [debug] [MainThread]: STDERR: "b''"
+21:01:26.424645 [debug] [MainThread]: Executing "git rev-parse HEAD"
+21:01:26.447119 [debug] [MainThread]: STDOUT: "b'd1eaed8e088c4252f80cfdd6ea94d41d2385ad9e\n'"
+21:01:26.447669 [debug] [MainThread]: STDERR: "b''"
+21:01:26.447843 [debug] [MainThread]: Already at d1eaed8, nothing to do.
+21:01:26.448128 [info ] [MainThread]:   Installed from revision 0.5.8
+21:01:26.449400 [info ] [MainThread]: Installing version 0.5.7
+21:01:26.534848 [info ] [MainThread]:   Installed from version 0.5.7
+21:01:26.537641 [info ] [MainThread]:   Updated version available: 0.6.0
+21:01:26.538973 [info ] [MainThread]: Installing version 0.8.6
+21:01:26.740980 [info ] [MainThread]:   Installed from version 0.8.6
+21:01:26.747081 [info ] [MainThread]:   Updated version available: 0.9.1
+21:01:26.748491 [info ] [MainThread]: 
+21:01:26.750748 [info ] [MainThread]: Updates available for packages: ['calogica/dbt_date', 'dbt-labs/dbt_utils']                 
+Update your versions in packages.yml, then run dbt deps
+
+
+============================== 2022-09-13 21:01:47.210830 | 27c6dca0-31ab-4e20-aab6-70873d8962ef ==============================
+21:01:47.210830 [info ] [MainThread]: Running with dbt=1.0.0
+21:01:47.212120 [debug] [MainThread]: running dbt with arguments Namespace(cls=<class 'dbt.task.deps.DepsTask'>, debug=None, defer=None, event_buffer_size=None, fail_fast=None, log_cache_events=False, log_format=None, partial_parse=None, printer_width=None, profile=None, profiles_dir='/home/azureuser/.dbt', project_dir=None, record_timing_info=None, rpc_method='deps', send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='deps', write_json=None)
+21:01:47.212470 [debug] [MainThread]: Tracking: tracking
+21:01:47.212769 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fde964c0c40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fde964c0ca0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fde964c0d00>]}
+21:01:47.214055 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-3hir6dt5'
+21:01:47.214590 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/index.json
+21:01:47.301664 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/index.json 200
+21:01:47.302678 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables.json
+21:01:47.337729 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables.json 200
+21:01:47.341446 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables/0.8.0.json
+21:01:47.373511 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables/0.8.0.json 200
+21:01:47.374678 [debug] [MainThread]: Executing "git clone --depth 1 git@github.com:calogica/dbt-expectations.git 302c8ef7290af78b223a10403d76f27f"
+21:01:48.153983 [debug] [MainThread]: STDOUT: "b''"
+21:01:48.154688 [debug] [MainThread]: STDERR: "b"Cloning into '302c8ef7290af78b223a10403d76f27f'...\n""
+21:01:48.155281 [debug] [MainThread]: Pulling new dependency 302c8ef7290af78b223a10403d76f27f.
+21:01:48.155517 [debug] [MainThread]: Executing "git rev-parse HEAD"
+21:01:48.161104 [debug] [MainThread]: STDOUT: "b'0ad445448218330ee14658fe5fca4d18eaf1670c\n'"
+21:01:48.161610 [debug] [MainThread]: STDERR: "b''"
+21:01:48.161796 [debug] [MainThread]:   Checking out revision 0.5.8.
+21:01:48.161950 [debug] [MainThread]: Executing "git remote set-branches origin 0.5.8"
+21:01:48.167458 [debug] [MainThread]: STDOUT: "b''"
+21:01:48.167965 [debug] [MainThread]: STDERR: "b''"
+21:01:48.168099 [debug] [MainThread]: Executing "git fetch origin --depth 1 --tags 0.5.8"
+21:01:48.793510 [debug] [MainThread]: STDOUT: "b''"
+21:01:48.794065 [debug] [MainThread]: STDERR: "b'From github.com:calogica/dbt-expectations\n * tag               0.5.8      -> FETCH_HEAD\n * [new tag]         0.1        -> 0.1\n * [new tag]         0.1.2      -> 0.1.2\n * [new tag]         0.1.3      -> 0.1.3\n * [new tag]         0.1.4      -> 0.1.4\n * [new tag]         0.2.0      -> 0.2.0\n * [new tag]         0.2.1      -> 0.2.1\n * [new tag]         0.2.2      -> 0.2.2\n * [new tag]         0.2.3      -> 0.2.3\n * [new tag]         0.2.4      -> 0.2.4\n * [new tag]         0.2.5      -> 0.2.5\n * [new tag]         0.2.6      -> 0.2.6\n * [new tag]         0.2.7      -> 0.2.7\n * [new tag]         0.2.8      -> 0.2.8\n * [new tag]         0.2.9      -> 0.2.9\n * [new tag]         0.3.0      -> 0.3.0\n * [new tag]         0.3.1      -> 0.3.1\n * [new tag]         0.3.2      -> 0.3.2\n * [new tag]         0.3.3      -> 0.3.3\n * [new tag]         0.3.4      -> 0.3.4\n * [new tag]         0.3.5      -> 0.3.5\n * [new tag]         0.3.6      -> 0.3.6\n * [new tag]         0.3.7      -> 0.3.7\n * [new tag]         0.4.0      -> 0.4.0\n * [new tag]         0.4.1      -> 0.4.1\n * [new tag]         0.4.2      -> 0.4.2\n * [new tag]         0.4.3      -> 0.4.3\n * [new tag]         0.4.4      -> 0.4.4\n * [new tag]         0.4.5      -> 0.4.5\n * [new tag]         0.4.6      -> 0.4.6\n * [new tag]         0.4.7      -> 0.4.7\n * [new tag]         0.5.0      -> 0.5.0\n * [new tag]         0.5.1      -> 0.5.1\n * [new tag]         0.5.2      -> 0.5.2\n * [new tag]         0.5.3      -> 0.5.3\n * [new tag]         0.5.4      -> 0.5.4\n * [new tag]         0.5.5      -> 0.5.5\n * [new tag]         0.5.6      -> 0.5.6\n * [new tag]         0.5.7      -> 0.5.7\n * [new tag]         0.5.8      -> 0.5.8\n * [new tag]         0.6.0      -> 0.6.0\n'"
+21:01:48.794282 [debug] [MainThread]: Executing "git tag --list"
+21:01:48.800292 [debug] [MainThread]: STDOUT: "b'0.1\n0.1.2\n0.1.3\n0.1.4\n0.2.0\n0.2.1\n0.2.2\n0.2.3\n0.2.4\n0.2.5\n0.2.6\n0.2.7\n0.2.8\n0.2.9\n0.3.0\n0.3.1\n0.3.2\n0.3.3\n0.3.4\n0.3.5\n0.3.6\n0.3.7\n0.4.0\n0.4.1\n0.4.2\n0.4.3\n0.4.4\n0.4.5\n0.4.6\n0.4.7\n0.5.0\n0.5.1\n0.5.2\n0.5.3\n0.5.4\n0.5.5\n0.5.6\n0.5.7\n0.5.8\n0.6.0\n'"
+21:01:48.800792 [debug] [MainThread]: STDERR: "b''"
+21:01:48.800945 [debug] [MainThread]: Executing "git reset --hard tags/0.5.8"
+21:01:48.854994 [debug] [MainThread]: STDOUT: "b'HEAD is now at d1eaed8 Update CHANGELOG.md\n'"
+21:01:48.855572 [debug] [MainThread]: STDERR: "b''"
+21:01:48.855739 [debug] [MainThread]: Executing "git rev-parse HEAD"
+21:01:48.861070 [debug] [MainThread]: STDOUT: "b'd1eaed8e088c4252f80cfdd6ea94d41d2385ad9e\n'"
+21:01:48.861572 [debug] [MainThread]: STDERR: "b''"
+21:01:48.861740 [debug] [MainThread]:   Checked out at d1eaed8.
+21:01:48.872194 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json
+21:01:48.905171 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json 200
+21:01:48.913310 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_date/0.5.7.json
+21:01:48.942908 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_date/0.5.7.json 200
+21:01:48.944077 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+21:01:48.974718 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+21:01:48.999584 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils/0.8.6.json
+21:01:49.029288 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils/0.8.6.json 200
+21:01:49.030242 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables.json
+21:01:49.078080 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables.json 200
+21:01:49.082051 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json
+21:01:49.112104 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json 200
+21:01:49.120329 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+21:01:49.153323 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+21:01:49.177944 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables/0.8.0.json
+21:01:49.208000 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables/0.8.0.json 200
+21:01:49.208940 [debug] [MainThread]: Executing "git clone --depth 1 git@github.com:calogica/dbt-expectations.git 302c8ef7290af78b223a10403d76f27f"
+21:01:49.214395 [debug] [MainThread]: STDOUT: "b''"
+21:01:49.214874 [debug] [MainThread]: STDERR: "b"fatal: destination path '302c8ef7290af78b223a10403d76f27f' already exists and is not an empty directory.\n""
+21:01:49.215009 [debug] [MainThread]: command return code=128
+21:01:49.215618 [debug] [MainThread]: Updating existing dependency 302c8ef7290af78b223a10403d76f27f.
+21:01:49.215774 [debug] [MainThread]: Executing "git rev-parse HEAD"
+21:01:49.220010 [debug] [MainThread]: STDOUT: "b'd1eaed8e088c4252f80cfdd6ea94d41d2385ad9e\n'"
+21:01:49.220446 [debug] [MainThread]: STDERR: "b''"
+21:01:49.220600 [debug] [MainThread]:   Checking out revision 0.5.8.
+21:01:49.220737 [debug] [MainThread]: Executing "git remote set-branches origin 0.5.8"
+21:01:49.225630 [debug] [MainThread]: STDOUT: "b''"
+21:01:49.226058 [debug] [MainThread]: STDERR: "b''"
+21:01:49.226186 [debug] [MainThread]: Executing "git fetch origin --depth 1 --tags 0.5.8"
+21:01:49.652999 [debug] [MainThread]: STDOUT: "b''"
+21:01:49.653599 [debug] [MainThread]: STDERR: "b'From github.com:calogica/dbt-expectations\n * tag               0.5.8      -> FETCH_HEAD\n'"
+21:01:49.653808 [debug] [MainThread]: Executing "git tag --list"
+21:01:49.660097 [debug] [MainThread]: STDOUT: "b'0.1\n0.1.2\n0.1.3\n0.1.4\n0.2.0\n0.2.1\n0.2.2\n0.2.3\n0.2.4\n0.2.5\n0.2.6\n0.2.7\n0.2.8\n0.2.9\n0.3.0\n0.3.1\n0.3.2\n0.3.3\n0.3.4\n0.3.5\n0.3.6\n0.3.7\n0.4.0\n0.4.1\n0.4.2\n0.4.3\n0.4.4\n0.4.5\n0.4.6\n0.4.7\n0.5.0\n0.5.1\n0.5.2\n0.5.3\n0.5.4\n0.5.5\n0.5.6\n0.5.7\n0.5.8\n0.6.0\n'"
+21:01:49.660637 [debug] [MainThread]: STDERR: "b''"
+21:01:49.660799 [debug] [MainThread]: Executing "git reset --hard tags/0.5.8"
+21:01:49.711730 [debug] [MainThread]: STDOUT: "b'HEAD is now at d1eaed8 Update CHANGELOG.md\n'"
+21:01:49.712281 [debug] [MainThread]: STDERR: "b''"
+21:01:49.712442 [debug] [MainThread]: Executing "git rev-parse HEAD"
+21:01:49.719798 [debug] [MainThread]: STDOUT: "b'd1eaed8e088c4252f80cfdd6ea94d41d2385ad9e\n'"
+21:01:49.720331 [debug] [MainThread]: STDERR: "b''"
+21:01:49.720500 [debug] [MainThread]: Already at d1eaed8, nothing to do.
+21:01:49.731575 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_date/0.5.7.json
+21:01:49.763884 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_date/0.5.7.json 200
+21:01:49.764838 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils/0.8.6.json
+21:01:49.795016 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils/0.8.6.json 200
+21:01:49.796149 [info ] [MainThread]: Installing version 0.8.0
+21:01:49.932346 [info ] [MainThread]:   Installed from version 0.8.0
+21:01:49.938468 [info ] [MainThread]:   Up to date!
+21:01:49.940364 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '27c6dca0-31ab-4e20-aab6-70873d8962ef', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fde964510d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fde964510a0>]}
+21:01:49.940824 [info ] [MainThread]: Installing revision 0.5.8
+21:01:49.964181 [debug] [MainThread]: Executing "git clone --depth 1 git@github.com:calogica/dbt-expectations.git 302c8ef7290af78b223a10403d76f27f"
+21:01:49.987109 [debug] [MainThread]: STDOUT: "b''"
+21:01:49.987657 [debug] [MainThread]: STDERR: "b"fatal: destination path '302c8ef7290af78b223a10403d76f27f' already exists and is not an empty directory.\n""
+21:01:49.987787 [debug] [MainThread]: command return code=128
+21:01:49.988052 [debug] [MainThread]: Updating existing dependency 302c8ef7290af78b223a10403d76f27f.
+21:01:49.988180 [debug] [MainThread]: Executing "git rev-parse HEAD"
+21:01:50.007057 [debug] [MainThread]: STDOUT: "b'd1eaed8e088c4252f80cfdd6ea94d41d2385ad9e\n'"
+21:01:50.007591 [debug] [MainThread]: STDERR: "b''"
+21:01:50.007761 [debug] [MainThread]:   Checking out revision 0.5.8.
+21:01:50.007899 [debug] [MainThread]: Executing "git remote set-branches origin 0.5.8"
+21:01:50.027194 [debug] [MainThread]: STDOUT: "b''"
+21:01:50.027744 [debug] [MainThread]: STDERR: "b''"
+21:01:50.027883 [debug] [MainThread]: Executing "git fetch origin --depth 1 --tags 0.5.8"
+21:01:50.496674 [debug] [MainThread]: STDOUT: "b''"
+21:01:50.497218 [debug] [MainThread]: STDERR: "b'From github.com:calogica/dbt-expectations\n * tag               0.5.8      -> FETCH_HEAD\n'"
+21:01:50.497400 [debug] [MainThread]: Executing "git tag --list"
+21:01:50.515018 [debug] [MainThread]: STDOUT: "b'0.1\n0.1.2\n0.1.3\n0.1.4\n0.2.0\n0.2.1\n0.2.2\n0.2.3\n0.2.4\n0.2.5\n0.2.6\n0.2.7\n0.2.8\n0.2.9\n0.3.0\n0.3.1\n0.3.2\n0.3.3\n0.3.4\n0.3.5\n0.3.6\n0.3.7\n0.4.0\n0.4.1\n0.4.2\n0.4.3\n0.4.4\n0.4.5\n0.4.6\n0.4.7\n0.5.0\n0.5.1\n0.5.2\n0.5.3\n0.5.4\n0.5.5\n0.5.6\n0.5.7\n0.5.8\n0.6.0\n'"
+21:01:50.515552 [debug] [MainThread]: STDERR: "b''"
+21:01:50.515710 [debug] [MainThread]: Executing "git reset --hard tags/0.5.8"
+21:01:50.539052 [debug] [MainThread]: STDOUT: "b'HEAD is now at d1eaed8 Update CHANGELOG.md\n'"
+21:01:50.539575 [debug] [MainThread]: STDERR: "b''"
+21:01:50.539733 [debug] [MainThread]: Executing "git rev-parse HEAD"
+21:01:50.554952 [debug] [MainThread]: STDOUT: "b'd1eaed8e088c4252f80cfdd6ea94d41d2385ad9e\n'"
+21:01:50.555479 [debug] [MainThread]: STDERR: "b''"
+21:01:50.555630 [debug] [MainThread]: Already at d1eaed8, nothing to do.
+21:01:50.555874 [info ] [MainThread]:   Installed from revision 0.5.8
+21:01:50.557001 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '27c6dca0-31ab-4e20-aab6-70873d8962ef', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fde96458c10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fde96458160>]}
+21:01:50.557511 [info ] [MainThread]: Installing version 0.5.7
+21:01:50.638332 [info ] [MainThread]:   Installed from version 0.5.7
+21:01:50.643561 [info ] [MainThread]:   Updated version available: 0.6.0
+21:01:50.644754 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '27c6dca0-31ab-4e20-aab6-70873d8962ef', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fde9645d250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fde9645dfd0>]}
+21:01:50.645059 [info ] [MainThread]: Installing version 0.8.6
+21:01:50.832213 [info ] [MainThread]:   Installed from version 0.8.6
+21:01:50.833311 [info ] [MainThread]:   Updated version available: 0.9.1
+21:01:50.834519 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '27c6dca0-31ab-4e20-aab6-70873d8962ef', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fde96458100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fde96458880>]}
+21:01:50.834877 [info ] [MainThread]: 
+21:01:50.838522 [info ] [MainThread]: Updates available for packages: ['calogica/dbt_date', 'dbt-labs/dbt_utils']                 
+Update your versions in packages.yml, then run dbt deps
+21:01:50.840558 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fde96428a30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fde9644c220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fde9644c790>]}
+
+
+============================== 2022-09-13 21:03:31.270330 | b6cfc58f-2276-4942-b2e0-d60fc29eaccc ==============================
+21:03:31.270330 [info ] [MainThread]: Running with dbt=1.0.0
+21:03:31.271582 [debug] [MainThread]: running dbt with arguments Namespace(cls=<class 'dbt.task.deps.DepsTask'>, debug=None, defer=None, event_buffer_size=None, fail_fast=None, log_cache_events=False, log_format=None, partial_parse=None, printer_width=None, profile=None, profiles_dir='/home/azureuser/.dbt', project_dir=None, record_timing_info=None, rpc_method='deps', send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='deps', write_json=None)
+21:03:31.271911 [debug] [MainThread]: Tracking: tracking
+21:03:31.272181 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1f206b7b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1f206b7bb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1f206b7c10>]}
+21:03:31.273388 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-xe9h56ra'
+21:03:31.273862 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/index.json
+21:03:31.448164 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/index.json 200
+21:03:31.449139 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables.json
+21:03:31.528200 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables.json 200
+21:03:31.533223 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables/0.8.0.json
+21:03:31.610887 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables/0.8.0.json 200
+21:03:31.612085 [debug] [MainThread]: Executing "git clone --depth 1 git@github.com:calogica/dbt-expectations.git 302c8ef7290af78b223a10403d76f27f"
+21:03:32.404055 [debug] [MainThread]: STDOUT: "b''"
+21:03:32.404621 [debug] [MainThread]: STDERR: "b"Cloning into '302c8ef7290af78b223a10403d76f27f'...\n""
+21:03:32.405110 [debug] [MainThread]: Pulling new dependency 302c8ef7290af78b223a10403d76f27f.
+21:03:32.405271 [debug] [MainThread]: Executing "git rev-parse HEAD"
+21:03:32.410352 [debug] [MainThread]: STDOUT: "b'0ad445448218330ee14658fe5fca4d18eaf1670c\n'"
+21:03:32.410911 [debug] [MainThread]: STDERR: "b''"
+21:03:32.411105 [debug] [MainThread]:   Checking out revision 0.5.8.
+21:03:32.411250 [debug] [MainThread]: Executing "git remote set-branches origin 0.5.8"
+21:03:32.415741 [debug] [MainThread]: STDOUT: "b''"
+21:03:32.416181 [debug] [MainThread]: STDERR: "b''"
+21:03:32.416314 [debug] [MainThread]: Executing "git fetch origin --depth 1 --tags 0.5.8"
+21:03:33.072104 [debug] [MainThread]: STDOUT: "b''"
+21:03:33.072649 [debug] [MainThread]: STDERR: "b'From github.com:calogica/dbt-expectations\n * tag               0.5.8      -> FETCH_HEAD\n * [new tag]         0.1        -> 0.1\n * [new tag]         0.1.2      -> 0.1.2\n * [new tag]         0.1.3      -> 0.1.3\n * [new tag]         0.1.4      -> 0.1.4\n * [new tag]         0.2.0      -> 0.2.0\n * [new tag]         0.2.1      -> 0.2.1\n * [new tag]         0.2.2      -> 0.2.2\n * [new tag]         0.2.3      -> 0.2.3\n * [new tag]         0.2.4      -> 0.2.4\n * [new tag]         0.2.5      -> 0.2.5\n * [new tag]         0.2.6      -> 0.2.6\n * [new tag]         0.2.7      -> 0.2.7\n * [new tag]         0.2.8      -> 0.2.8\n * [new tag]         0.2.9      -> 0.2.9\n * [new tag]         0.3.0      -> 0.3.0\n * [new tag]         0.3.1      -> 0.3.1\n * [new tag]         0.3.2      -> 0.3.2\n * [new tag]         0.3.3      -> 0.3.3\n * [new tag]         0.3.4      -> 0.3.4\n * [new tag]         0.3.5      -> 0.3.5\n * [new tag]         0.3.6      -> 0.3.6\n * [new tag]         0.3.7      -> 0.3.7\n * [new tag]         0.4.0      -> 0.4.0\n * [new tag]         0.4.1      -> 0.4.1\n * [new tag]         0.4.2      -> 0.4.2\n * [new tag]         0.4.3      -> 0.4.3\n * [new tag]         0.4.4      -> 0.4.4\n * [new tag]         0.4.5      -> 0.4.5\n * [new tag]         0.4.6      -> 0.4.6\n * [new tag]         0.4.7      -> 0.4.7\n * [new tag]         0.5.0      -> 0.5.0\n * [new tag]         0.5.1      -> 0.5.1\n * [new tag]         0.5.2      -> 0.5.2\n * [new tag]         0.5.3      -> 0.5.3\n * [new tag]         0.5.4      -> 0.5.4\n * [new tag]         0.5.5      -> 0.5.5\n * [new tag]         0.5.6      -> 0.5.6\n * [new tag]         0.5.7      -> 0.5.7\n * [new tag]         0.5.8      -> 0.5.8\n * [new tag]         0.6.0      -> 0.6.0\n'"
+21:03:33.072870 [debug] [MainThread]: Executing "git tag --list"
+21:03:33.078772 [debug] [MainThread]: STDOUT: "b'0.1\n0.1.2\n0.1.3\n0.1.4\n0.2.0\n0.2.1\n0.2.2\n0.2.3\n0.2.4\n0.2.5\n0.2.6\n0.2.7\n0.2.8\n0.2.9\n0.3.0\n0.3.1\n0.3.2\n0.3.3\n0.3.4\n0.3.5\n0.3.6\n0.3.7\n0.4.0\n0.4.1\n0.4.2\n0.4.3\n0.4.4\n0.4.5\n0.4.6\n0.4.7\n0.5.0\n0.5.1\n0.5.2\n0.5.3\n0.5.4\n0.5.5\n0.5.6\n0.5.7\n0.5.8\n0.6.0\n'"
+21:03:33.079272 [debug] [MainThread]: STDERR: "b''"
+21:03:33.079443 [debug] [MainThread]: Executing "git reset --hard tags/0.5.8"
+21:03:33.130435 [debug] [MainThread]: STDOUT: "b'HEAD is now at d1eaed8 Update CHANGELOG.md\n'"
+21:03:33.131019 [debug] [MainThread]: STDERR: "b''"
+21:03:33.131205 [debug] [MainThread]: Executing "git rev-parse HEAD"
+21:03:33.137788 [debug] [MainThread]: STDOUT: "b'd1eaed8e088c4252f80cfdd6ea94d41d2385ad9e\n'"
+21:03:33.138301 [debug] [MainThread]: STDERR: "b''"
+21:03:33.138491 [debug] [MainThread]:   Checked out at d1eaed8.
+21:03:33.149047 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json
+21:03:33.226268 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json 200
+21:03:33.235871 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_date/0.5.7.json
+21:03:33.312169 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_date/0.5.7.json 200
+21:03:33.313661 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+21:03:33.388290 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+21:03:33.414403 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils/0.8.6.json
+21:03:33.489120 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils/0.8.6.json 200
+21:03:33.490131 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables.json
+21:03:33.568339 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables.json 200
+21:03:33.573672 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json
+21:03:33.648815 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json 200
+21:03:33.658416 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+21:03:33.736273 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+21:03:33.762694 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables/0.8.0.json
+21:03:33.839919 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables/0.8.0.json 200
+21:03:33.840860 [debug] [MainThread]: Executing "git clone --depth 1 git@github.com:calogica/dbt-expectations.git 302c8ef7290af78b223a10403d76f27f"
+21:03:33.847330 [debug] [MainThread]: STDOUT: "b''"
+21:03:33.847788 [debug] [MainThread]: STDERR: "b"fatal: destination path '302c8ef7290af78b223a10403d76f27f' already exists and is not an empty directory.\n""
+21:03:33.847925 [debug] [MainThread]: command return code=128
+21:03:33.848549 [debug] [MainThread]: Updating existing dependency 302c8ef7290af78b223a10403d76f27f.
+21:03:33.848704 [debug] [MainThread]: Executing "git rev-parse HEAD"
+21:03:33.852928 [debug] [MainThread]: STDOUT: "b'd1eaed8e088c4252f80cfdd6ea94d41d2385ad9e\n'"
+21:03:33.853348 [debug] [MainThread]: STDERR: "b''"
+21:03:33.853510 [debug] [MainThread]:   Checking out revision 0.5.8.
+21:03:33.853648 [debug] [MainThread]: Executing "git remote set-branches origin 0.5.8"
+21:03:33.857798 [debug] [MainThread]: STDOUT: "b''"
+21:03:33.858214 [debug] [MainThread]: STDERR: "b''"
+21:03:33.858346 [debug] [MainThread]: Executing "git fetch origin --depth 1 --tags 0.5.8"
+21:03:34.245714 [debug] [MainThread]: STDOUT: "b''"
+21:03:34.246331 [debug] [MainThread]: STDERR: "b'From github.com:calogica/dbt-expectations\n * tag               0.5.8      -> FETCH_HEAD\n'"
+21:03:34.246694 [debug] [MainThread]: Executing "git tag --list"
+21:03:34.252514 [debug] [MainThread]: STDOUT: "b'0.1\n0.1.2\n0.1.3\n0.1.4\n0.2.0\n0.2.1\n0.2.2\n0.2.3\n0.2.4\n0.2.5\n0.2.6\n0.2.7\n0.2.8\n0.2.9\n0.3.0\n0.3.1\n0.3.2\n0.3.3\n0.3.4\n0.3.5\n0.3.6\n0.3.7\n0.4.0\n0.4.1\n0.4.2\n0.4.3\n0.4.4\n0.4.5\n0.4.6\n0.4.7\n0.5.0\n0.5.1\n0.5.2\n0.5.3\n0.5.4\n0.5.5\n0.5.6\n0.5.7\n0.5.8\n0.6.0\n'"
+21:03:34.252985 [debug] [MainThread]: STDERR: "b''"
+21:03:34.253146 [debug] [MainThread]: Executing "git reset --hard tags/0.5.8"
+21:03:34.259525 [debug] [MainThread]: STDOUT: "b'HEAD is now at d1eaed8 Update CHANGELOG.md\n'"
+21:03:34.259984 [debug] [MainThread]: STDERR: "b''"
+21:03:34.260144 [debug] [MainThread]: Executing "git rev-parse HEAD"
+21:03:34.263886 [debug] [MainThread]: STDOUT: "b'd1eaed8e088c4252f80cfdd6ea94d41d2385ad9e\n'"
+21:03:34.264309 [debug] [MainThread]: STDERR: "b''"
+21:03:34.264476 [debug] [MainThread]: Already at d1eaed8, nothing to do.
+21:03:34.275055 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_date/0.5.7.json
+21:03:34.350951 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_date/0.5.7.json 200
+21:03:34.351941 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils/0.8.6.json
+21:03:34.428909 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils/0.8.6.json 200
+21:03:34.430112 [info ] [MainThread]: Installing version 0.8.0
+21:03:34.605771 [info ] [MainThread]:   Installed from version 0.8.0
+21:03:34.612014 [info ] [MainThread]:   Up to date!
+21:03:34.612862 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'b6cfc58f-2276-4942-b2e0-d60fc29eaccc', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1f2064ba00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1f2064b190>]}
+21:03:34.613267 [info ] [MainThread]: Installing revision 0.5.8
+21:03:34.626295 [debug] [MainThread]: Executing "git clone --depth 1 git@github.com:calogica/dbt-expectations.git 302c8ef7290af78b223a10403d76f27f"
+21:03:34.663045 [debug] [MainThread]: STDOUT: "b''"
+21:03:34.663593 [debug] [MainThread]: STDERR: "b"fatal: destination path '302c8ef7290af78b223a10403d76f27f' already exists and is not an empty directory.\n""
+21:03:34.663733 [debug] [MainThread]: command return code=128
+21:03:34.663991 [debug] [MainThread]: Updating existing dependency 302c8ef7290af78b223a10403d76f27f.
+21:03:34.664112 [debug] [MainThread]: Executing "git rev-parse HEAD"
+21:03:34.677970 [debug] [MainThread]: STDOUT: "b'd1eaed8e088c4252f80cfdd6ea94d41d2385ad9e\n'"
+21:03:34.678475 [debug] [MainThread]: STDERR: "b''"
+21:03:34.678682 [debug] [MainThread]:   Checking out revision 0.5.8.
+21:03:34.678828 [debug] [MainThread]: Executing "git remote set-branches origin 0.5.8"
+21:03:34.703052 [debug] [MainThread]: STDOUT: "b''"
+21:03:34.703578 [debug] [MainThread]: STDERR: "b''"
+21:03:34.703730 [debug] [MainThread]: Executing "git fetch origin --depth 1 --tags 0.5.8"
+21:03:35.168495 [debug] [MainThread]: STDOUT: "b''"
+21:03:35.169056 [debug] [MainThread]: STDERR: "b'From github.com:calogica/dbt-expectations\n * tag               0.5.8      -> FETCH_HEAD\n'"
+21:03:35.169250 [debug] [MainThread]: Executing "git tag --list"
+21:03:35.178690 [debug] [MainThread]: STDOUT: "b'0.1\n0.1.2\n0.1.3\n0.1.4\n0.2.0\n0.2.1\n0.2.2\n0.2.3\n0.2.4\n0.2.5\n0.2.6\n0.2.7\n0.2.8\n0.2.9\n0.3.0\n0.3.1\n0.3.2\n0.3.3\n0.3.4\n0.3.5\n0.3.6\n0.3.7\n0.4.0\n0.4.1\n0.4.2\n0.4.3\n0.4.4\n0.4.5\n0.4.6\n0.4.7\n0.5.0\n0.5.1\n0.5.2\n0.5.3\n0.5.4\n0.5.5\n0.5.6\n0.5.7\n0.5.8\n0.6.0\n'"
+21:03:35.179232 [debug] [MainThread]: STDERR: "b''"
+21:03:35.179405 [debug] [MainThread]: Executing "git reset --hard tags/0.5.8"
+21:03:35.185308 [debug] [MainThread]: STDOUT: "b'HEAD is now at d1eaed8 Update CHANGELOG.md\n'"
+21:03:35.185808 [debug] [MainThread]: STDERR: "b''"
+21:03:35.185972 [debug] [MainThread]: Executing "git rev-parse HEAD"
+21:03:35.189935 [debug] [MainThread]: STDOUT: "b'd1eaed8e088c4252f80cfdd6ea94d41d2385ad9e\n'"
+21:03:35.190444 [debug] [MainThread]: STDERR: "b''"
+21:03:35.190751 [debug] [MainThread]: Already at d1eaed8, nothing to do.
+21:03:35.191023 [info ] [MainThread]:   Installed from revision 0.5.8
+21:03:35.192710 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'b6cfc58f-2276-4942-b2e0-d60fc29eaccc', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1f20650b20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1f20650490>]}
+21:03:35.193290 [info ] [MainThread]: Installing version 0.5.7
+21:03:35.268063 [info ] [MainThread]:   Installed from version 0.5.7
+21:03:35.270712 [info ] [MainThread]:   Updated version available: 0.6.0
+21:03:35.271826 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'b6cfc58f-2276-4942-b2e0-d60fc29eaccc', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1f20650d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1f20650b50>]}
+21:03:35.272166 [info ] [MainThread]: Installing version 0.8.6
+21:03:35.477562 [info ] [MainThread]:   Installed from version 0.8.6
+21:03:35.480130 [info ] [MainThread]:   Updated version available: 0.9.1
+21:03:35.480856 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'b6cfc58f-2276-4942-b2e0-d60fc29eaccc', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1f20650970>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1f20650640>]}
+21:03:35.481181 [info ] [MainThread]: 
+21:03:35.482780 [info ] [MainThread]: Updates available for packages: ['calogica/dbt_date', 'dbt-labs/dbt_utils']                 
+Update your versions in packages.yml, then run dbt deps
+21:03:35.485196 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1f2063bd30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1f206b7c10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1f20652610>]}
+
+
+============================== 2022-09-13 21:25:12.167327 | 27b0df76-8f59-4bb2-af6e-d7370c935647 ==============================
+21:25:12.167327 [info ] [MainThread]: Running with dbt=1.0.0
+21:25:12.168524 [debug] [MainThread]: running dbt with arguments Namespace(cls=<class 'dbt.task.clean.CleanTask'>, debug=None, defer=None, event_buffer_size=None, fail_fast=None, log_cache_events=False, log_format=None, partial_parse=None, printer_width=None, profile=None, profiles_dir='/home/azureuser/.dbt', project_dir='/home/azureuser/shawn_dbt/Auctioneer', record_timing_info=None, rpc_method=None, send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='clean', write_json=None)
+21:25:12.168863 [debug] [MainThread]: Tracking: tracking
+21:25:12.169150 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f46f0dc4ac0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f46f0dc4b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f46f0dc4b80>]}
+21:25:12.199517 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f46f0dc4eb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f46f0dc4f40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f46f0dc4580>]}
+
+
+============================== 2022-09-14 01:39:13.722249 | c3459397-7091-4272-9559-9d9594079a65 ==============================
+01:39:13.722249 [info ] [MainThread]: Running with dbt=1.0.0
+01:39:13.724712 [debug] [MainThread]: running dbt with arguments Namespace(cls=<class 'dbt.task.deps.DepsTask'>, debug=None, defer=None, event_buffer_size=None, fail_fast=None, log_cache_events=False, log_format=None, partial_parse=None, printer_width=None, profile=None, profiles_dir='/home/azureuser/.dbt', project_dir=None, record_timing_info=None, rpc_method='deps', send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='deps', write_json=None)
+01:39:13.724909 [debug] [MainThread]: Tracking: tracking
+01:39:13.725114 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09dbaa3bb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09dbaa3c10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09dbaa3c70>]}
+01:39:13.725704 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-87akmb2h'
+01:39:13.726102 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/index.json
+01:39:13.979889 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/index.json 200
+01:39:13.980665 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables.json
+01:39:14.031027 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables.json 200
+01:39:14.034483 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables/0.8.0.json
+01:39:14.084184 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables/0.8.0.json 200
+01:39:14.085148 [debug] [MainThread]: Executing "git clone --depth 1 git@github.com:calogica/dbt-expectations.git 302c8ef7290af78b223a10403d76f27f"
+01:39:14.900100 [debug] [MainThread]: STDOUT: "b''"
+01:39:14.900632 [debug] [MainThread]: STDERR: "b"Cloning into '302c8ef7290af78b223a10403d76f27f'...\n""
+01:39:14.901119 [debug] [MainThread]: Pulling new dependency 302c8ef7290af78b223a10403d76f27f.
+01:39:14.901272 [debug] [MainThread]: Executing "git rev-parse HEAD"
+01:39:14.906473 [debug] [MainThread]: STDOUT: "b'0ad445448218330ee14658fe5fca4d18eaf1670c\n'"
+01:39:14.907015 [debug] [MainThread]: STDERR: "b''"
+01:39:14.907190 [debug] [MainThread]:   Checking out revision 0.5.8.
+01:39:14.907338 [debug] [MainThread]: Executing "git remote set-branches origin 0.5.8"
+01:39:14.912092 [debug] [MainThread]: STDOUT: "b''"
+01:39:14.912513 [debug] [MainThread]: STDERR: "b''"
+01:39:14.912641 [debug] [MainThread]: Executing "git fetch origin --depth 1 --tags 0.5.8"
+01:39:15.562879 [debug] [MainThread]: STDOUT: "b''"
+01:39:15.563414 [debug] [MainThread]: STDERR: "b'From github.com:calogica/dbt-expectations\n * tag               0.5.8      -> FETCH_HEAD\n * [new tag]         0.1        -> 0.1\n * [new tag]         0.1.2      -> 0.1.2\n * [new tag]         0.1.3      -> 0.1.3\n * [new tag]         0.1.4      -> 0.1.4\n * [new tag]         0.2.0      -> 0.2.0\n * [new tag]         0.2.1      -> 0.2.1\n * [new tag]         0.2.2      -> 0.2.2\n * [new tag]         0.2.3      -> 0.2.3\n * [new tag]         0.2.4      -> 0.2.4\n * [new tag]         0.2.5      -> 0.2.5\n * [new tag]         0.2.6      -> 0.2.6\n * [new tag]         0.2.7      -> 0.2.7\n * [new tag]         0.2.8      -> 0.2.8\n * [new tag]         0.2.9      -> 0.2.9\n * [new tag]         0.3.0      -> 0.3.0\n * [new tag]         0.3.1      -> 0.3.1\n * [new tag]         0.3.2      -> 0.3.2\n * [new tag]         0.3.3      -> 0.3.3\n * [new tag]         0.3.4      -> 0.3.4\n * [new tag]         0.3.5      -> 0.3.5\n * [new tag]         0.3.6      -> 0.3.6\n * [new tag]         0.3.7      -> 0.3.7\n * [new tag]         0.4.0      -> 0.4.0\n * [new tag]         0.4.1      -> 0.4.1\n * [new tag]         0.4.2      -> 0.4.2\n * [new tag]         0.4.3      -> 0.4.3\n * [new tag]         0.4.4      -> 0.4.4\n * [new tag]         0.4.5      -> 0.4.5\n * [new tag]         0.4.6      -> 0.4.6\n * [new tag]         0.4.7      -> 0.4.7\n * [new tag]         0.5.0      -> 0.5.0\n * [new tag]         0.5.1      -> 0.5.1\n * [new tag]         0.5.2      -> 0.5.2\n * [new tag]         0.5.3      -> 0.5.3\n * [new tag]         0.5.4      -> 0.5.4\n * [new tag]         0.5.5      -> 0.5.5\n * [new tag]         0.5.6      -> 0.5.6\n * [new tag]         0.5.7      -> 0.5.7\n * [new tag]         0.5.8      -> 0.5.8\n * [new tag]         0.6.0      -> 0.6.0\n'"
+01:39:15.563620 [debug] [MainThread]: Executing "git tag --list"
+01:39:15.569808 [debug] [MainThread]: STDOUT: "b'0.1\n0.1.2\n0.1.3\n0.1.4\n0.2.0\n0.2.1\n0.2.2\n0.2.3\n0.2.4\n0.2.5\n0.2.6\n0.2.7\n0.2.8\n0.2.9\n0.3.0\n0.3.1\n0.3.2\n0.3.3\n0.3.4\n0.3.5\n0.3.6\n0.3.7\n0.4.0\n0.4.1\n0.4.2\n0.4.3\n0.4.4\n0.4.5\n0.4.6\n0.4.7\n0.5.0\n0.5.1\n0.5.2\n0.5.3\n0.5.4\n0.5.5\n0.5.6\n0.5.7\n0.5.8\n0.6.0\n'"
+01:39:15.570305 [debug] [MainThread]: STDERR: "b''"
+01:39:15.570463 [debug] [MainThread]: Executing "git reset --hard tags/0.5.8"
+01:39:15.622465 [debug] [MainThread]: STDOUT: "b'HEAD is now at d1eaed8 Update CHANGELOG.md\n'"
+01:39:15.623020 [debug] [MainThread]: STDERR: "b''"
+01:39:15.623190 [debug] [MainThread]: Executing "git rev-parse HEAD"
+01:39:15.628443 [debug] [MainThread]: STDOUT: "b'd1eaed8e088c4252f80cfdd6ea94d41d2385ad9e\n'"
+01:39:15.628895 [debug] [MainThread]: STDERR: "b''"
+01:39:15.629063 [debug] [MainThread]:   Checked out at d1eaed8.
+01:39:15.639513 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json
+01:39:15.692835 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json 200
+01:39:15.700683 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_date/0.5.7.json
+01:39:15.748512 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_date/0.5.7.json 200
+01:39:15.749540 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+01:39:15.797573 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+01:39:15.821782 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils/0.8.6.json
+01:39:15.871262 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils/0.8.6.json 200
+01:39:15.872093 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables.json
+01:39:15.920195 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables.json 200
+01:39:15.923797 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json
+01:39:15.972760 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json 200
+01:39:15.980419 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+01:39:16.029150 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+01:39:16.053616 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables/0.8.0.json
+01:39:16.103277 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables/0.8.0.json 200
+01:39:16.104044 [debug] [MainThread]: Executing "git clone --depth 1 git@github.com:calogica/dbt-expectations.git 302c8ef7290af78b223a10403d76f27f"
+01:39:16.109090 [debug] [MainThread]: STDOUT: "b''"
+01:39:16.109529 [debug] [MainThread]: STDERR: "b"fatal: destination path '302c8ef7290af78b223a10403d76f27f' already exists and is not an empty directory.\n""
+01:39:16.109659 [debug] [MainThread]: command return code=128
+01:39:16.110264 [debug] [MainThread]: Updating existing dependency 302c8ef7290af78b223a10403d76f27f.
+01:39:16.110420 [debug] [MainThread]: Executing "git rev-parse HEAD"
+01:39:16.114719 [debug] [MainThread]: STDOUT: "b'd1eaed8e088c4252f80cfdd6ea94d41d2385ad9e\n'"
+01:39:16.115137 [debug] [MainThread]: STDERR: "b''"
+01:39:16.115298 [debug] [MainThread]:   Checking out revision 0.5.8.
+01:39:16.115438 [debug] [MainThread]: Executing "git remote set-branches origin 0.5.8"
+01:39:16.119497 [debug] [MainThread]: STDOUT: "b''"
+01:39:16.119917 [debug] [MainThread]: STDERR: "b''"
+01:39:16.120045 [debug] [MainThread]: Executing "git fetch origin --depth 1 --tags 0.5.8"
+01:39:16.489246 [debug] [MainThread]: STDOUT: "b''"
+01:39:16.489832 [debug] [MainThread]: STDERR: "b'From github.com:calogica/dbt-expectations\n * tag               0.5.8      -> FETCH_HEAD\n'"
+01:39:16.490037 [debug] [MainThread]: Executing "git tag --list"
+01:39:16.495500 [debug] [MainThread]: STDOUT: "b'0.1\n0.1.2\n0.1.3\n0.1.4\n0.2.0\n0.2.1\n0.2.2\n0.2.3\n0.2.4\n0.2.5\n0.2.6\n0.2.7\n0.2.8\n0.2.9\n0.3.0\n0.3.1\n0.3.2\n0.3.3\n0.3.4\n0.3.5\n0.3.6\n0.3.7\n0.4.0\n0.4.1\n0.4.2\n0.4.3\n0.4.4\n0.4.5\n0.4.6\n0.4.7\n0.5.0\n0.5.1\n0.5.2\n0.5.3\n0.5.4\n0.5.5\n0.5.6\n0.5.7\n0.5.8\n0.6.0\n'"
+01:39:16.495958 [debug] [MainThread]: STDERR: "b''"
+01:39:16.496110 [debug] [MainThread]: Executing "git reset --hard tags/0.5.8"
+01:39:16.502129 [debug] [MainThread]: STDOUT: "b'HEAD is now at d1eaed8 Update CHANGELOG.md\n'"
+01:39:16.502624 [debug] [MainThread]: STDERR: "b''"
+01:39:16.502797 [debug] [MainThread]: Executing "git rev-parse HEAD"
+01:39:16.506264 [debug] [MainThread]: STDOUT: "b'd1eaed8e088c4252f80cfdd6ea94d41d2385ad9e\n'"
+01:39:16.506748 [debug] [MainThread]: STDERR: "b''"
+01:39:16.506920 [debug] [MainThread]: Already at d1eaed8, nothing to do.
+01:39:16.517353 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_date/0.5.7.json
+01:39:16.567669 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_date/0.5.7.json 200
+01:39:16.568565 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils/0.8.6.json
+01:39:16.619500 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils/0.8.6.json 200
+01:39:16.620519 [info ] [MainThread]: Installing version 0.8.0
+01:39:16.752271 [info ] [MainThread]:   Installed from version 0.8.0
+01:39:16.753319 [info ] [MainThread]:   Up to date!
+01:39:16.754628 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'c3459397-7091-4272-9559-9d9594079a65', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09dbaa3e80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09dbaa3ee0>]}
+01:39:16.755023 [info ] [MainThread]: Installing revision 0.5.8
+01:39:16.762041 [debug] [MainThread]: Executing "git clone --depth 1 git@github.com:calogica/dbt-expectations.git 302c8ef7290af78b223a10403d76f27f"
+01:39:16.767548 [debug] [MainThread]: STDOUT: "b''"
+01:39:16.767926 [debug] [MainThread]: STDERR: "b"fatal: destination path '302c8ef7290af78b223a10403d76f27f' already exists and is not an empty directory.\n""
+01:39:16.768046 [debug] [MainThread]: command return code=128
+01:39:16.768287 [debug] [MainThread]: Updating existing dependency 302c8ef7290af78b223a10403d76f27f.
+01:39:16.768408 [debug] [MainThread]: Executing "git rev-parse HEAD"
+01:39:16.772374 [debug] [MainThread]: STDOUT: "b'd1eaed8e088c4252f80cfdd6ea94d41d2385ad9e\n'"
+01:39:16.772765 [debug] [MainThread]: STDERR: "b''"
+01:39:16.772927 [debug] [MainThread]:   Checking out revision 0.5.8.
+01:39:16.773067 [debug] [MainThread]: Executing "git remote set-branches origin 0.5.8"
+01:39:16.777090 [debug] [MainThread]: STDOUT: "b''"
+01:39:16.777477 [debug] [MainThread]: STDERR: "b''"
+01:39:16.777603 [debug] [MainThread]: Executing "git fetch origin --depth 1 --tags 0.5.8"
+01:39:17.175338 [debug] [MainThread]: STDOUT: "b''"
+01:39:17.175923 [debug] [MainThread]: STDERR: "b'From github.com:calogica/dbt-expectations\n * tag               0.5.8      -> FETCH_HEAD\n'"
+01:39:17.176122 [debug] [MainThread]: Executing "git tag --list"
+01:39:17.181600 [debug] [MainThread]: STDOUT: "b'0.1\n0.1.2\n0.1.3\n0.1.4\n0.2.0\n0.2.1\n0.2.2\n0.2.3\n0.2.4\n0.2.5\n0.2.6\n0.2.7\n0.2.8\n0.2.9\n0.3.0\n0.3.1\n0.3.2\n0.3.3\n0.3.4\n0.3.5\n0.3.6\n0.3.7\n0.4.0\n0.4.1\n0.4.2\n0.4.3\n0.4.4\n0.4.5\n0.4.6\n0.4.7\n0.5.0\n0.5.1\n0.5.2\n0.5.3\n0.5.4\n0.5.5\n0.5.6\n0.5.7\n0.5.8\n0.6.0\n'"
+01:39:17.182088 [debug] [MainThread]: STDERR: "b''"
+01:39:17.182244 [debug] [MainThread]: Executing "git reset --hard tags/0.5.8"
+01:39:17.187247 [debug] [MainThread]: STDOUT: "b'HEAD is now at d1eaed8 Update CHANGELOG.md\n'"
+01:39:17.187682 [debug] [MainThread]: STDERR: "b''"
+01:39:17.187830 [debug] [MainThread]: Executing "git rev-parse HEAD"
+01:39:17.191213 [debug] [MainThread]: STDOUT: "b'd1eaed8e088c4252f80cfdd6ea94d41d2385ad9e\n'"
+01:39:17.191614 [debug] [MainThread]: STDERR: "b''"
+01:39:17.191765 [debug] [MainThread]: Already at d1eaed8, nothing to do.
+01:39:17.191992 [info ] [MainThread]:   Installed from revision 0.5.8
+01:39:17.193473 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'c3459397-7091-4272-9559-9d9594079a65', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09dba325e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09dba32ca0>]}
+01:39:17.193929 [info ] [MainThread]: Installing version 0.5.7
+01:39:17.243308 [info ] [MainThread]:   Installed from version 0.5.7
+01:39:17.244288 [info ] [MainThread]:   Updated version available: 0.6.0
+01:39:17.245404 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'c3459397-7091-4272-9559-9d9594079a65', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09dba361c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09dba36f10>]}
+01:39:17.245718 [info ] [MainThread]: Installing version 0.8.6
+01:39:17.336088 [info ] [MainThread]:   Installed from version 0.8.6
+01:39:17.337734 [info ] [MainThread]:   Updated version available: 0.9.1
+01:39:17.339201 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'c3459397-7091-4272-9559-9d9594079a65', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09dba326a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09dba329d0>]}
+01:39:17.339515 [info ] [MainThread]: 
+01:39:17.340375 [info ] [MainThread]: Updates available for packages: ['calogica/dbt_date', 'dbt-labs/dbt_utils']                 
+Update your versions in packages.yml, then run dbt deps
+01:39:17.342059 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09dba26d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09dbaa3c70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09dba32a30>]}
+
+
+============================== 2022-09-14 01:40:11.813661 | 71b53dc1-b849-4dac-a228-64d045fc7ca7 ==============================
+01:40:11.813661 [info ] [MainThread]: Running with dbt=1.0.0
+01:40:11.814761 [debug] [MainThread]: running dbt with arguments Namespace(cls=<class 'dbt.task.deps.DepsTask'>, debug=None, defer=None, event_buffer_size=None, fail_fast=None, log_cache_events=False, log_format=None, partial_parse=None, printer_width=None, profile=None, profiles_dir='/home/azureuser/.dbt', project_dir=None, record_timing_info=None, rpc_method='deps', send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='deps', write_json=None)
+01:40:11.814994 [debug] [MainThread]: Tracking: tracking
+01:40:11.815199 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fceb6a6eaf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fceb6a6eb50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fceb6a6ebb0>]}
+01:40:11.816333 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-46kpe6wv'
+01:40:11.816751 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/index.json
+01:40:11.901950 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/index.json 200
+01:40:11.903252 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables.json
+01:40:11.979643 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables.json 200
+01:40:11.983577 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables/0.8.0.json
+01:40:12.059509 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables/0.8.0.json 200
+01:40:12.060454 [debug] [MainThread]: Executing "git clone --depth 1 git@github.com:calogica/dbt-expectations.git 302c8ef7290af78b223a10403d76f27f"
+01:40:12.851871 [debug] [MainThread]: STDOUT: "b''"
+01:40:12.852415 [debug] [MainThread]: STDERR: "b"Cloning into '302c8ef7290af78b223a10403d76f27f'...\n""
+01:40:12.852884 [debug] [MainThread]: Pulling new dependency 302c8ef7290af78b223a10403d76f27f.
+01:40:12.853037 [debug] [MainThread]: Executing "git rev-parse HEAD"
+01:40:12.858081 [debug] [MainThread]: STDOUT: "b'0ad445448218330ee14658fe5fca4d18eaf1670c\n'"
+01:40:12.858618 [debug] [MainThread]: STDERR: "b''"
+01:40:12.858814 [debug] [MainThread]:   Checking out revision 0.5.8.
+01:40:12.858959 [debug] [MainThread]: Executing "git remote set-branches origin 0.5.8"
+01:40:12.863699 [debug] [MainThread]: STDOUT: "b''"
+01:40:12.864134 [debug] [MainThread]: STDERR: "b''"
+01:40:12.864256 [debug] [MainThread]: Executing "git fetch origin --depth 1 --tags 0.5.8"
+01:40:13.493447 [debug] [MainThread]: STDOUT: "b''"
+01:40:13.493983 [debug] [MainThread]: STDERR: "b'From github.com:calogica/dbt-expectations\n * tag               0.5.8      -> FETCH_HEAD\n * [new tag]         0.1        -> 0.1\n * [new tag]         0.1.2      -> 0.1.2\n * [new tag]         0.1.3      -> 0.1.3\n * [new tag]         0.1.4      -> 0.1.4\n * [new tag]         0.2.0      -> 0.2.0\n * [new tag]         0.2.1      -> 0.2.1\n * [new tag]         0.2.2      -> 0.2.2\n * [new tag]         0.2.3      -> 0.2.3\n * [new tag]         0.2.4      -> 0.2.4\n * [new tag]         0.2.5      -> 0.2.5\n * [new tag]         0.2.6      -> 0.2.6\n * [new tag]         0.2.7      -> 0.2.7\n * [new tag]         0.2.8      -> 0.2.8\n * [new tag]         0.2.9      -> 0.2.9\n * [new tag]         0.3.0      -> 0.3.0\n * [new tag]         0.3.1      -> 0.3.1\n * [new tag]         0.3.2      -> 0.3.2\n * [new tag]         0.3.3      -> 0.3.3\n * [new tag]         0.3.4      -> 0.3.4\n * [new tag]         0.3.5      -> 0.3.5\n * [new tag]         0.3.6      -> 0.3.6\n * [new tag]         0.3.7      -> 0.3.7\n * [new tag]         0.4.0      -> 0.4.0\n * [new tag]         0.4.1      -> 0.4.1\n * [new tag]         0.4.2      -> 0.4.2\n * [new tag]         0.4.3      -> 0.4.3\n * [new tag]         0.4.4      -> 0.4.4\n * [new tag]         0.4.5      -> 0.4.5\n * [new tag]         0.4.6      -> 0.4.6\n * [new tag]         0.4.7      -> 0.4.7\n * [new tag]         0.5.0      -> 0.5.0\n * [new tag]         0.5.1      -> 0.5.1\n * [new tag]         0.5.2      -> 0.5.2\n * [new tag]         0.5.3      -> 0.5.3\n * [new tag]         0.5.4      -> 0.5.4\n * [new tag]         0.5.5      -> 0.5.5\n * [new tag]         0.5.6      -> 0.5.6\n * [new tag]         0.5.7      -> 0.5.7\n * [new tag]         0.5.8      -> 0.5.8\n * [new tag]         0.6.0      -> 0.6.0\n'"
+01:40:13.494194 [debug] [MainThread]: Executing "git tag --list"
+01:40:13.499650 [debug] [MainThread]: STDOUT: "b'0.1\n0.1.2\n0.1.3\n0.1.4\n0.2.0\n0.2.1\n0.2.2\n0.2.3\n0.2.4\n0.2.5\n0.2.6\n0.2.7\n0.2.8\n0.2.9\n0.3.0\n0.3.1\n0.3.2\n0.3.3\n0.3.4\n0.3.5\n0.3.6\n0.3.7\n0.4.0\n0.4.1\n0.4.2\n0.4.3\n0.4.4\n0.4.5\n0.4.6\n0.4.7\n0.5.0\n0.5.1\n0.5.2\n0.5.3\n0.5.4\n0.5.5\n0.5.6\n0.5.7\n0.5.8\n0.6.0\n'"
+01:40:13.500097 [debug] [MainThread]: STDERR: "b''"
+01:40:13.500248 [debug] [MainThread]: Executing "git reset --hard tags/0.5.8"
+01:40:13.550560 [debug] [MainThread]: STDOUT: "b'HEAD is now at d1eaed8 Update CHANGELOG.md\n'"
+01:40:13.551105 [debug] [MainThread]: STDERR: "b''"
+01:40:13.551268 [debug] [MainThread]: Executing "git rev-parse HEAD"
+01:40:13.556240 [debug] [MainThread]: STDOUT: "b'd1eaed8e088c4252f80cfdd6ea94d41d2385ad9e\n'"
+01:40:13.556682 [debug] [MainThread]: STDERR: "b''"
+01:40:13.556851 [debug] [MainThread]:   Checked out at d1eaed8.
+01:40:13.567045 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json
+01:40:13.643042 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json 200
+01:40:13.650777 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_date/0.5.7.json
+01:40:13.726359 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_date/0.5.7.json 200
+01:40:13.727488 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+01:40:13.802578 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+01:40:13.827126 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils/0.8.6.json
+01:40:13.902654 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils/0.8.6.json 200
+01:40:13.903380 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables.json
+01:40:13.978281 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables.json 200
+01:40:13.981987 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json
+01:40:14.056279 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json 200
+01:40:14.063843 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+01:40:14.139193 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+01:40:14.163565 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables/0.8.0.json
+01:40:14.238630 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables/0.8.0.json 200
+01:40:14.239481 [debug] [MainThread]: Executing "git clone --depth 1 git@github.com:calogica/dbt-expectations.git 302c8ef7290af78b223a10403d76f27f"
+01:40:14.244665 [debug] [MainThread]: STDOUT: "b''"
+01:40:14.245084 [debug] [MainThread]: STDERR: "b"fatal: destination path '302c8ef7290af78b223a10403d76f27f' already exists and is not an empty directory.\n""
+01:40:14.245212 [debug] [MainThread]: command return code=128
+01:40:14.245800 [debug] [MainThread]: Updating existing dependency 302c8ef7290af78b223a10403d76f27f.
+01:40:14.245950 [debug] [MainThread]: Executing "git rev-parse HEAD"
+01:40:14.249685 [debug] [MainThread]: STDOUT: "b'd1eaed8e088c4252f80cfdd6ea94d41d2385ad9e\n'"
+01:40:14.250077 [debug] [MainThread]: STDERR: "b''"
+01:40:14.250233 [debug] [MainThread]:   Checking out revision 0.5.8.
+01:40:14.250365 [debug] [MainThread]: Executing "git remote set-branches origin 0.5.8"
+01:40:14.254282 [debug] [MainThread]: STDOUT: "b''"
+01:40:14.254782 [debug] [MainThread]: STDERR: "b''"
+01:40:14.254915 [debug] [MainThread]: Executing "git fetch origin --depth 1 --tags 0.5.8"
+01:40:14.640378 [debug] [MainThread]: STDOUT: "b''"
+01:40:14.640933 [debug] [MainThread]: STDERR: "b'From github.com:calogica/dbt-expectations\n * tag               0.5.8      -> FETCH_HEAD\n'"
+01:40:14.641116 [debug] [MainThread]: Executing "git tag --list"
+01:40:14.646525 [debug] [MainThread]: STDOUT: "b'0.1\n0.1.2\n0.1.3\n0.1.4\n0.2.0\n0.2.1\n0.2.2\n0.2.3\n0.2.4\n0.2.5\n0.2.6\n0.2.7\n0.2.8\n0.2.9\n0.3.0\n0.3.1\n0.3.2\n0.3.3\n0.3.4\n0.3.5\n0.3.6\n0.3.7\n0.4.0\n0.4.1\n0.4.2\n0.4.3\n0.4.4\n0.4.5\n0.4.6\n0.4.7\n0.5.0\n0.5.1\n0.5.2\n0.5.3\n0.5.4\n0.5.5\n0.5.6\n0.5.7\n0.5.8\n0.6.0\n'"
+01:40:14.647086 [debug] [MainThread]: STDERR: "b''"
+01:40:14.647240 [debug] [MainThread]: Executing "git reset --hard tags/0.5.8"
+01:40:14.653416 [debug] [MainThread]: STDOUT: "b'HEAD is now at d1eaed8 Update CHANGELOG.md\n'"
+01:40:14.653897 [debug] [MainThread]: STDERR: "b''"
+01:40:14.654056 [debug] [MainThread]: Executing "git rev-parse HEAD"
+01:40:14.657979 [debug] [MainThread]: STDOUT: "b'd1eaed8e088c4252f80cfdd6ea94d41d2385ad9e\n'"
+01:40:14.658445 [debug] [MainThread]: STDERR: "b''"
+01:40:14.658713 [debug] [MainThread]: Already at d1eaed8, nothing to do.
+01:40:14.669682 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_date/0.5.7.json
+01:40:14.747319 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_date/0.5.7.json 200
+01:40:14.748187 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils/0.8.6.json
+01:40:14.823812 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils/0.8.6.json 200
+01:40:14.824839 [info ] [MainThread]: Installing version 0.8.0
+01:40:14.904969 [info ] [MainThread]:   Installed from version 0.8.0
+01:40:14.906338 [info ] [MainThread]:   Up to date!
+01:40:14.907210 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '71b53dc1-b849-4dac-a228-64d045fc7ca7', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fceb6a6ed90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fceb6a6ee80>]}
+01:40:14.907582 [info ] [MainThread]: Installing revision 0.5.8
+01:40:14.915064 [debug] [MainThread]: Executing "git clone --depth 1 git@github.com:calogica/dbt-expectations.git 302c8ef7290af78b223a10403d76f27f"
+01:40:14.920354 [debug] [MainThread]: STDOUT: "b''"
+01:40:14.920731 [debug] [MainThread]: STDERR: "b"fatal: destination path '302c8ef7290af78b223a10403d76f27f' already exists and is not an empty directory.\n""
+01:40:14.920846 [debug] [MainThread]: command return code=128
+01:40:14.921085 [debug] [MainThread]: Updating existing dependency 302c8ef7290af78b223a10403d76f27f.
+01:40:14.921211 [debug] [MainThread]: Executing "git rev-parse HEAD"
+01:40:14.924800 [debug] [MainThread]: STDOUT: "b'd1eaed8e088c4252f80cfdd6ea94d41d2385ad9e\n'"
+01:40:14.925179 [debug] [MainThread]: STDERR: "b''"
+01:40:14.925333 [debug] [MainThread]:   Checking out revision 0.5.8.
+01:40:14.925462 [debug] [MainThread]: Executing "git remote set-branches origin 0.5.8"
+01:40:14.929373 [debug] [MainThread]: STDOUT: "b''"
+01:40:14.929756 [debug] [MainThread]: STDERR: "b''"
+01:40:14.929879 [debug] [MainThread]: Executing "git fetch origin --depth 1 --tags 0.5.8"
+01:40:15.324017 [debug] [MainThread]: STDOUT: "b''"
+01:40:15.324561 [debug] [MainThread]: STDERR: "b'From github.com:calogica/dbt-expectations\n * tag               0.5.8      -> FETCH_HEAD\n'"
+01:40:15.324742 [debug] [MainThread]: Executing "git tag --list"
+01:40:15.330232 [debug] [MainThread]: STDOUT: "b'0.1\n0.1.2\n0.1.3\n0.1.4\n0.2.0\n0.2.1\n0.2.2\n0.2.3\n0.2.4\n0.2.5\n0.2.6\n0.2.7\n0.2.8\n0.2.9\n0.3.0\n0.3.1\n0.3.2\n0.3.3\n0.3.4\n0.3.5\n0.3.6\n0.3.7\n0.4.0\n0.4.1\n0.4.2\n0.4.3\n0.4.4\n0.4.5\n0.4.6\n0.4.7\n0.5.0\n0.5.1\n0.5.2\n0.5.3\n0.5.4\n0.5.5\n0.5.6\n0.5.7\n0.5.8\n0.6.0\n'"
+01:40:15.330802 [debug] [MainThread]: STDERR: "b''"
+01:40:15.330970 [debug] [MainThread]: Executing "git reset --hard tags/0.5.8"
+01:40:15.335998 [debug] [MainThread]: STDOUT: "b'HEAD is now at d1eaed8 Update CHANGELOG.md\n'"
+01:40:15.336437 [debug] [MainThread]: STDERR: "b''"
+01:40:15.336586 [debug] [MainThread]: Executing "git rev-parse HEAD"
+01:40:15.340100 [debug] [MainThread]: STDOUT: "b'd1eaed8e088c4252f80cfdd6ea94d41d2385ad9e\n'"
+01:40:15.340516 [debug] [MainThread]: STDERR: "b''"
+01:40:15.340667 [debug] [MainThread]: Already at d1eaed8, nothing to do.
+01:40:15.340896 [info ] [MainThread]:   Installed from revision 0.5.8
+01:40:15.341973 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '71b53dc1-b849-4dac-a228-64d045fc7ca7', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fceb6a0d4f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fceb6a0dbe0>]}
+01:40:15.342433 [info ] [MainThread]: Installing version 0.5.7
+01:40:15.392891 [info ] [MainThread]:   Installed from version 0.5.7
+01:40:15.394278 [info ] [MainThread]:   Updated version available: 0.6.0
+01:40:15.395118 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '71b53dc1-b849-4dac-a228-64d045fc7ca7', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fceb6a0dd90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fceb6a0dd30>]}
+01:40:15.395429 [info ] [MainThread]: Installing version 0.8.6
+01:40:15.487553 [info ] [MainThread]:   Installed from version 0.8.6
+01:40:15.488528 [info ] [MainThread]:   Updated version available: 0.9.1
+01:40:15.489688 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '71b53dc1-b849-4dac-a228-64d045fc7ca7', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fceb6a0d040>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fceb6a0d730>]}
+01:40:15.489996 [info ] [MainThread]: 
+01:40:15.491124 [info ] [MainThread]: Updates available for packages: ['calogica/dbt_date', 'dbt-labs/dbt_utils']                 
+Update your versions in packages.yml, then run dbt deps
+01:40:15.492664 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fceb69f8ca0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fceb6a6ebb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fceb6a12df0>]}
+
+
+============================== 2022-09-14 02:30:15.269248 | 15c0c637-c86f-45d8-ba4b-b332e9981c53 ==============================
+02:30:15.269248 [info ] [MainThread]: Running with dbt=1.0.0
+02:30:15.270359 [debug] [MainThread]: running dbt with arguments Namespace(cls=<class 'dbt.task.clean.CleanTask'>, debug=None, defer=None, event_buffer_size=None, fail_fast=None, log_cache_events=False, log_format=None, partial_parse=None, printer_width=None, profile=None, profiles_dir='/home/azureuser/.dbt', project_dir='/home/azureuser/shawn_dbt/Auctioneer', record_timing_info=None, rpc_method=None, send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='clean', write_json=None)
+02:30:15.270646 [debug] [MainThread]: Tracking: tracking
+02:30:15.270860 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4a546f7bb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4a546f7be0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4a546f7c70>]}
+02:30:15.292815 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4a546f7dc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4a546f7fa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4a546f7610>]}
+
+
+============================== 2022-09-14 03:40:58.930408 | 38a25627-8956-424e-9561-ea9e3868f33a ==============================
+03:40:58.930408 [info ] [MainThread]: Running with dbt=1.0.0
+03:40:58.931475 [debug] [MainThread]: running dbt with arguments Namespace(cls=<class 'dbt.task.clean.CleanTask'>, debug=None, defer=None, event_buffer_size=None, fail_fast=None, log_cache_events=False, log_format=None, partial_parse=None, printer_width=None, profile=None, profiles_dir='/home/azureuser/.dbt', project_dir='/home/azureuser/shawn_dbt/AH', record_timing_info=None, rpc_method=None, send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='clean', write_json=None)
+03:40:58.931710 [debug] [MainThread]: Tracking: tracking
+03:40:58.931903 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f813a8b2a90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f813a8b2af0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f813a8b2b50>]}
+03:40:58.963366 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f813a8b2d30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f813a8b2cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f813a8b2df0>]}
+
+
+============================== 2022-09-14 03:41:54.879711 | 46c980df-cc2d-498c-ad23-49fe0bb2e6ae ==============================
+03:41:54.879711 [info ] [MainThread]: Running with dbt=1.0.0
+03:41:54.880776 [debug] [MainThread]: running dbt with arguments Namespace(cls=<class 'dbt.task.clean.CleanTask'>, debug=None, defer=None, event_buffer_size=None, fail_fast=None, log_cache_events=False, log_format=None, partial_parse=None, printer_width=None, profile=None, profiles_dir='/home/azureuser/.dbt', project_dir='/home/azureuser/shawn_dbt/AH', record_timing_info=None, rpc_method=None, send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='clean', write_json=None)
+03:41:54.881020 [debug] [MainThread]: Tracking: tracking
+03:41:54.881218 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f075aa95910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f075aa95ac0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f075aa95af0>]}
+03:41:54.890837 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f075aa95e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f075aa95eb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f075aa95f10>]}

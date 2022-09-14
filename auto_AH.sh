@@ -1,3 +1,10 @@
+# This step, upload the log file to anayized then clean the log file on VM
+curl -F "file=@AH/logs/dbt.log" "http://shawngao.ca/weCloudData/res/saveLogFile.php"
+dbt clean --project-dir AH 
+# rm AH/logs/*
+# rm -r -f AH/target/*
+# dbt run --project-dir AH -m tag:processing 
+
 # This step, build view from Raw tabale , just need running once
 # ---------------------------------------------------------------------------
 # dbt run --project-dir AH --models step1_InterView
@@ -23,6 +30,24 @@ dbt snapshot --project-dir AH
 # ---------------------------------------------------------------------------
 dbt run --project-dir AH --models step5_DM
 
+# Those step, build FT table
+# ---------------------------------------------------------------------------
 dbt run --project-dir AH --models step6_FT_1_stg
 dbt run --project-dir AH --models step6_FT_2_tmp
 dbt run --project-dir AH --models step6_FT_3
+
+# Those step, build Flatten the ListingProperties Table table
+# ---------------------------------------------------------------------------
+dbt run --project-dir AH --models step7_1
+dbt run --project-dir AH --models step7_2
+dbt run --project-dir AH --models step7_3
+dbt run --project-dir AH --models step7_4
+
+# Those step, build DM/FT table base on Flatten the ListingProperties Table
+# ---------------------------------------------------------------------------
+dbt run --project-dir AH --models step8_1_DM
+dbt run --project-dir AH --models step8_2_FT_stg
+dbt run --project-dir AH --models step8_3_FT_tmp
+dbt run --project-dir AH --models step8_4_FT
+
+
