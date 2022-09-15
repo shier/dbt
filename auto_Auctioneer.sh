@@ -3,6 +3,7 @@ curl -F "file=@Auctioneer/logs/dbt.log" "http://shawngao.ca/weCloudData/res/save
 dbt clean --project-dir Auctioneer 
 # rm Auctioneer/logs/*
 # rm -r -f Auctioneer/target/*
+# ps aux | grep dbt
 
 # dbt run --project-dir AH -m tag:processing 
 

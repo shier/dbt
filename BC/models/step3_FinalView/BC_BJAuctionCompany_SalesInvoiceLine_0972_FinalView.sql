@@ -58,7 +58,7 @@ Select
 	[PostingGroup] ,
 	[Description] ,
 	[Description2] ,
-	[LineNo] as [LineNo_] ,
+	[LineNo_S] as [LineNo_] ,
 	[Appl__fromItemEntry] as [Appl_-fromItemEntry] ,
 	[AllowLineDisc] as [AllowLineDisc_] ,
 	[LineDiscountCalculation] ,

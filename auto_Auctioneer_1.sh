@@ -49,4 +49,3 @@ dbt run --project-dir Auctioneer --models step6_3
 # ---------------------------------------------------------------------------
 dbt run --project-dir Auctioneer --models step7_0
 dbt run --project-dir Auctioneer --models step7_1
-dbt run --project-dir Auctioneer --models step7_2

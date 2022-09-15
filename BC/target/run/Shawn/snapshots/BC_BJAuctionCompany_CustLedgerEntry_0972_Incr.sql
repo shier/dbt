@@ -1,58 +1,21 @@
 
-      
-  
-  if object_id ('"stg"."BC_BJAuctionCompany_CustLedgerEntry_0972_Incr_temp_view"','V') is not null
-    begin
-    drop view "stg"."BC_BJAuctionCompany_CustLedgerEntry_0972_Incr_temp_view"
-    end
+      EXEC('
+           BEGIN TRANSACTION
+           update "BJAC_DW_PROD"."stg"."BC_BJAuctionCompany_CustLedgerEntry_0972_Incr"
+          set dbt_valid_to = TMP.dbt_valid_to
+          from "BJAC_DW_PROD"."stg"."#BC_BJAuctionCompany_CustLedgerEntry_0972_Incr__dbt_tmp" TMP
+          where "BJAC_DW_PROD"."stg"."BC_BJAuctionCompany_CustLedgerEntry_0972_Incr".dbt_scd_id = TMP.dbt_scd_id
+            and TMP.dbt_change_type in (''update'', ''delete'')
+            and "BJAC_DW_PROD"."stg"."BC_BJAuctionCompany_CustLedgerEntry_0972_Incr".dbt_valid_to is null;
 
-
-   
-    
-  if object_id ('"stg"."BC_BJAuctionCompany_CustLedgerEntry_0972_Incr"','U') is not null
-    begin
-    drop table "stg"."BC_BJAuctionCompany_CustLedgerEntry_0972_Incr"
-    end
-
-
-   EXEC('create view stg.BC_BJAuctionCompany_CustLedgerEntry_0972_Incr_temp_view as
-    
-
-    select *,
-        
-    CONVERT(VARCHAR(32), HashBytes(''MD5'', 
-        coalesce(cast(EntryNo as varchar(max)), '''')  + ''|'' + 
-    
-        coalesce(cast(CONVERT(DATETIME2, ''2022-09-15 00:31:47.085217'') as varchar(max)), '''') 
-    ), 2)
- as dbt_scd_id,
-        CONVERT(DATETIME2, ''2022-09-15 00:31:47.085217'') as dbt_updated_at,
-        CONVERT(DATETIME2, ''2022-09-15 00:31:47.085217'') as dbt_valid_from,
-        nullif(CONVERT(DATETIME2, ''2022-09-15 00:31:47.085217''), CONVERT(DATETIME2, ''2022-09-15 00:31:47.085217'')) as dbt_valid_to
-    from (
-        
-	
-	SELECT * from stg.[BC_BJAuctionCompany_CustLedgerEntry_0972_InterView]
-    ) sbq
-
-
-
-    ');
-
-  CREATE TABLE "stg"."BC_BJAuctionCompany_CustLedgerEntry_0972_Incr"
-    WITH(
-      DISTRIBUTION = ROUND_ROBIN,
-      CLUSTERED COLUMNSTORE INDEX
-      )
-    AS (SELECT * FROM stg.BC_BJAuctionCompany_CustLedgerEntry_0972_Incr_temp_view)
-
-   
-  
-  if object_id ('"stg"."BC_BJAuctionCompany_CustLedgerEntry_0972_Incr_temp_view"','V') is not null
-    begin
-    drop view "stg"."BC_BJAuctionCompany_CustLedgerEntry_0972_Incr_temp_view"
-    end
-
+            insert into "BJAC_DW_PROD"."stg"."BC_BJAuctionCompany_CustLedgerEntry_0972_Incr" (
+                  "EntryNo", "PostingDate", "DueDate", "Pmt_DiscountDate", "ClosedatDate", "DocumentDate", "Pmt_Disc_ToleranceDate", "DocumentType", "Applies_toDoc_Type", "Open_S", "Positive", "ClosedbyEntryNo", "systemCreatedAt", "systemModifiedAt", "ApplyingEntry", "Reversed", "ReversedbyEntryNo", "ReversedEntryNo", "Prepayment", "ExportedtoPaymentFile", "Bal_AccountType", "TransactionNo", "CalculateInterest", "ClosingInterestCalculated", "LastIssuedReminderLevel", "AcceptedPmt_Disc_Tolerance", "SalesLCY", "ProfitLCY", "Inv_DiscountLCY", "OriginalPmt_Disc_Possible", "Pmt_Disc_GivenLCY", "ClosedbyAmount", "DimensionSetID", "ElectronicDocumentSent", "No_ofE_DocumentsSent", "ElectronicDocumentStatus", "AcceptedPaymentTolerance", "Pmt_ToleranceLCY", "AmounttoApply", "ClosedbyAmountLCY", "ClosedbyCurrencyAmount", "AdjustedCurrencyFactor", "OriginalCurrencyFactor", "RemainingPmt_Disc_Possible", "Max_PaymentTolerance", "timestamp", "OriginalDocumentXML", "OriginalString", "DigitalStampSAT", "SignedDocumentXML", "DigitalStampPAC", "CustomerNo", "DocumentNo", "Description", "CurrencyCode", "Sell_toCustomerNo", "CustomerPostingGroup", "QRCode", "Date_TimeFirstReq_Sent", "CustomerName", "systemId", "PaymentReference", "systemCreatedBy", "systemModifiedBy", "Date_TimeSent", "Date_TimeCanceled", "ErrorCode", "ErrorDescription", "PACWebServiceName", "FiscalInvoiceNumberPAC", "MessagetoRecipient", "DirectDebitMandateID", "TaxExemptionNo", "STETransactionID", "CertificateSerialNo", "Date_TimeStamped", "No_Series", "ClosedbyCurrencyCode", "ICPartnerCode", "PaymentMethodCode", "Applies_toExt_Doc_No", "RecipientBankAccount", "Applies_toDoc_No", "Applies_toID", "JournalBatchName", "ReasonCode", "Bal_AccountNo", "ExternalDocumentNo", "GlobalDimension1Code", "GlobalDimension2Code", "SalespersonCode", "UserID", "SourceCode", "OnHold", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
+                  )
+            select "EntryNo", "PostingDate", "DueDate", "Pmt_DiscountDate", "ClosedatDate", "DocumentDate", "Pmt_Disc_ToleranceDate", "DocumentType", "Applies_toDoc_Type", "Open_S", "Positive", "ClosedbyEntryNo", "systemCreatedAt", "systemModifiedAt", "ApplyingEntry", "Reversed", "ReversedbyEntryNo", "ReversedEntryNo", "Prepayment", "ExportedtoPaymentFile", "Bal_AccountType", "TransactionNo", "CalculateInterest", "ClosingInterestCalculated", "LastIssuedReminderLevel", "AcceptedPmt_Disc_Tolerance", "SalesLCY", "ProfitLCY", "Inv_DiscountLCY", "OriginalPmt_Disc_Possible", "Pmt_Disc_GivenLCY", "ClosedbyAmount", "DimensionSetID", "ElectronicDocumentSent", "No_ofE_DocumentsSent", "ElectronicDocumentStatus", "AcceptedPaymentTolerance", "Pmt_ToleranceLCY", "AmounttoApply", "ClosedbyAmountLCY", "ClosedbyCurrencyAmount", "AdjustedCurrencyFactor", "OriginalCurrencyFactor", "RemainingPmt_Disc_Possible", "Max_PaymentTolerance", "timestamp", "OriginalDocumentXML", "OriginalString", "DigitalStampSAT", "SignedDocumentXML", "DigitalStampPAC", "CustomerNo", "DocumentNo", "Description", "CurrencyCode", "Sell_toCustomerNo", "CustomerPostingGroup", "QRCode", "Date_TimeFirstReq_Sent", "CustomerName", "systemId", "PaymentReference", "systemCreatedBy", "systemModifiedBy", "Date_TimeSent", "Date_TimeCanceled", "ErrorCode", "ErrorDescription", "PACWebServiceName", "FiscalInvoiceNumberPAC", "MessagetoRecipient", "DirectDebitMandateID", "TaxExemptionNo", "STETransactionID", "CertificateSerialNo", "Date_TimeStamped", "No_Series", "ClosedbyCurrencyCode", "ICPartnerCode", "PaymentMethodCode", "Applies_toExt_Doc_No", "RecipientBankAccount", "Applies_toDoc_No", "Applies_toID", "JournalBatchName", "ReasonCode", "Bal_AccountNo", "ExternalDocumentNo", "GlobalDimension1Code", "GlobalDimension2Code", "SalespersonCode", "UserID", "SourceCode", "OnHold", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
+            from "BJAC_DW_PROD"."stg"."#BC_BJAuctionCompany_CustLedgerEntry_0972_Incr__dbt_tmp" 
+            where dbt_change_type = ''insert'' ; 
+           COMMIT TRANSACTION;
+           ');
 
 
   

@@ -17,7 +17,7 @@ Select
 	[ReversedbyEntryNo_] as [ReversedbyEntryNo],
 	[DocumentType] ,
 	[Applies-toDoc_Type] as [Applies_toDoc_Type],
-	[Open] ,
+	[Open] as [Open_S] ,
 	[Positive] ,
 	[ClosedbyEntryNo_] as [ClosedbyEntryNo],
 	[$systemCreatedAt] as [systemCreatedAt],

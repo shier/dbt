@@ -57,7 +57,7 @@ Select
 	[UnitofMeasure] ,
 	[ShortcutDimension1Code] ,
 	[ShortcutDimension2Code] ,
-	[LineNo] as [LineNo_] ,
+	[LineNo_S] as [LineNo_] ,
 	[Type] ,
 	[LineDiscountCalculation] ,
 	[OrderLineNo] as [OrderLineNo_] ,

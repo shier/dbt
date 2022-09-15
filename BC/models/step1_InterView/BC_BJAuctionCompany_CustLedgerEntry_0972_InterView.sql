@@ -9,7 +9,7 @@ Select
 	[Pmt_Disc_ToleranceDate] ,
 	[DocumentType] ,
 	[Applies-toDoc_Type] as [Applies_toDoc_Type],
-	[Open] ,
+	[Open] as [Open_S],
 	[Positive] ,
 	[ClosedbyEntryNo_] as [ClosedbyEntryNo],
 	[$systemCreatedAt] as [systemCreatedAt],

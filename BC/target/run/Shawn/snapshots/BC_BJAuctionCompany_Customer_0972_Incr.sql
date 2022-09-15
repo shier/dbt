@@ -1,58 +1,21 @@
 
-      
-  
-  if object_id ('"stg"."BC_BJAuctionCompany_Customer_0972_Incr_temp_view"','V') is not null
-    begin
-    drop view "stg"."BC_BJAuctionCompany_Customer_0972_Incr_temp_view"
-    end
+      EXEC('
+           BEGIN TRANSACTION
+           update "BJAC_DW_PROD"."stg"."BC_BJAuctionCompany_Customer_0972_Incr"
+          set dbt_valid_to = TMP.dbt_valid_to
+          from "BJAC_DW_PROD"."stg"."#BC_BJAuctionCompany_Customer_0972_Incr__dbt_tmp" TMP
+          where "BJAC_DW_PROD"."stg"."BC_BJAuctionCompany_Customer_0972_Incr".dbt_scd_id = TMP.dbt_scd_id
+            and TMP.dbt_change_type in (''update'', ''delete'')
+            and "BJAC_DW_PROD"."stg"."BC_BJAuctionCompany_Customer_0972_Incr".dbt_valid_to is null;
 
-
-   
-    
-  if object_id ('"stg"."BC_BJAuctionCompany_Customer_0972_Incr"','U') is not null
-    begin
-    drop table "stg"."BC_BJAuctionCompany_Customer_0972_Incr"
-    end
-
-
-   EXEC('create view stg.BC_BJAuctionCompany_Customer_0972_Incr_temp_view as
-    
-
-    select *,
-        
-    CONVERT(VARCHAR(32), HashBytes(''MD5'', 
-        coalesce(cast(No as varchar(max)), '''')  + ''|'' + 
-    
-        coalesce(cast(CONVERT(DATETIME2, ''2022-09-15 00:31:47.085217'') as varchar(max)), '''') 
-    ), 2)
- as dbt_scd_id,
-        CONVERT(DATETIME2, ''2022-09-15 00:31:47.085217'') as dbt_updated_at,
-        CONVERT(DATETIME2, ''2022-09-15 00:31:47.085217'') as dbt_valid_from,
-        nullif(CONVERT(DATETIME2, ''2022-09-15 00:31:47.085217''), CONVERT(DATETIME2, ''2022-09-15 00:31:47.085217'')) as dbt_valid_to
-    from (
-        
-	
-	SELECT * from stg.[BC_BJAuctionCompany_Customer_0972_InterView]
-    ) sbq
-
-
-
-    ');
-
-  CREATE TABLE "stg"."BC_BJAuctionCompany_Customer_0972_Incr"
-    WITH(
-      DISTRIBUTION = ROUND_ROBIN,
-      CLUSTERED COLUMNSTORE INDEX
-      )
-    AS (SELECT * FROM stg.BC_BJAuctionCompany_Customer_0972_Incr_temp_view)
-
-   
-  
-  if object_id ('"stg"."BC_BJAuctionCompany_Customer_0972_Incr_temp_view"','V') is not null
-    begin
-    drop view "stg"."BC_BJAuctionCompany_Customer_0972_Incr_temp_view"
-    end
-
+            insert into "BJAC_DW_PROD"."stg"."BC_BJAuctionCompany_Customer_0972_Incr" (
+                  "No", "systemId", "EORINumber", "MobilePhoneNo", "systemCreatedBy", "systemModifiedBy", "TaxAreaID", "ContactID", "ContactGraphId", "CFDIPurpose", "CFDIRelation", "Ship_toCode", "Image", "Id", "CurrencyId", "PaymentTermsId", "ShipmentMethodId", "PaymentMethodId", "TaxExemptionNo", "RFCNo", "CURPNo", "StateInscription", "DocumentSendingProfile", "GLN", "ResponsibilityCenter", "ShippingTime", "ShippingAgentServiceCode", "ServiceZoneCode", "BaseCalendarCode", "UPSZone", "TaxAreaCode", "VATBus_PostingGroup", "ICPartnerCode", "PreferredBankAccountCode", "CashFlowPaymentTermsCode", "PrimaryContactNo", "PostCode", "County", "E_Mail", "HomePage", "ReminderTermsCode", "No_Series", "PaymentMethodCode", "LocationCode", "FaxNo", "TelexAnswerBack", "VATRegistrationNo", "Gen_Bus_PostingGroup", "PlaceofExport", "InvoiceDisc_Code", "CustomerDisc_Group", "Country_RegionCode", "CollectionMethod", "Bill_toCustomerNo", "LanguageCode", "PaymentTermsCode", "Fin_ChargeTermsCode", "SalespersonCode", "ShipmentMethodCode", "ShippingAgentCode", "GlobalDimension1Code", "GlobalDimension2Code", "ChainName", "CustomerPostingGroup", "CurrencyCode", "CustomerPriceGroup", "City", "Contact", "PhoneNo", "TelexNo", "OurAccountNo", "TerritoryCode", "Name", "SearchName", "Name2", "Address", "Address2", "timestamp", "Picture", "BudgetedAmount", "CreditLimitLCY", "Amount", "Prepayment", "StatisticsGroup", "Blocked", "ContactType", "ValidateEUVatReg_No", "PrivacyBlocked", "DisableSearchbyName", "UseGLNinElectronicDocument", "PriceCalculationMethod", "AllowLineDisc", "CopySell_toAddr_toQteFrom", "BankCommunication", "CheckDateFormat", "CheckDateSeparator", "TaxIdentificationType", "CombineShipments", "TaxLiable", "Reserve", "BlockPaymentTolerance", "PartnerType", "ShippingAdvice", "InvoiceCopies", "LastStatementNo", "PrintStatements", "Priority", "ApplicationMethod", "PricesIncludingVAT", "LastDateModified", "LastModifiedDateTime", "systemCreatedAt", "systemModifiedAt", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
+                  )
+            select "No", "systemId", "EORINumber", "MobilePhoneNo", "systemCreatedBy", "systemModifiedBy", "TaxAreaID", "ContactID", "ContactGraphId", "CFDIPurpose", "CFDIRelation", "Ship_toCode", "Image", "Id", "CurrencyId", "PaymentTermsId", "ShipmentMethodId", "PaymentMethodId", "TaxExemptionNo", "RFCNo", "CURPNo", "StateInscription", "DocumentSendingProfile", "GLN", "ResponsibilityCenter", "ShippingTime", "ShippingAgentServiceCode", "ServiceZoneCode", "BaseCalendarCode", "UPSZone", "TaxAreaCode", "VATBus_PostingGroup", "ICPartnerCode", "PreferredBankAccountCode", "CashFlowPaymentTermsCode", "PrimaryContactNo", "PostCode", "County", "E_Mail", "HomePage", "ReminderTermsCode", "No_Series", "PaymentMethodCode", "LocationCode", "FaxNo", "TelexAnswerBack", "VATRegistrationNo", "Gen_Bus_PostingGroup", "PlaceofExport", "InvoiceDisc_Code", "CustomerDisc_Group", "Country_RegionCode", "CollectionMethod", "Bill_toCustomerNo", "LanguageCode", "PaymentTermsCode", "Fin_ChargeTermsCode", "SalespersonCode", "ShipmentMethodCode", "ShippingAgentCode", "GlobalDimension1Code", "GlobalDimension2Code", "ChainName", "CustomerPostingGroup", "CurrencyCode", "CustomerPriceGroup", "City", "Contact", "PhoneNo", "TelexNo", "OurAccountNo", "TerritoryCode", "Name", "SearchName", "Name2", "Address", "Address2", "timestamp", "Picture", "BudgetedAmount", "CreditLimitLCY", "Amount", "Prepayment", "StatisticsGroup", "Blocked", "ContactType", "ValidateEUVatReg_No", "PrivacyBlocked", "DisableSearchbyName", "UseGLNinElectronicDocument", "PriceCalculationMethod", "AllowLineDisc", "CopySell_toAddr_toQteFrom", "BankCommunication", "CheckDateFormat", "CheckDateSeparator", "TaxIdentificationType", "CombineShipments", "TaxLiable", "Reserve", "BlockPaymentTolerance", "PartnerType", "ShippingAdvice", "InvoiceCopies", "LastStatementNo", "PrintStatements", "Priority", "ApplicationMethod", "PricesIncludingVAT", "LastDateModified", "LastModifiedDateTime", "systemCreatedAt", "systemModifiedAt", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
+            from "BJAC_DW_PROD"."stg"."#BC_BJAuctionCompany_Customer_0972_Incr__dbt_tmp" 
+            where dbt_change_type = ''insert'' ; 
+           COMMIT TRANSACTION;
+           ');
 
 
   

@@ -1,58 +1,21 @@
 
-      
-  
-  if object_id ('"stg"."BC_BJAuctionCompany_PurchInvLine_0972_Incr_temp_view"','V') is not null
-    begin
-    drop view "stg"."BC_BJAuctionCompany_PurchInvLine_0972_Incr_temp_view"
-    end
+      EXEC('
+           BEGIN TRANSACTION
+           update "BJAC_DW_PROD"."stg"."BC_BJAuctionCompany_PurchInvLine_0972_Incr"
+          set dbt_valid_to = TMP.dbt_valid_to
+          from "BJAC_DW_PROD"."stg"."#BC_BJAuctionCompany_PurchInvLine_0972_Incr__dbt_tmp" TMP
+          where "BJAC_DW_PROD"."stg"."BC_BJAuctionCompany_PurchInvLine_0972_Incr".dbt_scd_id = TMP.dbt_scd_id
+            and TMP.dbt_change_type in (''update'', ''delete'')
+            and "BJAC_DW_PROD"."stg"."BC_BJAuctionCompany_PurchInvLine_0972_Incr".dbt_valid_to is null;
 
-
-   
-    
-  if object_id ('"stg"."BC_BJAuctionCompany_PurchInvLine_0972_Incr"','U') is not null
-    begin
-    drop table "stg"."BC_BJAuctionCompany_PurchInvLine_0972_Incr"
-    end
-
-
-   EXEC('create view stg.BC_BJAuctionCompany_PurchInvLine_0972_Incr_temp_view as
-    
-
-    select *,
-        
-    CONVERT(VARCHAR(32), HashBytes(''MD5'', 
-        coalesce(cast(systemId as varchar(max)), '''')  + ''|'' + 
-    
-        coalesce(cast(CONVERT(DATETIME2, ''2022-09-15 00:32:27.117072'') as varchar(max)), '''') 
-    ), 2)
- as dbt_scd_id,
-        CONVERT(DATETIME2, ''2022-09-15 00:32:27.117072'') as dbt_updated_at,
-        CONVERT(DATETIME2, ''2022-09-15 00:32:27.117072'') as dbt_valid_from,
-        nullif(CONVERT(DATETIME2, ''2022-09-15 00:32:27.117072''), CONVERT(DATETIME2, ''2022-09-15 00:32:27.117072'')) as dbt_valid_to
-    from (
-        
-	
-	SELECT * from stg.[BC_BJAuctionCompany_PurchInvLine_0972_InterView]
-    ) sbq
-
-
-
-    ');
-
-  CREATE TABLE "stg"."BC_BJAuctionCompany_PurchInvLine_0972_Incr"
-    WITH(
-      DISTRIBUTION = ROUND_ROBIN,
-      CLUSTERED COLUMNSTORE INDEX
-      )
-    AS (SELECT * FROM stg.BC_BJAuctionCompany_PurchInvLine_0972_Incr_temp_view)
-
-   
-  
-  if object_id ('"stg"."BC_BJAuctionCompany_PurchInvLine_0972_Incr_temp_view"','V') is not null
-    begin
-    drop view "stg"."BC_BJAuctionCompany_PurchInvLine_0972_Incr_temp_view"
-    end
-
+            insert into "BJAC_DW_PROD"."stg"."BC_BJAuctionCompany_PurchInvLine_0972_Incr" (
+                  "systemId", "timestamp", "Quantity", "DirectUnitCost", "UnitCostLCY", "VAT", "LineDiscount", "JobTotalPriceLCY", "JobLineAmountLCY", "JobLineDisc_AmountLCY", "JobCurrencyFactor", "Pmt_DiscountAmount", "JobUnitPrice", "JobTotalPrice", "JobLineAmount", "JobLineDiscountAmount", "JobLineDiscount", "JobUnitPriceLCY", "LineAmount", "VATDifference", "Qty_perUnitofMeasure", "QuantityBase", "SalvageValue", "OverheadRate", "UnitsperParcel", "UnitVolume", "IndirectCost", "Inv_DiscountAmount", "VATBaseAmount", "UnitCost", "LineDiscountAmount", "Amount", "AmountIncludingVAT", "UnitPriceLCY", "GrossWeight", "NetWeight", "LineNo_S", "Type", "AllowInvoiceDisc", "Appl__toItemEntry", "VATCalculationType", "JobLineType", "OrderLineNo", "ItemReferenceType", "PriceCalculationMethod", "IRS1099Liable", "Prod_OrderLineNo", "RoutingReferenceNo", "ReceiptLineNo", "PrepaymentLine", "DimensionSetID", "FAPostingType", "Depr_untilFAPostingDate", "Depr_AcquisitionCost", "UseDuplicationList", "Cross_ReferenceType", "Nonstock", "AttachedtoLineNo", "TaxLiable", "UseTax", "BlanketOrderLineNo", "System_CreatedEntry", "ICPartnerRef_Type", "ExpectedReceiptDate", "FAPostingDate", "PostingDate", "systemCreatedAt", "systemModifiedAt", "JobCurrencyCode", "ProvincialTaxAreaCode", "DeferralCode", "OrderNo", "ICCross_ReferenceNo", "OperationNo", "WorkCenterNo", "ReceiptNo", "Pay_toVendorNo", "ICPartnerCode", "JobTaskNo", "Cross_ReferenceTypeNo", "ItemCategoryCode", "PurchasingCode", "ProductGroupCode", "ReturnReasonCode", "RoutingNo", "InsuranceNo", "BudgetedFANo", "DuplicateinDepreciationBook", "ResponsibilityCenter", "Cross_ReferenceNo", "UnitofMeasureCrossRef", "Prod_OrderNo", "VariantCode", "BinCode", "UnitofMeasureCode", "DepreciationBookCode", "MaintenanceCode", "TaxGroupCode", "VATBus_PostingGroup", "VATProd_PostingGroup", "BlanketOrderNo", "VATIdentifier", "ICPartnerReference", "TransactionType", "TransportMethod", "EntryPoint", "Area", "TransactionSpecification", "TaxAreaCode", "ShortcutDimension1Code", "ShortcutDimension2Code", "JobNo", "VendorItemNo", "Gen_Bus_PostingGroup", "Gen_Prod_PostingGroup", "No", "LocationCode", "PostingGroup", "Description", "Description2", "UnitofMeasure", "DocumentNo", "Buy_fromVendorNo", "ItemReferenceNo", "ItemReferenceUnitofMeasure", "ItemReferenceTypeNo", "systemCreatedBy", "systemModifiedBy", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
+                  )
+            select "systemId", "timestamp", "Quantity", "DirectUnitCost", "UnitCostLCY", "VAT", "LineDiscount", "JobTotalPriceLCY", "JobLineAmountLCY", "JobLineDisc_AmountLCY", "JobCurrencyFactor", "Pmt_DiscountAmount", "JobUnitPrice", "JobTotalPrice", "JobLineAmount", "JobLineDiscountAmount", "JobLineDiscount", "JobUnitPriceLCY", "LineAmount", "VATDifference", "Qty_perUnitofMeasure", "QuantityBase", "SalvageValue", "OverheadRate", "UnitsperParcel", "UnitVolume", "IndirectCost", "Inv_DiscountAmount", "VATBaseAmount", "UnitCost", "LineDiscountAmount", "Amount", "AmountIncludingVAT", "UnitPriceLCY", "GrossWeight", "NetWeight", "LineNo_S", "Type", "AllowInvoiceDisc", "Appl__toItemEntry", "VATCalculationType", "JobLineType", "OrderLineNo", "ItemReferenceType", "PriceCalculationMethod", "IRS1099Liable", "Prod_OrderLineNo", "RoutingReferenceNo", "ReceiptLineNo", "PrepaymentLine", "DimensionSetID", "FAPostingType", "Depr_untilFAPostingDate", "Depr_AcquisitionCost", "UseDuplicationList", "Cross_ReferenceType", "Nonstock", "AttachedtoLineNo", "TaxLiable", "UseTax", "BlanketOrderLineNo", "System_CreatedEntry", "ICPartnerRef_Type", "ExpectedReceiptDate", "FAPostingDate", "PostingDate", "systemCreatedAt", "systemModifiedAt", "JobCurrencyCode", "ProvincialTaxAreaCode", "DeferralCode", "OrderNo", "ICCross_ReferenceNo", "OperationNo", "WorkCenterNo", "ReceiptNo", "Pay_toVendorNo", "ICPartnerCode", "JobTaskNo", "Cross_ReferenceTypeNo", "ItemCategoryCode", "PurchasingCode", "ProductGroupCode", "ReturnReasonCode", "RoutingNo", "InsuranceNo", "BudgetedFANo", "DuplicateinDepreciationBook", "ResponsibilityCenter", "Cross_ReferenceNo", "UnitofMeasureCrossRef", "Prod_OrderNo", "VariantCode", "BinCode", "UnitofMeasureCode", "DepreciationBookCode", "MaintenanceCode", "TaxGroupCode", "VATBus_PostingGroup", "VATProd_PostingGroup", "BlanketOrderNo", "VATIdentifier", "ICPartnerReference", "TransactionType", "TransportMethod", "EntryPoint", "Area", "TransactionSpecification", "TaxAreaCode", "ShortcutDimension1Code", "ShortcutDimension2Code", "JobNo", "VendorItemNo", "Gen_Bus_PostingGroup", "Gen_Prod_PostingGroup", "No", "LocationCode", "PostingGroup", "Description", "Description2", "UnitofMeasure", "DocumentNo", "Buy_fromVendorNo", "ItemReferenceNo", "ItemReferenceUnitofMeasure", "ItemReferenceTypeNo", "systemCreatedBy", "systemModifiedBy", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
+            from "BJAC_DW_PROD"."stg"."#BC_BJAuctionCompany_PurchInvLine_0972_Incr__dbt_tmp" 
+            where dbt_change_type = ''insert'' ; 
+           COMMIT TRANSACTION;
+           ');
 
 
   

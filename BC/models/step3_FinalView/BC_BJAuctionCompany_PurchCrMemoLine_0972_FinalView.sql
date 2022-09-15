@@ -59,7 +59,7 @@ Select
 	[UnitofMeasure] ,
 	[ShortcutDimension1Code] ,
 	[ShortcutDimension2Code] ,
-	[LineNo] as [LineNo_] ,
+	[LineNo_S] as [LineNo_] ,
 	[Type] ,
 	[AllowInvoiceDisc] as [AllowInvoiceDisc_] ,
 	[Appl__toItemEntry] as [Appl_-toItemEntry] ,

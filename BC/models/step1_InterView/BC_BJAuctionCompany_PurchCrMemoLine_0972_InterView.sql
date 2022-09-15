@@ -59,7 +59,7 @@ Select
 	cast([UnitofMeasure] as nvarchar(4000)) [UnitofMeasure],
 	cast([ShortcutDimension1Code] as nvarchar(4000)) [ShortcutDimension1Code],
 	cast([ShortcutDimension2Code] as nvarchar(4000)) [ShortcutDimension2Code],
-	[LineNo_] as [LineNo],
+	[LineNo_] as [LineNo_S],
 	[Type] ,
 	[AllowInvoiceDisc_] as [AllowInvoiceDisc],
 	[Appl_-toItemEntry] as [Appl__toItemEntry],

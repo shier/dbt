@@ -1,58 +1,21 @@
 
-      
-  
-  if object_id ('"stg"."BC_BJAuctionCompany_PurchInvHeader_8d9d_Incr_temp_view"','V') is not null
-    begin
-    drop view "stg"."BC_BJAuctionCompany_PurchInvHeader_8d9d_Incr_temp_view"
-    end
+      EXEC('
+           BEGIN TRANSACTION
+           update "BJAC_DW_PROD"."stg"."BC_BJAuctionCompany_PurchInvHeader_8d9d_Incr"
+          set dbt_valid_to = TMP.dbt_valid_to
+          from "BJAC_DW_PROD"."stg"."#BC_BJAuctionCompany_PurchInvHeader_8d9d_Incr__dbt_tmp" TMP
+          where "BJAC_DW_PROD"."stg"."BC_BJAuctionCompany_PurchInvHeader_8d9d_Incr".dbt_scd_id = TMP.dbt_scd_id
+            and TMP.dbt_change_type in (''update'', ''delete'')
+            and "BJAC_DW_PROD"."stg"."BC_BJAuctionCompany_PurchInvHeader_8d9d_Incr".dbt_valid_to is null;
 
-
-   
-    
-  if object_id ('"stg"."BC_BJAuctionCompany_PurchInvHeader_8d9d_Incr"','U') is not null
-    begin
-    drop table "stg"."BC_BJAuctionCompany_PurchInvHeader_8d9d_Incr"
-    end
-
-
-   EXEC('create view stg.BC_BJAuctionCompany_PurchInvHeader_8d9d_Incr_temp_view as
-    
-
-    select *,
-        
-    CONVERT(VARCHAR(32), HashBytes(''MD5'', 
-        coalesce(cast(No as varchar(max)), '''')  + ''|'' + 
-    
-        coalesce(cast(CONVERT(DATETIME2, ''2022-09-15 00:32:20.476297'') as varchar(max)), '''') 
-    ), 2)
- as dbt_scd_id,
-        CONVERT(DATETIME2, ''2022-09-15 00:32:20.476297'') as dbt_updated_at,
-        CONVERT(DATETIME2, ''2022-09-15 00:32:20.476297'') as dbt_valid_from,
-        nullif(CONVERT(DATETIME2, ''2022-09-15 00:32:20.476297''), CONVERT(DATETIME2, ''2022-09-15 00:32:20.476297'')) as dbt_valid_to
-    from (
-        
-	
-	SELECT * from stg.[BC_BJAuctionCompany_PurchInvHeader_8d9d_InterView]
-    ) sbq
-
-
-
-    ');
-
-  CREATE TABLE "stg"."BC_BJAuctionCompany_PurchInvHeader_8d9d_Incr"
-    WITH(
-      DISTRIBUTION = ROUND_ROBIN,
-      CLUSTERED COLUMNSTORE INDEX
-      )
-    AS (SELECT * FROM stg.BC_BJAuctionCompany_PurchInvHeader_8d9d_Incr_temp_view)
-
-   
-  
-  if object_id ('"stg"."BC_BJAuctionCompany_PurchInvHeader_8d9d_Incr_temp_view"','V') is not null
-    begin
-    drop view "stg"."BC_BJAuctionCompany_PurchInvHeader_8d9d_Incr_temp_view"
-    end
-
+            insert into "BJAC_DW_PROD"."stg"."BC_BJAuctionCompany_PurchInvHeader_8d9d_Incr" (
+                  "No", "WCI_AuctionDocumentNo", "WCI_LotNo", "WCI_AuctionID", "WCI_AssignedUserIDBJ", "timestamp", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
+                  )
+            select "No", "WCI_AuctionDocumentNo", "WCI_LotNo", "WCI_AuctionID", "WCI_AssignedUserIDBJ", "timestamp", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
+            from "BJAC_DW_PROD"."stg"."#BC_BJAuctionCompany_PurchInvHeader_8d9d_Incr__dbt_tmp" 
+            where dbt_change_type = ''insert'' ; 
+           COMMIT TRANSACTION;
+           ');
 
 
   

@@ -58,7 +58,7 @@ Select
 	cast([PostingGroup] as nvarchar(4000)) [PostingGroup],
 	cast([Description] as nvarchar(4000)) [Description],
 	cast([Description2] as nvarchar(4000)) [Description2],
-	[LineNo_] as [LineNo],
+	[LineNo_] as [LineNo_S],
 	[Appl_-fromItemEntry] as [Appl__fromItemEntry],
 	[AllowLineDisc_] as [AllowLineDisc],
 	[LineDiscountCalculation] ,

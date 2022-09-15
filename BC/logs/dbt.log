@@ -1,901 +1,480 @@
 
 
-============================== 2022-09-15 00:31:22.939297 | 701a99d6-7514-403e-ba00-af8db84ed424 ==============================
-00:31:22.939297 [info ] [MainThread]: Running with dbt=1.0.0
-00:31:22.944099 [debug] [MainThread]: running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=None, defer=None, event_buffer_size=None, exclude=None, fail_fast=None, full_refresh=False, log_cache_events=False, log_format=None, partial_parse=None, printer_width=None, profile=None, profiles_dir='/home/azureuser/.dbt', project_dir='/home/azureuser/shawn_dbt/BC', record_timing_info=None, rpc_method='run', select=['step1_InterView'], selector_name=None, send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, threads=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='run', write_json=None)
-00:31:22.944460 [debug] [MainThread]: Tracking: tracking
-00:31:22.944859 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8208eae0a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8208eae100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8208eae160>]}
-00:31:22.977548 [info ] [MainThread]: Partial parse save file not found. Starting full parse.
-00:31:22.983548 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '701a99d6-7514-403e-ba00-af8db84ed424', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8208ec1520>]}
-00:31:23.014189 [debug] [MainThread]: Parsing macros/generate_schema_name.sql
-00:31:23.015810 [debug] [MainThread]: Parsing macros/materializations/tests/test.sql
-00:31:23.021432 [debug] [MainThread]: Parsing macros/materializations/seeds/str_replace.sql
-00:31:23.022427 [debug] [MainThread]: Parsing macros/materializations/seeds/helpers.sql
-00:31:23.027991 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot_merge.sql
-00:31:23.029556 [debug] [MainThread]: Parsing macros/materializations/models/table/create_table_as.sql
-00:31:23.032338 [debug] [MainThread]: Parsing macros/materializations/models/view/create_view_as.sql
-00:31:23.033089 [debug] [MainThread]: Parsing macros/adapters/metadata.sql
-00:31:23.035112 [debug] [MainThread]: Parsing macros/adapters/columns.sql
-00:31:23.039726 [debug] [MainThread]: Parsing macros/adapters/relation.sql
-00:31:23.042766 [debug] [MainThread]: Parsing macros/adapters/indexes.sql
-00:31:23.048932 [debug] [MainThread]: Parsing macros/adapters/schema.sql
-00:31:23.049995 [debug] [MainThread]: Parsing macros/adapters.sql
-00:31:23.050259 [debug] [MainThread]: Parsing macros/materializations/tests/test.sql
-00:31:23.055222 [debug] [MainThread]: Parsing macros/materializations/tests/helpers.sql
-00:31:23.056490 [debug] [MainThread]: Parsing macros/materializations/seeds/helpers.sql
-00:31:23.063741 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot.sql
-00:31:23.065253 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot_merge.sql
-00:31:23.065969 [debug] [MainThread]: Parsing macros/materializations/snapshots/strategies.sql
-00:31:23.067439 [debug] [MainThread]: Parsing macros/materializations/models/incremental/merge.sql
-00:31:23.069365 [debug] [MainThread]: Parsing macros/materializations/models/table/create_table_as.sql
-00:31:23.071976 [debug] [MainThread]: Parsing macros/materializations/models/view/create_view_as.sql
-00:31:23.073438 [debug] [MainThread]: Parsing macros/adapters/freshness.sql
-00:31:23.073913 [debug] [MainThread]: Parsing macros/adapters/persist_docs.sql
-00:31:23.074141 [debug] [MainThread]: Parsing macros/adapters/metadata.sql
-00:31:23.078804 [debug] [MainThread]: Parsing macros/adapters/columns.sql
-00:31:23.083385 [debug] [MainThread]: Parsing macros/adapters/relation.sql
-00:31:23.088741 [debug] [MainThread]: Parsing macros/adapters/indexes.sql
-00:31:23.097231 [debug] [MainThread]: Parsing macros/adapters/schema.sql
-00:31:23.100472 [debug] [MainThread]: Parsing macros/materializations/hooks.sql
-00:31:23.105238 [debug] [MainThread]: Parsing macros/materializations/configs.sql
-00:31:23.107690 [debug] [MainThread]: Parsing macros/materializations/tests/where_subquery.sql
-00:31:23.109583 [debug] [MainThread]: Parsing macros/materializations/tests/test.sql
-00:31:23.114187 [debug] [MainThread]: Parsing macros/materializations/tests/helpers.sql
-00:31:23.116068 [debug] [MainThread]: Parsing macros/materializations/seeds/seed.sql
-00:31:23.177983 [debug] [MainThread]: Parsing macros/materializations/seeds/helpers.sql
-00:31:23.194819 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot.sql
-00:31:23.206841 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot_merge.sql
-00:31:23.208805 [debug] [MainThread]: Parsing macros/materializations/snapshots/strategies.sql
-00:31:23.225805 [debug] [MainThread]: Parsing macros/materializations/snapshots/helpers.sql
-00:31:23.237197 [debug] [MainThread]: Parsing macros/materializations/models/incremental/column_helpers.sql
-00:31:23.241948 [debug] [MainThread]: Parsing macros/materializations/models/incremental/merge.sql
-00:31:23.253631 [debug] [MainThread]: Parsing macros/materializations/models/incremental/incremental.sql
-00:31:23.263966 [debug] [MainThread]: Parsing macros/materializations/models/incremental/is_incremental.sql
-00:31:23.265733 [debug] [MainThread]: Parsing macros/materializations/models/incremental/on_schema_change.sql
-00:31:23.281087 [debug] [MainThread]: Parsing macros/materializations/models/table/table.sql
-00:31:23.288543 [debug] [MainThread]: Parsing macros/materializations/models/table/create_table_as.sql
-00:31:23.291620 [debug] [MainThread]: Parsing macros/materializations/models/view/create_view_as.sql
-00:31:23.294062 [debug] [MainThread]: Parsing macros/materializations/models/view/create_or_replace_view.sql
-00:31:23.296868 [debug] [MainThread]: Parsing macros/materializations/models/view/view.sql
-00:31:23.303969 [debug] [MainThread]: Parsing macros/materializations/models/view/helpers.sql
-00:31:23.305391 [debug] [MainThread]: Parsing macros/generic_test_sql/unique.sql
-00:31:23.306179 [debug] [MainThread]: Parsing macros/generic_test_sql/accepted_values.sql
-00:31:23.307639 [debug] [MainThread]: Parsing macros/generic_test_sql/not_null.sql
-00:31:23.308285 [debug] [MainThread]: Parsing macros/generic_test_sql/relationships.sql
-00:31:23.309221 [debug] [MainThread]: Parsing macros/adapters/freshness.sql
-00:31:23.312174 [debug] [MainThread]: Parsing macros/adapters/persist_docs.sql
-00:31:23.316628 [debug] [MainThread]: Parsing macros/adapters/metadata.sql
-00:31:23.324039 [debug] [MainThread]: Parsing macros/adapters/columns.sql
-00:31:23.334049 [debug] [MainThread]: Parsing macros/adapters/relation.sql
-00:31:23.345023 [debug] [MainThread]: Parsing macros/adapters/indexes.sql
-00:31:23.348017 [debug] [MainThread]: Parsing macros/adapters/schema.sql
-00:31:23.350378 [debug] [MainThread]: Parsing macros/etc/datetime.sql
-00:31:23.359023 [debug] [MainThread]: Parsing macros/etc/statement.sql
-00:31:23.363705 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_database.sql
-00:31:23.365444 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_schema.sql
-00:31:23.368021 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_alias.sql
-00:31:23.369628 [debug] [MainThread]: Parsing tests/generic/builtin.sql
-00:31:23.594702 [debug] [MainThread]: 1699: static parser successfully parsed step1_InterView/BC_BJAuctionCompany_CustLedgerEntry_0972_InterView.sql
-00:31:23.605394 [debug] [MainThread]: 1699: static parser successfully parsed step3_FinalView/BC_BJAuctionCompany_SalesInvoiceLine_0972_FinalView.sql
-00:31:23.607774 [debug] [MainThread]: 1699: static parser successfully parsed step3_FinalView/BC_BJAuctionCompany_Item_0972_FinalView.sql
-00:31:23.609885 [debug] [MainThread]: 1699: static parser successfully parsed step3_FinalView/BC_BJAuctionCompany_SalesInvoiceHeader_0972_FinalView.sql
-00:31:23.612530 [debug] [MainThread]: 1699: static parser successfully parsed step3_FinalView/BC_BJAuctionCompany_PurchInvHeader_0972_FinalView.sql
-00:31:23.616425 [debug] [MainThread]: 1699: static parser successfully parsed step3_FinalView/BC_BJAuctionCompany_SalesInvoiceHeader_8d9d_FinalView.sql
-00:31:23.618446 [debug] [MainThread]: 1699: static parser successfully parsed step3_FinalView/BC_BJAuctionCompany_SalesCrMemoHeader_0972_FinalView.sql
-00:31:23.621077 [debug] [MainThread]: 1699: static parser successfully parsed step3_FinalView/BC_BJAuctionCompany_SalesCrMemoLine_0972_FinalView.sql
-00:31:23.624165 [debug] [MainThread]: 1699: static parser successfully parsed step3_FinalView/BC_BJAuctionCompany_SalesInvoiceEntityAggregate_0972_FinalView.sql
-00:31:23.626601 [debug] [MainThread]: 1699: static parser successfully parsed step3_FinalView/BC_BJAuctionCompany_DimensionSetEntry_0972_FinalView.sql
-00:31:23.628933 [debug] [MainThread]: 1699: static parser successfully parsed step3_FinalView/BC_BJAuctionCompany_PurchInvLine_0972_FinalView.sql
-00:31:23.631790 [debug] [MainThread]: 1699: static parser successfully parsed step3_FinalView/BC_BJAuctionCompany_VendorLedgerEntry_0972_FinalView.sql
-00:31:23.635216 [debug] [MainThread]: 1699: static parser successfully parsed step3_FinalView/BC_BJAuctionCompany_SalesCrMemoHeader_8d9d_FinalView.sql
-00:31:23.637198 [debug] [MainThread]: 1699: static parser successfully parsed step3_FinalView/BC_BJAuctionCompany_GLEntry_0972_FinalView.sql
-00:31:23.639931 [debug] [MainThread]: 1699: static parser successfully parsed step3_FinalView/BC_BJAuctionCompany_Vendor_0972_FinalView.sql
-00:31:23.643339 [debug] [MainThread]: 1699: static parser successfully parsed step3_FinalView/BC_BJAuctionCompany_DetailedCustLedgEntry_0972_FinalView.sql
-00:31:23.645624 [debug] [MainThread]: 1699: static parser successfully parsed step3_FinalView/BC_BJAuctionCompany_Customer_0972_FinalView.sql
-00:31:23.648805 [debug] [MainThread]: 1699: static parser successfully parsed step3_FinalView/BC_BJAuctionCompany_PurchInvHeader_8d9d_FinalView.sql
-00:31:23.650920 [debug] [MainThread]: 1699: static parser successfully parsed step3_FinalView/BC_BJAuctionCompany_PurchCrMemoLine_0972_FinalView.sql
-00:31:23.652919 [debug] [MainThread]: 1699: static parser successfully parsed step3_FinalView/BC_BJAuctionCompany_CustLedgerEntry_0972_FinalView.sql
-00:31:23.654983 [debug] [MainThread]: 1699: static parser successfully parsed step3_FinalView/BC_BJAuctionCompany_PurchCrMemoHdr_8d9d_FinalView.sql
-00:31:23.657018 [debug] [MainThread]: 1699: static parser successfully parsed step3_FinalView/BC_BJAuctionCompany_DetailedVendorLedgEntry_0972_FinalView.sql
-00:31:23.659329 [debug] [MainThread]: 1699: static parser successfully parsed step3_FinalView/BC_BJAuctionCompany_PurchCrMemoHdr_0972_FinalView.sql
-00:31:23.796918 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '701a99d6-7514-403e-ba00-af8db84ed424', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8208b3e910>]}
-00:31:23.807786 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '701a99d6-7514-403e-ba00-af8db84ed424', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8208b06040>]}
-00:31:23.808224 [info ] [MainThread]: Found 23 models, 0 tests, 22 snapshots, 0 analyses, 211 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
-00:31:23.811364 [info ] [MainThread]: 
-00:31:23.812403 [debug] [MainThread]: Acquiring new synapse connection "master"
-00:31:23.813760 [debug] [ThreadPool]: Acquiring new synapse connection "list_BJAC_DW_PROD"
-00:31:23.823003 [debug] [ThreadPool]: Opening a new connection, currently in state init
-00:31:24.193248 [debug] [ThreadPool]: On list_BJAC_DW_PROD: Close
-00:31:24.197107 [debug] [ThreadPool]: Acquiring new synapse connection "list_BJAC_DW_PROD_stg"
-00:31:24.202993 [debug] [ThreadPool]: Opening a new connection, currently in state init
-00:31:24.464959 [debug] [ThreadPool]: On list_BJAC_DW_PROD_stg: ROLLBACK
-00:31:24.465414 [debug] [ThreadPool]: On list_BJAC_DW_PROD_stg: Close
-00:31:33.278702 [debug] [MainThread]: On master: COMMIT
-00:31:33.279420 [info ] [MainThread]: Concurrency: 4 threads (target='prod')
-00:31:33.280624 [info ] [MainThread]: 
-00:31:33.285032 [debug] [Thread-1  ]: Began running node model.Shawn.BC_BJAuctionCompany_CustLedgerEntry_0972_InterView
-00:31:33.285390 [info ] [Thread-1  ]: 1 of 1 START view model stg.BC_BJAuctionCompany_CustLedgerEntry_0972_InterView.. [RUN]
-00:31:33.286409 [debug] [Thread-1  ]: Acquiring new synapse connection "model.Shawn.BC_BJAuctionCompany_CustLedgerEntry_0972_InterView"
-00:31:33.286678 [debug] [Thread-1  ]: Began compiling node model.Shawn.BC_BJAuctionCompany_CustLedgerEntry_0972_InterView
-00:31:33.286872 [debug] [Thread-1  ]: Compiling model.Shawn.BC_BJAuctionCompany_CustLedgerEntry_0972_InterView
-00:31:33.290636 [debug] [Thread-1  ]: Writing injected SQL for node "model.Shawn.BC_BJAuctionCompany_CustLedgerEntry_0972_InterView"
-00:31:33.291287 [debug] [Thread-1  ]: finished collecting timing info
-00:31:33.291617 [debug] [Thread-1  ]: Began executing node model.Shawn.BC_BJAuctionCompany_CustLedgerEntry_0972_InterView
-00:31:33.372552 [debug] [Thread-1  ]: Writing runtime SQL for node "model.Shawn.BC_BJAuctionCompany_CustLedgerEntry_0972_InterView"
-00:31:33.373514 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
-00:31:34.101043 [debug] [Thread-1  ]: On model.Shawn.BC_BJAuctionCompany_CustLedgerEntry_0972_InterView: COMMIT
-00:31:34.423861 [debug] [Thread-1  ]: finished collecting timing info
-00:31:34.424270 [debug] [Thread-1  ]: On model.Shawn.BC_BJAuctionCompany_CustLedgerEntry_0972_InterView: Close
-00:31:34.424995 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '701a99d6-7514-403e-ba00-af8db84ed424', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8202e6f6a0>]}
-00:31:34.425476 [info ] [Thread-1  ]: 1 of 1 OK created view model stg.BC_BJAuctionCompany_CustLedgerEntry_0972_InterView [[32mOK[0m in 1.14s]
-00:31:34.426676 [debug] [Thread-1  ]: Finished running node model.Shawn.BC_BJAuctionCompany_CustLedgerEntry_0972_InterView
-00:31:34.427955 [debug] [MainThread]: Acquiring new synapse connection "master"
-00:31:34.428158 [debug] [MainThread]: On master: COMMIT
-00:31:34.428448 [info ] [MainThread]: 
-00:31:34.429427 [info ] [MainThread]: Finished running 1 view model in 10.62s.
-00:31:34.430269 [debug] [MainThread]: Connection 'master' was properly closed.
-00:31:34.430464 [debug] [MainThread]: Connection 'list_BJAC_DW_PROD' was properly closed.
-00:31:34.430628 [debug] [MainThread]: Connection 'model.Shawn.BC_BJAuctionCompany_CustLedgerEntry_0972_InterView' was properly closed.
-00:31:34.438999 [info ] [MainThread]: 
-00:31:34.439657 [info ] [MainThread]: [32mCompleted successfully[0m
-00:31:34.440538 [info ] [MainThread]: 
-00:31:34.441304 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
-00:31:34.442164 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8208b3e400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8208b66430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8202fa9f40>]}
-
-
-============================== 2022-09-15 00:31:36.949575 | a5603bca-3c4b-4012-91fe-1fb5968879b9 ==============================
-00:31:36.949575 [info ] [MainThread]: Running with dbt=1.0.0
-00:31:36.955497 [debug] [MainThread]: running dbt with arguments Namespace(cls=<class 'dbt.task.snapshot.SnapshotTask'>, debug=None, defer=None, event_buffer_size=None, exclude=None, fail_fast=None, log_cache_events=False, log_format=None, partial_parse=None, printer_width=None, profile=None, profiles_dir='/home/azureuser/.dbt', project_dir='/home/azureuser/shawn_dbt/BC', record_timing_info=None, rpc_method='snapshot', select=None, selector_name=None, send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, threads=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='snapshot', write_json=None)
-00:31:36.955862 [debug] [MainThread]: Tracking: tracking
-00:31:36.956247 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe08c3600d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe08c360130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe08c360190>]}
-00:31:37.080040 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
-00:31:37.080379 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
-00:31:37.088164 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a5603bca-3c4b-4012-91fe-1fb5968879b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe08c2244c0>]}
-00:31:37.099120 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a5603bca-3c4b-4012-91fe-1fb5968879b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe08c303d30>]}
-00:31:37.099532 [info ] [MainThread]: Found 23 models, 0 tests, 22 snapshots, 0 analyses, 211 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
-00:31:37.103375 [info ] [MainThread]: 
-00:31:37.104461 [debug] [MainThread]: Acquiring new synapse connection "master"
-00:31:37.106935 [debug] [ThreadPool]: Acquiring new synapse connection "list_BJAC_DW_PROD"
-00:31:37.115841 [debug] [ThreadPool]: Opening a new connection, currently in state init
-00:31:37.427911 [debug] [ThreadPool]: On list_BJAC_DW_PROD: Close
-00:31:37.431726 [debug] [ThreadPool]: Acquiring new synapse connection "list_BJAC_DW_PROD_stg"
-00:31:37.437740 [debug] [ThreadPool]: Opening a new connection, currently in state init
-00:31:37.688153 [debug] [ThreadPool]: On list_BJAC_DW_PROD_stg: ROLLBACK
-00:31:37.688582 [debug] [ThreadPool]: On list_BJAC_DW_PROD_stg: Close
-00:31:46.641066 [debug] [MainThread]: On master: COMMIT
-00:31:46.641787 [info ] [MainThread]: Concurrency: 4 threads (target='prod')
-00:31:46.643273 [info ] [MainThread]: 
-00:31:46.648593 [debug] [Thread-1  ]: Began running node snapshot.Shawn.BC_BJAuctionCompany_CustLedgerEntry_0972_Incr
-00:31:46.648949 [info ] [Thread-1  ]: 1 of 22 START snapshot stg.BC_BJAuctionCompany_CustLedgerEntry_0972_Incr........ [RUN]
-00:31:46.649232 [debug] [Thread-2  ]: Began running node snapshot.Shawn.BC_BJAuctionCompany_Customer_0972_Incr
-00:31:46.649439 [info ] [Thread-2  ]: 2 of 22 START snapshot stg.BC_BJAuctionCompany_Customer_0972_Incr............... [RUN]
-00:31:46.649699 [debug] [Thread-3  ]: Began running node snapshot.Shawn.BC_BJAuctionCompany_DetailedCustLedgEntry_0972_Incr
-00:31:46.649889 [info ] [Thread-3  ]: 3 of 22 START snapshot stg.BC_BJAuctionCompany_DetailedCustLedgEntry_0972_Incr.. [RUN]
-00:31:46.650112 [debug] [Thread-4  ]: Began running node snapshot.Shawn.BC_BJAuctionCompany_DetailedVendorLedgEntry_0972_Incr
-00:31:46.650286 [info ] [Thread-4  ]: 4 of 22 START snapshot stg.BC_BJAuctionCompany_DetailedVendorLedgEntry_0972_Incr [RUN]
-00:31:46.651242 [debug] [Thread-1  ]: Acquiring new synapse connection "snapshot.Shawn.BC_BJAuctionCompany_CustLedgerEntry_0972_Incr"
-00:31:46.653081 [debug] [Thread-1  ]: Began compiling node snapshot.Shawn.BC_BJAuctionCompany_CustLedgerEntry_0972_Incr
-00:31:46.653334 [debug] [Thread-1  ]: Compiling snapshot.Shawn.BC_BJAuctionCompany_CustLedgerEntry_0972_Incr
-00:31:46.652480 [debug] [Thread-4  ]: Acquiring new synapse connection "snapshot.Shawn.BC_BJAuctionCompany_DetailedVendorLedgEntry_0972_Incr"
-00:31:46.656736 [debug] [Thread-4  ]: Began compiling node snapshot.Shawn.BC_BJAuctionCompany_DetailedVendorLedgEntry_0972_Incr
-00:31:46.656876 [debug] [Thread-4  ]: Compiling snapshot.Shawn.BC_BJAuctionCompany_DetailedVendorLedgEntry_0972_Incr
-00:31:46.651918 [debug] [Thread-2  ]: Acquiring new synapse connection "snapshot.Shawn.BC_BJAuctionCompany_Customer_0972_Incr"
-00:31:46.660044 [debug] [Thread-2  ]: Began compiling node snapshot.Shawn.BC_BJAuctionCompany_Customer_0972_Incr
-00:31:46.660174 [debug] [Thread-2  ]: Compiling snapshot.Shawn.BC_BJAuctionCompany_Customer_0972_Incr
-00:31:46.652220 [debug] [Thread-3  ]: Acquiring new synapse connection "snapshot.Shawn.BC_BJAuctionCompany_DetailedCustLedgEntry_0972_Incr"
-00:31:46.662934 [debug] [Thread-3  ]: Began compiling node snapshot.Shawn.BC_BJAuctionCompany_DetailedCustLedgEntry_0972_Incr
-00:31:46.663058 [debug] [Thread-3  ]: Compiling snapshot.Shawn.BC_BJAuctionCompany_DetailedCustLedgEntry_0972_Incr
-00:31:46.665454 [debug] [Thread-3  ]: finished collecting timing info
-00:31:46.665638 [debug] [Thread-3  ]: Began executing node snapshot.Shawn.BC_BJAuctionCompany_DetailedCustLedgEntry_0972_Incr
-00:31:46.662750 [debug] [Thread-2  ]: finished collecting timing info
-00:31:46.671765 [debug] [Thread-2  ]: Began executing node snapshot.Shawn.BC_BJAuctionCompany_Customer_0972_Incr
-00:31:46.656545 [debug] [Thread-1  ]: finished collecting timing info
-00:31:46.690013 [debug] [Thread-1  ]: Began executing node snapshot.Shawn.BC_BJAuctionCompany_CustLedgerEntry_0972_Incr
-00:31:46.659844 [debug] [Thread-4  ]: finished collecting timing info
-00:31:46.710171 [debug] [Thread-4  ]: Began executing node snapshot.Shawn.BC_BJAuctionCompany_DetailedVendorLedgEntry_0972_Incr
-00:31:46.728577 [debug] [Thread-2  ]: Opening a new connection, currently in state closed
-00:31:46.733246 [debug] [Thread-3  ]: Opening a new connection, currently in state init
-00:31:46.760514 [debug] [Thread-4  ]: Opening a new connection, currently in state init
-00:31:46.757753 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
-00:31:47.221939 [debug] [Thread-3  ]: Writing runtime SQL for node "snapshot.Shawn.BC_BJAuctionCompany_DetailedCustLedgEntry_0972_Incr"
-00:31:47.223443 [debug] [Thread-4  ]: Writing runtime SQL for node "snapshot.Shawn.BC_BJAuctionCompany_DetailedVendorLedgEntry_0972_Incr"
-00:31:47.239046 [debug] [Thread-1  ]: Writing runtime SQL for node "snapshot.Shawn.BC_BJAuctionCompany_CustLedgerEntry_0972_Incr"
-00:31:47.245061 [debug] [Thread-2  ]: Writing runtime SQL for node "snapshot.Shawn.BC_BJAuctionCompany_Customer_0972_Incr"
-00:31:59.805231 [debug] [Thread-2  ]: On snapshot.Shawn.BC_BJAuctionCompany_Customer_0972_Incr: COMMIT
-00:31:59.813289 [debug] [Thread-2  ]: finished collecting timing info
-00:31:59.813642 [debug] [Thread-2  ]: On snapshot.Shawn.BC_BJAuctionCompany_Customer_0972_Incr: Close
-00:31:59.814332 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a5603bca-3c4b-4012-91fe-1fb5968879b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe08a56dfa0>]}
-00:31:59.814867 [info ] [Thread-2  ]: 2 of 22 OK snapshotted stg.BC_BJAuctionCompany_Customer_0972_Incr............... [[32mOK[0m in 13.16s]
-00:31:59.816044 [debug] [Thread-2  ]: Finished running node snapshot.Shawn.BC_BJAuctionCompany_Customer_0972_Incr
-00:31:59.816293 [debug] [Thread-2  ]: Began running node snapshot.Shawn.BC_BJAuctionCompany_DimensionSetEntry_0972_Incr
-00:31:59.816673 [info ] [Thread-2  ]: 5 of 22 START snapshot stg.BC_BJAuctionCompany_DimensionSetEntry_0972_Incr...... [RUN]
-00:31:59.817861 [debug] [Thread-2  ]: Acquiring new synapse connection "snapshot.Shawn.BC_BJAuctionCompany_DimensionSetEntry_0972_Incr"
-00:31:59.818063 [debug] [Thread-2  ]: Began compiling node snapshot.Shawn.BC_BJAuctionCompany_DimensionSetEntry_0972_Incr
-00:31:59.818229 [debug] [Thread-2  ]: Compiling snapshot.Shawn.BC_BJAuctionCompany_DimensionSetEntry_0972_Incr
-00:31:59.821419 [debug] [Thread-2  ]: finished collecting timing info
-00:31:59.821633 [debug] [Thread-2  ]: Began executing node snapshot.Shawn.BC_BJAuctionCompany_DimensionSetEntry_0972_Incr
-00:31:59.824551 [debug] [Thread-2  ]: Opening a new connection, currently in state closed
-00:32:00.265571 [debug] [Thread-2  ]: Writing runtime SQL for node "snapshot.Shawn.BC_BJAuctionCompany_DimensionSetEntry_0972_Incr"
-00:32:00.878748 [debug] [Thread-4  ]: On snapshot.Shawn.BC_BJAuctionCompany_DetailedVendorLedgEntry_0972_Incr: COMMIT
-00:32:00.887855 [debug] [Thread-4  ]: finished collecting timing info
-00:32:00.888286 [debug] [Thread-4  ]: On snapshot.Shawn.BC_BJAuctionCompany_DetailedVendorLedgEntry_0972_Incr: Close
-00:32:00.889075 [debug] [Thread-4  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a5603bca-3c4b-4012-91fe-1fb5968879b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe08a528760>]}
-00:32:00.889624 [info ] [Thread-4  ]: 4 of 22 OK snapshotted stg.BC_BJAuctionCompany_DetailedVendorLedgEntry_0972_Incr [[32mOK[0m in 14.24s]
-00:32:00.891175 [debug] [Thread-4  ]: Finished running node snapshot.Shawn.BC_BJAuctionCompany_DetailedVendorLedgEntry_0972_Incr
-00:32:00.891476 [debug] [Thread-4  ]: Began running node snapshot.Shawn.BC_BJAuctionCompany_GLEntry_0972_Incr
-00:32:00.891901 [info ] [Thread-4  ]: 6 of 22 START snapshot stg.BC_BJAuctionCompany_GLEntry_0972_Incr................ [RUN]
-00:32:00.892892 [debug] [Thread-4  ]: Acquiring new synapse connection "snapshot.Shawn.BC_BJAuctionCompany_GLEntry_0972_Incr"
-00:32:00.893101 [debug] [Thread-4  ]: Began compiling node snapshot.Shawn.BC_BJAuctionCompany_GLEntry_0972_Incr
-00:32:00.893271 [debug] [Thread-4  ]: Compiling snapshot.Shawn.BC_BJAuctionCompany_GLEntry_0972_Incr
-00:32:00.897150 [debug] [Thread-4  ]: finished collecting timing info
-00:32:00.897381 [debug] [Thread-4  ]: Began executing node snapshot.Shawn.BC_BJAuctionCompany_GLEntry_0972_Incr
-00:32:00.900349 [debug] [Thread-4  ]: Opening a new connection, currently in state closed
-00:32:01.200247 [debug] [Thread-4  ]: Writing runtime SQL for node "snapshot.Shawn.BC_BJAuctionCompany_GLEntry_0972_Incr"
-00:32:01.386410 [debug] [Thread-1  ]: On snapshot.Shawn.BC_BJAuctionCompany_CustLedgerEntry_0972_Incr: COMMIT
-00:32:01.394860 [debug] [Thread-1  ]: finished collecting timing info
-00:32:01.395178 [debug] [Thread-1  ]: On snapshot.Shawn.BC_BJAuctionCompany_CustLedgerEntry_0972_Incr: Close
-00:32:01.395853 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a5603bca-3c4b-4012-91fe-1fb5968879b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe08a56dc40>]}
-00:32:01.396333 [info ] [Thread-1  ]: 1 of 22 OK snapshotted stg.BC_BJAuctionCompany_CustLedgerEntry_0972_Incr........ [[32mOK[0m in 14.74s]
-00:32:01.397390 [debug] [Thread-1  ]: Finished running node snapshot.Shawn.BC_BJAuctionCompany_CustLedgerEntry_0972_Incr
-00:32:01.397638 [debug] [Thread-1  ]: Began running node snapshot.Shawn.BC_BJAuctionCompany_Item_0972_Incr
-00:32:01.398002 [info ] [Thread-1  ]: 7 of 22 START snapshot stg.BC_BJAuctionCompany_Item_0972_Incr................... [RUN]
-00:32:01.399358 [debug] [Thread-1  ]: Acquiring new synapse connection "snapshot.Shawn.BC_BJAuctionCompany_Item_0972_Incr"
-00:32:01.399581 [debug] [Thread-1  ]: Began compiling node snapshot.Shawn.BC_BJAuctionCompany_Item_0972_Incr
-00:32:01.399749 [debug] [Thread-1  ]: Compiling snapshot.Shawn.BC_BJAuctionCompany_Item_0972_Incr
-00:32:01.402749 [debug] [Thread-1  ]: finished collecting timing info
-00:32:01.402962 [debug] [Thread-1  ]: Began executing node snapshot.Shawn.BC_BJAuctionCompany_Item_0972_Incr
-00:32:01.405782 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
-00:32:01.565772 [debug] [Thread-3  ]: On snapshot.Shawn.BC_BJAuctionCompany_DetailedCustLedgEntry_0972_Incr: COMMIT
-00:32:01.574316 [debug] [Thread-3  ]: finished collecting timing info
-00:32:01.583767 [debug] [Thread-3  ]: On snapshot.Shawn.BC_BJAuctionCompany_DetailedCustLedgEntry_0972_Incr: Close
-00:32:01.584528 [debug] [Thread-3  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a5603bca-3c4b-4012-91fe-1fb5968879b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe0884d6340>]}
-00:32:01.584978 [info ] [Thread-3  ]: 3 of 22 OK snapshotted stg.BC_BJAuctionCompany_DetailedCustLedgEntry_0972_Incr.. [[32mOK[0m in 14.93s]
-00:32:01.586045 [debug] [Thread-3  ]: Finished running node snapshot.Shawn.BC_BJAuctionCompany_DetailedCustLedgEntry_0972_Incr
-00:32:01.586304 [debug] [Thread-3  ]: Began running node snapshot.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_0972_Incr
-00:32:01.586708 [info ] [Thread-3  ]: 8 of 22 START snapshot stg.BC_BJAuctionCompany_PurchCrMemoHdr_0972_Incr......... [RUN]
-00:32:01.587899 [debug] [Thread-3  ]: Acquiring new synapse connection "snapshot.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_0972_Incr"
-00:32:01.588099 [debug] [Thread-3  ]: Began compiling node snapshot.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_0972_Incr
-00:32:01.588261 [debug] [Thread-3  ]: Compiling snapshot.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_0972_Incr
-00:32:01.594380 [debug] [Thread-3  ]: finished collecting timing info
-00:32:01.594750 [debug] [Thread-3  ]: Began executing node snapshot.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_0972_Incr
-00:32:01.597401 [debug] [Thread-3  ]: Opening a new connection, currently in state closed
-00:32:01.884955 [debug] [Thread-1  ]: Writing runtime SQL for node "snapshot.Shawn.BC_BJAuctionCompany_Item_0972_Incr"
-00:32:02.324640 [debug] [Thread-3  ]: Writing runtime SQL for node "snapshot.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_0972_Incr"
-00:32:14.027852 [debug] [Thread-1  ]: On snapshot.Shawn.BC_BJAuctionCompany_Item_0972_Incr: COMMIT
-00:32:14.036263 [debug] [Thread-1  ]: finished collecting timing info
-00:32:14.036713 [debug] [Thread-1  ]: On snapshot.Shawn.BC_BJAuctionCompany_Item_0972_Incr: Close
-00:32:14.037524 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a5603bca-3c4b-4012-91fe-1fb5968879b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe08a577c10>]}
-00:32:14.038049 [info ] [Thread-1  ]: 7 of 22 OK snapshotted stg.BC_BJAuctionCompany_Item_0972_Incr................... [[32mOK[0m in 12.64s]
-00:32:14.039313 [debug] [Thread-1  ]: Finished running node snapshot.Shawn.BC_BJAuctionCompany_Item_0972_Incr
-00:32:14.039582 [debug] [Thread-1  ]: Began running node snapshot.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_8d9d_Incr
-00:32:14.039977 [info ] [Thread-1  ]: 9 of 22 START snapshot stg.BC_BJAuctionCompany_PurchCrMemoHdr_8d9d_Incr......... [RUN]
-00:32:14.041446 [debug] [Thread-1  ]: Acquiring new synapse connection "snapshot.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_8d9d_Incr"
-00:32:14.041655 [debug] [Thread-1  ]: Began compiling node snapshot.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_8d9d_Incr
-00:32:14.041824 [debug] [Thread-1  ]: Compiling snapshot.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_8d9d_Incr
-00:32:14.045319 [debug] [Thread-1  ]: finished collecting timing info
-00:32:14.045547 [debug] [Thread-1  ]: Began executing node snapshot.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_8d9d_Incr
-00:32:14.049114 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
-00:32:14.826679 [debug] [Thread-1  ]: Writing runtime SQL for node "snapshot.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_8d9d_Incr"
-00:32:16.879055 [debug] [Thread-3  ]: On snapshot.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_0972_Incr: COMMIT
-00:32:16.888149 [debug] [Thread-3  ]: finished collecting timing info
-00:32:16.888604 [debug] [Thread-3  ]: On snapshot.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_0972_Incr: Close
-00:32:16.889418 [debug] [Thread-3  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a5603bca-3c4b-4012-91fe-1fb5968879b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe08a577ee0>]}
-00:32:16.889962 [info ] [Thread-3  ]: 8 of 22 OK snapshotted stg.BC_BJAuctionCompany_PurchCrMemoHdr_0972_Incr......... [[32mOK[0m in 15.30s]
-00:32:16.891200 [debug] [Thread-3  ]: Finished running node snapshot.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_0972_Incr
-00:32:16.891474 [debug] [Thread-3  ]: Began running node snapshot.Shawn.BC_BJAuctionCompany_PurchCrMemoLine_0972_Incr
-00:32:16.891883 [info ] [Thread-3  ]: 10 of 22 START snapshot stg.BC_BJAuctionCompany_PurchCrMemoLine_0972_Incr....... [RUN]
-00:32:16.893197 [debug] [Thread-3  ]: Acquiring new synapse connection "snapshot.Shawn.BC_BJAuctionCompany_PurchCrMemoLine_0972_Incr"
-00:32:16.893404 [debug] [Thread-3  ]: Began compiling node snapshot.Shawn.BC_BJAuctionCompany_PurchCrMemoLine_0972_Incr
-00:32:16.893574 [debug] [Thread-3  ]: Compiling snapshot.Shawn.BC_BJAuctionCompany_PurchCrMemoLine_0972_Incr
-00:32:16.897427 [debug] [Thread-3  ]: finished collecting timing info
-00:32:16.897675 [debug] [Thread-3  ]: Began executing node snapshot.Shawn.BC_BJAuctionCompany_PurchCrMemoLine_0972_Incr
-00:32:16.900644 [debug] [Thread-3  ]: Opening a new connection, currently in state closed
-00:32:17.562792 [debug] [Thread-3  ]: Writing runtime SQL for node "snapshot.Shawn.BC_BJAuctionCompany_PurchCrMemoLine_0972_Incr"
-00:32:19.343964 [debug] [Thread-1  ]: On snapshot.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_8d9d_Incr: COMMIT
-00:32:19.353079 [debug] [Thread-1  ]: finished collecting timing info
-00:32:19.353532 [debug] [Thread-1  ]: On snapshot.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_8d9d_Incr: Close
-00:32:19.354346 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a5603bca-3c4b-4012-91fe-1fb5968879b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe08e319790>]}
-00:32:19.354930 [info ] [Thread-1  ]: 9 of 22 OK snapshotted stg.BC_BJAuctionCompany_PurchCrMemoHdr_8d9d_Incr......... [[32mOK[0m in 5.31s]
-00:32:19.356089 [debug] [Thread-1  ]: Finished running node snapshot.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_8d9d_Incr
-00:32:19.356361 [debug] [Thread-1  ]: Began running node snapshot.Shawn.BC_BJAuctionCompany_PurchInvHeader_0972_Incr
-00:32:19.356768 [info ] [Thread-1  ]: 11 of 22 START snapshot stg.BC_BJAuctionCompany_PurchInvHeader_0972_Incr........ [RUN]
-00:32:19.358328 [debug] [Thread-1  ]: Acquiring new synapse connection "snapshot.Shawn.BC_BJAuctionCompany_PurchInvHeader_0972_Incr"
-00:32:19.358575 [debug] [Thread-1  ]: Began compiling node snapshot.Shawn.BC_BJAuctionCompany_PurchInvHeader_0972_Incr
-00:32:19.358764 [debug] [Thread-1  ]: Compiling snapshot.Shawn.BC_BJAuctionCompany_PurchInvHeader_0972_Incr
-00:32:19.362265 [debug] [Thread-1  ]: finished collecting timing info
-00:32:19.362518 [debug] [Thread-1  ]: Began executing node snapshot.Shawn.BC_BJAuctionCompany_PurchInvHeader_0972_Incr
-00:32:19.365609 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
-00:32:20.021213 [debug] [Thread-1  ]: Writing runtime SQL for node "snapshot.Shawn.BC_BJAuctionCompany_PurchInvHeader_0972_Incr"
-00:32:20.214713 [debug] [Thread-2  ]: On snapshot.Shawn.BC_BJAuctionCompany_DimensionSetEntry_0972_Incr: COMMIT
-00:32:20.224058 [debug] [Thread-2  ]: finished collecting timing info
-00:32:20.224508 [debug] [Thread-2  ]: On snapshot.Shawn.BC_BJAuctionCompany_DimensionSetEntry_0972_Incr: Close
-00:32:20.225315 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a5603bca-3c4b-4012-91fe-1fb5968879b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe08a577d90>]}
-00:32:20.225868 [info ] [Thread-2  ]: 5 of 22 OK snapshotted stg.BC_BJAuctionCompany_DimensionSetEntry_0972_Incr...... [[32mOK[0m in 20.41s]
-00:32:20.227085 [debug] [Thread-2  ]: Finished running node snapshot.Shawn.BC_BJAuctionCompany_DimensionSetEntry_0972_Incr
-00:32:20.227361 [debug] [Thread-2  ]: Began running node snapshot.Shawn.BC_BJAuctionCompany_PurchInvHeader_8d9d_Incr
-00:32:20.227765 [info ] [Thread-2  ]: 12 of 22 START snapshot stg.BC_BJAuctionCompany_PurchInvHeader_8d9d_Incr........ [RUN]
-00:32:20.229288 [debug] [Thread-2  ]: Acquiring new synapse connection "snapshot.Shawn.BC_BJAuctionCompany_PurchInvHeader_8d9d_Incr"
-00:32:20.229500 [debug] [Thread-2  ]: Began compiling node snapshot.Shawn.BC_BJAuctionCompany_PurchInvHeader_8d9d_Incr
-00:32:20.229669 [debug] [Thread-2  ]: Compiling snapshot.Shawn.BC_BJAuctionCompany_PurchInvHeader_8d9d_Incr
-00:32:20.232953 [debug] [Thread-2  ]: finished collecting timing info
-00:32:20.233463 [debug] [Thread-2  ]: Began executing node snapshot.Shawn.BC_BJAuctionCompany_PurchInvHeader_8d9d_Incr
-00:32:20.236639 [debug] [Thread-2  ]: Opening a new connection, currently in state closed
-00:32:20.622240 [debug] [Thread-2  ]: Writing runtime SQL for node "snapshot.Shawn.BC_BJAuctionCompany_PurchInvHeader_8d9d_Incr"
-00:32:26.926261 [debug] [Thread-4  ]: On snapshot.Shawn.BC_BJAuctionCompany_GLEntry_0972_Incr: COMMIT
-00:32:26.935114 [debug] [Thread-4  ]: finished collecting timing info
-00:32:26.935513 [debug] [Thread-4  ]: On snapshot.Shawn.BC_BJAuctionCompany_GLEntry_0972_Incr: Close
-00:32:26.936237 [debug] [Thread-4  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a5603bca-3c4b-4012-91fe-1fb5968879b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe08a562070>]}
-00:32:26.936742 [info ] [Thread-4  ]: 6 of 22 OK snapshotted stg.BC_BJAuctionCompany_GLEntry_0972_Incr................ [[32mOK[0m in 26.04s]
-00:32:26.938173 [debug] [Thread-4  ]: Finished running node snapshot.Shawn.BC_BJAuctionCompany_GLEntry_0972_Incr
-00:32:26.938436 [debug] [Thread-4  ]: Began running node snapshot.Shawn.BC_BJAuctionCompany_PurchInvLine_0972_Incr
-00:32:26.938858 [info ] [Thread-4  ]: 13 of 22 START snapshot stg.BC_BJAuctionCompany_PurchInvLine_0972_Incr.......... [RUN]
-00:32:26.939742 [debug] [Thread-4  ]: Acquiring new synapse connection "snapshot.Shawn.BC_BJAuctionCompany_PurchInvLine_0972_Incr"
-00:32:26.939939 [debug] [Thread-4  ]: Began compiling node snapshot.Shawn.BC_BJAuctionCompany_PurchInvLine_0972_Incr
-00:32:26.940101 [debug] [Thread-4  ]: Compiling snapshot.Shawn.BC_BJAuctionCompany_PurchInvLine_0972_Incr
-00:32:26.943483 [debug] [Thread-4  ]: finished collecting timing info
-00:32:26.943696 [debug] [Thread-4  ]: Began executing node snapshot.Shawn.BC_BJAuctionCompany_PurchInvLine_0972_Incr
-00:32:26.946674 [debug] [Thread-4  ]: Opening a new connection, currently in state closed
-00:32:27.254639 [debug] [Thread-4  ]: Writing runtime SQL for node "snapshot.Shawn.BC_BJAuctionCompany_PurchInvLine_0972_Incr"
-00:32:29.167588 [debug] [Thread-2  ]: On snapshot.Shawn.BC_BJAuctionCompany_PurchInvHeader_8d9d_Incr: COMMIT
-00:32:29.175690 [debug] [Thread-3  ]: On snapshot.Shawn.BC_BJAuctionCompany_PurchCrMemoLine_0972_Incr: COMMIT
-00:32:29.245464 [debug] [Thread-2  ]: finished collecting timing info
-00:32:29.252841 [debug] [Thread-2  ]: On snapshot.Shawn.BC_BJAuctionCompany_PurchInvHeader_8d9d_Incr: Close
-00:32:29.253621 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a5603bca-3c4b-4012-91fe-1fb5968879b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe08a5621c0>]}
-00:32:29.254342 [info ] [Thread-2  ]: 12 of 22 OK snapshotted stg.BC_BJAuctionCompany_PurchInvHeader_8d9d_Incr........ [[32mOK[0m in 9.02s]
-00:32:29.255414 [debug] [Thread-2  ]: Finished running node snapshot.Shawn.BC_BJAuctionCompany_PurchInvHeader_8d9d_Incr
-00:32:29.255674 [debug] [Thread-2  ]: Began running node snapshot.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_0972_Incr
-00:32:29.256057 [info ] [Thread-2  ]: 14 of 22 START snapshot stg.BC_BJAuctionCompany_SalesCrMemoHeader_0972_Incr..... [RUN]
-00:32:29.252485 [debug] [Thread-3  ]: finished collecting timing info
-00:32:29.258715 [debug] [Thread-3  ]: On snapshot.Shawn.BC_BJAuctionCompany_PurchCrMemoLine_0972_Incr: Close
-00:32:29.257514 [debug] [Thread-2  ]: Acquiring new synapse connection "snapshot.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_0972_Incr"
-00:32:29.259904 [debug] [Thread-2  ]: Began compiling node snapshot.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_0972_Incr
-00:32:29.260075 [debug] [Thread-2  ]: Compiling snapshot.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_0972_Incr
-00:32:29.259688 [debug] [Thread-3  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a5603bca-3c4b-4012-91fe-1fb5968879b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe08a5625b0>]}
-00:32:29.264098 [info ] [Thread-3  ]: 10 of 22 OK snapshotted stg.BC_BJAuctionCompany_PurchCrMemoLine_0972_Incr....... [[32mOK[0m in 12.37s]
-00:32:29.265105 [debug] [Thread-3  ]: Finished running node snapshot.Shawn.BC_BJAuctionCompany_PurchCrMemoLine_0972_Incr
-00:32:29.265356 [debug] [Thread-3  ]: Began running node snapshot.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_8d9d_Incr
-00:32:29.265779 [info ] [Thread-3  ]: 15 of 22 START snapshot stg.BC_BJAuctionCompany_SalesCrMemoHeader_8d9d_Incr..... [RUN]
-00:32:29.267006 [debug] [Thread-3  ]: Acquiring new synapse connection "snapshot.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_8d9d_Incr"
-00:32:29.267211 [debug] [Thread-3  ]: Began compiling node snapshot.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_8d9d_Incr
-00:32:29.267380 [debug] [Thread-3  ]: Compiling snapshot.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_8d9d_Incr
-00:32:29.263627 [debug] [Thread-2  ]: finished collecting timing info
-00:32:29.271236 [debug] [Thread-2  ]: Began executing node snapshot.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_0972_Incr
-00:32:29.273992 [debug] [Thread-2  ]: Opening a new connection, currently in state closed
-00:32:29.271005 [debug] [Thread-3  ]: finished collecting timing info
-00:32:29.274714 [debug] [Thread-3  ]: Began executing node snapshot.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_8d9d_Incr
-00:32:29.277362 [debug] [Thread-3  ]: Opening a new connection, currently in state closed
-00:32:29.578053 [debug] [Thread-3  ]: Writing runtime SQL for node "snapshot.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_8d9d_Incr"
-00:32:29.704433 [debug] [Thread-2  ]: Writing runtime SQL for node "snapshot.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_0972_Incr"
-00:32:29.979788 [debug] [Thread-1  ]: On snapshot.Shawn.BC_BJAuctionCompany_PurchInvHeader_0972_Incr: COMMIT
-00:32:29.987620 [debug] [Thread-1  ]: finished collecting timing info
-00:32:29.988003 [debug] [Thread-1  ]: On snapshot.Shawn.BC_BJAuctionCompany_PurchInvHeader_0972_Incr: Close
-00:32:29.988744 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a5603bca-3c4b-4012-91fe-1fb5968879b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe08a562700>]}
-00:32:29.989263 [info ] [Thread-1  ]: 11 of 22 OK snapshotted stg.BC_BJAuctionCompany_PurchInvHeader_0972_Incr........ [[32mOK[0m in 10.63s]
-00:32:29.990338 [debug] [Thread-1  ]: Finished running node snapshot.Shawn.BC_BJAuctionCompany_PurchInvHeader_0972_Incr
-00:32:29.990626 [debug] [Thread-1  ]: Began running node snapshot.Shawn.BC_BJAuctionCompany_SalesCrMemoLine_0972_Incr
-00:32:29.991031 [info ] [Thread-1  ]: 16 of 22 START snapshot stg.BC_BJAuctionCompany_SalesCrMemoLine_0972_Incr....... [RUN]
-00:32:29.993066 [debug] [Thread-1  ]: Acquiring new synapse connection "snapshot.Shawn.BC_BJAuctionCompany_SalesCrMemoLine_0972_Incr"
-00:32:29.993274 [debug] [Thread-1  ]: Began compiling node snapshot.Shawn.BC_BJAuctionCompany_SalesCrMemoLine_0972_Incr
-00:32:29.993444 [debug] [Thread-1  ]: Compiling snapshot.Shawn.BC_BJAuctionCompany_SalesCrMemoLine_0972_Incr
-00:32:29.996770 [debug] [Thread-1  ]: finished collecting timing info
-00:32:29.997134 [debug] [Thread-1  ]: Began executing node snapshot.Shawn.BC_BJAuctionCompany_SalesCrMemoLine_0972_Incr
-00:32:29.999883 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
-00:32:31.093671 [debug] [Thread-1  ]: Writing runtime SQL for node "snapshot.Shawn.BC_BJAuctionCompany_SalesCrMemoLine_0972_Incr"
-00:32:36.711477 [debug] [Thread-2  ]: On snapshot.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_0972_Incr: COMMIT
-00:32:36.720096 [debug] [Thread-2  ]: finished collecting timing info
-00:32:36.720553 [debug] [Thread-2  ]: On snapshot.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_0972_Incr: Close
-00:32:36.721345 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a5603bca-3c4b-4012-91fe-1fb5968879b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe08a562af0>]}
-00:32:36.721887 [info ] [Thread-2  ]: 14 of 22 OK snapshotted stg.BC_BJAuctionCompany_SalesCrMemoHeader_0972_Incr..... [[32mOK[0m in 7.46s]
-00:32:36.723139 [debug] [Thread-2  ]: Finished running node snapshot.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_0972_Incr
-00:32:36.723409 [debug] [Thread-2  ]: Began running node snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceEntityAggregate_0972_Incr
-00:32:36.723808 [info ] [Thread-2  ]: 17 of 22 START snapshot stg.BC_BJAuctionCompany_SalesInvoiceEntityAggregate_0972_Incr [RUN]
-00:32:36.725320 [debug] [Thread-2  ]: Acquiring new synapse connection "snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceEntityAggregate_0972_Incr"
-00:32:36.725531 [debug] [Thread-2  ]: Began compiling node snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceEntityAggregate_0972_Incr
-00:32:36.725701 [debug] [Thread-2  ]: Compiling snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceEntityAggregate_0972_Incr
-00:32:36.729367 [debug] [Thread-2  ]: finished collecting timing info
-00:32:36.729621 [debug] [Thread-2  ]: Began executing node snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceEntityAggregate_0972_Incr
-00:32:36.732653 [debug] [Thread-2  ]: Opening a new connection, currently in state closed
-00:32:37.122180 [debug] [Thread-2  ]: Writing runtime SQL for node "snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceEntityAggregate_0972_Incr"
-00:32:39.660880 [debug] [Thread-3  ]: On snapshot.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_8d9d_Incr: COMMIT
-00:32:39.669294 [debug] [Thread-3  ]: finished collecting timing info
-00:32:39.669715 [debug] [Thread-3  ]: On snapshot.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_8d9d_Incr: Close
-00:32:39.670488 [debug] [Thread-3  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a5603bca-3c4b-4012-91fe-1fb5968879b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe08e315af0>]}
-00:32:39.671050 [info ] [Thread-3  ]: 15 of 22 OK snapshotted stg.BC_BJAuctionCompany_SalesCrMemoHeader_8d9d_Incr..... [[32mOK[0m in 10.40s]
-00:32:39.672228 [debug] [Thread-3  ]: Finished running node snapshot.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_8d9d_Incr
-00:32:39.672493 [debug] [Thread-3  ]: Began running node snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_0972_Incr
-00:32:39.672885 [info ] [Thread-3  ]: 18 of 22 START snapshot stg.BC_BJAuctionCompany_SalesInvoiceHeader_0972_Incr.... [RUN]
-00:32:39.674339 [debug] [Thread-3  ]: Acquiring new synapse connection "snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_0972_Incr"
-00:32:39.674571 [debug] [Thread-3  ]: Began compiling node snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_0972_Incr
-00:32:39.674751 [debug] [Thread-3  ]: Compiling snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_0972_Incr
-00:32:39.678012 [debug] [Thread-3  ]: finished collecting timing info
-00:32:39.678234 [debug] [Thread-3  ]: Began executing node snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_0972_Incr
-00:32:39.681175 [debug] [Thread-3  ]: Opening a new connection, currently in state closed
-00:32:40.137734 [debug] [Thread-3  ]: Writing runtime SQL for node "snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_0972_Incr"
-00:32:40.175409 [debug] [Thread-1  ]: On snapshot.Shawn.BC_BJAuctionCompany_SalesCrMemoLine_0972_Incr: COMMIT
-00:32:40.183679 [debug] [Thread-1  ]: finished collecting timing info
-00:32:40.184102 [debug] [Thread-1  ]: On snapshot.Shawn.BC_BJAuctionCompany_SalesCrMemoLine_0972_Incr: Close
-00:32:40.184873 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a5603bca-3c4b-4012-91fe-1fb5968879b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe08a5629a0>]}
-00:32:40.185402 [info ] [Thread-1  ]: 16 of 22 OK snapshotted stg.BC_BJAuctionCompany_SalesCrMemoLine_0972_Incr....... [[32mOK[0m in 10.19s]
-00:32:40.186618 [debug] [Thread-1  ]: Finished running node snapshot.Shawn.BC_BJAuctionCompany_SalesCrMemoLine_0972_Incr
-00:32:40.186883 [debug] [Thread-1  ]: Began running node snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_8d9d_Incr
-00:32:40.187276 [info ] [Thread-1  ]: 19 of 22 START snapshot stg.BC_BJAuctionCompany_SalesInvoiceHeader_8d9d_Incr.... [RUN]
-00:32:40.188552 [debug] [Thread-1  ]: Acquiring new synapse connection "snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_8d9d_Incr"
-00:32:40.188760 [debug] [Thread-1  ]: Began compiling node snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_8d9d_Incr
-00:32:40.188928 [debug] [Thread-1  ]: Compiling snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_8d9d_Incr
-00:32:40.192682 [debug] [Thread-1  ]: finished collecting timing info
-00:32:40.192933 [debug] [Thread-1  ]: Began executing node snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_8d9d_Incr
-00:32:40.195841 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
-00:32:40.535384 [debug] [Thread-1  ]: Writing runtime SQL for node "snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_8d9d_Incr"
-00:32:45.380997 [debug] [Thread-2  ]: On snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceEntityAggregate_0972_Incr: COMMIT
-00:32:45.389804 [debug] [Thread-2  ]: finished collecting timing info
-00:32:45.390255 [debug] [Thread-2  ]: On snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceEntityAggregate_0972_Incr: Close
-00:32:45.391084 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a5603bca-3c4b-4012-91fe-1fb5968879b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe08a562d90>]}
-00:32:45.391628 [info ] [Thread-2  ]: 17 of 22 OK snapshotted stg.BC_BJAuctionCompany_SalesInvoiceEntityAggregate_0972_Incr [[32mOK[0m in 8.67s]
-00:32:45.393162 [debug] [Thread-2  ]: Finished running node snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceEntityAggregate_0972_Incr
-00:32:45.393450 [debug] [Thread-2  ]: Began running node snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceLine_0972_Incr
-00:32:45.393850 [info ] [Thread-2  ]: 20 of 22 START snapshot stg.BC_BJAuctionCompany_SalesInvoiceLine_0972_Incr...... [RUN]
-00:32:45.394843 [debug] [Thread-2  ]: Acquiring new synapse connection "snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceLine_0972_Incr"
-00:32:45.395049 [debug] [Thread-2  ]: Began compiling node snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceLine_0972_Incr
-00:32:45.395221 [debug] [Thread-2  ]: Compiling snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceLine_0972_Incr
-00:32:45.399177 [debug] [Thread-2  ]: finished collecting timing info
-00:32:45.399434 [debug] [Thread-2  ]: Began executing node snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceLine_0972_Incr
-00:32:45.402406 [debug] [Thread-2  ]: Opening a new connection, currently in state closed
-00:32:45.692912 [debug] [Thread-2  ]: Writing runtime SQL for node "snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceLine_0972_Incr"
-00:32:52.468644 [debug] [Thread-1  ]: On snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_8d9d_Incr: COMMIT
-00:32:52.478156 [debug] [Thread-1  ]: finished collecting timing info
-00:32:52.478634 [debug] [Thread-1  ]: On snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_8d9d_Incr: Close
-00:32:52.479478 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a5603bca-3c4b-4012-91fe-1fb5968879b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe08a56d070>]}
-00:32:52.480018 [info ] [Thread-1  ]: 19 of 22 OK snapshotted stg.BC_BJAuctionCompany_SalesInvoiceHeader_8d9d_Incr.... [[32mOK[0m in 12.29s]
-00:32:52.481175 [debug] [Thread-1  ]: Finished running node snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_8d9d_Incr
-00:32:52.481449 [debug] [Thread-1  ]: Began running node snapshot.Shawn.BC_BJAuctionCompany_VendorLedgerEntry_0972_Incr
-00:32:52.481850 [info ] [Thread-1  ]: 21 of 22 START snapshot stg.BC_BJAuctionCompany_VendorLedgerEntry_0972_Incr..... [RUN]
-00:32:52.483364 [debug] [Thread-1  ]: Acquiring new synapse connection "snapshot.Shawn.BC_BJAuctionCompany_VendorLedgerEntry_0972_Incr"
-00:32:52.483583 [debug] [Thread-1  ]: Began compiling node snapshot.Shawn.BC_BJAuctionCompany_VendorLedgerEntry_0972_Incr
-00:32:52.483757 [debug] [Thread-1  ]: Compiling snapshot.Shawn.BC_BJAuctionCompany_VendorLedgerEntry_0972_Incr
-00:32:52.487398 [debug] [Thread-1  ]: finished collecting timing info
-00:32:52.487653 [debug] [Thread-1  ]: Began executing node snapshot.Shawn.BC_BJAuctionCompany_VendorLedgerEntry_0972_Incr
-00:32:52.491479 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
-00:32:52.959947 [debug] [Thread-1  ]: Writing runtime SQL for node "snapshot.Shawn.BC_BJAuctionCompany_VendorLedgerEntry_0972_Incr"
-00:32:53.506702 [debug] [Thread-2  ]: On snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceLine_0972_Incr: COMMIT
-00:32:53.515773 [debug] [Thread-2  ]: finished collecting timing info
-00:32:53.516189 [debug] [Thread-2  ]: On snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceLine_0972_Incr: Close
-00:32:53.516987 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a5603bca-3c4b-4012-91fe-1fb5968879b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe08a56d1c0>]}
-00:32:53.517508 [info ] [Thread-2  ]: 20 of 22 OK snapshotted stg.BC_BJAuctionCompany_SalesInvoiceLine_0972_Incr...... [[32mOK[0m in 8.12s]
-00:32:53.518598 [debug] [Thread-2  ]: Finished running node snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceLine_0972_Incr
-00:32:53.518856 [debug] [Thread-2  ]: Began running node snapshot.Shawn.BC_BJAuctionCompany_Vendor_0972_Incr
-00:32:53.519246 [info ] [Thread-2  ]: 22 of 22 START snapshot stg.BC_BJAuctionCompany_Vendor_0972_Incr................ [RUN]
-00:32:53.520485 [debug] [Thread-2  ]: Acquiring new synapse connection "snapshot.Shawn.BC_BJAuctionCompany_Vendor_0972_Incr"
-00:32:53.520685 [debug] [Thread-2  ]: Began compiling node snapshot.Shawn.BC_BJAuctionCompany_Vendor_0972_Incr
-00:32:53.520848 [debug] [Thread-2  ]: Compiling snapshot.Shawn.BC_BJAuctionCompany_Vendor_0972_Incr
-00:32:53.524286 [debug] [Thread-2  ]: finished collecting timing info
-00:32:53.524665 [debug] [Thread-2  ]: Began executing node snapshot.Shawn.BC_BJAuctionCompany_Vendor_0972_Incr
-00:32:53.527556 [debug] [Thread-2  ]: Opening a new connection, currently in state closed
-00:32:54.037394 [debug] [Thread-2  ]: Writing runtime SQL for node "snapshot.Shawn.BC_BJAuctionCompany_Vendor_0972_Incr"
-00:32:56.634244 [debug] [Thread-4  ]: On snapshot.Shawn.BC_BJAuctionCompany_PurchInvLine_0972_Incr: COMMIT
-00:32:56.643295 [debug] [Thread-4  ]: finished collecting timing info
-00:32:56.643716 [debug] [Thread-4  ]: On snapshot.Shawn.BC_BJAuctionCompany_PurchInvLine_0972_Incr: Close
-00:32:56.644504 [debug] [Thread-4  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a5603bca-3c4b-4012-91fe-1fb5968879b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe08a562310>]}
-00:32:56.645044 [info ] [Thread-4  ]: 13 of 22 OK snapshotted stg.BC_BJAuctionCompany_PurchInvLine_0972_Incr.......... [[32mOK[0m in 29.70s]
-00:32:56.646191 [debug] [Thread-4  ]: Finished running node snapshot.Shawn.BC_BJAuctionCompany_PurchInvLine_0972_Incr
-00:32:56.673705 [debug] [Thread-3  ]: On snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_0972_Incr: COMMIT
-00:32:56.682372 [debug] [Thread-3  ]: finished collecting timing info
-00:32:56.682798 [debug] [Thread-3  ]: On snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_0972_Incr: Close
-00:32:56.683534 [debug] [Thread-3  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a5603bca-3c4b-4012-91fe-1fb5968879b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe0884bbb80>]}
-00:32:56.684049 [info ] [Thread-3  ]: 18 of 22 OK snapshotted stg.BC_BJAuctionCompany_SalesInvoiceHeader_0972_Incr.... [[32mOK[0m in 17.01s]
-00:32:56.685150 [debug] [Thread-3  ]: Finished running node snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_0972_Incr
-00:32:58.169737 [debug] [Thread-2  ]: On snapshot.Shawn.BC_BJAuctionCompany_Vendor_0972_Incr: COMMIT
-00:32:58.178305 [debug] [Thread-2  ]: finished collecting timing info
-00:32:58.178708 [debug] [Thread-2  ]: On snapshot.Shawn.BC_BJAuctionCompany_Vendor_0972_Incr: Close
-00:32:58.179454 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a5603bca-3c4b-4012-91fe-1fb5968879b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe08e2b70a0>]}
-00:32:58.179971 [info ] [Thread-2  ]: 22 of 22 OK snapshotted stg.BC_BJAuctionCompany_Vendor_0972_Incr................ [[32mOK[0m in 4.66s]
-00:32:58.181046 [debug] [Thread-2  ]: Finished running node snapshot.Shawn.BC_BJAuctionCompany_Vendor_0972_Incr
-00:32:58.346574 [debug] [Thread-1  ]: On snapshot.Shawn.BC_BJAuctionCompany_VendorLedgerEntry_0972_Incr: COMMIT
-00:32:58.355560 [debug] [Thread-1  ]: finished collecting timing info
-00:32:58.355971 [debug] [Thread-1  ]: On snapshot.Shawn.BC_BJAuctionCompany_VendorLedgerEntry_0972_Incr: Close
-00:32:58.356756 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a5603bca-3c4b-4012-91fe-1fb5968879b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe08e2ff070>]}
-00:32:58.357279 [info ] [Thread-1  ]: 21 of 22 OK snapshotted stg.BC_BJAuctionCompany_VendorLedgerEntry_0972_Incr..... [[32mOK[0m in 5.87s]
-00:32:58.358321 [debug] [Thread-1  ]: Finished running node snapshot.Shawn.BC_BJAuctionCompany_VendorLedgerEntry_0972_Incr
-00:32:58.360470 [debug] [MainThread]: Acquiring new synapse connection "master"
-00:32:58.360679 [debug] [MainThread]: On master: COMMIT
-00:32:58.360988 [info ] [MainThread]: 
-00:32:58.361653 [info ] [MainThread]: Finished running 22 snapshots in 81.26s.
-00:32:58.362594 [debug] [MainThread]: Connection 'master' was properly closed.
-00:32:58.362782 [debug] [MainThread]: Connection 'snapshot.Shawn.BC_BJAuctionCompany_Vendor_0972_Incr' was properly closed.
-00:32:58.362913 [debug] [MainThread]: Connection 'snapshot.Shawn.BC_BJAuctionCompany_VendorLedgerEntry_0972_Incr' was properly closed.
-00:32:58.363035 [debug] [MainThread]: Connection 'snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_0972_Incr' was properly closed.
-00:32:58.363150 [debug] [MainThread]: Connection 'snapshot.Shawn.BC_BJAuctionCompany_PurchInvLine_0972_Incr' was properly closed.
-00:32:58.372263 [info ] [MainThread]: 
-00:32:58.373162 [info ] [MainThread]: [32mCompleted successfully[0m
-00:32:58.374170 [info ] [MainThread]: 
-00:32:58.374991 [info ] [MainThread]: Done. PASS=22 WARN=0 ERROR=0 SKIP=0 TOTAL=22
-00:32:58.375726 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe08a5b8a00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe08c3038e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe08c372a30>]}
-
-
-============================== 2022-09-15 00:33:00.748195 | c8b9e4be-22b0-4af4-a7d8-084fc9f91722 ==============================
-00:33:00.748195 [info ] [MainThread]: Running with dbt=1.0.0
-00:33:00.751661 [debug] [MainThread]: running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=None, defer=None, event_buffer_size=None, exclude=None, fail_fast=None, full_refresh=False, log_cache_events=False, log_format=None, partial_parse=None, printer_width=None, profile=None, profiles_dir='/home/azureuser/.dbt', project_dir='/home/azureuser/shawn_dbt/BC', record_timing_info=None, rpc_method='run', select=['step3_FinalView'], selector_name=None, send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, threads=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='run', write_json=None)
-00:33:00.752035 [debug] [MainThread]: Tracking: tracking
-00:33:00.752432 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec9c705130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec9c705190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec9c7051f0>]}
-00:33:00.892219 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
-00:33:00.892609 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
-00:33:00.901314 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c8b9e4be-22b0-4af4-a7d8-084fc9f91722', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec9c5c5520>]}
-00:33:00.913861 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c8b9e4be-22b0-4af4-a7d8-084fc9f91722', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec9c6a8d90>]}
-00:33:00.914347 [info ] [MainThread]: Found 23 models, 0 tests, 22 snapshots, 0 analyses, 211 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
-00:33:00.918329 [info ] [MainThread]: 
-00:33:00.919574 [debug] [MainThread]: Acquiring new synapse connection "master"
-00:33:00.922236 [debug] [ThreadPool]: Acquiring new synapse connection "list_BJAC_DW_PROD"
-00:33:00.931684 [debug] [ThreadPool]: Opening a new connection, currently in state init
-00:33:01.715012 [debug] [ThreadPool]: On list_BJAC_DW_PROD: Close
-00:33:01.719276 [debug] [ThreadPool]: Acquiring new synapse connection "list_BJAC_DW_PROD_stg"
-00:33:01.725544 [debug] [ThreadPool]: Opening a new connection, currently in state init
-00:33:02.019549 [debug] [ThreadPool]: On list_BJAC_DW_PROD_stg: ROLLBACK
-00:33:02.020013 [debug] [ThreadPool]: On list_BJAC_DW_PROD_stg: Close
-00:33:11.213206 [debug] [MainThread]: On master: COMMIT
-00:33:11.213919 [info ] [MainThread]: Concurrency: 4 threads (target='prod')
-00:33:11.215442 [info ] [MainThread]: 
-00:33:11.220119 [debug] [Thread-1  ]: Began running node model.Shawn.BC_BJAuctionCompany_CustLedgerEntry_0972_FinalView
-00:33:11.220479 [info ] [Thread-1  ]: 1 of 22 START view model stg.BC_BJAuctionCompany_CustLedgerEntry_0972_FinalView. [RUN]
-00:33:11.220764 [debug] [Thread-2  ]: Began running node model.Shawn.BC_BJAuctionCompany_Customer_0972_FinalView
-00:33:11.220970 [info ] [Thread-2  ]: 2 of 22 START view model stg.BC_BJAuctionCompany_Customer_0972_FinalView........ [RUN]
-00:33:11.221502 [debug] [Thread-3  ]: Began running node model.Shawn.BC_BJAuctionCompany_DetailedCustLedgEntry_0972_FinalView
-00:33:11.221753 [info ] [Thread-3  ]: 3 of 22 START view model stg.BC_BJAuctionCompany_DetailedCustLedgEntry_0972_FinalView [RUN]
-00:33:11.222119 [debug] [Thread-4  ]: Began running node model.Shawn.BC_BJAuctionCompany_DetailedVendorLedgEntry_0972_FinalView
-00:33:11.222343 [info ] [Thread-4  ]: 4 of 22 START view model stg.BC_BJAuctionCompany_DetailedVendorLedgEntry_0972_FinalView [RUN]
-00:33:11.223258 [debug] [Thread-1  ]: Acquiring new synapse connection "model.Shawn.BC_BJAuctionCompany_CustLedgerEntry_0972_FinalView"
-00:33:11.225326 [debug] [Thread-1  ]: Began compiling node model.Shawn.BC_BJAuctionCompany_CustLedgerEntry_0972_FinalView
-00:33:11.225554 [debug] [Thread-1  ]: Compiling model.Shawn.BC_BJAuctionCompany_CustLedgerEntry_0972_FinalView
-00:33:11.224914 [debug] [Thread-4  ]: Acquiring new synapse connection "model.Shawn.BC_BJAuctionCompany_DetailedVendorLedgEntry_0972_FinalView"
-00:33:11.229336 [debug] [Thread-4  ]: Began compiling node model.Shawn.BC_BJAuctionCompany_DetailedVendorLedgEntry_0972_FinalView
-00:33:11.229464 [debug] [Thread-4  ]: Compiling model.Shawn.BC_BJAuctionCompany_DetailedVendorLedgEntry_0972_FinalView
-00:33:11.224022 [debug] [Thread-2  ]: Acquiring new synapse connection "model.Shawn.BC_BJAuctionCompany_Customer_0972_FinalView"
-00:33:11.232471 [debug] [Thread-2  ]: Began compiling node model.Shawn.BC_BJAuctionCompany_Customer_0972_FinalView
-00:33:11.232602 [debug] [Thread-2  ]: Compiling model.Shawn.BC_BJAuctionCompany_Customer_0972_FinalView
-00:33:11.224631 [debug] [Thread-3  ]: Acquiring new synapse connection "model.Shawn.BC_BJAuctionCompany_DetailedCustLedgEntry_0972_FinalView"
-00:33:11.235721 [debug] [Thread-3  ]: Began compiling node model.Shawn.BC_BJAuctionCompany_DetailedCustLedgEntry_0972_FinalView
-00:33:11.235855 [debug] [Thread-3  ]: Compiling model.Shawn.BC_BJAuctionCompany_DetailedCustLedgEntry_0972_FinalView
-00:33:11.229129 [debug] [Thread-1  ]: Writing injected SQL for node "model.Shawn.BC_BJAuctionCompany_CustLedgerEntry_0972_FinalView"
-00:33:11.232257 [debug] [Thread-4  ]: Writing injected SQL for node "model.Shawn.BC_BJAuctionCompany_DetailedVendorLedgEntry_0972_FinalView"
-00:33:11.239241 [debug] [Thread-4  ]: finished collecting timing info
-00:33:11.239629 [debug] [Thread-4  ]: Began executing node model.Shawn.BC_BJAuctionCompany_DetailedVendorLedgEntry_0972_FinalView
-00:33:11.235495 [debug] [Thread-2  ]: Writing injected SQL for node "model.Shawn.BC_BJAuctionCompany_Customer_0972_FinalView"
-00:33:11.247985 [debug] [Thread-2  ]: finished collecting timing info
-00:33:11.248210 [debug] [Thread-2  ]: Began executing node model.Shawn.BC_BJAuctionCompany_Customer_0972_FinalView
-00:33:11.239493 [debug] [Thread-1  ]: finished collecting timing info
-00:33:11.265806 [debug] [Thread-1  ]: Began executing node model.Shawn.BC_BJAuctionCompany_CustLedgerEntry_0972_FinalView
-00:33:11.238475 [debug] [Thread-3  ]: Writing injected SQL for node "model.Shawn.BC_BJAuctionCompany_DetailedCustLedgEntry_0972_FinalView"
-00:33:11.282282 [debug] [Thread-3  ]: finished collecting timing info
-00:33:11.282663 [debug] [Thread-3  ]: Began executing node model.Shawn.BC_BJAuctionCompany_DetailedCustLedgEntry_0972_FinalView
-00:33:11.453440 [debug] [Thread-4  ]: Writing runtime SQL for node "model.Shawn.BC_BJAuctionCompany_DetailedVendorLedgEntry_0972_FinalView"
-00:33:11.467389 [debug] [Thread-4  ]: Opening a new connection, currently in state init
-00:33:11.466702 [debug] [Thread-1  ]: Writing runtime SQL for node "model.Shawn.BC_BJAuctionCompany_CustLedgerEntry_0972_FinalView"
-00:33:11.476121 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
-00:33:11.498829 [debug] [Thread-3  ]: Writing runtime SQL for node "model.Shawn.BC_BJAuctionCompany_DetailedCustLedgEntry_0972_FinalView"
-00:33:11.508133 [debug] [Thread-3  ]: Opening a new connection, currently in state init
-00:33:11.538771 [debug] [Thread-2  ]: Writing runtime SQL for node "model.Shawn.BC_BJAuctionCompany_Customer_0972_FinalView"
-00:33:11.539551 [debug] [Thread-2  ]: Opening a new connection, currently in state closed
-00:33:12.093380 [debug] [Thread-1  ]: On model.Shawn.BC_BJAuctionCompany_CustLedgerEntry_0972_FinalView: COMMIT
-00:33:12.094835 [debug] [Thread-3  ]: On model.Shawn.BC_BJAuctionCompany_DetailedCustLedgEntry_0972_FinalView: COMMIT
-00:33:12.113517 [debug] [Thread-2  ]: On model.Shawn.BC_BJAuctionCompany_Customer_0972_FinalView: COMMIT
-00:33:12.114834 [debug] [Thread-4  ]: On model.Shawn.BC_BJAuctionCompany_DetailedVendorLedgEntry_0972_FinalView: COMMIT
-00:33:12.246901 [debug] [Thread-2  ]: finished collecting timing info
-00:33:12.257020 [debug] [Thread-2  ]: On model.Shawn.BC_BJAuctionCompany_Customer_0972_FinalView: Close
-00:33:12.257901 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c8b9e4be-22b0-4af4-a7d8-084fc9f91722', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec9a8dbd00>]}
-00:33:12.258368 [info ] [Thread-2  ]: 2 of 22 OK created view model stg.BC_BJAuctionCompany_Customer_0972_FinalView... [[32mOK[0m in 1.03s]
-00:33:12.259609 [debug] [Thread-2  ]: Finished running node model.Shawn.BC_BJAuctionCompany_Customer_0972_FinalView
-00:33:12.260422 [debug] [Thread-2  ]: Began running node model.Shawn.BC_BJAuctionCompany_DimensionSetEntry_0972_FinalView
-00:33:12.261451 [info ] [Thread-2  ]: 5 of 22 START view model stg.BC_BJAuctionCompany_DimensionSetEntry_0972_FinalView [RUN]
-00:33:12.262317 [debug] [Thread-1  ]: finished collecting timing info
-00:33:12.263490 [debug] [Thread-1  ]: On model.Shawn.BC_BJAuctionCompany_CustLedgerEntry_0972_FinalView: Close
-00:33:12.264122 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c8b9e4be-22b0-4af4-a7d8-084fc9f91722', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec9a8dba00>]}
-00:33:12.263319 [debug] [Thread-2  ]: Acquiring new synapse connection "model.Shawn.BC_BJAuctionCompany_DimensionSetEntry_0972_FinalView"
-00:33:12.265021 [debug] [Thread-2  ]: Began compiling node model.Shawn.BC_BJAuctionCompany_DimensionSetEntry_0972_FinalView
-00:33:12.265197 [debug] [Thread-2  ]: Compiling model.Shawn.BC_BJAuctionCompany_DimensionSetEntry_0972_FinalView
-00:33:12.264638 [info ] [Thread-1  ]: 1 of 22 OK created view model stg.BC_BJAuctionCompany_CustLedgerEntry_0972_FinalView [[32mOK[0m in 1.04s]
-00:33:12.271153 [debug] [Thread-1  ]: Finished running node model.Shawn.BC_BJAuctionCompany_CustLedgerEntry_0972_FinalView
-00:33:12.271449 [debug] [Thread-1  ]: Began running node model.Shawn.BC_BJAuctionCompany_GLEntry_0972_FinalView
-00:33:12.271859 [info ] [Thread-1  ]: 6 of 22 START view model stg.BC_BJAuctionCompany_GLEntry_0972_FinalView......... [RUN]
-00:33:12.272765 [debug] [Thread-1  ]: Acquiring new synapse connection "model.Shawn.BC_BJAuctionCompany_GLEntry_0972_FinalView"
-00:33:12.272966 [debug] [Thread-1  ]: Began compiling node model.Shawn.BC_BJAuctionCompany_GLEntry_0972_FinalView
-00:33:12.273124 [debug] [Thread-1  ]: Compiling model.Shawn.BC_BJAuctionCompany_GLEntry_0972_FinalView
-00:33:12.268280 [debug] [Thread-2  ]: Writing injected SQL for node "model.Shawn.BC_BJAuctionCompany_DimensionSetEntry_0972_FinalView"
-00:33:12.278942 [debug] [Thread-2  ]: finished collecting timing info
-00:33:12.279111 [debug] [Thread-2  ]: Began executing node model.Shawn.BC_BJAuctionCompany_DimensionSetEntry_0972_FinalView
-00:33:12.278019 [debug] [Thread-1  ]: Writing injected SQL for node "model.Shawn.BC_BJAuctionCompany_GLEntry_0972_FinalView"
-00:33:12.288148 [debug] [Thread-1  ]: finished collecting timing info
-00:33:12.288395 [debug] [Thread-1  ]: Began executing node model.Shawn.BC_BJAuctionCompany_GLEntry_0972_FinalView
-00:33:12.376010 [debug] [Thread-3  ]: finished collecting timing info
-00:33:12.390762 [debug] [Thread-3  ]: On model.Shawn.BC_BJAuctionCompany_DetailedCustLedgEntry_0972_FinalView: Close
-00:33:12.391693 [debug] [Thread-3  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c8b9e4be-22b0-4af4-a7d8-084fc9f91722', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec9a8dbf10>]}
-00:33:12.392172 [info ] [Thread-3  ]: 3 of 22 OK created view model stg.BC_BJAuctionCompany_DetailedCustLedgEntry_0972_FinalView [[32mOK[0m in 1.17s]
-00:33:12.398703 [debug] [Thread-4  ]: finished collecting timing info
-00:33:12.415884 [debug] [Thread-4  ]: On model.Shawn.BC_BJAuctionCompany_DetailedVendorLedgEntry_0972_FinalView: Close
-00:33:12.416858 [debug] [Thread-4  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c8b9e4be-22b0-4af4-a7d8-084fc9f91722', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec9803f100>]}
-00:33:12.417326 [info ] [Thread-4  ]: 4 of 22 OK created view model stg.BC_BJAuctionCompany_DetailedVendorLedgEntry_0972_FinalView [[32mOK[0m in 1.19s]
-00:33:12.398997 [debug] [Thread-3  ]: Finished running node model.Shawn.BC_BJAuctionCompany_DetailedCustLedgEntry_0972_FinalView
-00:33:12.417787 [debug] [Thread-3  ]: Began running node model.Shawn.BC_BJAuctionCompany_Item_0972_FinalView
-00:33:12.418017 [info ] [Thread-3  ]: 7 of 22 START view model stg.BC_BJAuctionCompany_Item_0972_FinalView............ [RUN]
-00:33:12.421789 [debug] [Thread-2  ]: Writing runtime SQL for node "model.Shawn.BC_BJAuctionCompany_DimensionSetEntry_0972_FinalView"
-00:33:12.422320 [debug] [Thread-2  ]: Opening a new connection, currently in state closed
-00:33:12.423859 [debug] [Thread-4  ]: Finished running node model.Shawn.BC_BJAuctionCompany_DetailedVendorLedgEntry_0972_FinalView
-00:33:12.424648 [debug] [Thread-3  ]: Acquiring new synapse connection "model.Shawn.BC_BJAuctionCompany_Item_0972_FinalView"
-00:33:12.425708 [debug] [Thread-3  ]: Began compiling node model.Shawn.BC_BJAuctionCompany_Item_0972_FinalView
-00:33:12.425847 [debug] [Thread-3  ]: Compiling model.Shawn.BC_BJAuctionCompany_Item_0972_FinalView
-00:33:12.425532 [debug] [Thread-4  ]: Began running node model.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_0972_FinalView
-00:33:12.432736 [info ] [Thread-4  ]: 8 of 22 START view model stg.BC_BJAuctionCompany_PurchCrMemoHdr_0972_FinalView.. [RUN]
-00:33:12.442117 [debug] [Thread-3  ]: Writing injected SQL for node "model.Shawn.BC_BJAuctionCompany_Item_0972_FinalView"
-00:33:12.443041 [debug] [Thread-4  ]: Acquiring new synapse connection "model.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_0972_FinalView"
-00:33:12.444378 [debug] [Thread-4  ]: Began compiling node model.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_0972_FinalView
-00:33:12.444572 [debug] [Thread-4  ]: Compiling model.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_0972_FinalView
-00:33:12.448405 [debug] [Thread-4  ]: Writing injected SQL for node "model.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_0972_FinalView"
-00:33:12.453324 [debug] [Thread-4  ]: finished collecting timing info
-00:33:12.453485 [debug] [Thread-4  ]: Began executing node model.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_0972_FinalView
-00:33:12.448715 [debug] [Thread-3  ]: finished collecting timing info
-00:33:12.459873 [debug] [Thread-3  ]: Began executing node model.Shawn.BC_BJAuctionCompany_Item_0972_FinalView
-00:33:12.452929 [debug] [Thread-1  ]: Writing runtime SQL for node "model.Shawn.BC_BJAuctionCompany_GLEntry_0972_FinalView"
-00:33:12.468476 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
-00:33:12.582924 [debug] [Thread-4  ]: Writing runtime SQL for node "model.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_0972_FinalView"
-00:33:12.592155 [debug] [Thread-4  ]: Opening a new connection, currently in state closed
-00:33:12.599003 [debug] [Thread-3  ]: Writing runtime SQL for node "model.Shawn.BC_BJAuctionCompany_Item_0972_FinalView"
-00:33:12.599995 [debug] [Thread-3  ]: Opening a new connection, currently in state closed
-00:33:12.767802 [debug] [Thread-2  ]: On model.Shawn.BC_BJAuctionCompany_DimensionSetEntry_0972_FinalView: COMMIT
-00:33:12.811386 [debug] [Thread-1  ]: On model.Shawn.BC_BJAuctionCompany_GLEntry_0972_FinalView: COMMIT
-00:33:12.838847 [debug] [Thread-2  ]: finished collecting timing info
-00:33:12.844339 [debug] [Thread-2  ]: On model.Shawn.BC_BJAuctionCompany_DimensionSetEntry_0972_FinalView: Close
-00:33:12.845167 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c8b9e4be-22b0-4af4-a7d8-084fc9f91722', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec9a905b50>]}
-00:33:12.845651 [info ] [Thread-2  ]: 5 of 22 OK created view model stg.BC_BJAuctionCompany_DimensionSetEntry_0972_FinalView [[32mOK[0m in 0.58s]
-00:33:12.846746 [debug] [Thread-2  ]: Finished running node model.Shawn.BC_BJAuctionCompany_DimensionSetEntry_0972_FinalView
-00:33:12.847133 [debug] [Thread-2  ]: Began running node model.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_8d9d_FinalView
-00:33:12.847546 [info ] [Thread-2  ]: 9 of 22 START view model stg.BC_BJAuctionCompany_PurchCrMemoHdr_8d9d_FinalView.. [RUN]
-00:33:12.848887 [debug] [Thread-2  ]: Acquiring new synapse connection "model.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_8d9d_FinalView"
-00:33:12.849090 [debug] [Thread-2  ]: Began compiling node model.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_8d9d_FinalView
-00:33:12.849255 [debug] [Thread-2  ]: Compiling model.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_8d9d_FinalView
-00:33:12.852732 [debug] [Thread-2  ]: Writing injected SQL for node "model.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_8d9d_FinalView"
-00:33:12.853358 [debug] [Thread-2  ]: finished collecting timing info
-00:33:12.853539 [debug] [Thread-2  ]: Began executing node model.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_8d9d_FinalView
-00:33:12.875260 [debug] [Thread-4  ]: On model.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_0972_FinalView: COMMIT
-00:33:12.889577 [debug] [Thread-3  ]: On model.Shawn.BC_BJAuctionCompany_Item_0972_FinalView: COMMIT
-00:33:12.899104 [debug] [Thread-1  ]: finished collecting timing info
-00:33:12.911884 [debug] [Thread-1  ]: On model.Shawn.BC_BJAuctionCompany_GLEntry_0972_FinalView: Close
-00:33:12.912805 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c8b9e4be-22b0-4af4-a7d8-084fc9f91722', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec9a8db7c0>]}
-00:33:12.913280 [info ] [Thread-1  ]: 6 of 22 OK created view model stg.BC_BJAuctionCompany_GLEntry_0972_FinalView.... [[32mOK[0m in 0.64s]
-00:33:12.914364 [debug] [Thread-1  ]: Finished running node model.Shawn.BC_BJAuctionCompany_GLEntry_0972_FinalView
-00:33:12.914705 [debug] [Thread-1  ]: Began running node model.Shawn.BC_BJAuctionCompany_PurchCrMemoLine_0972_FinalView
-00:33:12.915127 [info ] [Thread-1  ]: 10 of 22 START view model stg.BC_BJAuctionCompany_PurchCrMemoLine_0972_FinalView [RUN]
-00:33:12.916544 [debug] [Thread-1  ]: Acquiring new synapse connection "model.Shawn.BC_BJAuctionCompany_PurchCrMemoLine_0972_FinalView"
-00:33:12.922738 [debug] [Thread-1  ]: Began compiling node model.Shawn.BC_BJAuctionCompany_PurchCrMemoLine_0972_FinalView
-00:33:12.923049 [debug] [Thread-1  ]: Compiling model.Shawn.BC_BJAuctionCompany_PurchCrMemoLine_0972_FinalView
-00:33:12.926531 [debug] [Thread-1  ]: Writing injected SQL for node "model.Shawn.BC_BJAuctionCompany_PurchCrMemoLine_0972_FinalView"
-00:33:12.936066 [debug] [Thread-1  ]: finished collecting timing info
-00:33:12.936327 [debug] [Thread-1  ]: Began executing node model.Shawn.BC_BJAuctionCompany_PurchCrMemoLine_0972_FinalView
-00:33:12.955175 [debug] [Thread-2  ]: Writing runtime SQL for node "model.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_8d9d_FinalView"
-00:33:12.974386 [debug] [Thread-2  ]: Opening a new connection, currently in state closed
-00:33:12.977006 [debug] [Thread-4  ]: finished collecting timing info
-00:33:12.987883 [debug] [Thread-4  ]: On model.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_0972_FinalView: Close
-00:33:12.988795 [debug] [Thread-4  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c8b9e4be-22b0-4af4-a7d8-084fc9f91722', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec9e68ff40>]}
-00:33:12.989265 [info ] [Thread-4  ]: 8 of 22 OK created view model stg.BC_BJAuctionCompany_PurchCrMemoHdr_0972_FinalView [[32mOK[0m in 0.55s]
-00:33:12.990687 [debug] [Thread-4  ]: Finished running node model.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_0972_FinalView
-00:33:12.990992 [debug] [Thread-4  ]: Began running node model.Shawn.BC_BJAuctionCompany_PurchInvHeader_0972_FinalView
-00:33:12.991427 [info ] [Thread-4  ]: 11 of 22 START view model stg.BC_BJAuctionCompany_PurchInvHeader_0972_FinalView. [RUN]
-00:33:12.992843 [debug] [Thread-4  ]: Acquiring new synapse connection "model.Shawn.BC_BJAuctionCompany_PurchInvHeader_0972_FinalView"
-00:33:12.999550 [debug] [Thread-4  ]: Began compiling node model.Shawn.BC_BJAuctionCompany_PurchInvHeader_0972_FinalView
-00:33:12.999843 [debug] [Thread-4  ]: Compiling model.Shawn.BC_BJAuctionCompany_PurchInvHeader_0972_FinalView
-00:33:13.003220 [debug] [Thread-4  ]: Writing injected SQL for node "model.Shawn.BC_BJAuctionCompany_PurchInvHeader_0972_FinalView"
-00:33:13.011659 [debug] [Thread-4  ]: finished collecting timing info
-00:33:13.011892 [debug] [Thread-4  ]: Began executing node model.Shawn.BC_BJAuctionCompany_PurchInvHeader_0972_FinalView
-00:33:13.056926 [debug] [Thread-1  ]: Writing runtime SQL for node "model.Shawn.BC_BJAuctionCompany_PurchCrMemoLine_0972_FinalView"
-00:33:13.057647 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
-00:33:13.103910 [debug] [Thread-4  ]: Writing runtime SQL for node "model.Shawn.BC_BJAuctionCompany_PurchInvHeader_0972_FinalView"
-00:33:13.104606 [debug] [Thread-4  ]: Opening a new connection, currently in state closed
-00:33:13.127245 [debug] [Thread-3  ]: finished collecting timing info
-00:33:13.127704 [debug] [Thread-3  ]: On model.Shawn.BC_BJAuctionCompany_Item_0972_FinalView: Close
-00:33:13.131612 [debug] [Thread-3  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c8b9e4be-22b0-4af4-a7d8-084fc9f91722', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec9809e1f0>]}
-00:33:13.132265 [info ] [Thread-3  ]: 7 of 22 OK created view model stg.BC_BJAuctionCompany_Item_0972_FinalView....... [[32mOK[0m in 0.71s]
-00:33:13.133366 [debug] [Thread-3  ]: Finished running node model.Shawn.BC_BJAuctionCompany_Item_0972_FinalView
-00:33:13.133649 [debug] [Thread-3  ]: Began running node model.Shawn.BC_BJAuctionCompany_PurchInvHeader_8d9d_FinalView
-00:33:13.134059 [info ] [Thread-3  ]: 12 of 22 START view model stg.BC_BJAuctionCompany_PurchInvHeader_8d9d_FinalView. [RUN]
-00:33:13.135484 [debug] [Thread-3  ]: Acquiring new synapse connection "model.Shawn.BC_BJAuctionCompany_PurchInvHeader_8d9d_FinalView"
-00:33:13.135708 [debug] [Thread-3  ]: Began compiling node model.Shawn.BC_BJAuctionCompany_PurchInvHeader_8d9d_FinalView
-00:33:13.135876 [debug] [Thread-3  ]: Compiling model.Shawn.BC_BJAuctionCompany_PurchInvHeader_8d9d_FinalView
-00:33:13.139291 [debug] [Thread-3  ]: Writing injected SQL for node "model.Shawn.BC_BJAuctionCompany_PurchInvHeader_8d9d_FinalView"
-00:33:13.150457 [debug] [Thread-3  ]: finished collecting timing info
-00:33:13.150868 [debug] [Thread-3  ]: Began executing node model.Shawn.BC_BJAuctionCompany_PurchInvHeader_8d9d_FinalView
-00:33:13.238373 [debug] [Thread-3  ]: Writing runtime SQL for node "model.Shawn.BC_BJAuctionCompany_PurchInvHeader_8d9d_FinalView"
-00:33:13.239083 [debug] [Thread-3  ]: Opening a new connection, currently in state closed
-00:33:13.247072 [debug] [Thread-2  ]: On model.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_8d9d_FinalView: COMMIT
-00:33:13.268416 [debug] [Thread-1  ]: On model.Shawn.BC_BJAuctionCompany_PurchCrMemoLine_0972_FinalView: COMMIT
-00:33:13.321481 [debug] [Thread-1  ]: finished collecting timing info
-00:33:13.321938 [debug] [Thread-1  ]: On model.Shawn.BC_BJAuctionCompany_PurchCrMemoLine_0972_FinalView: Close
-00:33:13.323891 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c8b9e4be-22b0-4af4-a7d8-084fc9f91722', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec7bfed040>]}
-00:33:13.324457 [info ] [Thread-1  ]: 10 of 22 OK created view model stg.BC_BJAuctionCompany_PurchCrMemoLine_0972_FinalView [[32mOK[0m in 0.41s]
-00:33:13.326180 [debug] [Thread-1  ]: Finished running node model.Shawn.BC_BJAuctionCompany_PurchCrMemoLine_0972_FinalView
-00:33:13.326441 [debug] [Thread-1  ]: Began running node model.Shawn.BC_BJAuctionCompany_PurchInvLine_0972_FinalView
-00:33:13.326869 [info ] [Thread-1  ]: 13 of 22 START view model stg.BC_BJAuctionCompany_PurchInvLine_0972_FinalView... [RUN]
-00:33:13.327901 [debug] [Thread-1  ]: Acquiring new synapse connection "model.Shawn.BC_BJAuctionCompany_PurchInvLine_0972_FinalView"
-00:33:13.328103 [debug] [Thread-1  ]: Began compiling node model.Shawn.BC_BJAuctionCompany_PurchInvLine_0972_FinalView
-00:33:13.328269 [debug] [Thread-1  ]: Compiling model.Shawn.BC_BJAuctionCompany_PurchInvLine_0972_FinalView
-00:33:13.332991 [debug] [Thread-1  ]: Writing injected SQL for node "model.Shawn.BC_BJAuctionCompany_PurchInvLine_0972_FinalView"
-00:33:13.341350 [debug] [Thread-1  ]: finished collecting timing info
-00:33:13.341595 [debug] [Thread-1  ]: Began executing node model.Shawn.BC_BJAuctionCompany_PurchInvLine_0972_FinalView
-00:33:13.371123 [debug] [Thread-2  ]: finished collecting timing info
-00:33:13.379868 [debug] [Thread-2  ]: On model.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_8d9d_FinalView: Close
-00:33:13.380768 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c8b9e4be-22b0-4af4-a7d8-084fc9f91722', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec9e70c040>]}
-00:33:13.381241 [info ] [Thread-2  ]: 9 of 22 OK created view model stg.BC_BJAuctionCompany_PurchCrMemoHdr_8d9d_FinalView [[32mOK[0m in 0.53s]
-00:33:13.382316 [debug] [Thread-2  ]: Finished running node model.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_8d9d_FinalView
-00:33:13.382642 [debug] [Thread-2  ]: Began running node model.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_0972_FinalView
-00:33:13.383146 [info ] [Thread-2  ]: 14 of 22 START view model stg.BC_BJAuctionCompany_SalesCrMemoHeader_0972_FinalView [RUN]
-00:33:13.384562 [debug] [Thread-2  ]: Acquiring new synapse connection "model.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_0972_FinalView"
-00:33:13.400424 [debug] [Thread-2  ]: Began compiling node model.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_0972_FinalView
-00:33:13.400625 [debug] [Thread-2  ]: Compiling model.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_0972_FinalView
-00:33:13.400178 [debug] [Thread-4  ]: On model.Shawn.BC_BJAuctionCompany_PurchInvHeader_0972_FinalView: COMMIT
-00:33:13.404215 [debug] [Thread-2  ]: Writing injected SQL for node "model.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_0972_FinalView"
-00:33:13.412411 [debug] [Thread-2  ]: finished collecting timing info
-00:33:13.412645 [debug] [Thread-2  ]: Began executing node model.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_0972_FinalView
-00:33:13.561110 [debug] [Thread-1  ]: Writing runtime SQL for node "model.Shawn.BC_BJAuctionCompany_PurchInvLine_0972_FinalView"
-00:33:13.576244 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
-00:33:13.581950 [debug] [Thread-4  ]: finished collecting timing info
-00:33:13.591987 [debug] [Thread-4  ]: On model.Shawn.BC_BJAuctionCompany_PurchInvHeader_0972_FinalView: Close
-00:33:13.592896 [debug] [Thread-4  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c8b9e4be-22b0-4af4-a7d8-084fc9f91722', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec9a90f370>]}
-00:33:13.593360 [info ] [Thread-4  ]: 11 of 22 OK created view model stg.BC_BJAuctionCompany_PurchInvHeader_0972_FinalView [[32mOK[0m in 0.60s]
-00:33:13.594748 [debug] [Thread-4  ]: Finished running node model.Shawn.BC_BJAuctionCompany_PurchInvHeader_0972_FinalView
-00:33:13.595030 [debug] [Thread-4  ]: Began running node model.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_8d9d_FinalView
-00:33:13.595430 [info ] [Thread-4  ]: 15 of 22 START view model stg.BC_BJAuctionCompany_SalesCrMemoHeader_8d9d_FinalView [RUN]
-00:33:13.596703 [debug] [Thread-4  ]: Acquiring new synapse connection "model.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_8d9d_FinalView"
-00:33:13.603710 [debug] [Thread-4  ]: Began compiling node model.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_8d9d_FinalView
-00:33:13.603964 [debug] [Thread-4  ]: Compiling model.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_8d9d_FinalView
-00:33:13.607187 [debug] [Thread-4  ]: Writing injected SQL for node "model.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_8d9d_FinalView"
-00:33:13.615589 [debug] [Thread-4  ]: finished collecting timing info
-00:33:13.615850 [debug] [Thread-4  ]: Began executing node model.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_8d9d_FinalView
-00:33:13.625394 [debug] [Thread-2  ]: Writing runtime SQL for node "model.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_0972_FinalView"
-00:33:13.626073 [debug] [Thread-2  ]: Opening a new connection, currently in state closed
-00:33:13.627839 [debug] [Thread-3  ]: On model.Shawn.BC_BJAuctionCompany_PurchInvHeader_8d9d_FinalView: COMMIT
-00:33:13.698054 [debug] [Thread-4  ]: Writing runtime SQL for node "model.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_8d9d_FinalView"
-00:33:13.698813 [debug] [Thread-4  ]: Opening a new connection, currently in state closed
-00:33:13.733057 [debug] [Thread-3  ]: finished collecting timing info
-00:33:13.733517 [debug] [Thread-3  ]: On model.Shawn.BC_BJAuctionCompany_PurchInvHeader_8d9d_FinalView: Close
-00:33:13.734303 [debug] [Thread-3  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c8b9e4be-22b0-4af4-a7d8-084fc9f91722', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec9e6cf8e0>]}
-00:33:13.734853 [info ] [Thread-3  ]: 12 of 22 OK created view model stg.BC_BJAuctionCompany_PurchInvHeader_8d9d_FinalView [[32mOK[0m in 0.60s]
-00:33:13.736154 [debug] [Thread-3  ]: Finished running node model.Shawn.BC_BJAuctionCompany_PurchInvHeader_8d9d_FinalView
-00:33:13.736416 [debug] [Thread-3  ]: Began running node model.Shawn.BC_BJAuctionCompany_SalesCrMemoLine_0972_FinalView
-00:33:13.736890 [info ] [Thread-3  ]: 16 of 22 START view model stg.BC_BJAuctionCompany_SalesCrMemoLine_0972_FinalView [RUN]
-00:33:13.738227 [debug] [Thread-3  ]: Acquiring new synapse connection "model.Shawn.BC_BJAuctionCompany_SalesCrMemoLine_0972_FinalView"
-00:33:13.738435 [debug] [Thread-3  ]: Began compiling node model.Shawn.BC_BJAuctionCompany_SalesCrMemoLine_0972_FinalView
-00:33:13.738634 [debug] [Thread-3  ]: Compiling model.Shawn.BC_BJAuctionCompany_SalesCrMemoLine_0972_FinalView
-00:33:13.743339 [debug] [Thread-3  ]: Writing injected SQL for node "model.Shawn.BC_BJAuctionCompany_SalesCrMemoLine_0972_FinalView"
-00:33:13.752056 [debug] [Thread-3  ]: finished collecting timing info
-00:33:13.752313 [debug] [Thread-3  ]: Began executing node model.Shawn.BC_BJAuctionCompany_SalesCrMemoLine_0972_FinalView
-00:33:13.812665 [debug] [Thread-1  ]: On model.Shawn.BC_BJAuctionCompany_PurchInvLine_0972_FinalView: COMMIT
-00:33:13.837317 [debug] [Thread-3  ]: Writing runtime SQL for node "model.Shawn.BC_BJAuctionCompany_SalesCrMemoLine_0972_FinalView"
-00:33:13.838043 [debug] [Thread-3  ]: Opening a new connection, currently in state closed
-00:33:13.882825 [debug] [Thread-1  ]: finished collecting timing info
-00:33:13.883654 [debug] [Thread-1  ]: On model.Shawn.BC_BJAuctionCompany_PurchInvLine_0972_FinalView: Close
-00:33:13.884494 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c8b9e4be-22b0-4af4-a7d8-084fc9f91722', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec9a90f610>]}
-00:33:13.884976 [info ] [Thread-1  ]: 13 of 22 OK created view model stg.BC_BJAuctionCompany_PurchInvLine_0972_FinalView [[32mOK[0m in 0.56s]
-00:33:13.886041 [debug] [Thread-1  ]: Finished running node model.Shawn.BC_BJAuctionCompany_PurchInvLine_0972_FinalView
-00:33:13.886298 [debug] [Thread-1  ]: Began running node model.Shawn.BC_BJAuctionCompany_SalesInvoiceEntityAggregate_0972_FinalView
-00:33:13.886743 [info ] [Thread-1  ]: 17 of 22 START view model stg.BC_BJAuctionCompany_SalesInvoiceEntityAggregate_0972_FinalView [RUN]
-00:33:13.888207 [debug] [Thread-1  ]: Acquiring new synapse connection "model.Shawn.BC_BJAuctionCompany_SalesInvoiceEntityAggregate_0972_FinalView"
-00:33:13.888413 [debug] [Thread-1  ]: Began compiling node model.Shawn.BC_BJAuctionCompany_SalesInvoiceEntityAggregate_0972_FinalView
-00:33:13.888578 [debug] [Thread-1  ]: Compiling model.Shawn.BC_BJAuctionCompany_SalesInvoiceEntityAggregate_0972_FinalView
-00:33:13.892410 [debug] [Thread-1  ]: Writing injected SQL for node "model.Shawn.BC_BJAuctionCompany_SalesInvoiceEntityAggregate_0972_FinalView"
-00:33:13.892912 [debug] [Thread-1  ]: finished collecting timing info
-00:33:13.893098 [debug] [Thread-1  ]: Began executing node model.Shawn.BC_BJAuctionCompany_SalesInvoiceEntityAggregate_0972_FinalView
-00:33:13.918873 [debug] [Thread-2  ]: On model.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_0972_FinalView: COMMIT
-00:33:13.973531 [debug] [Thread-1  ]: Writing runtime SQL for node "model.Shawn.BC_BJAuctionCompany_SalesInvoiceEntityAggregate_0972_FinalView"
-00:33:13.975014 [debug] [Thread-4  ]: On model.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_8d9d_FinalView: COMMIT
-00:33:13.978923 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
-00:33:14.026469 [debug] [Thread-3  ]: On model.Shawn.BC_BJAuctionCompany_SalesCrMemoLine_0972_FinalView: COMMIT
-00:33:14.080284 [debug] [Thread-3  ]: finished collecting timing info
-00:33:14.080966 [debug] [Thread-3  ]: On model.Shawn.BC_BJAuctionCompany_SalesCrMemoLine_0972_FinalView: Close
-00:33:14.081782 [debug] [Thread-3  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c8b9e4be-22b0-4af4-a7d8-084fc9f91722', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec9a90f8b0>]}
-00:33:14.082294 [info ] [Thread-3  ]: 16 of 22 OK created view model stg.BC_BJAuctionCompany_SalesCrMemoLine_0972_FinalView [[32mOK[0m in 0.34s]
-00:33:14.083343 [debug] [Thread-3  ]: Finished running node model.Shawn.BC_BJAuctionCompany_SalesCrMemoLine_0972_FinalView
-00:33:14.083602 [debug] [Thread-3  ]: Began running node model.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_0972_FinalView
-00:33:14.084000 [info ] [Thread-3  ]: 18 of 22 START view model stg.BC_BJAuctionCompany_SalesInvoiceHeader_0972_FinalView [RUN]
-00:33:14.085525 [debug] [Thread-3  ]: Acquiring new synapse connection "model.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_0972_FinalView"
-00:33:14.085733 [debug] [Thread-3  ]: Began compiling node model.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_0972_FinalView
-00:33:14.085898 [debug] [Thread-3  ]: Compiling model.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_0972_FinalView
-00:33:14.089623 [debug] [Thread-3  ]: Writing injected SQL for node "model.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_0972_FinalView"
-00:33:14.090102 [debug] [Thread-3  ]: finished collecting timing info
-00:33:14.090286 [debug] [Thread-3  ]: Began executing node model.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_0972_FinalView
-00:33:14.125975 [debug] [Thread-4  ]: finished collecting timing info
-00:33:14.143901 [debug] [Thread-4  ]: On model.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_8d9d_FinalView: Close
-00:33:14.144768 [debug] [Thread-4  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c8b9e4be-22b0-4af4-a7d8-084fc9f91722', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec9a90f760>]}
-00:33:14.145240 [info ] [Thread-4  ]: 15 of 22 OK created view model stg.BC_BJAuctionCompany_SalesCrMemoHeader_8d9d_FinalView [[32mOK[0m in 0.55s]
-00:33:14.153406 [debug] [Thread-4  ]: Finished running node model.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_8d9d_FinalView
-00:33:14.153719 [debug] [Thread-4  ]: Began running node model.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_8d9d_FinalView
-00:33:14.153978 [info ] [Thread-4  ]: 19 of 22 START view model stg.BC_BJAuctionCompany_SalesInvoiceHeader_8d9d_FinalView [RUN]
-00:33:14.162171 [debug] [Thread-4  ]: Acquiring new synapse connection "model.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_8d9d_FinalView"
-00:33:14.162454 [debug] [Thread-4  ]: Began compiling node model.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_8d9d_FinalView
-00:33:14.162616 [debug] [Thread-4  ]: Compiling model.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_8d9d_FinalView
-00:33:14.165535 [debug] [Thread-4  ]: Writing injected SQL for node "model.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_8d9d_FinalView"
-00:33:14.165980 [debug] [Thread-4  ]: finished collecting timing info
-00:33:14.166140 [debug] [Thread-4  ]: Began executing node model.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_8d9d_FinalView
-00:33:14.204195 [debug] [Thread-2  ]: finished collecting timing info
-00:33:14.230047 [debug] [Thread-2  ]: On model.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_0972_FinalView: Close
-00:33:14.234525 [debug] [Thread-3  ]: Writing runtime SQL for node "model.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_0972_FinalView"
-00:33:14.244182 [debug] [Thread-3  ]: Opening a new connection, currently in state closed
-00:33:14.236740 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c8b9e4be-22b0-4af4-a7d8-084fc9f91722', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec98061be0>]}
-00:33:14.245758 [info ] [Thread-2  ]: 14 of 22 OK created view model stg.BC_BJAuctionCompany_SalesCrMemoHeader_0972_FinalView [[32mOK[0m in 0.85s]
-00:33:14.247302 [debug] [Thread-2  ]: Finished running node model.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_0972_FinalView
-00:33:14.247595 [debug] [Thread-2  ]: Began running node model.Shawn.BC_BJAuctionCompany_SalesInvoiceLine_0972_FinalView
-00:33:14.248035 [info ] [Thread-2  ]: 20 of 22 START view model stg.BC_BJAuctionCompany_SalesInvoiceLine_0972_FinalView [RUN]
-00:33:14.249452 [debug] [Thread-2  ]: Acquiring new synapse connection "model.Shawn.BC_BJAuctionCompany_SalesInvoiceLine_0972_FinalView"
-00:33:14.249668 [debug] [Thread-2  ]: Began compiling node model.Shawn.BC_BJAuctionCompany_SalesInvoiceLine_0972_FinalView
-00:33:14.249850 [debug] [Thread-2  ]: Compiling model.Shawn.BC_BJAuctionCompany_SalesInvoiceLine_0972_FinalView
-00:33:14.253911 [debug] [Thread-2  ]: Writing injected SQL for node "model.Shawn.BC_BJAuctionCompany_SalesInvoiceLine_0972_FinalView"
-00:33:14.264162 [debug] [Thread-2  ]: finished collecting timing info
-00:33:14.264454 [debug] [Thread-2  ]: Began executing node model.Shawn.BC_BJAuctionCompany_SalesInvoiceLine_0972_FinalView
-00:33:14.267774 [debug] [Thread-1  ]: On model.Shawn.BC_BJAuctionCompany_SalesInvoiceEntityAggregate_0972_FinalView: COMMIT
-00:33:14.313231 [debug] [Thread-4  ]: Writing runtime SQL for node "model.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_8d9d_FinalView"
-00:33:14.321901 [debug] [Thread-4  ]: Opening a new connection, currently in state closed
-00:33:14.361938 [debug] [Thread-2  ]: Writing runtime SQL for node "model.Shawn.BC_BJAuctionCompany_SalesInvoiceLine_0972_FinalView"
-00:33:14.362727 [debug] [Thread-2  ]: Opening a new connection, currently in state closed
-00:33:14.487515 [debug] [Thread-1  ]: finished collecting timing info
-00:33:14.490069 [debug] [Thread-1  ]: On model.Shawn.BC_BJAuctionCompany_SalesInvoiceEntityAggregate_0972_FinalView: Close
-00:33:14.490824 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c8b9e4be-22b0-4af4-a7d8-084fc9f91722', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec9a90fa00>]}
-00:33:14.491284 [info ] [Thread-1  ]: 17 of 22 OK created view model stg.BC_BJAuctionCompany_SalesInvoiceEntityAggregate_0972_FinalView [[32mOK[0m in 0.60s]
-00:33:14.492412 [debug] [Thread-1  ]: Finished running node model.Shawn.BC_BJAuctionCompany_SalesInvoiceEntityAggregate_0972_FinalView
-00:33:14.492665 [debug] [Thread-1  ]: Began running node model.Shawn.BC_BJAuctionCompany_VendorLedgerEntry_0972_FinalView
-00:33:14.493037 [info ] [Thread-1  ]: 21 of 22 START view model stg.BC_BJAuctionCompany_VendorLedgerEntry_0972_FinalView [RUN]
-00:33:14.494385 [debug] [Thread-1  ]: Acquiring new synapse connection "model.Shawn.BC_BJAuctionCompany_VendorLedgerEntry_0972_FinalView"
-00:33:14.494639 [debug] [Thread-1  ]: Began compiling node model.Shawn.BC_BJAuctionCompany_VendorLedgerEntry_0972_FinalView
-00:33:14.494807 [debug] [Thread-1  ]: Compiling model.Shawn.BC_BJAuctionCompany_VendorLedgerEntry_0972_FinalView
-00:33:14.575934 [debug] [Thread-1  ]: Writing injected SQL for node "model.Shawn.BC_BJAuctionCompany_VendorLedgerEntry_0972_FinalView"
-00:33:14.592373 [debug] [Thread-1  ]: finished collecting timing info
-00:33:14.592634 [debug] [Thread-1  ]: Began executing node model.Shawn.BC_BJAuctionCompany_VendorLedgerEntry_0972_FinalView
-00:33:14.577471 [debug] [Thread-3  ]: On model.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_0972_FinalView: COMMIT
-00:33:14.642699 [debug] [Thread-2  ]: On model.Shawn.BC_BJAuctionCompany_SalesInvoiceLine_0972_FinalView: COMMIT
-00:33:14.644191 [debug] [Thread-4  ]: On model.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_8d9d_FinalView: COMMIT
-00:33:14.668948 [debug] [Thread-1  ]: Writing runtime SQL for node "model.Shawn.BC_BJAuctionCompany_VendorLedgerEntry_0972_FinalView"
-00:33:14.669722 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
-00:33:14.703768 [debug] [Thread-2  ]: finished collecting timing info
-00:33:14.704233 [debug] [Thread-2  ]: On model.Shawn.BC_BJAuctionCompany_SalesInvoiceLine_0972_FinalView: Close
-00:33:14.705053 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c8b9e4be-22b0-4af4-a7d8-084fc9f91722', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec9e723670>]}
-00:33:14.705586 [info ] [Thread-2  ]: 20 of 22 OK created view model stg.BC_BJAuctionCompany_SalesInvoiceLine_0972_FinalView [[32mOK[0m in 0.46s]
-00:33:14.707192 [debug] [Thread-2  ]: Finished running node model.Shawn.BC_BJAuctionCompany_SalesInvoiceLine_0972_FinalView
-00:33:14.707464 [debug] [Thread-2  ]: Began running node model.Shawn.BC_BJAuctionCompany_Vendor_0972_FinalView
-00:33:14.707877 [info ] [Thread-2  ]: 22 of 22 START view model stg.BC_BJAuctionCompany_Vendor_0972_FinalView......... [RUN]
-00:33:14.708837 [debug] [Thread-2  ]: Acquiring new synapse connection "model.Shawn.BC_BJAuctionCompany_Vendor_0972_FinalView"
-00:33:14.709038 [debug] [Thread-2  ]: Began compiling node model.Shawn.BC_BJAuctionCompany_Vendor_0972_FinalView
-00:33:14.709200 [debug] [Thread-2  ]: Compiling model.Shawn.BC_BJAuctionCompany_Vendor_0972_FinalView
-00:33:14.714243 [debug] [Thread-2  ]: Writing injected SQL for node "model.Shawn.BC_BJAuctionCompany_Vendor_0972_FinalView"
-00:33:14.714800 [debug] [Thread-2  ]: finished collecting timing info
-00:33:14.715129 [debug] [Thread-2  ]: Began executing node model.Shawn.BC_BJAuctionCompany_Vendor_0972_FinalView
-00:33:14.780377 [debug] [Thread-2  ]: Writing runtime SQL for node "model.Shawn.BC_BJAuctionCompany_Vendor_0972_FinalView"
-00:33:14.781110 [debug] [Thread-2  ]: Opening a new connection, currently in state closed
-00:33:14.849501 [debug] [Thread-3  ]: finished collecting timing info
-00:33:14.849951 [debug] [Thread-3  ]: On model.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_0972_FinalView: Close
-00:33:14.850770 [debug] [Thread-3  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c8b9e4be-22b0-4af4-a7d8-084fc9f91722', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec9a90fdf0>]}
-00:33:14.851278 [info ] [Thread-3  ]: 18 of 22 OK created view model stg.BC_BJAuctionCompany_SalesInvoiceHeader_0972_FinalView [[32mOK[0m in 0.77s]
-00:33:14.852350 [debug] [Thread-3  ]: Finished running node model.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_0972_FinalView
-00:33:14.870396 [debug] [Thread-4  ]: finished collecting timing info
-00:33:14.870880 [debug] [Thread-4  ]: On model.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_8d9d_FinalView: Close
-00:33:14.871685 [debug] [Thread-4  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c8b9e4be-22b0-4af4-a7d8-084fc9f91722', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec9ab25c40>]}
-00:33:14.872204 [info ] [Thread-4  ]: 19 of 22 OK created view model stg.BC_BJAuctionCompany_SalesInvoiceHeader_8d9d_FinalView [[32mOK[0m in 0.71s]
-00:33:14.873291 [debug] [Thread-4  ]: Finished running node model.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_8d9d_FinalView
-00:33:14.919623 [debug] [Thread-1  ]: On model.Shawn.BC_BJAuctionCompany_VendorLedgerEntry_0972_FinalView: COMMIT
-00:33:15.027076 [debug] [Thread-1  ]: finished collecting timing info
-00:33:15.027521 [debug] [Thread-1  ]: On model.Shawn.BC_BJAuctionCompany_VendorLedgerEntry_0972_FinalView: Close
-00:33:15.028304 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c8b9e4be-22b0-4af4-a7d8-084fc9f91722', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec9a90ffd0>]}
-00:33:15.028828 [info ] [Thread-1  ]: 21 of 22 OK created view model stg.BC_BJAuctionCompany_VendorLedgerEntry_0972_FinalView [[32mOK[0m in 0.53s]
-00:33:15.030194 [debug] [Thread-1  ]: Finished running node model.Shawn.BC_BJAuctionCompany_VendorLedgerEntry_0972_FinalView
-00:33:15.032090 [debug] [Thread-2  ]: On model.Shawn.BC_BJAuctionCompany_Vendor_0972_FinalView: COMMIT
-00:33:15.246363 [debug] [Thread-2  ]: finished collecting timing info
-00:33:15.246834 [debug] [Thread-2  ]: On model.Shawn.BC_BJAuctionCompany_Vendor_0972_FinalView: Close
-00:33:15.247651 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c8b9e4be-22b0-4af4-a7d8-084fc9f91722', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec9e6a2610>]}
-00:33:15.248160 [info ] [Thread-2  ]: 22 of 22 OK created view model stg.BC_BJAuctionCompany_Vendor_0972_FinalView.... [[32mOK[0m in 0.54s]
-00:33:15.249248 [debug] [Thread-2  ]: Finished running node model.Shawn.BC_BJAuctionCompany_Vendor_0972_FinalView
-00:33:15.251457 [debug] [MainThread]: Acquiring new synapse connection "master"
-00:33:15.251685 [debug] [MainThread]: On master: COMMIT
-00:33:15.252083 [info ] [MainThread]: 
-00:33:15.253073 [info ] [MainThread]: Finished running 22 view models in 14.33s.
-00:33:15.254041 [debug] [MainThread]: Connection 'master' was properly closed.
-00:33:15.254230 [debug] [MainThread]: Connection 'model.Shawn.BC_BJAuctionCompany_Vendor_0972_FinalView' was properly closed.
-00:33:15.254405 [debug] [MainThread]: Connection 'model.Shawn.BC_BJAuctionCompany_VendorLedgerEntry_0972_FinalView' was properly closed.
-00:33:15.254566 [debug] [MainThread]: Connection 'model.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_0972_FinalView' was properly closed.
-00:33:15.254694 [debug] [MainThread]: Connection 'model.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_8d9d_FinalView' was properly closed.
-00:33:15.266033 [info ] [MainThread]: 
-00:33:15.267056 [info ] [MainThread]: [32mCompleted successfully[0m
-00:33:15.267798 [info ] [MainThread]: 
-00:33:15.269193 [info ] [MainThread]: Done. PASS=22 WARN=0 ERROR=0 SKIP=0 TOTAL=22
-00:33:15.270436 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec9c713370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec9a943490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec9a90d5e0>]}
+============================== 2022-09-15 02:49:59.714946 | be4cab2a-7e7e-4123-8ae2-3a4b84492c1a ==============================
+02:49:59.714946 [info ] [MainThread]: Running with dbt=1.0.0
+02:49:59.719286 [debug] [MainThread]: running dbt with arguments Namespace(cls=<class 'dbt.task.snapshot.SnapshotTask'>, debug=None, defer=None, event_buffer_size=None, exclude=None, fail_fast=None, log_cache_events=False, log_format=None, partial_parse=None, printer_width=None, profile=None, profiles_dir='/home/azureuser/.dbt', project_dir='/home/azureuser/shawn_dbt/BC', record_timing_info=None, rpc_method='snapshot', select=None, selector_name=None, send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, threads=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='snapshot', write_json=None)
+02:49:59.719691 [debug] [MainThread]: Tracking: tracking
+02:49:59.720141 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f65c7051070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f65c70510d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f65c7051130>]}
+02:49:59.758927 [info ] [MainThread]: Partial parse save file not found. Starting full parse.
+02:49:59.760193 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'be4cab2a-7e7e-4123-8ae2-3a4b84492c1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f65c70645b0>]}
+02:49:59.792455 [debug] [MainThread]: Parsing macros/generate_schema_name.sql
+02:49:59.794097 [debug] [MainThread]: Parsing macros/materializations/tests/test.sql
+02:49:59.800005 [debug] [MainThread]: Parsing macros/materializations/seeds/str_replace.sql
+02:49:59.800906 [debug] [MainThread]: Parsing macros/materializations/seeds/helpers.sql
+02:49:59.806565 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot_merge.sql
+02:49:59.808269 [debug] [MainThread]: Parsing macros/materializations/models/table/create_table_as.sql
+02:49:59.811215 [debug] [MainThread]: Parsing macros/materializations/models/view/create_view_as.sql
+02:49:59.811994 [debug] [MainThread]: Parsing macros/adapters/metadata.sql
+02:49:59.814033 [debug] [MainThread]: Parsing macros/adapters/columns.sql
+02:49:59.818587 [debug] [MainThread]: Parsing macros/adapters/relation.sql
+02:49:59.821546 [debug] [MainThread]: Parsing macros/adapters/indexes.sql
+02:49:59.827779 [debug] [MainThread]: Parsing macros/adapters/schema.sql
+02:49:59.828781 [debug] [MainThread]: Parsing macros/adapters.sql
+02:49:59.829037 [debug] [MainThread]: Parsing macros/materializations/tests/test.sql
+02:49:59.833852 [debug] [MainThread]: Parsing macros/materializations/tests/helpers.sql
+02:49:59.835204 [debug] [MainThread]: Parsing macros/materializations/seeds/helpers.sql
+02:49:59.842489 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot.sql
+02:49:59.844015 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot_merge.sql
+02:49:59.844763 [debug] [MainThread]: Parsing macros/materializations/snapshots/strategies.sql
+02:49:59.846230 [debug] [MainThread]: Parsing macros/materializations/models/incremental/merge.sql
+02:49:59.848361 [debug] [MainThread]: Parsing macros/materializations/models/table/create_table_as.sql
+02:49:59.851230 [debug] [MainThread]: Parsing macros/materializations/models/view/create_view_as.sql
+02:49:59.852699 [debug] [MainThread]: Parsing macros/adapters/freshness.sql
+02:49:59.853208 [debug] [MainThread]: Parsing macros/adapters/persist_docs.sql
+02:49:59.853458 [debug] [MainThread]: Parsing macros/adapters/metadata.sql
+02:49:59.857883 [debug] [MainThread]: Parsing macros/adapters/columns.sql
+02:49:59.862527 [debug] [MainThread]: Parsing macros/adapters/relation.sql
+02:49:59.867934 [debug] [MainThread]: Parsing macros/adapters/indexes.sql
+02:49:59.877084 [debug] [MainThread]: Parsing macros/adapters/schema.sql
+02:49:59.884080 [debug] [MainThread]: Parsing macros/materializations/hooks.sql
+02:49:59.888155 [debug] [MainThread]: Parsing macros/materializations/configs.sql
+02:49:59.890646 [debug] [MainThread]: Parsing macros/materializations/tests/where_subquery.sql
+02:49:59.892582 [debug] [MainThread]: Parsing macros/materializations/tests/test.sql
+02:49:59.958821 [debug] [MainThread]: Parsing macros/materializations/tests/helpers.sql
+02:49:59.961091 [debug] [MainThread]: Parsing macros/materializations/seeds/seed.sql
+02:49:59.969830 [debug] [MainThread]: Parsing macros/materializations/seeds/helpers.sql
+02:49:59.988791 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot.sql
+02:50:00.000958 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot_merge.sql
+02:50:00.003025 [debug] [MainThread]: Parsing macros/materializations/snapshots/strategies.sql
+02:50:00.022600 [debug] [MainThread]: Parsing macros/materializations/snapshots/helpers.sql
+02:50:00.034394 [debug] [MainThread]: Parsing macros/materializations/models/incremental/column_helpers.sql
+02:50:00.039343 [debug] [MainThread]: Parsing macros/materializations/models/incremental/merge.sql
+02:50:00.051110 [debug] [MainThread]: Parsing macros/materializations/models/incremental/incremental.sql
+02:50:00.062267 [debug] [MainThread]: Parsing macros/materializations/models/incremental/is_incremental.sql
+02:50:00.064214 [debug] [MainThread]: Parsing macros/materializations/models/incremental/on_schema_change.sql
+02:50:00.079872 [debug] [MainThread]: Parsing macros/materializations/models/table/table.sql
+02:50:00.087545 [debug] [MainThread]: Parsing macros/materializations/models/table/create_table_as.sql
+02:50:00.090771 [debug] [MainThread]: Parsing macros/materializations/models/view/create_view_as.sql
+02:50:00.093392 [debug] [MainThread]: Parsing macros/materializations/models/view/create_or_replace_view.sql
+02:50:00.096250 [debug] [MainThread]: Parsing macros/materializations/models/view/view.sql
+02:50:00.103576 [debug] [MainThread]: Parsing macros/materializations/models/view/helpers.sql
+02:50:00.105100 [debug] [MainThread]: Parsing macros/generic_test_sql/unique.sql
+02:50:00.105942 [debug] [MainThread]: Parsing macros/generic_test_sql/accepted_values.sql
+02:50:00.107416 [debug] [MainThread]: Parsing macros/generic_test_sql/not_null.sql
+02:50:00.108090 [debug] [MainThread]: Parsing macros/generic_test_sql/relationships.sql
+02:50:00.109069 [debug] [MainThread]: Parsing macros/adapters/freshness.sql
+02:50:00.112062 [debug] [MainThread]: Parsing macros/adapters/persist_docs.sql
+02:50:00.116542 [debug] [MainThread]: Parsing macros/adapters/metadata.sql
+02:50:00.123904 [debug] [MainThread]: Parsing macros/adapters/columns.sql
+02:50:00.133772 [debug] [MainThread]: Parsing macros/adapters/relation.sql
+02:50:00.143710 [debug] [MainThread]: Parsing macros/adapters/indexes.sql
+02:50:00.146763 [debug] [MainThread]: Parsing macros/adapters/schema.sql
+02:50:00.149207 [debug] [MainThread]: Parsing macros/etc/datetime.sql
+02:50:00.157830 [debug] [MainThread]: Parsing macros/etc/statement.sql
+02:50:00.162441 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_database.sql
+02:50:00.164249 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_schema.sql
+02:50:00.166892 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_alias.sql
+02:50:00.168537 [debug] [MainThread]: Parsing tests/generic/builtin.sql
+02:50:00.432769 [debug] [MainThread]: 1699: static parser successfully parsed step1_InterView/BC_BJAuctionCompany_VendorLedgerEntry_0972_InterView.sql
+02:50:00.443545 [debug] [MainThread]: 1699: static parser successfully parsed step1_InterView/BC_BJAuctionCompany_SalesInvoiceHeader_8d9d_InterView.sql
+02:50:00.445997 [debug] [MainThread]: 1699: static parser successfully parsed step1_InterView/BC_BJAuctionCompany_PurchInvHeader_0972_InterView.sql
+02:50:00.448241 [debug] [MainThread]: 1699: static parser successfully parsed step1_InterView/BC_BJAuctionCompany_Item_0972_InterView.sql
+02:50:00.451119 [debug] [MainThread]: 1699: static parser successfully parsed step1_InterView/BC_BJAuctionCompany_CustLedgerEntry_0972_InterView.sql
+02:50:00.453300 [debug] [MainThread]: 1699: static parser successfully parsed step1_InterView/BC_BJAuctionCompany_Vendor_0972_InterView.sql
+02:50:00.455641 [debug] [MainThread]: 1699: static parser successfully parsed step1_InterView/BC_BJAuctionCompany_SalesCrMemoLine_0972_InterView.sql
+02:50:00.457667 [debug] [MainThread]: 1699: static parser successfully parsed step1_InterView/BC_BJAuctionCompany_SalesInvoiceEntityAggregate_0972_InterView.sql
+02:50:00.459694 [debug] [MainThread]: 1699: static parser successfully parsed step1_InterView/BC_BJAuctionCompany_PurchInvHeader_8d9d_InterView.sql
+02:50:00.461701 [debug] [MainThread]: 1699: static parser successfully parsed step1_InterView/BC_BJAuctionCompany_DimensionSetEntry_0972_InterView.sql
+02:50:00.463755 [debug] [MainThread]: 1699: static parser successfully parsed step1_InterView/BC_BJAuctionCompany_DetailedVendorLedgEntry_0972_InterView.sql
+02:50:00.466074 [debug] [MainThread]: 1699: static parser successfully parsed step1_InterView/BC_BJAuctionCompany_Customer_0972_InterView.sql
+02:50:00.468070 [debug] [MainThread]: 1699: static parser successfully parsed step1_InterView/BC_BJAuctionCompany_SalesCrMemoHeader_8d9d_InterView.sql
+02:50:00.470177 [debug] [MainThread]: 1699: static parser successfully parsed step1_InterView/BC_BJAuctionCompany_PurchCrMemoLine_0972_InterView.sql
+02:50:00.473594 [debug] [MainThread]: 1699: static parser successfully parsed step1_InterView/BC_BJAuctionCompany_PurchInvLine_0972_InterView.sql
+02:50:00.475670 [debug] [MainThread]: 1699: static parser successfully parsed step1_InterView/BC_BJAuctionCompany_GLEntry_0972_InterView.sql
+02:50:00.477781 [debug] [MainThread]: 1699: static parser successfully parsed step1_InterView/BC_BJAuctionCompany_SalesInvoiceHeader_0972_InterView.sql
+02:50:00.481364 [debug] [MainThread]: 1699: static parser successfully parsed step1_InterView/BC_BJAuctionCompany_PurchCrMemoHdr_0972_InterView.sql
+02:50:00.483471 [debug] [MainThread]: 1699: static parser successfully parsed step1_InterView/BC_BJAuctionCompany_PurchCrMemoHdr_8d9d_InterView.sql
+02:50:00.485644 [debug] [MainThread]: 1699: static parser successfully parsed step1_InterView/BC_BJAuctionCompany_SalesInvoiceLine_0972_InterView.sql
+02:50:00.487744 [debug] [MainThread]: 1699: static parser successfully parsed step1_InterView/BC_BJAuctionCompany_SalesCrMemoHeader_0972_InterView.sql
+02:50:00.493918 [debug] [MainThread]: 1699: static parser successfully parsed step1_InterView/BC_BJAuctionCompany_DetailedCustLedgEntry_0972_InterView.sql
+02:50:00.505382 [debug] [MainThread]: 1699: static parser successfully parsed step3_FinalView/BC_BJAuctionCompany_SalesInvoiceLine_0972_FinalView.sql
+02:50:00.507824 [debug] [MainThread]: 1699: static parser successfully parsed step3_FinalView/BC_BJAuctionCompany_Item_0972_FinalView.sql
+02:50:00.509965 [debug] [MainThread]: 1699: static parser successfully parsed step3_FinalView/BC_BJAuctionCompany_SalesInvoiceHeader_0972_FinalView.sql
+02:50:00.516572 [debug] [MainThread]: 1699: static parser successfully parsed step3_FinalView/BC_BJAuctionCompany_PurchInvHeader_0972_FinalView.sql
+02:50:00.524196 [debug] [MainThread]: 1699: static parser successfully parsed step3_FinalView/BC_BJAuctionCompany_SalesInvoiceHeader_8d9d_FinalView.sql
+02:50:00.529733 [debug] [MainThread]: 1699: static parser successfully parsed step3_FinalView/BC_BJAuctionCompany_SalesCrMemoHeader_0972_FinalView.sql
+02:50:00.532500 [debug] [MainThread]: 1699: static parser successfully parsed step3_FinalView/BC_BJAuctionCompany_SalesCrMemoLine_0972_FinalView.sql
+02:50:00.534527 [debug] [MainThread]: 1699: static parser successfully parsed step3_FinalView/BC_BJAuctionCompany_SalesInvoiceEntityAggregate_0972_FinalView.sql
+02:50:00.536548 [debug] [MainThread]: 1699: static parser successfully parsed step3_FinalView/BC_BJAuctionCompany_DimensionSetEntry_0972_FinalView.sql
+02:50:00.538600 [debug] [MainThread]: 1699: static parser successfully parsed step3_FinalView/BC_BJAuctionCompany_PurchInvLine_0972_FinalView.sql
+02:50:00.540642 [debug] [MainThread]: 1699: static parser successfully parsed step3_FinalView/BC_BJAuctionCompany_VendorLedgerEntry_0972_FinalView.sql
+02:50:00.542935 [debug] [MainThread]: 1699: static parser successfully parsed step3_FinalView/BC_BJAuctionCompany_SalesCrMemoHeader_8d9d_FinalView.sql
+02:50:00.544984 [debug] [MainThread]: 1699: static parser successfully parsed step3_FinalView/BC_BJAuctionCompany_GLEntry_0972_FinalView.sql
+02:50:00.547015 [debug] [MainThread]: 1699: static parser successfully parsed step3_FinalView/BC_BJAuctionCompany_Vendor_0972_FinalView.sql
+02:50:00.549018 [debug] [MainThread]: 1699: static parser successfully parsed step3_FinalView/BC_BJAuctionCompany_DetailedCustLedgEntry_0972_FinalView.sql
+02:50:00.551069 [debug] [MainThread]: 1699: static parser successfully parsed step3_FinalView/BC_BJAuctionCompany_Customer_0972_FinalView.sql
+02:50:00.553074 [debug] [MainThread]: 1699: static parser successfully parsed step3_FinalView/BC_BJAuctionCompany_PurchInvHeader_8d9d_FinalView.sql
+02:50:00.556501 [debug] [MainThread]: 1699: static parser successfully parsed step3_FinalView/BC_BJAuctionCompany_PurchCrMemoLine_0972_FinalView.sql
+02:50:00.560016 [debug] [MainThread]: 1699: static parser successfully parsed step3_FinalView/BC_BJAuctionCompany_CustLedgerEntry_0972_FinalView.sql
+02:50:00.562024 [debug] [MainThread]: 1699: static parser successfully parsed step3_FinalView/BC_BJAuctionCompany_PurchCrMemoHdr_8d9d_FinalView.sql
+02:50:00.564073 [debug] [MainThread]: 1699: static parser successfully parsed step3_FinalView/BC_BJAuctionCompany_DetailedVendorLedgEntry_0972_FinalView.sql
+02:50:00.566116 [debug] [MainThread]: 1699: static parser successfully parsed step3_FinalView/BC_BJAuctionCompany_PurchCrMemoHdr_0972_FinalView.sql
+02:50:00.759466 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'be4cab2a-7e7e-4123-8ae2-3a4b84492c1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f65c6cb32b0>]}
+02:50:00.784506 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'be4cab2a-7e7e-4123-8ae2-3a4b84492c1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f65c6cb32b0>]}
+02:50:00.785014 [info ] [MainThread]: Found 44 models, 0 tests, 22 snapshots, 0 analyses, 211 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+02:50:00.799421 [info ] [MainThread]: 
+02:50:00.800816 [debug] [MainThread]: Acquiring new synapse connection "master"
+02:50:00.805942 [debug] [ThreadPool]: Acquiring new synapse connection "list_BJAC_DW_PROD"
+02:50:00.818664 [debug] [ThreadPool]: Opening a new connection, currently in state init
+02:50:01.121995 [debug] [ThreadPool]: On list_BJAC_DW_PROD: Close
+02:50:01.131350 [debug] [ThreadPool]: Acquiring new synapse connection "list_BJAC_DW_PROD_stg"
+02:50:01.141947 [debug] [ThreadPool]: Opening a new connection, currently in state init
+02:50:01.439766 [debug] [ThreadPool]: On list_BJAC_DW_PROD_stg: ROLLBACK
+02:50:01.440277 [debug] [ThreadPool]: On list_BJAC_DW_PROD_stg: Close
+02:50:11.261195 [debug] [MainThread]: On master: COMMIT
+02:50:11.261899 [info ] [MainThread]: Concurrency: 4 threads (target='prod')
+02:50:11.263079 [info ] [MainThread]: 
+02:50:11.268327 [debug] [Thread-1  ]: Began running node snapshot.Shawn.BC_BJAuctionCompany_CustLedgerEntry_0972_Incr
+02:50:11.268669 [info ] [Thread-1  ]: 1 of 22 START snapshot stg.BC_BJAuctionCompany_CustLedgerEntry_0972_Incr........ [RUN]
+02:50:11.268945 [debug] [Thread-2  ]: Began running node snapshot.Shawn.BC_BJAuctionCompany_Customer_0972_Incr
+02:50:11.269151 [info ] [Thread-2  ]: 2 of 22 START snapshot stg.BC_BJAuctionCompany_Customer_0972_Incr............... [RUN]
+02:50:11.269447 [debug] [Thread-3  ]: Began running node snapshot.Shawn.BC_BJAuctionCompany_DetailedCustLedgEntry_0972_Incr
+02:50:11.269663 [info ] [Thread-3  ]: 3 of 22 START snapshot stg.BC_BJAuctionCompany_DetailedCustLedgEntry_0972_Incr.. [RUN]
+02:50:11.269918 [debug] [Thread-4  ]: Began running node snapshot.Shawn.BC_BJAuctionCompany_DetailedVendorLedgEntry_0972_Incr
+02:50:11.270121 [info ] [Thread-4  ]: 4 of 22 START snapshot stg.BC_BJAuctionCompany_DetailedVendorLedgEntry_0972_Incr [RUN]
+02:50:11.271431 [debug] [Thread-1  ]: Acquiring new synapse connection "snapshot.Shawn.BC_BJAuctionCompany_CustLedgerEntry_0972_Incr"
+02:50:11.273188 [debug] [Thread-1  ]: Began compiling node snapshot.Shawn.BC_BJAuctionCompany_CustLedgerEntry_0972_Incr
+02:50:11.273440 [debug] [Thread-1  ]: Compiling snapshot.Shawn.BC_BJAuctionCompany_CustLedgerEntry_0972_Incr
+02:50:11.272625 [debug] [Thread-4  ]: Acquiring new synapse connection "snapshot.Shawn.BC_BJAuctionCompany_DetailedVendorLedgEntry_0972_Incr"
+02:50:11.276890 [debug] [Thread-4  ]: Began compiling node snapshot.Shawn.BC_BJAuctionCompany_DetailedVendorLedgEntry_0972_Incr
+02:50:11.277017 [debug] [Thread-4  ]: Compiling snapshot.Shawn.BC_BJAuctionCompany_DetailedVendorLedgEntry_0972_Incr
+02:50:11.272071 [debug] [Thread-2  ]: Acquiring new synapse connection "snapshot.Shawn.BC_BJAuctionCompany_Customer_0972_Incr"
+02:50:11.279846 [debug] [Thread-2  ]: Began compiling node snapshot.Shawn.BC_BJAuctionCompany_Customer_0972_Incr
+02:50:11.279966 [debug] [Thread-2  ]: Compiling snapshot.Shawn.BC_BJAuctionCompany_Customer_0972_Incr
+02:50:11.282284 [debug] [Thread-2  ]: finished collecting timing info
+02:50:11.272371 [debug] [Thread-3  ]: Acquiring new synapse connection "snapshot.Shawn.BC_BJAuctionCompany_DetailedCustLedgEntry_0972_Incr"
+02:50:11.282688 [debug] [Thread-3  ]: Began compiling node snapshot.Shawn.BC_BJAuctionCompany_DetailedCustLedgEntry_0972_Incr
+02:50:11.282815 [debug] [Thread-3  ]: Compiling snapshot.Shawn.BC_BJAuctionCompany_DetailedCustLedgEntry_0972_Incr
+02:50:11.285054 [debug] [Thread-3  ]: finished collecting timing info
+02:50:11.285221 [debug] [Thread-3  ]: Began executing node snapshot.Shawn.BC_BJAuctionCompany_DetailedCustLedgEntry_0972_Incr
+02:50:11.282463 [debug] [Thread-2  ]: Began executing node snapshot.Shawn.BC_BJAuctionCompany_Customer_0972_Incr
+02:50:11.279661 [debug] [Thread-4  ]: finished collecting timing info
+02:50:11.312339 [debug] [Thread-4  ]: Began executing node snapshot.Shawn.BC_BJAuctionCompany_DetailedVendorLedgEntry_0972_Incr
+02:50:11.276701 [debug] [Thread-1  ]: finished collecting timing info
+02:50:11.319770 [debug] [Thread-1  ]: Began executing node snapshot.Shawn.BC_BJAuctionCompany_CustLedgerEntry_0972_Incr
+02:50:11.352333 [debug] [Thread-3  ]: Opening a new connection, currently in state init
+02:50:11.358758 [debug] [Thread-4  ]: Opening a new connection, currently in state init
+02:50:11.368734 [debug] [Thread-2  ]: Opening a new connection, currently in state closed
+02:50:11.376709 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+02:51:15.723896 [debug] [Thread-2  ]: Writing runtime SQL for node "snapshot.Shawn.BC_BJAuctionCompany_Customer_0972_Incr"
+02:51:19.284272 [debug] [Thread-2  ]: On snapshot.Shawn.BC_BJAuctionCompany_Customer_0972_Incr: COMMIT
+02:51:19.342181 [debug] [Thread-2  ]: finished collecting timing info
+02:51:19.342734 [debug] [Thread-2  ]: On snapshot.Shawn.BC_BJAuctionCompany_Customer_0972_Incr: Close
+02:51:19.343608 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'be4cab2a-7e7e-4123-8ae2-3a4b84492c1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f65c479adf0>]}
+02:51:19.344203 [info ] [Thread-2  ]: 2 of 22 OK snapshotted stg.BC_BJAuctionCompany_Customer_0972_Incr............... [[32mOK[0m in 68.07s]
+02:51:19.345378 [debug] [Thread-2  ]: Finished running node snapshot.Shawn.BC_BJAuctionCompany_Customer_0972_Incr
+02:51:19.345682 [debug] [Thread-2  ]: Began running node snapshot.Shawn.BC_BJAuctionCompany_DimensionSetEntry_0972_Incr
+02:51:19.346133 [info ] [Thread-2  ]: 5 of 22 START snapshot stg.BC_BJAuctionCompany_DimensionSetEntry_0972_Incr...... [RUN]
+02:51:19.347486 [debug] [Thread-2  ]: Acquiring new synapse connection "snapshot.Shawn.BC_BJAuctionCompany_DimensionSetEntry_0972_Incr"
+02:51:19.347733 [debug] [Thread-2  ]: Began compiling node snapshot.Shawn.BC_BJAuctionCompany_DimensionSetEntry_0972_Incr
+02:51:19.347933 [debug] [Thread-2  ]: Compiling snapshot.Shawn.BC_BJAuctionCompany_DimensionSetEntry_0972_Incr
+02:51:19.351833 [debug] [Thread-2  ]: finished collecting timing info
+02:51:19.352111 [debug] [Thread-2  ]: Began executing node snapshot.Shawn.BC_BJAuctionCompany_DimensionSetEntry_0972_Incr
+02:51:19.355238 [debug] [Thread-2  ]: Opening a new connection, currently in state closed
+02:51:21.334021 [debug] [Thread-4  ]: Writing runtime SQL for node "snapshot.Shawn.BC_BJAuctionCompany_DetailedVendorLedgEntry_0972_Incr"
+02:51:24.731903 [debug] [Thread-4  ]: On snapshot.Shawn.BC_BJAuctionCompany_DetailedVendorLedgEntry_0972_Incr: COMMIT
+02:51:24.809742 [debug] [Thread-4  ]: finished collecting timing info
+02:51:24.810261 [debug] [Thread-4  ]: On snapshot.Shawn.BC_BJAuctionCompany_DetailedVendorLedgEntry_0972_Incr: Close
+02:51:24.811126 [debug] [Thread-4  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'be4cab2a-7e7e-4123-8ae2-3a4b84492c1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f65c510ea90>]}
+02:51:24.811718 [info ] [Thread-4  ]: 4 of 22 OK snapshotted stg.BC_BJAuctionCompany_DetailedVendorLedgEntry_0972_Incr [[32mOK[0m in 73.54s]
+02:51:24.813220 [debug] [Thread-4  ]: Finished running node snapshot.Shawn.BC_BJAuctionCompany_DetailedVendorLedgEntry_0972_Incr
+02:51:24.818971 [debug] [Thread-4  ]: Began running node snapshot.Shawn.BC_BJAuctionCompany_GLEntry_0972_Incr
+02:51:24.819499 [info ] [Thread-4  ]: 6 of 22 START snapshot stg.BC_BJAuctionCompany_GLEntry_0972_Incr................ [RUN]
+02:51:24.820870 [debug] [Thread-4  ]: Acquiring new synapse connection "snapshot.Shawn.BC_BJAuctionCompany_GLEntry_0972_Incr"
+02:51:24.821118 [debug] [Thread-4  ]: Began compiling node snapshot.Shawn.BC_BJAuctionCompany_GLEntry_0972_Incr
+02:51:24.821320 [debug] [Thread-4  ]: Compiling snapshot.Shawn.BC_BJAuctionCompany_GLEntry_0972_Incr
+02:51:24.828969 [debug] [Thread-4  ]: finished collecting timing info
+02:51:24.829321 [debug] [Thread-4  ]: Began executing node snapshot.Shawn.BC_BJAuctionCompany_GLEntry_0972_Incr
+02:51:24.836693 [debug] [Thread-4  ]: Opening a new connection, currently in state closed
+02:51:49.447879 [debug] [Thread-3  ]: Writing runtime SQL for node "snapshot.Shawn.BC_BJAuctionCompany_DetailedCustLedgEntry_0972_Incr"
+02:51:54.996073 [debug] [Thread-3  ]: On snapshot.Shawn.BC_BJAuctionCompany_DetailedCustLedgEntry_0972_Incr: COMMIT
+02:51:55.219925 [debug] [Thread-3  ]: finished collecting timing info
+02:51:55.220444 [debug] [Thread-3  ]: On snapshot.Shawn.BC_BJAuctionCompany_DetailedCustLedgEntry_0972_Incr: Close
+02:51:55.221289 [debug] [Thread-3  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'be4cab2a-7e7e-4123-8ae2-3a4b84492c1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f65c510e7f0>]}
+02:51:55.221866 [info ] [Thread-3  ]: 3 of 22 OK snapshotted stg.BC_BJAuctionCompany_DetailedCustLedgEntry_0972_Incr.. [[32mOK[0m in 103.95s]
+02:51:55.223102 [debug] [Thread-3  ]: Finished running node snapshot.Shawn.BC_BJAuctionCompany_DetailedCustLedgEntry_0972_Incr
+02:51:55.223396 [debug] [Thread-3  ]: Began running node snapshot.Shawn.BC_BJAuctionCompany_Item_0972_Incr
+02:51:55.223840 [info ] [Thread-3  ]: 7 of 22 START snapshot stg.BC_BJAuctionCompany_Item_0972_Incr................... [RUN]
+02:51:55.225306 [debug] [Thread-3  ]: Acquiring new synapse connection "snapshot.Shawn.BC_BJAuctionCompany_Item_0972_Incr"
+02:51:55.225539 [debug] [Thread-3  ]: Began compiling node snapshot.Shawn.BC_BJAuctionCompany_Item_0972_Incr
+02:51:55.225735 [debug] [Thread-3  ]: Compiling snapshot.Shawn.BC_BJAuctionCompany_Item_0972_Incr
+02:51:55.229235 [debug] [Thread-3  ]: finished collecting timing info
+02:51:55.229504 [debug] [Thread-3  ]: Began executing node snapshot.Shawn.BC_BJAuctionCompany_Item_0972_Incr
+02:51:55.232552 [debug] [Thread-3  ]: Opening a new connection, currently in state closed
+02:51:56.380072 [debug] [Thread-1  ]: Writing runtime SQL for node "snapshot.Shawn.BC_BJAuctionCompany_CustLedgerEntry_0972_Incr"
+02:52:03.447423 [debug] [Thread-1  ]: On snapshot.Shawn.BC_BJAuctionCompany_CustLedgerEntry_0972_Incr: COMMIT
+02:52:03.605025 [debug] [Thread-1  ]: finished collecting timing info
+02:52:03.605544 [debug] [Thread-1  ]: On snapshot.Shawn.BC_BJAuctionCompany_CustLedgerEntry_0972_Incr: Close
+02:52:03.606503 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'be4cab2a-7e7e-4123-8ae2-3a4b84492c1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f65c4fecfa0>]}
+02:52:03.607107 [info ] [Thread-1  ]: 1 of 22 OK snapshotted stg.BC_BJAuctionCompany_CustLedgerEntry_0972_Incr........ [[32mOK[0m in 112.34s]
+02:52:03.608296 [debug] [Thread-1  ]: Finished running node snapshot.Shawn.BC_BJAuctionCompany_CustLedgerEntry_0972_Incr
+02:52:03.608588 [debug] [Thread-1  ]: Began running node snapshot.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_0972_Incr
+02:52:03.609007 [info ] [Thread-1  ]: 8 of 22 START snapshot stg.BC_BJAuctionCompany_PurchCrMemoHdr_0972_Incr......... [RUN]
+02:52:03.610249 [debug] [Thread-1  ]: Acquiring new synapse connection "snapshot.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_0972_Incr"
+02:52:03.610476 [debug] [Thread-1  ]: Began compiling node snapshot.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_0972_Incr
+02:52:03.610704 [debug] [Thread-1  ]: Compiling snapshot.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_0972_Incr
+02:52:03.614582 [debug] [Thread-1  ]: finished collecting timing info
+02:52:03.614873 [debug] [Thread-1  ]: Began executing node snapshot.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_0972_Incr
+02:52:03.617825 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+02:52:47.937726 [debug] [Thread-3  ]: Writing runtime SQL for node "snapshot.Shawn.BC_BJAuctionCompany_Item_0972_Incr"
+02:52:53.780096 [debug] [Thread-3  ]: On snapshot.Shawn.BC_BJAuctionCompany_Item_0972_Incr: COMMIT
+02:52:53.925320 [debug] [Thread-3  ]: finished collecting timing info
+02:52:53.925852 [debug] [Thread-3  ]: On snapshot.Shawn.BC_BJAuctionCompany_Item_0972_Incr: Close
+02:52:53.926753 [debug] [Thread-3  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'be4cab2a-7e7e-4123-8ae2-3a4b84492c1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f65c512a4f0>]}
+02:52:53.927354 [info ] [Thread-3  ]: 7 of 22 OK snapshotted stg.BC_BJAuctionCompany_Item_0972_Incr................... [[32mOK[0m in 58.70s]
+02:52:53.928637 [debug] [Thread-3  ]: Finished running node snapshot.Shawn.BC_BJAuctionCompany_Item_0972_Incr
+02:52:53.928945 [debug] [Thread-3  ]: Began running node snapshot.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_8d9d_Incr
+02:52:53.929397 [info ] [Thread-3  ]: 9 of 22 START snapshot stg.BC_BJAuctionCompany_PurchCrMemoHdr_8d9d_Incr......... [RUN]
+02:52:53.930808 [debug] [Thread-3  ]: Acquiring new synapse connection "snapshot.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_8d9d_Incr"
+02:52:53.931047 [debug] [Thread-3  ]: Began compiling node snapshot.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_8d9d_Incr
+02:52:53.931244 [debug] [Thread-3  ]: Compiling snapshot.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_8d9d_Incr
+02:52:53.935145 [debug] [Thread-3  ]: finished collecting timing info
+02:52:53.935422 [debug] [Thread-3  ]: Began executing node snapshot.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_8d9d_Incr
+02:52:53.938480 [debug] [Thread-3  ]: Opening a new connection, currently in state closed
+02:53:10.612331 [debug] [Thread-1  ]: Writing runtime SQL for node "snapshot.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_0972_Incr"
+02:53:15.734819 [debug] [Thread-1  ]: On snapshot.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_0972_Incr: COMMIT
+02:53:16.010179 [debug] [Thread-1  ]: finished collecting timing info
+02:53:16.010709 [debug] [Thread-1  ]: On snapshot.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_0972_Incr: Close
+02:53:16.011509 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'be4cab2a-7e7e-4123-8ae2-3a4b84492c1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f65c512a220>]}
+02:53:16.012093 [info ] [Thread-1  ]: 8 of 22 OK snapshotted stg.BC_BJAuctionCompany_PurchCrMemoHdr_0972_Incr......... [[32mOK[0m in 72.40s]
+02:53:16.013338 [debug] [Thread-1  ]: Finished running node snapshot.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_0972_Incr
+02:53:16.013624 [debug] [Thread-1  ]: Began running node snapshot.Shawn.BC_BJAuctionCompany_PurchCrMemoLine_0972_Incr
+02:53:16.014034 [info ] [Thread-1  ]: 10 of 22 START snapshot stg.BC_BJAuctionCompany_PurchCrMemoLine_0972_Incr....... [RUN]
+02:53:16.015291 [debug] [Thread-1  ]: Acquiring new synapse connection "snapshot.Shawn.BC_BJAuctionCompany_PurchCrMemoLine_0972_Incr"
+02:53:16.015517 [debug] [Thread-1  ]: Began compiling node snapshot.Shawn.BC_BJAuctionCompany_PurchCrMemoLine_0972_Incr
+02:53:16.015711 [debug] [Thread-1  ]: Compiling snapshot.Shawn.BC_BJAuctionCompany_PurchCrMemoLine_0972_Incr
+02:53:16.019524 [debug] [Thread-1  ]: finished collecting timing info
+02:53:16.019793 [debug] [Thread-1  ]: Began executing node snapshot.Shawn.BC_BJAuctionCompany_PurchCrMemoLine_0972_Incr
+02:53:16.022600 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+02:54:00.503150 [debug] [Thread-3  ]: Writing runtime SQL for node "snapshot.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_8d9d_Incr"
+02:54:03.255116 [debug] [Thread-3  ]: On snapshot.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_8d9d_Incr: COMMIT
+02:54:03.329913 [debug] [Thread-3  ]: finished collecting timing info
+02:54:03.330461 [debug] [Thread-3  ]: On snapshot.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_8d9d_Incr: Close
+02:54:03.332132 [debug] [Thread-3  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'be4cab2a-7e7e-4123-8ae2-3a4b84492c1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f65c462ec10>]}
+02:54:03.332743 [info ] [Thread-3  ]: 9 of 22 OK snapshotted stg.BC_BJAuctionCompany_PurchCrMemoHdr_8d9d_Incr......... [[32mOK[0m in 69.40s]
+02:54:03.334312 [debug] [Thread-3  ]: Finished running node snapshot.Shawn.BC_BJAuctionCompany_PurchCrMemoHdr_8d9d_Incr
+02:54:03.334637 [debug] [Thread-3  ]: Began running node snapshot.Shawn.BC_BJAuctionCompany_PurchInvHeader_0972_Incr
+02:54:03.335079 [info ] [Thread-3  ]: 11 of 22 START snapshot stg.BC_BJAuctionCompany_PurchInvHeader_0972_Incr........ [RUN]
+02:54:03.336463 [debug] [Thread-3  ]: Acquiring new synapse connection "snapshot.Shawn.BC_BJAuctionCompany_PurchInvHeader_0972_Incr"
+02:54:03.336739 [debug] [Thread-3  ]: Began compiling node snapshot.Shawn.BC_BJAuctionCompany_PurchInvHeader_0972_Incr
+02:54:03.336942 [debug] [Thread-3  ]: Compiling snapshot.Shawn.BC_BJAuctionCompany_PurchInvHeader_0972_Incr
+02:54:03.340846 [debug] [Thread-3  ]: finished collecting timing info
+02:54:03.341140 [debug] [Thread-3  ]: Began executing node snapshot.Shawn.BC_BJAuctionCompany_PurchInvHeader_0972_Incr
+02:54:03.344246 [debug] [Thread-3  ]: Opening a new connection, currently in state closed
+02:54:03.450037 [debug] [Thread-1  ]: Writing runtime SQL for node "snapshot.Shawn.BC_BJAuctionCompany_PurchCrMemoLine_0972_Incr"
+02:54:07.466149 [debug] [Thread-1  ]: On snapshot.Shawn.BC_BJAuctionCompany_PurchCrMemoLine_0972_Incr: COMMIT
+02:54:07.551108 [debug] [Thread-1  ]: finished collecting timing info
+02:54:07.551581 [debug] [Thread-1  ]: On snapshot.Shawn.BC_BJAuctionCompany_PurchCrMemoLine_0972_Incr: Close
+02:54:07.552367 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'be4cab2a-7e7e-4123-8ae2-3a4b84492c1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f65c512ab80>]}
+02:54:07.552943 [info ] [Thread-1  ]: 10 of 22 OK snapshotted stg.BC_BJAuctionCompany_PurchCrMemoLine_0972_Incr....... [[32mOK[0m in 51.54s]
+02:54:07.554110 [debug] [Thread-1  ]: Finished running node snapshot.Shawn.BC_BJAuctionCompany_PurchCrMemoLine_0972_Incr
+02:54:07.554401 [debug] [Thread-1  ]: Began running node snapshot.Shawn.BC_BJAuctionCompany_PurchInvHeader_8d9d_Incr
+02:54:07.554866 [info ] [Thread-1  ]: 12 of 22 START snapshot stg.BC_BJAuctionCompany_PurchInvHeader_8d9d_Incr........ [RUN]
+02:54:07.556324 [debug] [Thread-1  ]: Acquiring new synapse connection "snapshot.Shawn.BC_BJAuctionCompany_PurchInvHeader_8d9d_Incr"
+02:54:07.556553 [debug] [Thread-1  ]: Began compiling node snapshot.Shawn.BC_BJAuctionCompany_PurchInvHeader_8d9d_Incr
+02:54:07.556746 [debug] [Thread-1  ]: Compiling snapshot.Shawn.BC_BJAuctionCompany_PurchInvHeader_8d9d_Incr
+02:54:07.560414 [debug] [Thread-1  ]: finished collecting timing info
+02:54:07.560669 [debug] [Thread-1  ]: Began executing node snapshot.Shawn.BC_BJAuctionCompany_PurchInvHeader_8d9d_Incr
+02:54:07.563507 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+02:54:27.100145 [debug] [Thread-4  ]: Writing runtime SQL for node "snapshot.Shawn.BC_BJAuctionCompany_GLEntry_0972_Incr"
+02:54:29.896280 [debug] [Thread-4  ]: On snapshot.Shawn.BC_BJAuctionCompany_GLEntry_0972_Incr: COMMIT
+02:54:29.975436 [debug] [Thread-4  ]: finished collecting timing info
+02:54:29.975999 [debug] [Thread-4  ]: On snapshot.Shawn.BC_BJAuctionCompany_GLEntry_0972_Incr: Close
+02:54:29.977160 [debug] [Thread-4  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'be4cab2a-7e7e-4123-8ae2-3a4b84492c1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f65c512a640>]}
+02:54:29.977734 [info ] [Thread-4  ]: 6 of 22 OK snapshotted stg.BC_BJAuctionCompany_GLEntry_0972_Incr................ [[32mOK[0m in 185.16s]
+02:54:29.983133 [debug] [Thread-4  ]: Finished running node snapshot.Shawn.BC_BJAuctionCompany_GLEntry_0972_Incr
+02:54:29.983495 [debug] [Thread-4  ]: Began running node snapshot.Shawn.BC_BJAuctionCompany_PurchInvLine_0972_Incr
+02:54:29.984590 [info ] [Thread-4  ]: 13 of 22 START snapshot stg.BC_BJAuctionCompany_PurchInvLine_0972_Incr.......... [RUN]
+02:54:29.985890 [debug] [Thread-4  ]: Acquiring new synapse connection "snapshot.Shawn.BC_BJAuctionCompany_PurchInvLine_0972_Incr"
+02:54:29.986128 [debug] [Thread-4  ]: Began compiling node snapshot.Shawn.BC_BJAuctionCompany_PurchInvLine_0972_Incr
+02:54:29.986331 [debug] [Thread-4  ]: Compiling snapshot.Shawn.BC_BJAuctionCompany_PurchInvLine_0972_Incr
+02:54:29.989769 [debug] [Thread-4  ]: finished collecting timing info
+02:54:29.990037 [debug] [Thread-4  ]: Began executing node snapshot.Shawn.BC_BJAuctionCompany_PurchInvLine_0972_Incr
+02:54:29.993486 [debug] [Thread-4  ]: Opening a new connection, currently in state closed
+02:54:50.250516 [debug] [Thread-1  ]: Writing runtime SQL for node "snapshot.Shawn.BC_BJAuctionCompany_PurchInvHeader_8d9d_Incr"
+02:54:54.770884 [debug] [Thread-1  ]: On snapshot.Shawn.BC_BJAuctionCompany_PurchInvHeader_8d9d_Incr: COMMIT
+02:54:55.003858 [debug] [Thread-1  ]: finished collecting timing info
+02:54:55.004376 [debug] [Thread-1  ]: On snapshot.Shawn.BC_BJAuctionCompany_PurchInvHeader_8d9d_Incr: Close
+02:54:55.005203 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'be4cab2a-7e7e-4123-8ae2-3a4b84492c1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f65c512ae20>]}
+02:54:55.005807 [info ] [Thread-1  ]: 12 of 22 OK snapshotted stg.BC_BJAuctionCompany_PurchInvHeader_8d9d_Incr........ [[32mOK[0m in 47.45s]
+02:54:55.007148 [debug] [Thread-1  ]: Finished running node snapshot.Shawn.BC_BJAuctionCompany_PurchInvHeader_8d9d_Incr
+02:54:55.007459 [debug] [Thread-1  ]: Began running node snapshot.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_0972_Incr
+02:54:55.007904 [info ] [Thread-1  ]: 14 of 22 START snapshot stg.BC_BJAuctionCompany_SalesCrMemoHeader_0972_Incr..... [RUN]
+02:54:55.009241 [debug] [Thread-1  ]: Acquiring new synapse connection "snapshot.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_0972_Incr"
+02:54:55.009476 [debug] [Thread-1  ]: Began compiling node snapshot.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_0972_Incr
+02:54:55.009678 [debug] [Thread-1  ]: Compiling snapshot.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_0972_Incr
+02:54:55.013563 [debug] [Thread-1  ]: finished collecting timing info
+02:54:55.013825 [debug] [Thread-1  ]: Began executing node snapshot.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_0972_Incr
+02:54:55.016753 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+02:54:58.854881 [debug] [Thread-2  ]: Writing runtime SQL for node "snapshot.Shawn.BC_BJAuctionCompany_DimensionSetEntry_0972_Incr"
+02:55:01.736776 [debug] [Thread-2  ]: On snapshot.Shawn.BC_BJAuctionCompany_DimensionSetEntry_0972_Incr: COMMIT
+02:55:01.827262 [debug] [Thread-2  ]: finished collecting timing info
+02:55:01.827803 [debug] [Thread-2  ]: On snapshot.Shawn.BC_BJAuctionCompany_DimensionSetEntry_0972_Incr: Close
+02:55:01.828655 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'be4cab2a-7e7e-4123-8ae2-3a4b84492c1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f65c512a3a0>]}
+02:55:01.829248 [info ] [Thread-2  ]: 5 of 22 OK snapshotted stg.BC_BJAuctionCompany_DimensionSetEntry_0972_Incr...... [[32mOK[0m in 222.48s]
+02:55:01.830533 [debug] [Thread-2  ]: Finished running node snapshot.Shawn.BC_BJAuctionCompany_DimensionSetEntry_0972_Incr
+02:55:01.830878 [debug] [Thread-2  ]: Began running node snapshot.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_8d9d_Incr
+02:55:01.831341 [info ] [Thread-2  ]: 15 of 22 START snapshot stg.BC_BJAuctionCompany_SalesCrMemoHeader_8d9d_Incr..... [RUN]
+02:55:01.832791 [debug] [Thread-2  ]: Acquiring new synapse connection "snapshot.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_8d9d_Incr"
+02:55:01.833026 [debug] [Thread-2  ]: Began compiling node snapshot.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_8d9d_Incr
+02:55:01.833229 [debug] [Thread-2  ]: Compiling snapshot.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_8d9d_Incr
+02:55:01.837214 [debug] [Thread-2  ]: finished collecting timing info
+02:55:01.837487 [debug] [Thread-2  ]: Began executing node snapshot.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_8d9d_Incr
+02:55:01.840615 [debug] [Thread-2  ]: Opening a new connection, currently in state closed
+02:55:02.066531 [debug] [Thread-3  ]: Writing runtime SQL for node "snapshot.Shawn.BC_BJAuctionCompany_PurchInvHeader_0972_Incr"
+02:55:07.520353 [debug] [Thread-3  ]: On snapshot.Shawn.BC_BJAuctionCompany_PurchInvHeader_0972_Incr: COMMIT
+02:55:07.606854 [debug] [Thread-3  ]: finished collecting timing info
+02:55:07.609074 [debug] [Thread-3  ]: On snapshot.Shawn.BC_BJAuctionCompany_PurchInvHeader_0972_Incr: Close
+02:55:07.611574 [debug] [Thread-3  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'be4cab2a-7e7e-4123-8ae2-3a4b84492c1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f65c512acd0>]}
+02:55:07.612196 [info ] [Thread-3  ]: 11 of 22 OK snapshotted stg.BC_BJAuctionCompany_PurchInvHeader_0972_Incr........ [[32mOK[0m in 64.28s]
+02:55:07.616182 [debug] [Thread-3  ]: Finished running node snapshot.Shawn.BC_BJAuctionCompany_PurchInvHeader_0972_Incr
+02:55:07.616573 [debug] [Thread-3  ]: Began running node snapshot.Shawn.BC_BJAuctionCompany_SalesCrMemoLine_0972_Incr
+02:55:07.617073 [info ] [Thread-3  ]: 16 of 22 START snapshot stg.BC_BJAuctionCompany_SalesCrMemoLine_0972_Incr....... [RUN]
+02:55:07.618360 [debug] [Thread-3  ]: Acquiring new synapse connection "snapshot.Shawn.BC_BJAuctionCompany_SalesCrMemoLine_0972_Incr"
+02:55:07.618642 [debug] [Thread-3  ]: Began compiling node snapshot.Shawn.BC_BJAuctionCompany_SalesCrMemoLine_0972_Incr
+02:55:07.618858 [debug] [Thread-3  ]: Compiling snapshot.Shawn.BC_BJAuctionCompany_SalesCrMemoLine_0972_Incr
+02:55:07.622373 [debug] [Thread-3  ]: finished collecting timing info
+02:55:07.622658 [debug] [Thread-3  ]: Began executing node snapshot.Shawn.BC_BJAuctionCompany_SalesCrMemoLine_0972_Incr
+02:55:07.626238 [debug] [Thread-3  ]: Opening a new connection, currently in state closed
+02:55:34.022269 [debug] [Thread-2  ]: Writing runtime SQL for node "snapshot.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_8d9d_Incr"
+02:55:36.445663 [debug] [Thread-2  ]: On snapshot.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_8d9d_Incr: COMMIT
+02:55:36.530719 [debug] [Thread-2  ]: finished collecting timing info
+02:55:36.531219 [debug] [Thread-2  ]: On snapshot.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_8d9d_Incr: Close
+02:55:36.532049 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'be4cab2a-7e7e-4123-8ae2-3a4b84492c1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f65c512a790>]}
+02:55:36.532631 [info ] [Thread-2  ]: 15 of 22 OK snapshotted stg.BC_BJAuctionCompany_SalesCrMemoHeader_8d9d_Incr..... [[32mOK[0m in 34.70s]
+02:55:36.534125 [debug] [Thread-2  ]: Finished running node snapshot.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_8d9d_Incr
+02:55:36.534436 [debug] [Thread-2  ]: Began running node snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceEntityAggregate_0972_Incr
+02:55:36.534931 [info ] [Thread-2  ]: 17 of 22 START snapshot stg.BC_BJAuctionCompany_SalesInvoiceEntityAggregate_0972_Incr [RUN]
+02:55:36.535974 [debug] [Thread-2  ]: Acquiring new synapse connection "snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceEntityAggregate_0972_Incr"
+02:55:36.536207 [debug] [Thread-2  ]: Began compiling node snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceEntityAggregate_0972_Incr
+02:55:36.536404 [debug] [Thread-2  ]: Compiling snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceEntityAggregate_0972_Incr
+02:55:36.540344 [debug] [Thread-2  ]: finished collecting timing info
+02:55:36.540604 [debug] [Thread-2  ]: Began executing node snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceEntityAggregate_0972_Incr
+02:55:36.543594 [debug] [Thread-2  ]: Opening a new connection, currently in state closed
+02:55:51.130936 [debug] [Thread-4  ]: Writing runtime SQL for node "snapshot.Shawn.BC_BJAuctionCompany_PurchInvLine_0972_Incr"
+02:55:52.382071 [debug] [Thread-1  ]: Writing runtime SQL for node "snapshot.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_0972_Incr"
+02:55:54.921476 [debug] [Thread-4  ]: On snapshot.Shawn.BC_BJAuctionCompany_PurchInvLine_0972_Incr: COMMIT
+02:55:55.097073 [debug] [Thread-4  ]: finished collecting timing info
+02:55:55.097621 [debug] [Thread-4  ]: On snapshot.Shawn.BC_BJAuctionCompany_PurchInvLine_0972_Incr: Close
+02:55:55.098492 [debug] [Thread-4  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'be4cab2a-7e7e-4123-8ae2-3a4b84492c1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f65c512a8e0>]}
+02:55:55.099162 [info ] [Thread-4  ]: 13 of 22 OK snapshotted stg.BC_BJAuctionCompany_PurchInvLine_0972_Incr.......... [[32mOK[0m in 85.11s]
+02:55:55.100497 [debug] [Thread-4  ]: Finished running node snapshot.Shawn.BC_BJAuctionCompany_PurchInvLine_0972_Incr
+02:55:55.100819 [debug] [Thread-4  ]: Began running node snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_0972_Incr
+02:55:55.101277 [info ] [Thread-4  ]: 18 of 22 START snapshot stg.BC_BJAuctionCompany_SalesInvoiceHeader_0972_Incr.... [RUN]
+02:55:55.102663 [debug] [Thread-4  ]: Acquiring new synapse connection "snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_0972_Incr"
+02:55:55.102899 [debug] [Thread-4  ]: Began compiling node snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_0972_Incr
+02:55:55.103098 [debug] [Thread-4  ]: Compiling snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_0972_Incr
+02:55:55.107037 [debug] [Thread-4  ]: finished collecting timing info
+02:55:55.107292 [debug] [Thread-4  ]: Began executing node snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_0972_Incr
+02:55:55.109983 [debug] [Thread-4  ]: Opening a new connection, currently in state closed
+02:55:56.633240 [debug] [Thread-1  ]: On snapshot.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_0972_Incr: COMMIT
+02:55:56.733463 [debug] [Thread-1  ]: finished collecting timing info
+02:55:56.734393 [debug] [Thread-1  ]: On snapshot.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_0972_Incr: Close
+02:55:56.735270 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'be4cab2a-7e7e-4123-8ae2-3a4b84492c1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f65c5134100>]}
+02:55:56.735829 [info ] [Thread-1  ]: 14 of 22 OK snapshotted stg.BC_BJAuctionCompany_SalesCrMemoHeader_0972_Incr..... [[32mOK[0m in 61.73s]
+02:55:56.737113 [debug] [Thread-1  ]: Finished running node snapshot.Shawn.BC_BJAuctionCompany_SalesCrMemoHeader_0972_Incr
+02:55:56.737400 [debug] [Thread-1  ]: Began running node snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_8d9d_Incr
+02:55:56.737828 [info ] [Thread-1  ]: 19 of 22 START snapshot stg.BC_BJAuctionCompany_SalesInvoiceHeader_8d9d_Incr.... [RUN]
+02:55:56.739344 [debug] [Thread-1  ]: Acquiring new synapse connection "snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_8d9d_Incr"
+02:55:56.739577 [debug] [Thread-1  ]: Began compiling node snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_8d9d_Incr
+02:55:56.739771 [debug] [Thread-1  ]: Compiling snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_8d9d_Incr
+02:55:56.743514 [debug] [Thread-1  ]: finished collecting timing info
+02:55:56.747892 [debug] [Thread-1  ]: Began executing node snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_8d9d_Incr
+02:55:56.750851 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+02:55:57.063443 [debug] [Thread-3  ]: Writing runtime SQL for node "snapshot.Shawn.BC_BJAuctionCompany_SalesCrMemoLine_0972_Incr"
+02:56:00.574739 [debug] [Thread-3  ]: On snapshot.Shawn.BC_BJAuctionCompany_SalesCrMemoLine_0972_Incr: COMMIT
+02:56:00.669509 [debug] [Thread-3  ]: finished collecting timing info
+02:56:00.670058 [debug] [Thread-3  ]: On snapshot.Shawn.BC_BJAuctionCompany_SalesCrMemoLine_0972_Incr: Close
+02:56:00.670967 [debug] [Thread-3  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'be4cab2a-7e7e-4123-8ae2-3a4b84492c1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f65c454d310>]}
+02:56:00.671577 [info ] [Thread-3  ]: 16 of 22 OK snapshotted stg.BC_BJAuctionCompany_SalesCrMemoLine_0972_Incr....... [[32mOK[0m in 53.05s]
+02:56:00.672781 [debug] [Thread-3  ]: Finished running node snapshot.Shawn.BC_BJAuctionCompany_SalesCrMemoLine_0972_Incr
+02:56:00.673078 [debug] [Thread-3  ]: Began running node snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceLine_0972_Incr
+02:56:00.673536 [info ] [Thread-3  ]: 20 of 22 START snapshot stg.BC_BJAuctionCompany_SalesInvoiceLine_0972_Incr...... [RUN]
+02:56:00.674970 [debug] [Thread-3  ]: Acquiring new synapse connection "snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceLine_0972_Incr"
+02:56:00.675209 [debug] [Thread-3  ]: Began compiling node snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceLine_0972_Incr
+02:56:00.675407 [debug] [Thread-3  ]: Compiling snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceLine_0972_Incr
+02:56:00.679206 [debug] [Thread-3  ]: finished collecting timing info
+02:56:00.679513 [debug] [Thread-3  ]: Began executing node snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceLine_0972_Incr
+02:56:00.682566 [debug] [Thread-3  ]: Opening a new connection, currently in state closed
+02:56:11.200180 [debug] [Thread-2  ]: Writing runtime SQL for node "snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceEntityAggregate_0972_Incr"
+02:56:16.761085 [debug] [Thread-2  ]: On snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceEntityAggregate_0972_Incr: COMMIT
+02:56:16.858412 [debug] [Thread-2  ]: finished collecting timing info
+02:56:16.858953 [debug] [Thread-2  ]: On snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceEntityAggregate_0972_Incr: Close
+02:56:16.859782 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'be4cab2a-7e7e-4123-8ae2-3a4b84492c1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f65c51344f0>]}
+02:56:16.860387 [info ] [Thread-2  ]: 17 of 22 OK snapshotted stg.BC_BJAuctionCompany_SalesInvoiceEntityAggregate_0972_Incr [[32mOK[0m in 40.32s]
+02:56:16.861642 [debug] [Thread-2  ]: Finished running node snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceEntityAggregate_0972_Incr
+02:56:16.861949 [debug] [Thread-2  ]: Began running node snapshot.Shawn.BC_BJAuctionCompany_VendorLedgerEntry_0972_Incr
+02:56:16.862382 [info ] [Thread-2  ]: 21 of 22 START snapshot stg.BC_BJAuctionCompany_VendorLedgerEntry_0972_Incr..... [RUN]
+02:56:16.863754 [debug] [Thread-2  ]: Acquiring new synapse connection "snapshot.Shawn.BC_BJAuctionCompany_VendorLedgerEntry_0972_Incr"
+02:56:16.863986 [debug] [Thread-2  ]: Began compiling node snapshot.Shawn.BC_BJAuctionCompany_VendorLedgerEntry_0972_Incr
+02:56:16.864183 [debug] [Thread-2  ]: Compiling snapshot.Shawn.BC_BJAuctionCompany_VendorLedgerEntry_0972_Incr
+02:56:16.868016 [debug] [Thread-2  ]: finished collecting timing info
+02:56:16.868273 [debug] [Thread-2  ]: Began executing node snapshot.Shawn.BC_BJAuctionCompany_VendorLedgerEntry_0972_Incr
+02:56:16.871745 [debug] [Thread-2  ]: Opening a new connection, currently in state closed
+02:56:17.813427 [debug] [Thread-1  ]: Writing runtime SQL for node "snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_8d9d_Incr"
+02:56:25.867340 [debug] [Thread-1  ]: On snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_8d9d_Incr: COMMIT
+02:56:26.114343 [debug] [Thread-1  ]: finished collecting timing info
+02:56:26.114914 [debug] [Thread-1  ]: On snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_8d9d_Incr: Close
+02:56:26.115789 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'be4cab2a-7e7e-4123-8ae2-3a4b84492c1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f65c51343a0>]}
+02:56:26.116379 [info ] [Thread-1  ]: 19 of 22 OK snapshotted stg.BC_BJAuctionCompany_SalesInvoiceHeader_8d9d_Incr.... [[32mOK[0m in 29.38s]
+02:56:26.117657 [debug] [Thread-1  ]: Finished running node snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_8d9d_Incr
+02:56:26.117961 [debug] [Thread-1  ]: Began running node snapshot.Shawn.BC_BJAuctionCompany_Vendor_0972_Incr
+02:56:26.118398 [info ] [Thread-1  ]: 22 of 22 START snapshot stg.BC_BJAuctionCompany_Vendor_0972_Incr................ [RUN]
+02:56:26.119774 [debug] [Thread-1  ]: Acquiring new synapse connection "snapshot.Shawn.BC_BJAuctionCompany_Vendor_0972_Incr"
+02:56:26.120008 [debug] [Thread-1  ]: Began compiling node snapshot.Shawn.BC_BJAuctionCompany_Vendor_0972_Incr
+02:56:26.120206 [debug] [Thread-1  ]: Compiling snapshot.Shawn.BC_BJAuctionCompany_Vendor_0972_Incr
+02:56:26.124121 [debug] [Thread-1  ]: finished collecting timing info
+02:56:26.124402 [debug] [Thread-1  ]: Began executing node snapshot.Shawn.BC_BJAuctionCompany_Vendor_0972_Incr
+02:56:26.128199 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+02:57:07.400875 [debug] [Thread-1  ]: Writing runtime SQL for node "snapshot.Shawn.BC_BJAuctionCompany_Vendor_0972_Incr"
+02:57:11.159258 [debug] [Thread-1  ]: On snapshot.Shawn.BC_BJAuctionCompany_Vendor_0972_Incr: COMMIT
+02:57:11.257145 [debug] [Thread-1  ]: finished collecting timing info
+02:57:11.257631 [debug] [Thread-1  ]: On snapshot.Shawn.BC_BJAuctionCompany_Vendor_0972_Incr: Close
+02:57:11.258424 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'be4cab2a-7e7e-4123-8ae2-3a4b84492c1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f65c5134a60>]}
+02:57:11.259005 [info ] [Thread-1  ]: 22 of 22 OK snapshotted stg.BC_BJAuctionCompany_Vendor_0972_Incr................ [[32mOK[0m in 45.14s]
+02:57:11.260214 [debug] [Thread-1  ]: Finished running node snapshot.Shawn.BC_BJAuctionCompany_Vendor_0972_Incr
+02:57:25.757699 [debug] [Thread-2  ]: Writing runtime SQL for node "snapshot.Shawn.BC_BJAuctionCompany_VendorLedgerEntry_0972_Incr"
+02:57:28.272483 [debug] [Thread-2  ]: On snapshot.Shawn.BC_BJAuctionCompany_VendorLedgerEntry_0972_Incr: COMMIT
+02:57:28.326965 [debug] [Thread-2  ]: finished collecting timing info
+02:57:28.327481 [debug] [Thread-2  ]: On snapshot.Shawn.BC_BJAuctionCompany_VendorLedgerEntry_0972_Incr: Close
+02:57:28.328329 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'be4cab2a-7e7e-4123-8ae2-3a4b84492c1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f65c453d760>]}
+02:57:28.328931 [info ] [Thread-2  ]: 21 of 22 OK snapshotted stg.BC_BJAuctionCompany_VendorLedgerEntry_0972_Incr..... [[32mOK[0m in 71.46s]
+02:57:28.330184 [debug] [Thread-2  ]: Finished running node snapshot.Shawn.BC_BJAuctionCompany_VendorLedgerEntry_0972_Incr
+02:57:40.892121 [debug] [Thread-3  ]: Writing runtime SQL for node "snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceLine_0972_Incr"
+02:57:43.593484 [debug] [Thread-3  ]: On snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceLine_0972_Incr: COMMIT
+02:57:43.643372 [debug] [Thread-3  ]: finished collecting timing info
+02:57:43.643870 [debug] [Thread-3  ]: On snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceLine_0972_Incr: Close
+02:57:43.644644 [debug] [Thread-3  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'be4cab2a-7e7e-4123-8ae2-3a4b84492c1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f65c450b7f0>]}
+02:57:43.645215 [info ] [Thread-3  ]: 20 of 22 OK snapshotted stg.BC_BJAuctionCompany_SalesInvoiceLine_0972_Incr...... [[32mOK[0m in 102.97s]
+02:57:43.646451 [debug] [Thread-3  ]: Finished running node snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceLine_0972_Incr
+02:57:44.695630 [debug] [Thread-4  ]: Writing runtime SQL for node "snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_0972_Incr"
+02:57:48.693989 [debug] [Thread-4  ]: On snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_0972_Incr: COMMIT
+02:57:48.747381 [debug] [Thread-4  ]: finished collecting timing info
+02:57:48.747875 [debug] [Thread-4  ]: On snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_0972_Incr: Close
+02:57:48.748693 [debug] [Thread-4  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'be4cab2a-7e7e-4123-8ae2-3a4b84492c1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f65c4644d60>]}
+02:57:48.749268 [info ] [Thread-4  ]: 18 of 22 OK snapshotted stg.BC_BJAuctionCompany_SalesInvoiceHeader_0972_Incr.... [[32mOK[0m in 113.65s]
+02:57:48.750351 [debug] [Thread-4  ]: Finished running node snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_0972_Incr
+02:57:48.752494 [debug] [MainThread]: Acquiring new synapse connection "master"
+02:57:48.752713 [debug] [MainThread]: On master: COMMIT
+02:57:48.753037 [info ] [MainThread]: 
+02:57:48.753730 [info ] [MainThread]: Finished running 22 snapshots in 467.95s.
+02:57:48.754699 [debug] [MainThread]: Connection 'master' was properly closed.
+02:57:48.754924 [debug] [MainThread]: Connection 'snapshot.Shawn.BC_BJAuctionCompany_VendorLedgerEntry_0972_Incr' was properly closed.
+02:57:48.755093 [debug] [MainThread]: Connection 'snapshot.Shawn.BC_BJAuctionCompany_Vendor_0972_Incr' was properly closed.
+02:57:48.755250 [debug] [MainThread]: Connection 'snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceLine_0972_Incr' was properly closed.
+02:57:48.755402 [debug] [MainThread]: Connection 'snapshot.Shawn.BC_BJAuctionCompany_SalesInvoiceHeader_0972_Incr' was properly closed.
+02:57:48.766741 [info ] [MainThread]: 
+02:57:48.767763 [info ] [MainThread]: [32mCompleted successfully[0m
+02:57:48.769476 [info ] [MainThread]: 
+02:57:48.770646 [info ] [MainThread]: Done. PASS=22 WARN=0 ERROR=0 SKIP=0 TOTAL=22
+02:57:48.771688 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f65c6d01d00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f65c5122fa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f65c5122f40>]}
