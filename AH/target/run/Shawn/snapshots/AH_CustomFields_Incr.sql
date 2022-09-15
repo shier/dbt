@@ -12,8 +12,8 @@
                   "ID", "Required", "Deferred", "Encrypted", "IncludeonInvoice", "IncludeinSalesReport", "IncludeonInvoiceasSeller", "IncludeonInvoiceasBuyer", "IncludeinSalesReportasSeller", "IncludeinSalesReportasBuyer", "Type", "DisplayOrder", "VisiBIlity", "MutaBIlity", "CreatedOn", "UpdatedOn", "DeletedOn", "Name", "DefaultValue", "GroupName", "LastUpdatedUser", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "ID", "Required", "Deferred", "Encrypted", "IncludeonInvoice", "IncludeinSalesReport", "IncludeonInvoiceasSeller", "IncludeonInvoiceasBuyer", "IncludeinSalesReportasSeller", "IncludeinSalesReportasBuyer", "Type", "DisplayOrder", "VisiBIlity", "MutaBIlity", "CreatedOn", "UpdatedOn", "DeletedOn", "Name", "DefaultValue", "GroupName", "LastUpdatedUser", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#AH_CustomFields_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#AH_CustomFields_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

@@ -12,8 +12,8 @@
                   "ID", "CountryCode", "Name", "CurrencyCode", "CurrencynumCode", "CountryNameslug", "DisplayOrder", "CreateDate", "ModifyDate", "IsActive", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "ID", "CountryCode", "Name", "CurrencyCode", "CurrencynumCode", "CountryNameslug", "DisplayOrder", "CreateDate", "ModifyDate", "IsActive", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#CC_Country_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#CC_Country_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

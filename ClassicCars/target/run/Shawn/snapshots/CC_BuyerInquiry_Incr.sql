@@ -12,8 +12,8 @@
                   "ID", "IpAddress", "Browser", "FirstName", "LastName", "Email", "Phone", "Message", "UserAgent", "ListingID", "EmailFilterCodeID", "WantsNewsLetter", "WantsrrcInfo", "IsActive", "EmailProcessed", "CopyProcessed", "FollowupProcessed", "CreateDate", "ModifyDate", "EmailSentUTC", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "ID", "IpAddress", "Browser", "FirstName", "LastName", "Email", "Phone", "Message", "UserAgent", "ListingID", "EmailFilterCodeID", "WantsNewsLetter", "WantsrrcInfo", "IsActive", "EmailProcessed", "CopyProcessed", "FollowupProcessed", "CreateDate", "ModifyDate", "EmailSentUTC", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#CC_BuyerInquiry_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#CC_BuyerInquiry_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

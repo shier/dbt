@@ -12,8 +12,8 @@
                   "ID", "UpdatedOn", "DeletedOn", "CreatedOn", "UserID", "CountryID", "Street1", "Street2", "City", "Stateregion", "ZipPostal", "LastUpdatedUser", "Description", "FirstName", "LastName", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "ID", "UpdatedOn", "DeletedOn", "CreatedOn", "UserID", "CountryID", "Street1", "Street2", "City", "Stateregion", "ZipPostal", "LastUpdatedUser", "Description", "FirstName", "LastName", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#AH_Addresses_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#AH_Addresses_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

@@ -12,8 +12,8 @@
                   "ID", "Email", "FirstName", "LastName", "ZipCode", "ASenthusiast", "AsBidder", "AsConsignor", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "ID", "Email", "FirstName", "LastName", "ZipCode", "ASenthusiast", "AsBidder", "AsConsignor", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#AH_DailyhuntEmailSubscribers_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#AH_DailyhuntEmailSubscribers_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

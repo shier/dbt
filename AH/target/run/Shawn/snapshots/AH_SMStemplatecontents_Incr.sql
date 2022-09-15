@@ -12,8 +12,8 @@
                   "ID", "Name", "Body", "UpdatedOn", "DeletedOn", "CreatedOn", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "ID", "Name", "Body", "UpdatedOn", "DeletedOn", "CreatedOn", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#AH_SMStemplatecontents_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#AH_SMStemplatecontents_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

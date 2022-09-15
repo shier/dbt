@@ -12,8 +12,8 @@
                   "ID", "UserID", "ListingID", "CreatedOn", "UpdatedOn", "DeletedOn", "UserName", "Question", "Answer", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "ID", "UserID", "ListingID", "CreatedOn", "UpdatedOn", "DeletedOn", "UserName", "Question", "Answer", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#AH_ListingQuestions_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#AH_ListingQuestions_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

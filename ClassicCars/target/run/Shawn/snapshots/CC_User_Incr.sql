@@ -12,8 +12,8 @@
                   "ID", "CompanyID", "UserCreationSourceID", "CreateDate", "ModifyDate", "PasswordResetDate", "TwoFactorResetDate", "SessionToken", "Email", "FirstName", "LastName", "DataTokenID", "PasswordResetToken", "TwoFactorToken", "IsActive", "EmailConfirmed", "UseTwoFactor", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "ID", "CompanyID", "UserCreationSourceID", "CreateDate", "ModifyDate", "PasswordResetDate", "TwoFactorResetDate", "SessionToken", "Email", "FirstName", "LastName", "DataTokenID", "PasswordResetToken", "TwoFactorToken", "IsActive", "EmailConfirmed", "UseTwoFactor", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#CC_User_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#CC_User_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

@@ -12,8 +12,8 @@
                   "ID", "BillingAddressID", "BillingCreditCardID", "PrimaryAddressID", "AccessfailedCount", "IsApproved", "IsLockedOut", "NewsLetter", "IsVerified", "IsActive", "EmailConfirmed", "PhoneNumberConfirmed", "TwoFactorEnabled", "LockOutEnabled", "WebapiEnabled", "CreationDate", "LastLoginDate", "LastActivityDate", "CreatedOn", "UpdatedOn", "DeletedOn", "LockOutEndDateUTC", "UserName", "Email", "Password", "Comment", "LastUpdatedUser", "Culture", "Lastip", "VerificationToken", "PasswordResetToken", "ServiceAuthorizationToken", "PasswordHash", "SecURItyStamp", "PhoneNumber", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "ID", "BillingAddressID", "BillingCreditCardID", "PrimaryAddressID", "AccessfailedCount", "IsApproved", "IsLockedOut", "NewsLetter", "IsVerified", "IsActive", "EmailConfirmed", "PhoneNumberConfirmed", "TwoFactorEnabled", "LockOutEnabled", "WebapiEnabled", "CreationDate", "LastLoginDate", "LastActivityDate", "CreatedOn", "UpdatedOn", "DeletedOn", "LockOutEndDateUTC", "UserName", "Email", "Password", "Comment", "LastUpdatedUser", "Culture", "Lastip", "VerificationToken", "PasswordResetToken", "ServiceAuthorizationToken", "PasswordHash", "SecURItyStamp", "PhoneNumber", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#AH_Users_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#AH_Users_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

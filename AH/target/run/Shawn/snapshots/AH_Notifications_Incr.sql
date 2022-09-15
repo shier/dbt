@@ -12,8 +12,8 @@
                   "ID", "DetailID", "CreatedOn", "UpdatedOn", "DeletedOn", "Queueddttm", "Statusdttm", "RecipientEmail", "CcEmail", "BCcEmail", "LastUpdatedUser", "Status", "StatusMessage", "Message", "DetailType", "ReplytoEmail", "SEnderUserName", "ReceiverUserName", "Template", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "ID", "DetailID", "CreatedOn", "UpdatedOn", "DeletedOn", "Queueddttm", "Statusdttm", "RecipientEmail", "CcEmail", "BCcEmail", "LastUpdatedUser", "Status", "StatusMessage", "Message", "DetailType", "ReplytoEmail", "SEnderUserName", "ReceiverUserName", "Template", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#AH_Notifications_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#AH_Notifications_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

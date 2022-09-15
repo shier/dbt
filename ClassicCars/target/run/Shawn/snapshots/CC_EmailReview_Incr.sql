@@ -12,8 +12,8 @@
                   "ID", "ReviewReason", "ReviewInFormation", "SentFrom", "Replyto", "IpAddress", "Template", "ContentFields", "Meta", "ReviewedBy", "ReviewerAction", "IsActive", "CreateDate", "ModifyDate", "Source", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "ID", "ReviewReason", "ReviewInFormation", "SentFrom", "Replyto", "IpAddress", "Template", "ContentFields", "Meta", "ReviewedBy", "ReviewerAction", "IsActive", "CreateDate", "ModifyDate", "Source", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#CC_EmailReview_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#CC_EmailReview_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

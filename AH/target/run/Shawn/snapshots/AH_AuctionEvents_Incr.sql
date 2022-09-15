@@ -12,8 +12,8 @@
                   "ID", "SoftclosingGroupIncrementseconds", "LotCount", "CategoryID", "CurrencyID", "ClosingGroupIncrementseconds", "CurrentclosingGroup", "CurrentSoftclosingGroup", "CurrentLotOrder", "OwnerID", "ProxyBidding", "Published", "PreviewLots", "LotsTaxable", "FollowLiveEnabled", "BuyersPremiumPercent", "DeletedOn", "Startdttm", "Enddttm", "EstimatedLastEnddttm", "CreatedOn", "UpdatedOn", "Description", "LastUpdatedUser", "Status", "Timezone", "TermsandConditions", "PrimaryImageURI", "Title", "SecondaryImageURI", "OwnerUserName", "ShippingInfo", "SubTitle", "ManagedByName", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "ID", "SoftclosingGroupIncrementseconds", "LotCount", "CategoryID", "CurrencyID", "ClosingGroupIncrementseconds", "CurrentclosingGroup", "CurrentSoftclosingGroup", "CurrentLotOrder", "OwnerID", "ProxyBidding", "Published", "PreviewLots", "LotsTaxable", "FollowLiveEnabled", "BuyersPremiumPercent", "DeletedOn", "Startdttm", "Enddttm", "EstimatedLastEnddttm", "CreatedOn", "UpdatedOn", "Description", "LastUpdatedUser", "Status", "Timezone", "TermsandConditions", "PrimaryImageURI", "Title", "SecondaryImageURI", "OwnerUserName", "ShippingInfo", "SubTitle", "ManagedByName", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#AH_AuctionEvents_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#AH_AuctionEvents_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

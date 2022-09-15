@@ -12,8 +12,8 @@
                   "ID", "Currency", "Status", "Type", "LotNumber", "Description", "LastUpdatedUser", "CreatedOn", "UpdatedOn", "DeletedOn", "DaTestamp", "InvoiceID", "ListingID", "Quantity", "OwnerID", "PayerID", "ReListiteration", "AuctionEventID", "TotalAmount", "PeRunitAmount", "Taxable", "IsArchived", "BuyersPremiuMapplies", "IsPayerArchived", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "ID", "Currency", "Status", "Type", "LotNumber", "Description", "LastUpdatedUser", "CreatedOn", "UpdatedOn", "DeletedOn", "DaTestamp", "InvoiceID", "ListingID", "Quantity", "OwnerID", "PayerID", "ReListiteration", "AuctionEventID", "TotalAmount", "PeRunitAmount", "Taxable", "IsArchived", "BuyersPremiuMapplies", "IsPayerArchived", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#AH_LineItems_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#AH_LineItems_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

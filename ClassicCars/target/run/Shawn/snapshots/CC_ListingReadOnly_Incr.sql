@@ -12,8 +12,8 @@
                   "ID", "City", "State", "ZipCode", "Make", "Model", "Description", "CompanyName", "SrcsetandFirstURL", "Country", "StockNumber", "ListingStatusID", "CompanyID", "Year", "PriceTypeID", "VehicleTypeID", "CompanyTypeID", "ImageCount", "VideoCount", "CategoryID", "CreateDate", "ModifyDate", "FeaturedUntil", "FeaturedOn", "IsActive", "IsFeaturedListing", "Convertible", "Price", "Latitude", "Longitude", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "ID", "City", "State", "ZipCode", "Make", "Model", "Description", "CompanyName", "SrcsetandFirstURL", "Country", "StockNumber", "ListingStatusID", "CompanyID", "Year", "PriceTypeID", "VehicleTypeID", "CompanyTypeID", "ImageCount", "VideoCount", "CategoryID", "CreateDate", "ModifyDate", "FeaturedUntil", "FeaturedOn", "IsActive", "IsFeaturedListing", "Convertible", "Price", "Latitude", "Longitude", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#CC_ListingReadOnly_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#CC_ListingReadOnly_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

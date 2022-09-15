@@ -12,8 +12,8 @@
                   "ID", "IsActive", "OptinThirdParty", "DisableImmediateSavedSearches", "BlacklistedForAHNominations", "DisabledailySavedSearches", "DisableFirstAlerts", "BuyerInquiry_IncludeADF", "DashboardLock", "WhiteListedForAHNominations", "OptOutAHNominationAlerts", "Latitude", "Longitude", "CreateDate", "ModifyDate", "BuyerInquiry_AdfOptionID", "CompanyTypeID", "MaxActiveListings", "MaxFeaturedListings", "ImageSortType", "ListingPaymentType", "OverrideMAxActiveAlertCount", "CompanyName", "TelePhone", "Country", "Aboutus", "LogoURL", "CompanyURL", "BuyerInquiryEmailAddress", "CompanyDescription", "Email", "Address1", "Address2", "City", "State", "ZipCode", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "ID", "IsActive", "OptinThirdParty", "DisableImmediateSavedSearches", "BlacklistedForAHNominations", "DisabledailySavedSearches", "DisableFirstAlerts", "BuyerInquiry_IncludeADF", "DashboardLock", "WhiteListedForAHNominations", "OptOutAHNominationAlerts", "Latitude", "Longitude", "CreateDate", "ModifyDate", "BuyerInquiry_AdfOptionID", "CompanyTypeID", "MaxActiveListings", "MaxFeaturedListings", "ImageSortType", "ListingPaymentType", "OverrideMAxActiveAlertCount", "CompanyName", "TelePhone", "Country", "Aboutus", "LogoURL", "CompanyURL", "BuyerInquiryEmailAddress", "CompanyDescription", "Email", "Address1", "Address2", "City", "State", "ZipCode", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#CC_Company_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#CC_Company_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

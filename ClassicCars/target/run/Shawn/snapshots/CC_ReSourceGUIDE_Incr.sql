@@ -12,8 +12,8 @@
                   "ID", "ReSourceIDPath", "Slug", "Title", "Pagecontent", "MetaDescription", "FontawesomeIcon", "Teaser", "IsActive", "ParentreSourceGUIDEID", "Depth", "CreateDate", "ModifyDate", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "ID", "ReSourceIDPath", "Slug", "Title", "Pagecontent", "MetaDescription", "FontawesomeIcon", "Teaser", "IsActive", "ParentreSourceGUIDEID", "Depth", "CreateDate", "ModifyDate", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#CC_ReSourceGUIDE_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#CC_ReSourceGUIDE_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

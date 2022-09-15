@@ -12,8 +12,8 @@
                   "FsboSoftDeactivate_EmailAuditPK", "EmailAddress", "MandrillID", "MandrillStatus", "MandrillrejectReason", "DateSentUTC", "ListingModifyDate", "ListingID", "Deactivatestage", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "FsboSoftDeactivate_EmailAuditPK", "EmailAddress", "MandrillID", "MandrillStatus", "MandrillrejectReason", "DateSentUTC", "ListingModifyDate", "ListingID", "Deactivatestage", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#CC_FsboSoftDeactivate_EmailAudit_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#CC_FsboSoftDeactivate_EmailAudit_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

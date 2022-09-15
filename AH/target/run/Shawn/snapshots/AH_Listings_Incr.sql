@@ -12,8 +12,8 @@
                   "ID", "LastUpdatedUser", "PrimaryImageURI", "OwnerUserName", "CurrentListingActionUserName", "Title", "Description", "SubTitle", "Location", "Status", "CreatedOn", "UpdatedOn", "DeletedOn", "Enddttm", "Startdttm", "AutoreListrEMAining", "CurrentQuantity", "OriginalQuantity", "ReListiteration", "LotID", "AcceptedActionCount", "OwnerID", "ListingTypeID", "Duration", "Version", "CurrencyID", "PrimaryCategoryID", "CurrentListingActionID", "OfferCount", "OriginalreListCount", "Hits", "CurrentPrice", "Increment", "OriginalPrice", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "ID", "LastUpdatedUser", "PrimaryImageURI", "OwnerUserName", "CurrentListingActionUserName", "Title", "Description", "SubTitle", "Location", "Status", "CreatedOn", "UpdatedOn", "DeletedOn", "Enddttm", "Startdttm", "AutoreListrEMAining", "CurrentQuantity", "OriginalQuantity", "ReListiteration", "LotID", "AcceptedActionCount", "OwnerID", "ListingTypeID", "Duration", "Version", "CurrencyID", "PrimaryCategoryID", "CurrentListingActionID", "OfferCount", "OriginalreListCount", "Hits", "CurrentPrice", "Increment", "OriginalPrice", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#AH_Listings_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#AH_Listings_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

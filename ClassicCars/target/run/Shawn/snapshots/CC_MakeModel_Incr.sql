@@ -12,8 +12,8 @@
                   "ID", "CreateDate", "ModifyDate", "VehicleTypeID", "CountryID", "CategoryID", "Make", "Model", "Makeplural", "Modelplural", "RelatedModelslugs", "IsActive", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "ID", "CreateDate", "ModifyDate", "VehicleTypeID", "CountryID", "CategoryID", "Make", "Model", "Makeplural", "Modelplural", "RelatedModelslugs", "IsActive", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#CC_MakeModel_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#CC_MakeModel_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

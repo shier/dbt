@@ -12,8 +12,8 @@
                   "ID", "ResponseCode", "ForeignID", "DateSent", "CreateDate", "ModifyDate", "IsActive", "SentFrom", "Replyto", "IpAddress", "Template", "Fields", "Meta", "Response", "MandrillID", "MandrillrejectReason", "SuBJect", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "ID", "ResponseCode", "ForeignID", "DateSent", "CreateDate", "ModifyDate", "IsActive", "SentFrom", "Replyto", "IpAddress", "Template", "Fields", "Meta", "Response", "MandrillID", "MandrillrejectReason", "SuBJect", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#CC_EmailProcessed_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#CC_EmailProcessed_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

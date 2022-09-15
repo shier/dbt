@@ -12,8 +12,8 @@
                   "ID", "SEnderID", "RecipientID", "MasTerMessageID", "ListingID", "Sent", "CreatedOn", "UpdatedOn", "DeletedOn", "SuBJect", "Body", "SEnderStatus", "RecipientStatus", "LastUpdatedUser", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "ID", "SEnderID", "RecipientID", "MasTerMessageID", "ListingID", "Sent", "CreatedOn", "UpdatedOn", "DeletedOn", "SuBJect", "Body", "SEnderStatus", "RecipientStatus", "LastUpdatedUser", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#AH_UserMessages_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#AH_UserMessages_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

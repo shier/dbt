@@ -12,8 +12,8 @@
                   "ID", "CreateDate", "ModifyDate", "Name", "DisplayName", "AppKey", "AppSecret", "IsActive", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "ID", "CreateDate", "ModifyDate", "Name", "DisplayName", "AppKey", "AppSecret", "IsActive", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#CC_SocialprovIDEr_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#CC_SocialprovIDEr_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

@@ -12,8 +12,8 @@
                   "ID", "Priority", "EventID", "SqlDaTestamp", "EntryDaTestamp", "MachineName", "Message", "Title", "FunctionalArea", "Severity", "Actor", "ExceptionClass", "Stacktrace", "Properties", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "ID", "Priority", "EventID", "SqlDaTestamp", "EntryDaTestamp", "MachineName", "Message", "Title", "FunctionalArea", "Severity", "Actor", "ExceptionClass", "Stacktrace", "Properties", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#AH_Logentries_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#AH_Logentries_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

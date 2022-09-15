@@ -12,8 +12,8 @@
                   "ID", "StringnativeValue", "EnumnativeValue", "LastUpdatedUser", "Scope", "DecimalnativeValue", "DeletedOn", "DateTimenativeValue", "CreatedOn", "UpdatedOn", "IntnativeValue", "CustomFieldID", "ListingTypeID", "BoolnativeValue", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "ID", "StringnativeValue", "EnumnativeValue", "LastUpdatedUser", "Scope", "DecimalnativeValue", "DeletedOn", "DateTimenativeValue", "CreatedOn", "UpdatedOn", "IntnativeValue", "CustomFieldID", "ListingTypeID", "BoolnativeValue", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#AH_ListingTypeproperties_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#AH_ListingTypeproperties_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

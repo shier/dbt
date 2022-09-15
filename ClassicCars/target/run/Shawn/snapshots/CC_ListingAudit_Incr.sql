@@ -12,8 +12,8 @@
                   "AuditPK", "ListingFK", "AuditDateTimeUTC", "UserName", "DdlAction", "FieldName", "Oldvalue", "Newvalue", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "AuditPK", "ListingFK", "AuditDateTimeUTC", "UserName", "DdlAction", "FieldName", "Oldvalue", "Newvalue", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#CC_ListingAudit_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#CC_ListingAudit_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

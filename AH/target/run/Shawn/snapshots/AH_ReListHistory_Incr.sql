@@ -12,8 +12,8 @@
                   "ID", "CurrentPrice_Old", "CurrentPrice_New", "ReservePrice", "ListingID", "NewreListiteration", "Duration_Old", "Duration_New", "HighBidderID", "BidCount", "Startdttm_New", "Enddttm_Old", "Enddttm_New", "ReListdttm", "Startdttm_Old", "MaxBidAmount", "ProxyBidAmount", "BidIncrement", "ListingTitle", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "ID", "CurrentPrice_Old", "CurrentPrice_New", "ReservePrice", "ListingID", "NewreListiteration", "Duration_Old", "Duration_New", "HighBidderID", "BidCount", "Startdttm_New", "Enddttm_Old", "Enddttm_New", "ReListdttm", "Startdttm_Old", "MaxBidAmount", "ProxyBidAmount", "BidIncrement", "ListingTitle", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#AH_ReListHistory_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#AH_ReListHistory_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

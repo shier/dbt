@@ -12,8 +12,8 @@
                   "FavoritePK", "IsActive", "CreateDateUTC", "ModifyDateUTC", "ListingFK", "UserFK", "DataTokenID", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "FavoritePK", "IsActive", "CreateDateUTC", "ModifyDateUTC", "ListingFK", "UserFK", "DataTokenID", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#CC_Favorites_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#CC_Favorites_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

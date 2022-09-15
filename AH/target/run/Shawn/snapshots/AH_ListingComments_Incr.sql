@@ -12,8 +12,8 @@
                   "ID", "IsBID", "Approved", "ParentID", "ReportCount", "UserID", "ListingID", "CreatedOn", "UpdatedOn", "DeletedOn", "UserName", "Comment", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "ID", "IsBID", "Approved", "ParentID", "ReportCount", "UserID", "ListingID", "CreatedOn", "UpdatedOn", "DeletedOn", "UserName", "Comment", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#AH_ListingComments_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#AH_ListingComments_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 
