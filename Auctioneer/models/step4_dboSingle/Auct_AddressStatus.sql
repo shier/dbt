@@ -1,7 +1,7 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([AddressStatusID] as int) [AddressStatusID],
-	cast([Name] as varchar(64)) [AddressStatus],
-	cast([Created] as datetime) [Created_AddressStatus],
-	cast([UpdateEventID] as int) [UpdateEventID_AddressStatus] 
+	cast([AddressStatusID] as int) [ADDRESSSTATUSID],
+	cast([Name] as varchar(64)) [NAME],
+	cast([Created] as datetime) [CREATED],
+	cast([UpdateEventID] as int) [UPDATEEVENTID] 
 From stg.[Auct_AddressStatus_FinalView]

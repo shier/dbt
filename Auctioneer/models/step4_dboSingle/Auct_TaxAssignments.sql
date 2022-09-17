@@ -1,10 +1,10 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([TaxAssignmentID] as int) [TaxAssignmentID],
-	cast([CustomerAccountID] as int) [CustomerAccountID],
-	cast([CityTaxRatesID] as int) [CityTaxRatesID],
-	cast([CountyTaxRatesID] as int) [CountyTaxRatesID],
-	cast([StateTaxRatesID] as int) [StateTaxRatesID],
-	cast([Created] as datetime) [Created],
-	cast([UpdateEventID] as int) [UpdateEventID] 
+	cast([TaxAssignmentID] as int) [TAXASSIGNMENTID],
+	cast([CustomerAccountID] as int) [CUSTOMERACCOUNTID],
+	cast([CityTaxRatesID] as int) [CITYTAXRATESID],
+	cast([CountyTaxRatesID] as int) [COUNTYTAXRATESID],
+	cast([StateTaxRatesID] as int) [STATETAXRATESID],
+	cast([Created] as datetime) [CREATED],
+	cast([UpdateEventID] as int) [UPDATEEVENTID] 
 From stg.[Auct_TaxAssignments_FinalView]

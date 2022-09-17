@@ -1,7 +1,7 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([DynamicPropertyID] as int) [DynamicPropertyID],
-	cast([Name] as nvarchar(4000)) [Name],
-	cast([DisplayName] as nvarchar(4000)) [DisplayName],
-	cast([DataClass] as nvarchar(4000)) [DataClass] 
+	cast([DynamicPropertyID] as int) [DYNAMICPROPERTYID],
+	cast([Name] as nvarchar(4000)) [NAME],
+	cast([DisplayName] as nvarchar(4000)) [DISPLAYNAME],
+	cast([DataClass] as nvarchar(4000)) [DATACLASS] 
 From stg.[Auct_DynamicProperty_FinalView]

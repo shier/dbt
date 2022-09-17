@@ -1,12 +1,12 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([CredentialID] as int) [CredentialID],
-	cast([FeeType_Credential_ID] as int) [FeeType_Credential_ID],
-	cast([FeeTypeID] as int) [FeeTypeID],
-	cast([CredentialQuantity] as int) [CredentialQuantity],
-	cast([CreatedByUserID] as int) [CreatedByUserID],
-	cast([CreatedDate] as datetime) [CreatedDate],
-	cast([QueueID] as int) [QueueID],
-	cast([CredentialName] as nvarchar(4000)) [CredentialName],
-	cast([Active] as bit) [Active] 
+	cast([FeeType_Credential_ID] as int) [FEETYPE_CREDENTIAL_ID],
+	cast([CredentialID] as int) [CREDENTIALID],
+	cast([FeeTypeID] as int) [FEETYPEID],
+	cast([CredentialQuantity] as int) [CREDENTIALQUANTITY],
+	cast([CreatedByUserID] as int) [CREATEDBYUSERID],
+	cast([CreatedDate] as datetime) [CREATEDDATE],
+	cast([QueueID] as int) [QUEUEID],
+	cast([CredentialName] as nvarchar(4000)) [CREDENTIALNAME],
+	cast([Active] as bit) [ACTIVE] 
 From stg.[Auct_FeeType_Credential_FinalView]

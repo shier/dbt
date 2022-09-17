@@ -1,6 +1,6 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([SiteCategoryID] as int) [SiteCategoryID],
-	cast([Name] as nvarchar(4000)) [Name],
-	cast([FeeCategoryID] as int) [FeeCategoryID] 
+	cast([SiteCategoryID] as int) [SITECATEGORYID],
+	cast([Name] as nvarchar(4000)) [NAME],
+	cast([FeeCategoryID] as int) [FEECATEGORYID] 
 From stg.[Auct_SiteCategory_FinalView]

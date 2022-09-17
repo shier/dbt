@@ -1,7 +1,7 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([DriverID] as int) [DriverID],
-	cast([Active] as bit) [Active],
-	cast([Name] as nvarchar(4000)) [Name],
-	cast([Created] as DATETIME) [Created] 
+	cast([Active] as bit) [ACTIVE],
+	cast([DriverID] as int) [DRIVERID],
+	cast([Name] as nvarchar(4000)) [NAME],
+	cast([Created] as DATETIME) [CREATED] 
 From stg.[Auct_Driver_FinalView]

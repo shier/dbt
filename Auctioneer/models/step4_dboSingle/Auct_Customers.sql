@@ -1,9 +1,9 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([ContactID] as int) [ContactID],
-	cast([CustomerAccountID] as int) [CustomerAccountID],
-	cast([Name] as nvarchar(4000)) [Name],
-	cast([EmailAddress] as nvarchar(4000)) [EmailAddress],
+	cast([ContactID] as int) [CONTACTID],
+	cast([CustomerAccountID] as int) [CUSTOMERACCOUNTID],
+	cast([Name] as nvarchar(4000)) [NAME],
+	cast([EmailAddress] as nvarchar(4000)) [EMAILADDRESS],
 	cast([Type] as nvarchar(4000)) [Type],
-	cast([ContactTypeID] as int) [ContactTypeID] 
+	cast([ContactTypeID] as int) [CONTACTTYPEID] 
 From stg.[Auct_Customers_FinalView]

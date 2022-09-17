@@ -1,7 +1,7 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([BidIncrementID] as int) [BidIncrementID],
-	cast([IncrementValue] as numeric(19,4)) [IncrementValue],
-	cast([Created] as DATETIME) [Created],
-	cast([UpdateEventID] as int) [UpdateEventID] 
+	cast([IncrementValue] as numeric(19,4)) [INCREMENTVALUE],
+	cast([BidIncrementID] as int) [BIDINCREMENTID],
+	cast([Created] as DATETIME) [CREATED],
+	cast([UpdateEventID] as int) [UPDATEEVENTID] 
 From stg.[Auct_BidIncrement_FinalView]

@@ -1,14 +1,14 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([ID] as int) [ID],
+	cast([ID] as int) [Id],
 	cast([Active] as bit) [Active],
-	cast([MinimumBidHold] as numeric(194)) [MinimumBidHold],
-	cast([BasicplanPrice] as numeric(194)) [BasicplanPrice],
-	cast([ProPhotographyPrice] as numeric(194)) [ProPhotographyPrice],
-	cast([ProMarketingPrice] as numeric(194)) [ProMarketingPrice],
-	cast([Minfraudscore] as numeric(194)) [Minfraudscore],
+	cast([MinimumBidHold] as numeric(19,4)) [MinimumBidHold],
+	cast([BasicplanPrice] as numeric(19,4)) [BasicPlanPrice],
+	cast([ProPhotographyPrice] as numeric(19,4)) [ProPhotographyPrice],
+	cast([ProMarketingPrice] as numeric(19,4)) [ProMarketingPrice],
+	cast([Minfraudscore] as numeric(19,4)) [minFraudScore],
 	cast([UpdatedOn] as datetime) [UpdatedOn],
 	cast([CreatedOn] as datetime) [CreatedOn],
-	cast([MaximumBidCharge] as numeric(194)) [MaximumBidCharge],
-	cast([BidHoldPercentage] as numeric(194)) [BidHoldPercentage] 
+	cast([MaximumBidCharge] as numeric(19,4)) [MaximumBidCharge],
+	cast([BidHoldPercentage] as numeric(19,4)) [BidHoldPercentage] 
 From stg.[AH_PaymentConfigurationTable_FinalView]

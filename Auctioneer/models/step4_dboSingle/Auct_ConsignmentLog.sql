@@ -1,11 +1,11 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([ConsignmentLogID] as int) [ConsignmentLogID],
-	cast([ConsignmentID] as int) [ConsignmentID],
-	cast([NoteType] as nvarchar(4000)) [NoteType],
-	cast([Note] as nvarchar(4000)) [Note],
-	cast([UsersID] as int) [UsersID],
-	cast([Created] as DATETIME) [Created],
-	cast([UpdateEventID] as int) [UpdateEventID],
-	cast([CustomerAccountID] as int) [CustomerAccountID] 
+	cast([ConsignmentLogID] as int) [CONSIGNMENTLOGID],
+	cast([ConsignmentID] as int) [CONSIGNMENTID],
+	cast([NoteType] as nvarchar(4000)) [NOTETYPE],
+	cast([Note] as nvarchar(4000)) [NOTE],
+	cast([UsersID] as int) [USERSID],
+	cast([Created] as DATETIME) [CREATED],
+	cast([UpdateEventID] as int) [UPDATEEVENTID],
+	cast([CustomerAccountID] as int) [CUSTOMERACCOUNTID] 
 From stg.[Auct_ConsignmentLog_FinalView]

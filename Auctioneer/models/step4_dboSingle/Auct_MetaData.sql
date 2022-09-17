@@ -1,8 +1,8 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([MetaDataID] as int) [MetaDataID],
-	cast([MetaDataTypeID] as int) [MetaDataTypeID],
-	cast([Value] as nvarchar(4000)) [Value],
-	cast([Active] as int) [Active],
-	cast([DateCreated] as datetime) [DateCreated] 
+	cast([MetaDataID] as int) [METADATAID],
+	cast([MetaDataTypeID] as int) [METADATATYPEID],
+	cast([Value] as nvarchar(4000)) [VALUE],
+	cast([Active] as int) [ACTIVE],
+	cast([DateCreated] as datetime) [DATECREATED] 
 From stg.[Auct_MetaData_FinalView]

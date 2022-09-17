@@ -1,10 +1,10 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([CompanyID] as int) [CompanyID],
-	cast([Name] as nvarchar(4000)) [Name],
-	cast([IndustryTypeID] as int) [IndustryTypeID],
-	cast([Comments] as nvarchar(4000)) [Comments],
+	cast([CompanyID] as int) [COMPANYID],
+	cast([Name] as nvarchar(4000)) [NAME],
+	cast([IndustryTypeID] as int) [INDUSTRYTYPEID],
+	cast([Comments] as nvarchar(4000)) [COMMENTS],
 	cast([URL] as nvarchar(4000)) [URL],
-	cast([Created] as DATETIME) [Created],
-	cast([UpdateEventID] as int) [UpdateEventID] 
+	cast([Created] as DATETIME) [CREATED],
+	cast([UpdateEventID] as int) [UPDATEEVENTID] 
 From stg.[Auct_Company_FinalView]

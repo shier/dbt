@@ -1,7 +1,7 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
 	cast([TicketID] as bigint) [TicketID],
-	cast([TransactionID] as nvarchar(4000)) [TransActionID],
+	cast([TransactionID] as nvarchar(4000)) [TransactionID],
 	cast([EventName] as nvarchar(4000)) [EventName],
 	cast([SectionName] as nvarchar(4000)) [SectionName],
 	cast([Seatrow] as nvarchar(4000)) [SeatRow],

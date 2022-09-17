@@ -1,8 +1,8 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([AuctioneerID] as int) [AuctioneerID],
-	cast([Active] as bit) [Active],
-	cast([ContactID] as int) [ContactID],
-	cast([Created] as datetime) [Created],
-	cast([UpdateEventID] as int) [UpdateEventID] 
+	cast([Active] as bit) [ACTIVE],
+	cast([AuctioneerID] as int) [AUCTIONEERID],
+	cast([ContactID] as int) [CONTACTID],
+	cast([Created] as datetime) [CREATED],
+	cast([UpdateEventID] as int) [UPDATEEVENTID] 
 From stg.[Auct_Auctioneer_FinalView]

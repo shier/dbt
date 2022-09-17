@@ -1,11 +1,11 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([ConsignmentFormID] as int) [ConsignmentFormID],
-	cast([ConsignmentID] as int) [ConsignmentID],
-	cast([FormName] as nvarchar(4000)) [FormName],
-	cast([FormKey] as nvarchar(4000)) [FormKey],
-	cast([FilePath] as nvarchar(4000)) [FilePath],
-	cast([SignStartedDateTime] as DATETIME) [SignStartedDateTime],
-	cast([SignfinishedDateTime] as DATETIME) [SignfinishedDateTime],
-	cast([UserID] as int) [UserID] 
+	cast([ConsignmentFormID] as int) [CONSIGNMENTFORMID],
+	cast([ConsignmentID] as int) [CONSIGNMENTID],
+	cast([FormName] as nvarchar(4000)) [FORMNAME],
+	cast([FormKey] as nvarchar(4000)) [FORMKEY],
+	cast([FilePath] as nvarchar(4000)) [FILEPATH],
+	cast([SignStartedDateTime] as DATETIME) [SIGNSTARTEDDATETIME],
+	cast([SignfinishedDateTime] as DATETIME) [SIGNFINISHEDDATETIME],
+	cast([UserID] as int) [USERID] 
 From stg.[Auct_ConsignmentForms_FinalView]

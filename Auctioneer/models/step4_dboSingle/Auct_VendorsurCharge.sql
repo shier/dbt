@@ -1,8 +1,8 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([VendorsurChargeID] as int) [VendorsurChargeID],
-	cast([VendorAuctionID] as int) [VendorAuctionID],
-	cast([Created] as datetime) [Created],
-	cast([UpdateEventID] as int) [UpdateEventID],
-	cast([Surchagecost] as numeric(19,4)) [Surchagecost] 
+	cast([VendorsurChargeID] as int) [VENDORSURCHARGEID],
+	cast([VendorAuctionID] as int) [VENDORAUCTIONID],
+	cast([Created] as datetime) [CREATED],
+	cast([UpdateEventID] as int) [UPDATEEVENTID],
+	cast([Surchagecost] as numeric(19,4)) [SURCHAGECOST] 
 From stg.[Auct_VendorsurCharge_FinalView]

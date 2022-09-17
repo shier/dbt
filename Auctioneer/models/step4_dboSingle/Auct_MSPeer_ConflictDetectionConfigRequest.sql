@@ -1,10 +1,10 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([ID] as int) [ID],
-	cast([Publication] as nvarchar(4000)) [Publication],
-	cast([Sent_Date] as datetime) [Sent_Date],
-	cast([TimeOut] as int) [TimeOut],
-	cast([Modified_Date] as datetime) [Modified_Date],
-	cast([Progress_Phase] as nvarchar(4000)) [Progress_Phase],
-	cast([Phase_Timed_Out] as bit) [Phase_Timed_Out] 
+	cast([ID] as int) [id],
+	cast([Publication] as nvarchar(4000)) [publication],
+	cast([Sent_Date] as datetime) [sent_date],
+	cast([TimeOut] as int) [timeout],
+	cast([Modified_Date] as datetime) [modified_date],
+	cast([Progress_Phase] as nvarchar(4000)) [progress_phase],
+	cast([Phase_Timed_Out] as bit) [phase_timed_out] 
 From stg.[Auct_MSPeer_ConflictDetectionConfigRequest_FinalView]

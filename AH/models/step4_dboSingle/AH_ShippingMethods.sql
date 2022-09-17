@@ -1,6 +1,6 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([ID] as int) [ID],
+	cast([ID] as int) [Id],
 	cast([DisplayOrder] as int) [DisplayOrder],
 	cast([CreatedOn] as datetime) [CreatedOn],
 	cast([UpdatedOn] as datetime) [UpdatedOn],

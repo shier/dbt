@@ -1,20 +1,20 @@
 
   
-  if object_id ('"dbo"."SZ_AH_Properties_Pivot__dbt_tmp_temp_view"','V') is not null
+  if object_id ('"dbo_dbo"."SZ_AH_Properties_Pivot__dbt_tmp_temp_view"','V') is not null
     begin
-    drop view "dbo"."SZ_AH_Properties_Pivot__dbt_tmp_temp_view"
+    drop view "dbo_dbo"."SZ_AH_Properties_Pivot__dbt_tmp_temp_view"
     end
 
 
    
     
-  if object_id ('"dbo"."SZ_AH_Properties_Pivot__dbt_tmp"','U') is not null
+  if object_id ('"dbo_dbo"."SZ_AH_Properties_Pivot__dbt_tmp"','U') is not null
     begin
-    drop table "dbo"."SZ_AH_Properties_Pivot__dbt_tmp"
+    drop table "dbo_dbo"."SZ_AH_Properties_Pivot__dbt_tmp"
     end
 
 
-   EXEC('create view dbo.SZ_AH_Properties_Pivot__dbt_tmp_temp_view as
+   EXEC('create view dbo_dbo.SZ_AH_Properties_Pivot__dbt_tmp_temp_view as
     
 
 
@@ -67,18 +67,18 @@ select
 from pivoted_data
     ');
 
-  CREATE TABLE "dbo"."SZ_AH_Properties_Pivot__dbt_tmp"
+  CREATE TABLE "dbo_dbo"."SZ_AH_Properties_Pivot__dbt_tmp"
     WITH(
       DISTRIBUTION = ROUND_ROBIN,
       CLUSTERED COLUMNSTORE INDEX
       )
-    AS (SELECT * FROM dbo.SZ_AH_Properties_Pivot__dbt_tmp_temp_view)
+    AS (SELECT * FROM dbo_dbo.SZ_AH_Properties_Pivot__dbt_tmp_temp_view)
 
    
   
-  if object_id ('"dbo"."SZ_AH_Properties_Pivot__dbt_tmp_temp_view"','V') is not null
+  if object_id ('"dbo_dbo"."SZ_AH_Properties_Pivot__dbt_tmp_temp_view"','V') is not null
     begin
-    drop view "dbo"."SZ_AH_Properties_Pivot__dbt_tmp_temp_view"
+    drop view "dbo_dbo"."SZ_AH_Properties_Pivot__dbt_tmp_temp_view"
     end
 
 

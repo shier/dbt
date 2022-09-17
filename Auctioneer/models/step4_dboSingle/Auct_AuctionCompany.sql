@@ -1,8 +1,8 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([AuctionCompanyID] as int) [AuctionCompanyID],
-	cast([CompanyID] as int) [CompanyID],
-	cast([Logo] as nvarchar(4000)) [Logo],
-	cast([Created] as DATETIME) [Created],
-	cast([UpdateEventID] as int) [UpdateEventID] 
+	cast([AuctionCompanyID] as int) [AUCTIONCOMPANYID],
+	cast([CompanyID] as int) [COMPANYID],
+	cast([Logo] as nvarchar(4000)) [LOGO],
+	cast([Created] as DATETIME) [CREATED],
+	cast([UpdateEventID] as int) [UPDATEEVENTID] 
 From stg.[Auct_AuctionCompany_FinalView]

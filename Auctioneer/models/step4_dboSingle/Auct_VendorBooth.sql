@@ -1,8 +1,8 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([VendorBoothID] as int) [VendorBoothID],
-	cast([BoothID] as int) [BoothID],
-	cast([VendorAuctionID] as int) [VendorAuctionID],
-	cast([UpdateEventID] as int) [UpdateEventID],
-	cast([Created] as datetime) [Created] 
+	cast([VendorBoothID] as int) [VENDORBOOTHID],
+	cast([BoothID] as int) [BOOTHID],
+	cast([VendorAuctionID] as int) [VENDORAUCTIONID],
+	cast([UpdateEventID] as int) [UPDATEEVENTID],
+	cast([Created] as datetime) [CREATED] 
 From stg.[Auct_VendorBooth_FinalView]

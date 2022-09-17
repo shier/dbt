@@ -1,11 +1,11 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([MediaID] as int) [MediaID],
-	cast([CustomerAccountID] as int) [CustomerAccountID],
-	cast([AddressID] as int) [AddressID],
-	cast([MediaTypeID] as int) [MediaTypeID],
-	cast([Circulation] as nvarchar(4000)) [Circulation],
-	cast([StoryIdeas] as nvarchar(4000)) [StoryIdeas],
-	cast([Created] as datetime) [Created],
-	cast([UpdateEventID] as int) [UpdateEventID] 
+	cast([MediaID] as int) [MEDIAID],
+	cast([CustomerAccountID] as int) [CUSTOMERACCOUNTID],
+	cast([AddressID] as int) [ADDRESSID],
+	cast([MediaTypeID] as int) [MEDIATYPEID],
+	cast([Circulation] as nvarchar(4000)) [CIRCULATION],
+	cast([StoryIdeas] as nvarchar(4000)) [STORYIDEAS],
+	cast([Created] as datetime) [CREATED],
+	cast([UpdateEventID] as int) [UPDATEEVENTID] 
 From stg.[Auct_Media_FinalView]

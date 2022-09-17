@@ -1,12 +1,12 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([ID] as int) [ID],
 	cast([LotNumber] as nvarchar(4000)) [LotNumber],
 	cast([LastUpdatedUser] as nvarchar(4000)) [LastUpdatedUser],
-	cast([IsSoftclosing] as bit) [IsSoftclosing],
-	cast([SoftclosingGroup] as int) [SoftclosingGroup],
+	cast([IsSoftclosing] as bit) [IsSoftClosing],
+	cast([SoftclosingGroup] as int) [SoftClosingGroup],
 	cast([LotOrder] as int) [LotOrder],
 	cast([AuctionEventID] as int) [AuctionEventID],
+	cast([ID] as int) [Id],
 	cast([ClosingGroup] as int) [ClosingGroup],
 	cast([CreatedOn] as datetime) [CreatedOn],
 	cast([UpdatedOn] as datetime) [UpdatedOn],

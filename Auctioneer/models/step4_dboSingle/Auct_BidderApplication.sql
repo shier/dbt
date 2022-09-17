@@ -1,9 +1,9 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([BidderApplicationID] as int) [BidderApplicationID],
-	cast([AuctionID] as int) [AuctionID],
-	cast([AuctionName] as nvarchar(4000)) [AuctionName],
-	cast([DateRange] as nvarchar(4000)) [Daterange],
-	cast([PreRegistrationFee] as int) [PreRegistrationFee],
-	cast([PreRegistrationCutoffDate] as nvarchar(4000)) [PreRegistrationCutoffDate] 
+	cast([BidderApplicationID] as int) [BIDDERAPPLICATIONID],
+	cast([AuctionID] as int) [AUCTIONID],
+	cast([AuctionName] as nvarchar(4000)) [AUCTIONNAME],
+	cast([DateRange] as nvarchar(4000)) [DATERANGE],
+	cast([PreRegistrationFee] as int) [PREREGISTRATIONFEE],
+	cast([PreRegistrationCutoffDate] as nvarchar(4000)) [PREREGISTRATIONCUTOFFDATE] 
 From stg.[Auct_BidderApplication_FinalView]

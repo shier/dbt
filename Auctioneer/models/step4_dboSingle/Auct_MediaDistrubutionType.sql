@@ -1,5 +1,5 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([DistributionTypeID] as int) [DistributionTypeID],
-	cast([Name] as nvarchar(4000)) [Name] 
+	cast([DistributionTypeID] as int) [DISTRIBUTIONTYPEID],
+	cast([Name] as nvarchar(4000)) [NAME] 
 From stg.[Auct_MediaDistrubutionType_FinalView]

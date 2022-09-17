@@ -1,7 +1,7 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([BidderTypeID] as int) [BidderTypeID],
-	cast([Name] as nvarchar(4000)) [Name],
-	cast([Created] as DATETIME) [Created],
-	cast([UpdateEventID] as int) [UpdateEventID] 
+	cast([BidderTypeID] as int) [BIDDERTYPEID],
+	cast([Name] as nvarchar(4000)) [NAME],
+	cast([Created] as DATETIME) [CREATED],
+	cast([UpdateEventID] as int) [UPDATEEVENTID] 
 From stg.[Auct_BidderType_FinalView]

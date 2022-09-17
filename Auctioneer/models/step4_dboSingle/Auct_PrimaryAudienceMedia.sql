@@ -1,8 +1,8 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([PrimaryAudienceMediaID] as int) [PrimaryAudienceMediaID],
-	cast([MediaID] as int) [MediaID],
-	cast([PrimaryAudienceID] as int) [PrimaryAudienceID],
-	cast([Created] as datetime) [Created],
-	cast([UpdateEventID] as int) [UpdateEventID] 
+	cast([PrimaryAudienceMediaID] as int) [PRIMARYAUDIENCEMEDIAID],
+	cast([MediaID] as int) [MEDIAID],
+	cast([PrimaryAudienceID] as int) [PRIMARYAUDIENCEID],
+	cast([Created] as datetime) [CREATED],
+	cast([UpdateEventID] as int) [UPDATEEVENTID] 
 From stg.[Auct_PrimaryAudienceMedia_FinalView]

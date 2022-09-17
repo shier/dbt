@@ -1,9 +1,9 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([LogoutlogID] as int) [LogoutLogID],
-	cast([UsersID] as int) [UsersID],
-	cast([Login] as DATETIME) [Login],
-	cast([Logout] as DATETIME) [Logout],
-	cast([Created] as DATETIME) [Created],
-	cast([UpdateEventID] as int) [UpdateEventID] 
+	cast([LogoutlogID] as int) [LOGOUTLOGID],
+	cast([UsersID] as int) [USERSID],
+	cast([Login] as DATETIME) [LOGIN],
+	cast([Logout] as DATETIME) [LOGOUT],
+	cast([Created] as DATETIME) [CREATED],
+	cast([UpdateEventID] as int) [UPDATEEVENTID] 
 From stg.[Auct_Logoutlog_FinalView]

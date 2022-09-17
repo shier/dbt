@@ -1,10 +1,10 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([BidderBadgeImageID] as int) [BidderBadgeImageID],
-	cast([IsDefault] as bit) [IsDefault],
-	cast([FileName] as nvarchar(4000)) [FileName],
-	cast([UncPath] as nvarchar(4000)) [UNCPath],
-	cast([BadgesIDEID] as int) [BadgesIDEID],
-	cast([Description] as nvarchar(4000)) [Description],
-	cast([AuctionID] as int) [AuctionID] 
+	cast([IsDefault] as bit) [ISDEFAULT],
+	cast([BidderBadgeImageID] as int) [BIDDERBADGEIMAGEID],
+	cast([FileName] as nvarchar(4000)) [FILENAME],
+	cast([UncPath] as nvarchar(4000)) [UNCPATH],
+	cast([BadgesIDEID] as int) [BADGESIDEID],
+	cast([Description] as nvarchar(4000)) [DESCRIPTION],
+	cast([AuctionID] as int) [AUCTIONID] 
 From stg.[Auct_BidderBadgeImage_FinalView]

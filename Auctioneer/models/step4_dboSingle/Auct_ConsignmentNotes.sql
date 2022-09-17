@@ -1,5 +1,5 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([NoteID] as int) [NoteID],
-	cast([ConsignmentID] as int) [ConsignmentID] 
+	cast([ConsignmentID] as int) [CONSIGNMENTID],
+	cast([NoteID] as int) [NOTEID] 
 From stg.[Auct_ConsignmentNotes_FinalView]

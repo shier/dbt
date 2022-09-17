@@ -1,5 +1,5 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([TaskTypeID] as int) [TaskTypeID],
-	cast([UserID] as int) [UserID] 
+	cast([TaskTypeID] as int) [TASKTYPEID],
+	cast([UserID] as int) [USERID] 
 From stg.[Auct_UserTaskTypes_FinalView]

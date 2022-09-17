@@ -1,10 +1,10 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([NexusID] as int) [NexusID],
-	cast([City] as nvarchar(4000)) [City],
-	cast([State] as nvarchar(4000)) [State],
-	cast([County] as nvarchar(4000)) [County],
-	cast([Created] as datetime) [Created],
-	cast([OnlineBusinessUnitID] as int) [OnLineBusinessUnitID],
-	cast([Active] as bit) [Active] 
+	cast([NexusID] as int) [NEXUSID],
+	cast([City] as nvarchar(4000)) [CITY],
+	cast([State] as nvarchar(4000)) [STATE],
+	cast([County] as nvarchar(4000)) [COUNTY],
+	cast([Created] as datetime) [CREATED],
+	cast([OnlineBusinessUnitID] as int) [ONLINEBUSINESSUNITID],
+	cast([Active] as bit) [ACTIVE] 
 From stg.[Auct_Nexus_FinalView]

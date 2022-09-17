@@ -1,8 +1,8 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([NodeID] as int) [NodeID],
-	cast([NodeTreeID] as int) [NodeTreeID],
-	cast([Left] as int) [Left],
-	cast([Right] as int) [Right],
-	cast([ContentID] as int) [ContentID] 
+	cast([NodeID] as int) [NODEID],
+	cast([NodeTreeID] as int) [NODETREEID],
+	cast([Left] as int) [LEFT],
+	cast([Right] as int) [RIGHT],
+	cast([ContentID] as int) [CONTENTID] 
 From stg.[Auct_Node_FinalView]

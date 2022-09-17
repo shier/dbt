@@ -1,10 +1,10 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([BidderStatusID] as int) [BidderStatusID],
-	cast([Name] as nvarchar(512)) [BidderStatus],
-	cast([Created] as datetime) [Created],
-	cast([UpdateEventID] as int) [UpdateEventID],
-	cast([ProcessorID] as int) [ProcessorID],
-	cast([Active] as bit) [IsActive],
-	cast([Processor] as nvarchar(512)) [Processor] 
+	cast([BidderStatusID] as int) [BIDDERSTATUSID],
+	cast([Name] as nvarchar(512)) [NAME],
+	cast([Created] as datetime) [CREATED],
+	cast([UpdateEventID] as int) [UPDATEEVENTID],
+	cast([ProcessorID] as int) [PROCESSORID],
+	cast([Active] as bit) [ACTIVE],
+	cast([Processor] as nvarchar(512)) [PROCESSOR] 
 From stg.[Auct_BidderStatus_FinalView]

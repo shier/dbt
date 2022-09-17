@@ -1,11 +1,11 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([BlockBidID] as int) [BlockBidID],
-	cast([AskingBID] as numeric(19,4)) [AskingBid],
-	cast([HighBID] as numeric(19,4)) [HighBid],
-	cast([DocketID] as int) [DocketID],
-	cast([Created] as DATETIME) [Created],
-	cast([UpdateEventID] as int) [UpdateEventID],
-	cast([StartTime] as DATETIME) [StartTime],
-	cast([EndTime] as DATETIME) [EndTime] 
+	cast([AskingBID] as numeric(19,4)) [ASKINGBID],
+	cast([HighBID] as numeric(19,4)) [HIGHBID],
+	cast([BlockBidID] as int) [BLOCKBIDID],
+	cast([DocketID] as int) [DOCKETID],
+	cast([Created] as DATETIME) [CREATED],
+	cast([UpdateEventID] as int) [UPDATEEVENTID],
+	cast([StartTime] as DATETIME) [STARTTIME],
+	cast([EndTime] as DATETIME) [ENDTIME] 
 From stg.[Auct_BlockBID_FinalView]

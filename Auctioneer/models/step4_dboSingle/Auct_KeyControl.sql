@@ -1,7 +1,7 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([KeyControlID] as int) [KeyControlID],
-	cast([Active] as bit) [Active],
-	cast([CurrentKeyControlTransactionID] as int) [CurrentKeyControlTransActionID],
-	cast([ConsignmentID] as int) [ConsignmentID] 
+	cast([Active] as bit) [ACTIVE],
+	cast([KeyControlID] as int) [KEYCONTROLID],
+	cast([CurrentKeyControlTransactionID] as int) [CURRENTKEYCONTROLTRANSACTIONID],
+	cast([ConsignmentID] as int) [CONSIGNMENTID] 
 From stg.[Auct_KeyControl_FinalView]

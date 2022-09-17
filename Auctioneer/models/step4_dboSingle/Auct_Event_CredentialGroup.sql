@@ -1,8 +1,8 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([CredentialGroupID] as int) [CredentialGroupID],
-	cast([Active] as bit) [Active],
-	cast([IsDefault] as bit) [IsDefault],
-	cast([ExternalEventID] as int) [ExternalEventID],
-	cast([AuctionID] as int) [AuctionID] 
+	cast([Active] as bit) [ACTIVE],
+	cast([IsDefault] as bit) [ISDEFAULT],
+	cast([ExternalEventID] as int) [EXTERNALEVENTID],
+	cast([CredentialGroupID] as int) [CREDENTIALGROUPID],
+	cast([AuctionID] as int) [AUCTIONID] 
 From stg.[Auct_Event_CredentialGroup_FinalView]

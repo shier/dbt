@@ -1,12 +1,12 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([InspectionID] as int) [InspectionID],
-	cast([CarID] as int) [CarID],
-	cast([OwnerContactID] as int) [OwnerContactID],
-	cast([PerFormedByContactID] as int) [PerFormedByContactID],
-	cast([Results] as nvarchar(4000)) [Results],
-	cast([DateperFormed] as DATETIME) [DateperFormed],
-	cast([DateRequested] as DATETIME) [DateRequested],
-	cast([Created] as DATETIME) [Created],
-	cast([UpdateEventID] as int) [UpdateEventID] 
+	cast([InspectionID] as int) [INSPECTIONID],
+	cast([CarID] as int) [CARID],
+	cast([OwnerContactID] as int) [OWNERCONTACTID],
+	cast([PerFormedByContactID] as int) [PERFORMEDBYCONTACTID],
+	cast([Results] as nvarchar(4000)) [RESULTS],
+	cast([DateperFormed] as DATETIME) [DATEPERFORMED],
+	cast([DateRequested] as DATETIME) [DATEREQUESTED],
+	cast([Created] as DATETIME) [CREATED],
+	cast([UpdateEventID] as int) [UPDATEEVENTID] 
 From stg.[Auct_Inspection_FinalView]

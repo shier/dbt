@@ -1,9 +1,9 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([SponsorParkingID] as int) [SponsorParkingID],
-	cast([ParkingTypeID] as int) [ParkingTypeID],
-	cast([SponsorAuctionID] as int) [SponsorAuctionID],
-	cast([SponsorParkingNumber] as int) [SponsorParkingNumber],
-	cast([Created] as datetime) [Created],
-	cast([UpdateEventID] as int) [UpdateEventID] 
+	cast([SponsorParkingID] as int) [SPONSORPARKINGID],
+	cast([ParkingTypeID] as int) [PARKINGTYPEID],
+	cast([SponsorAuctionID] as int) [SPONSORAUCTIONID],
+	cast([SponsorParkingNumber] as int) [SPONSORPARKINGNUMBER],
+	cast([Created] as datetime) [CREATED],
+	cast([UpdateEventID] as int) [UPDATEEVENTID] 
 From stg.[Auct_SponsorParking_FinalView]

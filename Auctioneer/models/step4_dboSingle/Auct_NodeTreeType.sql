@@ -1,6 +1,6 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([NodeTreeTypeID] as int) [NodeTreeTypeID],
-	cast([Name] as nvarchar(4000)) [Name],
-	cast([Active] as int) [Active] 
+	cast([NodeTreeTypeID] as int) [NODETREETYPEID],
+	cast([Name] as nvarchar(4000)) [NAME],
+	cast([Active] as int) [ACTIVE] 
 From stg.[Auct_NodeTreeType_FinalView]

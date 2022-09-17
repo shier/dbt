@@ -1,8 +1,8 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([FeeTypeID] as int) [FeeTypeID],
-	cast([Active] as bit) [Active],
-	cast([AuctionID] as int) [AuctionID],
-	cast([CreatedByUserID] as int) [CreatedByUserID],
-	cast([ItemTypeID] as int) [ItemTypeID] 
+	cast([Active] as bit) [ACTIVE],
+	cast([FeeTypeID] as int) [FEETYPEID],
+	cast([AuctionID] as int) [AUCTIONID],
+	cast([CreatedByUserID] as int) [CREATEDBYUSERID],
+	cast([ItemTypeID] as int) [ITEMTYPEID] 
 From stg.[Auct_ChargeatSaleAuctionFeeType_FinalView]

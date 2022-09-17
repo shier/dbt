@@ -1,8 +1,8 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([BlockBidSignatureID] as int) [BlockBidSignatureID],
-	cast([AuctionID] as int) [AuctionID],
-	cast([AuctionBidderNumber] as int) [AuctionBidderNumber],
-	cast([SignaturePath] as nvarchar(4000)) [SignaturePath],
-	cast([BlockBidID] as int) [BlockBidID] 
+	cast([BlockBidSignatureID] as int) [BLOCKBIDSIGNATUREID],
+	cast([AuctionID] as int) [AUCTIONID],
+	cast([AuctionBidderNumber] as int) [AUCTIONBIDDERNUMBER],
+	cast([SignaturePath] as nvarchar(4000)) [SIGNATUREPATH],
+	cast([BlockBidID] as int) [BLOCKBIDID] 
 From stg.[Auct_BlockBidSignature_FinalView]

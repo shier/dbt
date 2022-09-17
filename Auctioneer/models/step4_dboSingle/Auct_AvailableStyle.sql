@@ -1,9 +1,9 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([AvailableStyleID] as int) [AvailableStyleID],
-	cast([CarModelID] as int) [CarModelID],
-	cast([CarStyleID] as int) [CarStyleID],
-	cast([AllowDropDown] as nvarchar(4000)) [AllowDropDown],
-	cast([Created] as DATETIME) [Created],
-	cast([UpdateEventID] as int) [UpdateEventID] 
+	cast([AvailableStyleID] as int) [AVAILABLESTYLEID],
+	cast([CarModelID] as int) [CARMODELID],
+	cast([CarStyleID] as int) [CARSTYLEID],
+	cast([AllowDropDown] as nvarchar(4000)) [ALLOWDROPDOWN],
+	cast([Created] as DATETIME) [CREATED],
+	cast([UpdateEventID] as int) [UPDATEEVENTID] 
 From stg.[Auct_AvailableStyle_FinalView]

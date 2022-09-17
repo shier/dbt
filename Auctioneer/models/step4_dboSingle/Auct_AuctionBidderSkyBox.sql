@@ -1,9 +1,9 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([SkyBoxTicketNumber] as int) [SkyBoxTicketNumber],
-	cast([Active] as bit) [Active],
-	cast([AuctionBidderID] as int) [AuctionbIDderID],
-	cast([Created] as DATETIME) [Created],
-	cast([CreatedByUserID] as int) [CreatedByUserID],
-	cast([AuctionID] as int) [AuctionID] 
+	cast([Active] as bit) [ACTIVE],
+	cast([AuctionBidderID] as int) [AUCTIONBIDDERID],
+	cast([SkyBoxTicketNumber] as int) [SKYBOXTICKETNUMBER],
+	cast([Created] as DATETIME) [CREATED],
+	cast([CreatedByUserID] as int) [CREATEDBYUSERID],
+	cast([AuctionID] as int) [AUCTIONID] 
 From stg.[Auct_AuctionBidderSkyBox_FinalView]

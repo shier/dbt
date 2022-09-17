@@ -1,8 +1,8 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([ModelID] as int) [ModelID],
-	cast([DropDownText] as nvarchar(4000)) [DropDownText],
-	cast([DisplayText] as nvarchar(4000)) [DisplayText],
-	cast([MakeID] as int) [MakeID],
-	cast([Active] as nvarchar(4000)) [Active] 
+	cast([ModelID] as int) [MODELID],
+	cast([DropDownText] as nvarchar(4000)) [DROPDOWNTEXT],
+	cast([DisplayText] as nvarchar(4000)) [DISPLAYTEXT],
+	cast([MakeID] as int) [MAKEID],
+	cast([Active] as nvarchar(4000)) [ACTIVE] 
 From stg.[Auct_Model_FinalView]

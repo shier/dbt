@@ -1,7 +1,7 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([LotNumber] as numeric(18,2)) [LotNumber],
-	cast([AuctionID] as int) [AuctionID],
-	cast([EndingBID] as int) [EndingBid],
-	cast([ChangeTime] as DATETIME) [ChangeTime] 
+	cast([LotNumber] as numeric(18,2)) [LOTNUMBER],
+	cast([AuctionID] as int) [AUCTIONID],
+	cast([EndingBID] as int) [ENDINGBID],
+	cast([ChangeTime] as DATETIME) [CHANGETIME] 
 From stg.[Auct_BidRecord_FinalView]

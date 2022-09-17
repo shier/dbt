@@ -1,6 +1,6 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([ContactID] as int) [ContactID],
-	cast([AuctionID] as int) [AuctionID],
-	cast([Count] as int) [Count] 
+	cast([ContactID] as int) [CONTACTID],
+	cast([AuctionID] as int) [AUCTIONID],
+	cast([Count] as int) [COUNT] 
 From stg.[Auct_ContactConreqAuction_FinalView]

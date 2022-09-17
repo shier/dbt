@@ -1,7 +1,7 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([ProductServiceTypeID] as int) [ProductServiceTypeID],
-	cast([Name] as nvarchar(4000)) [Name],
-	cast([Created] as datetime) [Created],
-	cast([UpdateEventID] as int) [UpdateEventID] 
+	cast([ProductServiceTypeID] as int) [PRODUCTSERVICETYPEID],
+	cast([Name] as nvarchar(4000)) [NAME],
+	cast([Created] as datetime) [CREATED],
+	cast([UpdateEventID] as int) [UPDATEEVENTID] 
 From stg.[Auct_ProductServiceType_FinalView]

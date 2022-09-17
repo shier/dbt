@@ -1,11 +1,11 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([ODOMeterReadingID] as int) [ODOMeterReadingID],
-	cast([CarID] as int) [CarID],
-	cast([ReadingTypeID] as int) [ReadingTypeID],
-	cast([Reading] as int) [Reading],
-	cast([DateRead] as datetime) [DateRead],
-	cast([ReadByContactID] as int) [ReadByContactID],
-	cast([Created] as datetime) [Created],
-	cast([UpdateEventID] as int) [UpdateEventID] 
+	cast([ODOMeterReadingID] as int) [ODOMETERREADINGID],
+	cast([CarID] as int) [CARID],
+	cast([ReadingTypeID] as int) [READINGTYPEID],
+	cast([Reading] as int) [READING],
+	cast([DateRead] as datetime) [DATEREAD],
+	cast([ReadByContactID] as int) [READBYCONTACTID],
+	cast([Created] as datetime) [CREATED],
+	cast([UpdateEventID] as int) [UPDATEEVENTID] 
 From stg.[Auct_ODOMeterReading_FinalView]

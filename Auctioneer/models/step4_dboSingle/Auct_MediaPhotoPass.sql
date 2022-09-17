@@ -1,8 +1,8 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([MediaPhotoPassID] as int) [MediaPhotoPassID],
-	cast([MediaAuctionID] as int) [MediaAuctionID],
-	cast([PhotoPassNumber] as nvarchar(4000)) [PhotoPassNumber],
-	cast([Created] as datetime) [Created],
-	cast([UpdateEventID] as int) [UpdateEventID] 
+	cast([MediaPhotoPassID] as int) [MEDIAPHOTOPASSID],
+	cast([MediaAuctionID] as int) [MEDIAAUCTIONID],
+	cast([PhotoPassNumber] as nvarchar(4000)) [PHOTOPASSNUMBER],
+	cast([Created] as datetime) [CREATED],
+	cast([UpdateEventID] as int) [UPDATEEVENTID] 
 From stg.[Auct_MediaPhotoPass_FinalView]

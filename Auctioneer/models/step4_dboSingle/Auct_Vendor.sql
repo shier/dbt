@@ -1,13 +1,13 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([VendorID] as int) [VendorID],
-	cast([CustomerAccountID] as int) [CustomerAccountID],
-	cast([VendorStatusID] as int) [VendorStatusID],
-	cast([VendorTypeID] as int) [VendorTypeID],
-	cast([ProductServiceTypeID] as int) [ProductServiceTypeID],
-	cast([Created] as datetime) [Created],
-	cast([UpdateEventID] as int) [UpdateEventID],
-	cast([AddressID] as int) [AddressID],
-	cast([LegacyVendorID] as int) [LegacyVendorID],
-	cast([JobTitle] as nvarchar(4000)) [JobTitle] 
+	cast([VendorID] as int) [VENDORID],
+	cast([CustomerAccountID] as int) [CUSTOMERACCOUNTID],
+	cast([VendorStatusID] as int) [VENDORSTATUSID],
+	cast([VendorTypeID] as int) [VENDORTYPEID],
+	cast([ProductServiceTypeID] as int) [PRODUCTSERVICETYPEID],
+	cast([Created] as datetime) [CREATED],
+	cast([UpdateEventID] as int) [UPDATEEVENTID],
+	cast([AddressID] as int) [ADDRESSID],
+	cast([LegacyVendorID] as int) [LEGACYVENDORID],
+	cast([JobTitle] as nvarchar(4000)) [JOBTITLE] 
 From stg.[Auct_Vendor_FinalView]

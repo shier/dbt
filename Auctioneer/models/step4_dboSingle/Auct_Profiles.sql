@@ -1,10 +1,10 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([ProfileID] as int) [ProFileID],
-	cast([UserName] as nvarchar(4000)) [UserName],
-	cast([ApplicationName] as nvarchar(4000)) [ApplicationName],
-	cast([IsAnonymous] as nvarchar(4000)) [IsAnonymous],
-	cast([LastActivityDate] as datetime) [LastActivityDate],
-	cast([LastUpdateddate] as datetime) [LastUpdateddate],
-	cast([IsAuthenticated] as int) [IsAuthenticated] 
+	cast([ProfileID] as int) [PROFILEID],
+	cast([UserName] as nvarchar(4000)) [USERNAME],
+	cast([ApplicationName] as nvarchar(4000)) [APPLICATIONNAME],
+	cast([IsAnonymous] as nvarchar(4000)) [ISANONYMOUS],
+	cast([LastActivityDate] as datetime) [LASTACTIVITYDATE],
+	cast([LastUpdateddate] as datetime) [LASTUPDATEDDATE],
+	cast([IsAuthenticated] as int) [ISAUTHENTICATED] 
 From stg.[Auct_Profiles_FinalView]

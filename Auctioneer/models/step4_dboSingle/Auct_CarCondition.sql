@@ -1,10 +1,10 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([CarConditionID] as int) [CarConditionID],
-	cast([WebActive] as bit) [WebActive],
-	cast([Active] as bit) [Active],
-	cast([Name] as nvarchar(4000)) [Name],
-	cast([Created] as DATETIME) [Created],
-	cast([UpdateEventID] as int) [UpdateEventID],
-	cast([CarConditionBit] as int) [CarConditionBit] 
+	cast([WebActive] as bit) [WEBACTIVE],
+	cast([Active] as bit) [ACTIVE],
+	cast([CarConditionID] as int) [CARCONDITIONID],
+	cast([Name] as nvarchar(4000)) [NAME],
+	cast([Created] as DATETIME) [CREATED],
+	cast([UpdateEventID] as int) [UPDATEEVENTID],
+	cast([CarConditionBit] as int) [CARCONDITIONBIT] 
 From stg.[Auct_CarCondition_FinalView]

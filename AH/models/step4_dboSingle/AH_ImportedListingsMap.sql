@@ -1,5 +1,5 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([LoCallistingID] as int) [LoCallistingID],
-	cast([ForeignListingID] as int) [ForeignListingID] 
+	cast([ForeignListingID] as int) [foreignListingId],
+	cast([LoCallistingID] as int) [localListingId] 
 From stg.[AH_ImportedListingsMap_FinalView]

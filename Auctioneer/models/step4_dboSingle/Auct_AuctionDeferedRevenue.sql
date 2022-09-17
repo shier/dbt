@@ -1,7 +1,7 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([DeferedAuctionID] as int) [DeferedAuctionID],
-	cast([DeferedPercentage] as numeric(18,6)) [DeferedPercentage],
-	cast([ParentAuctionID] as int) [ParentAuctionID],
-	cast([GlAccountNumber] as int) [GlAccountNumber] 
+	cast([DeferedPercentage] as numeric(18,6)) [DEFEREDPERCENTAGE],
+	cast([ParentAuctionID] as int) [PARENTAUCTIONID],
+	cast([DeferedAuctionID] as int) [DEFEREDAUCTIONID],
+	cast([GlAccountNumber] as int) [GLACCOUNTNUMBER] 
 From stg.[Auct_AuctionDeferedRevenue_FinalView]

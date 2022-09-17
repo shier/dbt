@@ -1,9 +1,9 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([GroupID] as int) [GroupID],
-	cast([Name] as nvarchar(4000)) [Name],
-	cast([DistributionEmail] as nvarchar(4000)) [DistributionEmail],
-	cast([Created] as datetime) [Created],
-	cast([UpdateEventID] as int) [UpdateEventID],
-	cast([GroupOwner] as int) [GroupOwner] 
+	cast([GroupID] as int) [GROUPID],
+	cast([Name] as nvarchar(4000)) [NAME],
+	cast([DistributionEmail] as nvarchar(4000)) [DISTRIBUTIONEMAIL],
+	cast([Created] as datetime) [CREATED],
+	cast([UpdateEventID] as int) [UPDATEEVENTID],
+	cast([GroupOwner] as int) [GROUPOWNER] 
 From stg.[Auct_UserGroup_FinalView]

@@ -1,6 +1,6 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([MyTableID] as int) [MyTableID],
-	cast([Code] as nvarchar(4000)) [Code],
-	cast([Description] as nvarchar(4000)) [Description] 
+	cast([MyTableID] as int) [myTableId],
+	cast([Code] as nvarchar(4000)) [code],
+	cast([Description] as nvarchar(4000)) [description] 
 From stg.[Auct_MyTable_FinalView]

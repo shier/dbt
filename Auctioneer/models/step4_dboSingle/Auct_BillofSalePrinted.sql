@@ -1,5 +1,5 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([BlockSaleID] as int) [BlockSaleID],
-	cast([Created] as DATETIME) [Created] 
+	cast([BlockSaleID] as int) [BLOCKSALEID],
+	cast([Created] as DATETIME) [CREATED] 
 From stg.[Auct_BillofSalePrinted_FinalView]

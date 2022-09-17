@@ -1,13 +1,13 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([SubordinateContactID] as int) [SubordinateContactID],
-	cast([MediaAuctionID] as int) [MediaAuctionID],
-	cast([SponsorAuctionID] as int) [SponsorAuctionID],
-	cast([VendorID] as int) [VendorID],
-	cast([ContactID] as int) [ContactID],
-	cast([MediaPositionID] as int) [MediaPositionID],
-	cast([DaysCovering] as nvarchar(4000)) [DaysCovering],
-	cast([JobTitle] as nvarchar(4000)) [JobTitle],
-	cast([Created] as datetime) [Created],
-	cast([UpdateEventID] as int) [UpdateEventID] 
+	cast([SubordinateContactID] as int) [SUBORDINATECONTACTID],
+	cast([MediaAuctionID] as int) [MEDIAAUCTIONID],
+	cast([SponsorAuctionID] as int) [SPONSORAUCTIONID],
+	cast([VendorID] as int) [VENDORID],
+	cast([ContactID] as int) [CONTACTID],
+	cast([MediaPositionID] as int) [MEDIAPOSITIONID],
+	cast([DaysCovering] as nvarchar(4000)) [DAYSCOVERING],
+	cast([JobTitle] as nvarchar(4000)) [JOBTITLE],
+	cast([Created] as datetime) [CREATED],
+	cast([UpdateEventID] as int) [UPDATEEVENTID] 
 From stg.[Auct_SubordinateContact_FinalView]

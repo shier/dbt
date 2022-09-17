@@ -1,10 +1,10 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([ConsignerApplictionID] as int) [ConsignerApplictionID],
-	cast([AuctionID] as nvarchar(4000)) [AuctionID],
-	cast([DealerLicenseNumber] as nvarchar(4000)) [DealerLicenseNumber],
-	cast([AuctionName] as nvarchar(4000)) [AuctionName],
-	cast([DateRange] as nvarchar(4000)) [DateRange],
-	cast([FullStateName] as nvarchar(4000)) [FullStateName],
-	cast([Page1Footer] as nvarchar(4000)) [Page1Footer] 
+	cast([ConsignerApplictionID] as int) [CONSIGNERAPPLICTIONID],
+	cast([AuctionID] as nvarchar(4000)) [AUCTIONID],
+	cast([DealerLicenseNumber] as nvarchar(4000)) [DEALERLICENSENUMBER],
+	cast([AuctionName] as nvarchar(4000)) [AUCTIONNAME],
+	cast([DateRange] as nvarchar(4000)) [DATERANGE],
+	cast([FullStateName] as nvarchar(4000)) [FULLSTATENAME],
+	cast([Page1Footer] as nvarchar(4000)) [PAGE1FOOTER] 
 From stg.[Auct_ConsignerApplication_FinalView]

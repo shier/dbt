@@ -1,13 +1,13 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([LookupID] as int) [LookupID],
-	cast([TaxRatesID] as int) [TaxRatesID],
-	cast([City] as nvarchar(4000)) [City],
-	cast([StateProvince] as nvarchar(4000)) [StateProvince],
-	cast([County] as nvarchar(4000)) [County],
-	cast([TaxType] as int) [TaxType],
-	cast([Created] as datetime) [Created],
-	cast([UpdateEventID] as int) [UpdateEventID],
-	cast([TaxLevelID] as int) [TaxLevelID],
-	cast([ItemTaxTypeID] as int) [ItemTaxTypeID] 
+	cast([LookupID] as int) [LOOKUPID],
+	cast([TaxRatesID] as int) [TAXRATESID],
+	cast([City] as nvarchar(4000)) [CITY],
+	cast([StateProvince] as nvarchar(4000)) [STATEPROVINCE],
+	cast([County] as nvarchar(4000)) [COUNTY],
+	cast([TaxType] as int) [TAXTYPE],
+	cast([Created] as datetime) [CREATED],
+	cast([UpdateEventID] as int) [UPDATEEVENTID],
+	cast([TaxLevelID] as int) [TAXLEVELID],
+	cast([ItemTaxTypeID] as int) [ITEMTAXTYPEID] 
 From stg.[Auct_TaxLookup_FinalView]

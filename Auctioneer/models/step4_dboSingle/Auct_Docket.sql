@@ -1,11 +1,11 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([DocketID] as int) [DocketID],
-	cast([ConsignmentID] as int) [ConsignmentID],
-	cast([LotStatus] as varchar(64)) [LotStatus],
-	cast([TargetTime] as datetime) [TargetDateTime],
-	cast([ActualTime] as datetime) [ActualDateTime],
-	cast([Created] as datetime) [Created],
-	cast([UpdateEventID] as int) [UpdateEventID],
-	cast([LaneNumber] as int) [LaneNumber] 
+	cast([DocketID] as int) [DOCKETID],
+	cast([ConsignmentID] as int) [CONSIGNMENTID],
+	cast([LotStatus] as varchar(64)) [LOTSTATUS],
+	cast([TargetTime] as datetime) [TARGETTIME],
+	cast([ActualTime] as datetime) [ACTUALTIME],
+	cast([Created] as datetime) [CREATED],
+	cast([UpdateEventID] as int) [UPDATEEVENTID],
+	cast([LaneNumber] as int) [LANENUMBER] 
 From stg.[Auct_Docket_FinalView]

@@ -1,9 +1,9 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([SponsorBadgesID] as int) [SponsorBadgesID],
-	cast([BadgeTypeID] as int) [BadgeTypeID],
-	cast([SponsorAuctionID] as int) [SponsorAuctionID],
-	cast([SponsorBadgeNumber] as int) [SponsorBadgeNumber],
-	cast([Created] as datetime) [Created],
-	cast([UpdateEventID] as int) [UpdateEventID] 
+	cast([SponsorBadgesID] as int) [SPONSORBADGESID],
+	cast([BadgeTypeID] as int) [BADGETYPEID],
+	cast([SponsorAuctionID] as int) [SPONSORAUCTIONID],
+	cast([SponsorBadgeNumber] as int) [SPONSORBADGENUMBER],
+	cast([Created] as datetime) [CREATED],
+	cast([UpdateEventID] as int) [UPDATEEVENTID] 
 From stg.[Auct_SponsorBadges_FinalView]

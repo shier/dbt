@@ -1,20 +1,20 @@
 
   
-  if object_id ('"stg"."SZ_AH_Properties_FieldType__dbt_tmp_temp_view"','V') is not null
+  if object_id ('"dbo_stg"."SZ_AH_Properties_FieldType__dbt_tmp_temp_view"','V') is not null
     begin
-    drop view "stg"."SZ_AH_Properties_FieldType__dbt_tmp_temp_view"
+    drop view "dbo_stg"."SZ_AH_Properties_FieldType__dbt_tmp_temp_view"
     end
 
 
    
     
-  if object_id ('"stg"."SZ_AH_Properties_FieldType__dbt_tmp"','U') is not null
+  if object_id ('"dbo_stg"."SZ_AH_Properties_FieldType__dbt_tmp"','U') is not null
     begin
-    drop table "stg"."SZ_AH_Properties_FieldType__dbt_tmp"
+    drop table "dbo_stg"."SZ_AH_Properties_FieldType__dbt_tmp"
     end
 
 
-   EXEC('create view stg.SZ_AH_Properties_FieldType__dbt_tmp_temp_view as
+   EXEC('create view dbo_stg.SZ_AH_Properties_FieldType__dbt_tmp_temp_view as
     
 
 select ''BoolNativeValue'' as column_name, ''bit'' as data_type union all
@@ -25,18 +25,18 @@ select ''DateTimeNativeValue'' as column_name, ''datetime'' as data_type union a
 select ''EnumNativeValue'' as column_name, ''nvarchar(200)'' as data_type
     ');
 
-  CREATE TABLE "stg"."SZ_AH_Properties_FieldType__dbt_tmp"
+  CREATE TABLE "dbo_stg"."SZ_AH_Properties_FieldType__dbt_tmp"
     WITH(
       DISTRIBUTION = ROUND_ROBIN,
       CLUSTERED COLUMNSTORE INDEX
       )
-    AS (SELECT * FROM stg.SZ_AH_Properties_FieldType__dbt_tmp_temp_view)
+    AS (SELECT * FROM dbo_stg.SZ_AH_Properties_FieldType__dbt_tmp_temp_view)
 
    
   
-  if object_id ('"stg"."SZ_AH_Properties_FieldType__dbt_tmp_temp_view"','V') is not null
+  if object_id ('"dbo_stg"."SZ_AH_Properties_FieldType__dbt_tmp_temp_view"','V') is not null
     begin
-    drop view "stg"."SZ_AH_Properties_FieldType__dbt_tmp_temp_view"
+    drop view "dbo_stg"."SZ_AH_Properties_FieldType__dbt_tmp_temp_view"
     end
 
 

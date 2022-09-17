@@ -1,7 +1,7 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([DistributionMethodID] as int) [DistributionMethodID],
-	cast([IsActive] as bit) [IsActive],
-	cast([Name] as nvarchar(4000)) [Name],
-	cast([FullyQualifiedClassName] as nvarchar(4000)) [FullyQualifiedClassName] 
+	cast([IsActive] as bit) [ISACTIVE],
+	cast([DistributionMethodID] as int) [DISTRIBUTIONMETHODID],
+	cast([Name] as nvarchar(4000)) [NAME],
+	cast([FullyQualifiedClassName] as nvarchar(4000)) [FULLYQUALIFIEDCLASSNAME] 
 From stg.[Auct_DistributionMethods_FinalView]

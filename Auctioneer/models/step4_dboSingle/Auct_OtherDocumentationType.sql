@@ -1,6 +1,6 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([OtherDocumentationTypeID] as int) [OtherDocumentationTypeID],
-	cast([Title] as nvarchar(4000)) [Title],
-	cast([Description] as nvarchar(4000)) [Description] 
+	cast([OtherDocumentationTypeID] as int) [OTHERDOCUMENTATIONTYPEID],
+	cast([Title] as nvarchar(4000)) [TITLE],
+	cast([Description] as nvarchar(4000)) [DESCRIPTION] 
 From stg.[Auct_OtherDocumentationType_FinalView]

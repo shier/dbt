@@ -1,18 +1,18 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([BidderID] as int) [BidderID],
-	cast([BidderNumber] as numeric(18,2)) [BidderNumber],
-	cast([BidLimit] as money) [BidLimit],
-	cast([BidderTypeID] as int) [BidderTypeID],
-	cast([BidderStatusID] as int) [BidderStatusID],
-	cast([CustomerAccountID] as int) [CustomerAccountID],
-	cast([AnniversaryDate] as datetime) [AnniversaryDate],
-	cast([ApprovedBy] as int) [ApprovedByUserID],
-	cast([Comments] as varchar(512)) [Comments],
-	cast([Created] as datetime) [Created],
-	cast([UpdateEventID] as int) [UpdateEventID],
-	cast([PaymentMethodID] as int) [PaymentMethodID],
-	cast([AddressID] as int) [AddressID],
-	cast([ShippingAddressID] as int) [ShippingAddressID],
-	cast([ContactPhoneID] as int) [ContactPhoneID] 
+	cast([BidderNumber] as numeric(18,2)) [BIDDERNUMBER],
+	cast([BidLimit] as money) [BIDLIMIT],
+	cast([BidderID] as int) [BIDDERID],
+	cast([BidderTypeID] as int) [BIDDERTYPEID],
+	cast([BidderStatusID] as int) [BIDDERSTATUSID],
+	cast([CustomerAccountID] as int) [CUSTOMERACCOUNTID],
+	cast([AnniversaryDate] as datetime) [ANNIVERSARYDATE],
+	cast([ApprovedBy] as int) [APPROVEDBY],
+	cast([Comments] as varchar(512)) [COMMENTS],
+	cast([Created] as datetime) [CREATED],
+	cast([UpdateEventID] as int) [UPDATEEVENTID],
+	cast([PaymentMethodID] as int) [PAYMENTMETHODID],
+	cast([AddressID] as int) [ADDRESSID],
+	cast([ShippingAddressID] as int) [SHIPPINGADDRESSID],
+	cast([ContactPhoneID] as int) [CONTACTPHONEID] 
 From stg.[Auct_Bidder_FinalView]

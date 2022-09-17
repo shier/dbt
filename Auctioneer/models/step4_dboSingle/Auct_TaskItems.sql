@@ -1,13 +1,13 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([TaskItemID] as int) [TaskItemID],
-	cast([TaskItemTypeID] as int) [TaskItemTypeID],
-	cast([TaskID] as int) [TaskID],
-	cast([Created] as datetime) [Created],
-	cast([CompletedByUserID] as int) [CompletedByUserID],
-	cast([Completed] as datetime) [Completed],
-	cast([Message] as nvarchar(4000)) [Message],
-	cast([CreatedByUserID] as int) [CreatedByUserID],
-	cast([AssignedByUserID] as int) [AssignedByUserID],
-	cast([NavigateURL] as nvarchar(4000)) [NavigateURL] 
+	cast([TaskItemID] as int) [TASKITEMID],
+	cast([TaskItemTypeID] as int) [TASKITEMTYPEID],
+	cast([TaskID] as int) [TASKID],
+	cast([Created] as datetime) [CREATED],
+	cast([CompletedByUserID] as int) [COMPLETEDBYUSERID],
+	cast([Completed] as datetime) [COMPLETED],
+	cast([Message] as nvarchar(4000)) [MESSAGE],
+	cast([CreatedByUserID] as int) [CREATEDBYUSERID],
+	cast([AssignedByUserID] as int) [ASSIGNEDBYUSERID],
+	cast([NavigateURL] as nvarchar(4000)) [NAVIGATEURL] 
 From stg.[Auct_TaskItems_FinalView]

@@ -1,0 +1,27 @@
+
+Select
+	cast([DocumentationPhotoID] as int) [DOCUMENTATIONPHOTOID],
+	cast([PhotoTypeID] as int) [PHOTOTYPEID],
+	cast([PhotoStatusID] as int) [PHOTOSTATUSID],
+	cast([ItemID] as int) [ITEMID],
+	cast([FileName] as nvarchar(4000)) [FILENAME],
+	cast([UncPath] as nvarchar(4000)) [UNCPATH],
+	cast([PhotoSize] as int) [PHOTOSIZE],
+	cast([Height] as int) [HEIGHT],
+	cast([Width] as int) [WIDTH],
+	cast([Created] as DATETIME) [CREATED],
+	cast([UpdateEventID] as int) [UPDATEEVENTID],
+	cast([TbFileName] as nvarchar(4000)) [TBFILENAME],
+	cast([TbPhotoSize] as int) [TBPHOTOSIZE],
+	cast([TbUncPath] as nvarchar(4000)) [TBUNCPATH],
+	cast([TbHeight] as int) [TBHEIGHT],
+	cast([TbWidth] as int) [TBWIDTH],
+	cast([FullPath] as nvarchar(4000)) [FULLPATH],
+	cast([TbfullPath] as nvarchar(4000)) [TBFULLPATH],
+	cast([WebSiteOrder] as int) [WEBSITEORDER],
+	cast([ShowonWeb] as int) [SHOWONWEB],
+	cast([WebFileName] as nvarchar(4000)) [WEBFILENAME],
+	cast([WebUncPath] as nvarchar(4000)) [WEBUNCPATH],
+	cast([RejectionReason] as nvarchar(4000)) [REJECTIONREASON],
+	cast([IsMainAdvertising] as int) [ISMAINADVERTISING] 
+From stg.[Auct_DocumentationPhoto_FinalView]

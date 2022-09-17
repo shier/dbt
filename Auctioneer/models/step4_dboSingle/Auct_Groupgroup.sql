@@ -1,8 +1,8 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([GroupgroupID] as int) [GroupgroupID],
-	cast([ParentGroupID] as int) [ParentGroupID],
-	cast([ChildGroupID] as int) [ChildGroupID],
-	cast([Created] as DATETIME) [Created],
-	cast([UpdateEventID] as int) [UpdateEventID] 
+	cast([GroupgroupID] as int) [GROUPGROUPID],
+	cast([ParentGroupID] as int) [PARENTGROUPID],
+	cast([ChildGroupID] as int) [CHILDGROUPID],
+	cast([Created] as DATETIME) [CREATED],
+	cast([UpdateEventID] as int) [UPDATEEVENTID] 
 From stg.[Auct_Groupgroup_FinalView]

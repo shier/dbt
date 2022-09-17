@@ -1,13 +1,13 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([CustomerAccounTicketID] as int) [CustomerAccounTicketID],
-	cast([Active] as bit) [Active],
-	cast([CustomerAccountID] as int) [CustomerAccountID],
-	cast([AuctionID] as int) [AuctionID],
-	cast([TicketNumber] as nvarchar(4000)) [TicketNumber],
-	cast([TicketTypeID] as int) [TicketTypeID],
-	cast([Created] as DATETIME) [Created],
-	cast([CreatedByUserID] as int) [CreatedByUserID],
-	cast([Quantity] as int) [Quantity],
-	cast([Comment] as nvarchar(4000)) [Comment] 
+	cast([Active] as bit) [ACTIVE],
+	cast([CustomerAccounTicketID] as int) [CUSTOMERACCOUNTICKETID],
+	cast([CustomerAccountID] as int) [CUSTOMERACCOUNTID],
+	cast([AuctionID] as int) [AUCTIONID],
+	cast([TicketNumber] as nvarchar(4000)) [TICKETNUMBER],
+	cast([TicketTypeID] as int) [TICKETTYPEID],
+	cast([Created] as DATETIME) [CREATED],
+	cast([CreatedByUserID] as int) [CREATEDBYUSERID],
+	cast([Quantity] as int) [QUANTITY],
+	cast([Comment] as nvarchar(4000)) [COMMENT] 
 From stg.[Auct_CustomerAccountTicket_FinalView]

@@ -1,7 +1,7 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
 	cast([IsActive] as bit) [IsActive],
-	cast([NewsLetterissueFK] as int) [NewsLetterissueFK],
+	cast([NewsLetterissueFK] as int) [NewsletterIssueFK],
 	cast([ListingFK] as int) [ListingFK],
 	cast([ShowcaseSequence] as int) [ShowcaseSequence],
 	cast([CreateDateUTC] as datetime) [CreateDateUTC],

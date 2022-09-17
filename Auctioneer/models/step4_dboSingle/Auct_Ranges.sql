@@ -1,14 +1,14 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([RangeID] as int) [RangeID],
-	cast([RangeName] as nvarchar(4000)) [RangeName],
-	cast([ContactTypeID] as int) [ContactTypeID],
-	cast([AuctionID] as int) [AuctionID],
-	cast([Created] as datetime) [Created],
-	cast([UpdateEventID] as int) [UpdateEventID],
-	cast([ProjectedTime] as datetime) [ProjectedTime],
-	cast([IsReserveLotFee] as int) [IsReserveLotFee],
-	cast([RangeStart] as numeric(30,2)) [RangeStart],
-	cast([RangeEnd] as numeric(30,2)) [RangeEnd],
-	cast([RangeNumber] as numeric(30,4)) [RangeNumber] 
+	cast([RangeID] as int) [RANGEID],
+	cast([RangeName] as nvarchar(4000)) [RANGENAME],
+	cast([ContactTypeID] as int) [CONTACTTYPEID],
+	cast([AuctionID] as int) [AUCTIONID],
+	cast([Created] as datetime) [CREATED],
+	cast([UpdateEventID] as int) [UPDATEEVENTID],
+	cast([ProjectedTime] as datetime) [PROJECTEDTIME],
+	cast([IsReserveLotFee] as int) [ISRESERVELOTFEE],
+	cast([RangeStart] as numeric(30,2)) [RANGESTART],
+	cast([RangeEnd] as numeric(30,2)) [RANGEEND],
+	cast([RangeNumber] as numeric(30,4)) [RANGENUMBER] 
 From stg.[Auct_Ranges_FinalView]

@@ -1,8 +1,8 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([NoteID] as int) [NoteID],
-	cast([Text] as nvarchar(4000)) [Text],
-	cast([NoteCategoryID] as int) [NoteCategoryID],
-	cast([UserName] as nvarchar(512)) [Username],
-	cast([Created] as datetime) [Created] 
+	cast([NoteID] as int) [NOTEID],
+	cast([Text] as nvarchar(4000)) [TEXT],
+	cast([NoteCategoryID] as int) [NOTECATEGORYID],
+	cast([UserName] as nvarchar(512)) [USERNAME],
+	cast([Created] as datetime) [CREATED] 
 From stg.[Auct_Notes_FinalView]

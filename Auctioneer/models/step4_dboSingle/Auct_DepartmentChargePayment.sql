@@ -1,11 +1,11 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([DepartmentChargePaymentID] as int) [DepartmentChargePaymentID],
-	cast([Amount] as numeric(19,4)) [Amount],
-	cast([PaymentID] as int) [PaymentID],
-	cast([ChargeID] as int) [ChargeID],
-	cast([VendorAuctionID] as int) [VendorAuctionID],
-	cast([Created] as DATETIME) [Created],
-	cast([UpdateEventID] as int) [UpdateEventID],
-	cast([SponsorAuctionID] as int) [SponsorAuctionID] 
+	cast([Amount] as numeric(19,4)) [AMOUNT],
+	cast([DepartmentChargePaymentID] as int) [DEPARTMENTCHARGEPAYMENTID],
+	cast([PaymentID] as int) [PAYMENTID],
+	cast([ChargeID] as int) [CHARGEID],
+	cast([VendorAuctionID] as int) [VENDORAUCTIONID],
+	cast([Created] as DATETIME) [CREATED],
+	cast([UpdateEventID] as int) [UPDATEEVENTID],
+	cast([SponsorAuctionID] as int) [SPONSORAUCTIONID] 
 From stg.[Auct_DepartmentChargePayment_FinalView]

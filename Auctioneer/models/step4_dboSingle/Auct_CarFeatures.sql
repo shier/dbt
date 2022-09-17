@@ -1,8 +1,8 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([CarFeatureID] as int) [CarFeatureID],
-	cast([Active] as bit) [Active],
-	cast([WebActive] as bit) [WebActive],
-	cast([Name] as nvarchar(4000)) [Name],
-	cast([Created] as DATETIME) [Created] 
+	cast([Active] as bit) [ACTIVE],
+	cast([WebActive] as bit) [WEBACTIVE],
+	cast([CarFeatureID] as int) [CARFEATUREID],
+	cast([Name] as nvarchar(4000)) [NAME],
+	cast([Created] as DATETIME) [CREATED] 
 From stg.[Auct_CarFeatures_FinalView]

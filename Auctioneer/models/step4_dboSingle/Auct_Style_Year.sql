@@ -1,5 +1,5 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([StyleID] as int) [StyleID],
-	cast([YearID] as int) [YearID] 
+	cast([StyleID] as int) [STYLEID],
+	cast([YearID] as int) [YEARID] 
 From stg.[Auct_Style_Year_FinalView]

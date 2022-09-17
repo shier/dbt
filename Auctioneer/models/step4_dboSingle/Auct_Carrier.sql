@@ -1,7 +1,7 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([CarrierID] as int) [CarrierID],
-	cast([Name] as nvarchar(4000)) [Name],
-	cast([Created] as DATETIME) [Created],
-	cast([UpdateEventID] as int) [UpdateEventID] 
+	cast([CarrierID] as int) [CARRIERID],
+	cast([Name] as nvarchar(4000)) [NAME],
+	cast([Created] as DATETIME) [CREATED],
+	cast([UpdateEventID] as int) [UPDATEEVENTID] 
 From stg.[Auct_Carrier_FinalView]

@@ -1,15 +1,15 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([DocumentImageID] as int) [DocumentImageID],
-	cast([Active] as bit) [Active],
-	cast([CustomerAccountID] as int) [CustomerAccountID],
-	cast([DocumentImageTypeID] as int) [DocumentImageTypeID],
-	cast([UncPath] as nvarchar(4000)) [UncPath],
-	cast([FullPath] as nvarchar(4000)) [FullPath],
-	cast([AuctionID] as int) [AuctionID],
-	cast([Expiration] as DATETIME) [Expiration],
-	cast([Created] as DATETIME) [Created],
-	cast([CreatedByUserID] as int) [CreatedByUserID],
-	cast([Height] as int) [Height],
-	cast([Width] as int) [Width] 
+	cast([Active] as bit) [ACTIVE],
+	cast([DocumentImageID] as int) [DOCUMENTIMAGEID],
+	cast([CustomerAccountID] as int) [CUSTOMERACCOUNTID],
+	cast([DocumentImageTypeID] as int) [DOCUMENTIMAGETYPEID],
+	cast([UncPath] as nvarchar(4000)) [UNCPATH],
+	cast([FullPath] as nvarchar(4000)) [FULLPATH],
+	cast([AuctionID] as int) [AUCTIONID],
+	cast([Expiration] as DATETIME) [EXPIRATION],
+	cast([Created] as DATETIME) [CREATED],
+	cast([CreatedByUserID] as int) [CREATEDBYUSERID],
+	cast([Height] as int) [HEIGHT],
+	cast([Width] as int) [WIDTH] 
 From stg.[Auct_DocumentImage_FinalView]

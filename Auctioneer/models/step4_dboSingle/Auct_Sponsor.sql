@@ -1,12 +1,12 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([SponsorID] as int) [SponsorID],
-	cast([CustomerAccountID] as int) [CustomerAccountID],
-	cast([SponsorStatusID] as int) [SponsorStatusID],
-	cast([SponsorLeadID] as int) [SponsorLeadID],
-	cast([TermStart] as datetime) [TermStart],
-	cast([TermEnd] as datetime) [TermEnd],
-	cast([Created] as datetime) [Created],
-	cast([UpdateEventID] as int) [UpdateEventID],
-	cast([AddressID] as int) [AddressID] 
+	cast([SponsorID] as int) [SPONSORID],
+	cast([CustomerAccountID] as int) [CUSTOMERACCOUNTID],
+	cast([SponsorStatusID] as int) [SPONSORSTATUSID],
+	cast([SponsorLeadID] as int) [SPONSORLEADID],
+	cast([TermStart] as datetime) [TERMSTART],
+	cast([TermEnd] as datetime) [TERMEND],
+	cast([Created] as datetime) [CREATED],
+	cast([UpdateEventID] as int) [UPDATEEVENTID],
+	cast([AddressID] as int) [ADDRESSID] 
 From stg.[Auct_Sponsor_FinalView]

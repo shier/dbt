@@ -1,5 +1,5 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([ReviewStatusID] as int) [ReviewStatusID],
-	cast([Name] as nvarchar(512)) [ReviewStatus] 
+	cast([ReviewStatusID] as int) [REVIEWSTATUSID],
+	cast([Name] as nvarchar(512)) [NAME] 
 From stg.[Auct_ReviewStatus_FinalView]

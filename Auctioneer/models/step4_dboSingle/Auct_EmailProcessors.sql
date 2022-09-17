@@ -1,6 +1,6 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([EmailProcessorID] as int) [EmailProcessorID],
-	cast([Active] as bit) [Active],
-	cast([ProcessorClass] as nvarchar(4000)) [ProcessorClass] 
+	cast([Active] as bit) [ACTIVE],
+	cast([EmailProcessorID] as int) [EMAILPROCESSORID],
+	cast([ProcessorClass] as nvarchar(4000)) [PROCESSORCLASS] 
 From stg.[Auct_EmailProcessors_FinalView]

@@ -1,5 +1,5 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([StateAbbreviation] as nvarchar(4000)) [StateAbbreviation],
-	cast([County] as nvarchar(4000)) [County] 
+	cast([StateAbbreviation] as nvarchar(4000)) [STATEABBREVIATION],
+	cast([County] as nvarchar(4000)) [COUNTY] 
 From stg.[Auct_County_FinalView]

@@ -1,10 +1,10 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([SourceID] as int) [SourceID],
-	cast([WebActive] as bit) [WebActive],
-	cast([SourceName] as nvarchar(4000)) [SourceName],
-	cast([Created] as datetime) [Created],
-	cast([UpdateEventID] as int) [UpdateEventID],
-	cast([Active] as nvarchar(4000)) [Active],
-	cast([DisplayOrder] as int) [DisplayOrder] 
+	cast([WebActive] as bit) [WEBACTIVE],
+	cast([SourceID] as int) [SOURCEID],
+	cast([SourceName] as nvarchar(4000)) [SOURCENAME],
+	cast([Created] as datetime) [CREATED],
+	cast([UpdateEventID] as int) [UPDATEEVENTID],
+	cast([Active] as nvarchar(4000)) [ACTIVE],
+	cast([DisplayOrder] as int) [DISPLAYORDER] 
 From stg.[Auct_Sources_FinalView]

@@ -1,5 +1,5 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([ReportID] as int) [ReportID],
-	cast([UserID] as int) [UserID] 
+	cast([ReportID] as int) [REPORTID],
+	cast([UserID] as int) [USERID] 
 From stg.[Auct_ReportRestricted_FinalView]

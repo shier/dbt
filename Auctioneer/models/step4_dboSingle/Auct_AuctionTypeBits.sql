@@ -1,6 +1,6 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([AuctionTypeBit] as int) [AuctionTypeBIt],
-	cast([Name] as nvarchar(4000)) [Name],
-	cast([Active] as bit) [Active] 
+	cast([AuctionTypeBit] as int) [AUCTIONTYPEBIT],
+	cast([Name] as nvarchar(4000)) [NAME],
+	cast([Active] as bit) [ACTIVE] 
 From stg.[Auct_AuctionTypeBits_FinalView]

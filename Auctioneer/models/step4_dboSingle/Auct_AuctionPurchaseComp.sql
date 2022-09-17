@@ -1,5 +1,5 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([PurchaseAuctionID] as int) [PurchaseAuctionID],
-	cast([CompedAuctionID] as int) [CompedAuctionID] 
+	cast([PurchaseAuctionID] as int) [PURCHASEAUCTIONID],
+	cast([CompedAuctionID] as int) [COMPEDAUCTIONID] 
 From stg.[Auct_AuctionPurchaseComp_FinalView]

@@ -1,8 +1,8 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([AuctionBidRecordID] as int) [AuctionbIDrecordID],
-	cast([LotNumber] as numeric(180)) [LotNumber],
-	cast([AuctionBidderNumber] as int) [AuctionbIDderNumber],
-	cast([AuctionID] as int) [AuctionID],
-	cast([Created] as DATETIME) [Created] 
+	cast([LotNumber] as numeric(180)) [LOTNUMBER],
+	cast([AuctionBidRecordID] as int) [AUCTIONBIDRECORDID],
+	cast([AuctionBidderNumber] as int) [AUCTIONBIDDERNUMBER],
+	cast([AuctionID] as int) [AUCTIONID],
+	cast([Created] as DATETIME) [CREATED] 
 From stg.[Auct_AuctionBidRecord_FinalView]

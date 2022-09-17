@@ -1,7 +1,7 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([BidderSourceID] as int) [BidderSourceID],
-	cast([Name] as nvarchar(4000)) [Name],
-	cast([DisplayOrder] as int) [DisplayOrder],
-	cast([Active] as bit) [Active] 
+	cast([BidderSourceID] as int) [BIDDERSOURCEID],
+	cast([Name] as nvarchar(4000)) [NAME],
+	cast([DisplayOrder] as int) [DISPLAYORDER],
+	cast([Active] as bit) [ACTIVE] 
 From stg.[Auct_BidderSources_FinalView]

@@ -1,11 +1,11 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([BidderAbsenteeID] as int) [BidderAbsenteeid],
-	cast([Notes] as nvarchar(4000)) [Notes],
-	cast([AuctionBidderID] as int) [AuctionBidderID],
-	cast([ContactInfo] as nvarchar(4000)) [ContactInfo],
-	cast([OtherContactInfo] as nvarchar(4000)) [OtherContactInfo],
-	cast([MaximumBID] as int) [MaximumBId],
-	cast([AuctionID] as int) [AuctionID],
-	cast([LotNumber] as numeric(18,2)) [Lotnumber] 
+	cast([BidderAbsenteeID] as int) [BIDDERABSENTEEID],
+	cast([Notes] as nvarchar(4000)) [NOTES],
+	cast([AuctionBidderID] as int) [AUCTIONBIDDERID],
+	cast([ContactInfo] as nvarchar(4000)) [CONTACTINFO],
+	cast([OtherContactInfo] as nvarchar(4000)) [OTHERCONTACTINFO],
+	cast([MaximumBID] as int) [MAXIMUMBID],
+	cast([AuctionID] as int) [AUCTIONID],
+	cast([LotNumber] as numeric(18,2)) [LOTNUMBER] 
 From stg.[Auct_BidderAbsentee_FinalView]

@@ -1,8 +1,8 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([UsersGroupID] as int) [UsersGroupID],
-	cast([UsersID] as int) [UsersID],
-	cast([GroupID] as int) [GroupID],
-	cast([Created] as datetime) [Created],
-	cast([UpdateEventID] as int) [UpdateEventID] 
+	cast([UsersGroupID] as int) [USERSGROUPID],
+	cast([UsersID] as int) [USERSID],
+	cast([GroupID] as int) [GROUPID],
+	cast([Created] as datetime) [CREATED],
+	cast([UpdateEventID] as int) [UPDATEEVENTID] 
 From stg.[Auct_UsersGroup_FinalView]

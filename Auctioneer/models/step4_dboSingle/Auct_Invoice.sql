@@ -1,9 +1,9 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([InvoiceID] as int) [InvoiceID],
-	cast([InvoiceName] as nvarchar(512)) [InvoiceName],
-	cast([AuctionID] as int) [AuctionID],
-	cast([ContactID] as int) [ContactID],
-	cast([Created] as datetime) [Created],
-	cast([UpdateEventID] as int) [UpdateEventID] 
+	cast([InvoiceID] as int) [INVOICEID],
+	cast([InvoiceName] as nvarchar(512)) [INVOICENAME],
+	cast([AuctionID] as int) [AUCTIONID],
+	cast([ContactID] as int) [CONTACTID],
+	cast([Created] as datetime) [CREATED],
+	cast([UpdateEventID] as int) [UPDATEEVENTID] 
 From stg.[Auct_Invoice_FinalView]

@@ -1,6 +1,6 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([OldVendorID] as int) [OldVendorID],
-	cast([NewVendorID] as int) [NewVendorID],
-	cast([VendorAuctionID] as int) [VendorAuctionID] 
+	cast([OldVendorID] as int) [OLDVENDORID],
+	cast([NewVendorID] as int) [NEWVENDORID],
+	cast([VendorAuctionID] as int) [VENDORAUCTIONID] 
 From stg.[Auct_VendorRef_FinalView]

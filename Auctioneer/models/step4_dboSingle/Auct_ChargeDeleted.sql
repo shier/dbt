@@ -1,18 +1,18 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([ChargeID] as int) [ChargeID],
-	cast([FeeTypeID] as int) [FeeTypeID],
-	cast([Created] as DATETIME) [Created],
-	cast([UpdateEventID] as int) [UpdateEventID],
-	cast([InvoiceID] as int) [InvoiceID],
-	cast([Comments] as nvarchar(4000)) [Comments],
-	cast([IsTaxable] as nvarchar(4000)) [IsTaxable],
-	cast([ConsignmentID] as int) [ConsignmentID],
-	cast([BidderID] as int) [BidderID],
-	cast([DealerID] as int) [DealerID],
-	cast([VendorID] as int) [VendorID],
-	cast([MediaID] as int) [MediaID],
-	cast([SponsorID] as int) [SponsorID],
-	cast([UserID] as int) [UserID],
-	cast([Amount] as numeric(19,4)) [Amount] 
+	cast([ChargeID] as int) [CHARGEID],
+	cast([FeeTypeID] as int) [FEETYPEID],
+	cast([Created] as DATETIME) [CREATED],
+	cast([UpdateEventID] as int) [UPDATEEVENTID],
+	cast([InvoiceID] as int) [INVOICEID],
+	cast([Comments] as nvarchar(4000)) [COMMENTS],
+	cast([IsTaxable] as nvarchar(4000)) [ISTAXABLE],
+	cast([ConsignmentID] as int) [CONSIGNMENTID],
+	cast([BidderID] as int) [BIDDERID],
+	cast([DealerID] as int) [DEALERID],
+	cast([VendorID] as int) [VENDORID],
+	cast([MediaID] as int) [MEDIAID],
+	cast([SponsorID] as int) [SPONSORID],
+	cast([UserID] as int) [USERID],
+	cast([Amount] as numeric(19,4)) [AMOUNT] 
 From stg.[Auct_ChargeDeleted_FinalView]

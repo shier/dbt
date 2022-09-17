@@ -1,6 +1,6 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([CollectionID] as int) [CollectionID],
-	cast([ConsignmentID] as int) [ConsignmentID],
-	cast([Active] as int) [Active] 
+	cast([CollectionID] as int) [COLLECTIONID],
+	cast([ConsignmentID] as int) [CONSIGNMENTID],
+	cast([Active] as int) [ACTIVE] 
 From stg.[Auct_Collection_Consignment_FinalView]

@@ -1,14 +1,14 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([AutomobiliaID] as int) [AutomobiliaID],
-	cast([LotNumber] as numeric(18,2)) [Lotnumber],
-	cast([AutomobiliaTypeID] as int) [AutomobiliaTypeID],
-	cast([AutomobiliaConditionID] as int) [AutomobiliaConditionID],
-	cast([ItemID] as int) [ItemID],
-	cast([Description] as nvarchar(4000)) [Description],
-	cast([Created] as DATETIME) [Created],
-	cast([UpdateEventID] as int) [UpdateEventID],
-	cast([CustomerAccountID] as int) [CustomerAccountID],
-	cast([AuctionID] as int) [AuctionID],
-	cast([Comments] as nvarchar(4000)) [Comments] 
+	cast([LotNumber] as numeric(18,2)) [LOTNUMBER],
+	cast([AutomobiliaID] as int) [AUTOMOBILIAID],
+	cast([AutomobiliaTypeID] as int) [AUTOMOBILIATYPEID],
+	cast([AutomobiliaConditionID] as int) [AUTOMOBILIACONDITIONID],
+	cast([ItemID] as int) [ITEMID],
+	cast([Description] as nvarchar(4000)) [DESCRIPTION],
+	cast([Created] as DATETIME) [CREATED],
+	cast([UpdateEventID] as int) [UPDATEEVENTID],
+	cast([CustomerAccountID] as int) [CUSTOMERACCOUNTID],
+	cast([AuctionID] as int) [AUCTIONID],
+	cast([Comments] as nvarchar(4000)) [COMMENTS] 
 From stg.[Auct_Automobilia_FinalView]

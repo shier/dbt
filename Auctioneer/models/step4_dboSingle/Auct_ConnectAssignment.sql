@@ -1,9 +1,9 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([ConnectID] as int) [ConnectID],
-	cast([Name] as nvarchar(4000)) [Name],
-	cast([UsersID] as int) [UsersID],
-	cast([ConfigID] as int) [ConfigID],
-	cast([Created] as DATETIME) [Created],
-	cast([UpdateEventID] as int) [UpdateEventID] 
+	cast([ConnectID] as int) [CONNECTID],
+	cast([Name] as nvarchar(4000)) [NAME],
+	cast([UsersID] as int) [USERSID],
+	cast([ConfigID] as int) [CONFIGID],
+	cast([Created] as DATETIME) [CREATED],
+	cast([UpdateEventID] as int) [UPDATEEVENTID] 
 From stg.[Auct_ConnectAssignment_FinalView]

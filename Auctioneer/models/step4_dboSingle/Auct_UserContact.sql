@@ -1,9 +1,9 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([UserContactID] as int) [UserContactID],
-	cast([ContactID] as int) [ContactID],
-	cast([UserContactTypeID] as int) [UserContactTypeID],
-	cast([UsersID] as int) [UsersID],
-	cast([Created] as datetime) [Created],
-	cast([UpdateEventID] as int) [UpdateEventID] 
+	cast([UserContactID] as int) [USERCONTACTID],
+	cast([ContactID] as int) [CONTACTID],
+	cast([UserContactTypeID] as int) [USERCONTACTTYPEID],
+	cast([UsersID] as int) [USERSID],
+	cast([Created] as datetime) [CREATED],
+	cast([UpdateEventID] as int) [UPDATEEVENTID] 
 From stg.[Auct_UserContact_FinalView]

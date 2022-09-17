@@ -1,7 +1,7 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([AccountTypeID] as int) [Accounttypeid],
-	cast([Name] as nvarchar(4000)) [Name],
-	cast([Created] as DATETIME) [Created],
-	cast([UpdateEventID] as int) [Updateeventid] 
+	cast([AccountTypeID] as int) [ACCOUNTTYPEID],
+	cast([Name] as nvarchar(4000)) [NAME],
+	cast([Created] as DATETIME) [CREATED],
+	cast([UpdateEventID] as int) [UPDATEEVENTID] 
 From stg.[Auct_AccountType_FinalView]

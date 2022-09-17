@@ -1,9 +1,9 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([OtherDocumentationID] as int) [OtherDocumentationID],
-	cast([ConsignmentID] as int) [ConsignmentID],
-	cast([OtherDocumentationTypeID] as int) [OtherDocumentationTypeID],
-	cast([DocumentationFileName] as nvarchar(4000)) [DocumentationFileName],
-	cast([DocumentationOtherTitle] as nvarchar(4000)) [DocumentationOtherTitle],
-	cast([DocumentationFilePath] as nvarchar(4000)) [DocumentationFilePath] 
+	cast([OtherDocumentationID] as int) [OTHERDOCUMENTATIONID],
+	cast([ConsignmentID] as int) [CONSIGNMENTID],
+	cast([OtherDocumentationTypeID] as int) [OTHERDOCUMENTATIONTYPEID],
+	cast([DocumentationFileName] as nvarchar(4000)) [DOCUMENTATIONFILENAME],
+	cast([DocumentationOtherTitle] as nvarchar(4000)) [DOCUMENTATIONOTHERTITLE],
+	cast([DocumentationFilePath] as nvarchar(4000)) [DOCUMENTATIONFILEPATH] 
 From stg.[Auct_OtherDocumentation_FinalView]

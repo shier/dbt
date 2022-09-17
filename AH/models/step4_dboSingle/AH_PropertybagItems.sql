@@ -1,7 +1,7 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([ID] as int) [ID],
-	cast([PropertybagID] as int) [PropertybagID],
+	cast([ID] as int) [Id],
+	cast([PropertybagID] as int) [PropertyBagId],
 	cast([CreatedOn] as datetime) [CreatedOn],
 	cast([UpdatedOn] as datetime) [UpdatedOn],
 	cast([DeletedOn] as datetime) [DeletedOn],

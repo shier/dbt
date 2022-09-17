@@ -1,10 +1,10 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([KeyControlTransactionID] as int) [KeyControlTransActionID],
-	cast([KeyControlID] as int) [KeyControlID],
-	cast([UserID] as int) [UserID],
-	cast([RecipientName] as nvarchar(4000)) [RecipientName],
-	cast([ConsignmentID] as int) [ConsignmentID],
-	cast([KeyControlStatusID] as int) [KeyControlStatusID],
-	cast([TransactionTime] as DATETIME) [TransactionTime] 
+	cast([KeyControlTransactionID] as int) [KEYCONTROLTRANSACTIONID],
+	cast([KeyControlID] as int) [KEYCONTROLID],
+	cast([UserID] as int) [USERID],
+	cast([RecipientName] as nvarchar(4000)) [RECIPIENTNAME],
+	cast([ConsignmentID] as int) [CONSIGNMENTID],
+	cast([KeyControlStatusID] as int) [KEYCONTROLSTATUSID],
+	cast([TransactionTime] as DATETIME) [TRANSACTIONTIME] 
 From stg.[Auct_KeyControlTransaction_FinalView]

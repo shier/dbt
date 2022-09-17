@@ -1,5 +1,5 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([SrvID] as int) [SrvID],
-	cast([SrvName] as nvarchar(4000)) [SrvName] 
+	cast([SrvName] as nvarchar(4000)) [srvname],
+	cast([SrvID] as int) [srvid] 
 From stg.[Auct_SysreplServers_FinalView]

@@ -1,20 +1,20 @@
 
   
-  if object_id ('"dbo"."AH_Currencies_DM__dbt_tmp_temp_view"','V') is not null
+  if object_id ('"dbo_dbo"."AH_Currencies_DM__dbt_tmp_temp_view"','V') is not null
     begin
-    drop view "dbo"."AH_Currencies_DM__dbt_tmp_temp_view"
+    drop view "dbo_dbo"."AH_Currencies_DM__dbt_tmp_temp_view"
     end
 
 
    
     
-  if object_id ('"dbo"."AH_Currencies_DM__dbt_tmp"','U') is not null
+  if object_id ('"dbo_dbo"."AH_Currencies_DM__dbt_tmp"','U') is not null
     begin
-    drop table "dbo"."AH_Currencies_DM__dbt_tmp"
+    drop table "dbo_dbo"."AH_Currencies_DM__dbt_tmp"
     end
 
 
-   EXEC('create view dbo.AH_Currencies_DM__dbt_tmp_temp_view as
+   EXEC('create view dbo_dbo.AH_Currencies_DM__dbt_tmp_temp_view as
     
 SELECT
 	[Id] AS [CurrencyId],
@@ -27,18 +27,18 @@ SELECT
 FROM [stg].[AH_Currencies_FinalView];
     ');
 
-  CREATE TABLE "dbo"."AH_Currencies_DM__dbt_tmp"
+  CREATE TABLE "dbo_dbo"."AH_Currencies_DM__dbt_tmp"
     WITH(
       DISTRIBUTION = ROUND_ROBIN,
       CLUSTERED COLUMNSTORE INDEX
       )
-    AS (SELECT * FROM dbo.AH_Currencies_DM__dbt_tmp_temp_view)
+    AS (SELECT * FROM dbo_dbo.AH_Currencies_DM__dbt_tmp_temp_view)
 
    
   
-  if object_id ('"dbo"."AH_Currencies_DM__dbt_tmp_temp_view"','V') is not null
+  if object_id ('"dbo_dbo"."AH_Currencies_DM__dbt_tmp_temp_view"','V') is not null
     begin
-    drop view "dbo"."AH_Currencies_DM__dbt_tmp_temp_view"
+    drop view "dbo_dbo"."AH_Currencies_DM__dbt_tmp_temp_view"
     end
 
 

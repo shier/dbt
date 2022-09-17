@@ -1,10 +1,10 @@
 {{ config(materialized='table',schema='dbo')}}
 Select
-	cast([PhotoDirectoryID] as int) [PhotoDirectoryID],
-	cast([UncPath] as nvarchar(4000)) [UncPath],
-	cast([TypeName] as nvarchar(4000)) [TypeName],
-	cast([Active] as int) [Active],
-	cast([DirectoryTypeID] as int) [DirectoryTypeID],
-	cast([AuctionID] as int) [AuctionID],
-	cast([IsCDN] as int) [IsCDN] 
+	cast([PhotoDirectoryID] as int) [PHOTODIRECTORYID],
+	cast([UncPath] as nvarchar(4000)) [UNCPATH],
+	cast([TypeName] as nvarchar(4000)) [TYPENAME],
+	cast([Active] as int) [ACTIVE],
+	cast([DirectoryTypeID] as int) [DIRECTORYTYPEID],
+	cast([AuctionID] as int) [AUCTIONID],
+	cast([IsCDN] as int) [ISCDN] 
 From stg.[Auct_PhotoDirectory_FinalView]
