@@ -1,4 +1,4 @@
 
 Select
-	cast([LineItemID] as int) [LineItemID] 
+	cast([LineItemID] as int) [LineItemId] 
 From stg.[AH_NewSalestoInvoice_FinalView]

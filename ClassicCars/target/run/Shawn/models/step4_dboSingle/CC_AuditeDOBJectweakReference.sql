@@ -17,10 +17,10 @@
    EXEC('create view dbo.CC_AuditeDOBJectweakReference__dbt_tmp_temp_view as
     
 Select
-	cast([OID] as nvarchar(4000)) [OID],
-	cast([GUIDID] as nvarchar(4000)) [GUIDID],
+	cast([OID] as nvarchar(4000)) [Oid],
+	cast([GUIDID] as nvarchar(4000)) [GuidId],
 	cast([DisplayName] as nvarchar(4000)) [DisplayName],
-	cast([IntID] as int) [IntID] 
+	cast([IntID] as int) [IntId] 
 From stg.[CC_AuditeDOBJectweakReference_FinalView]
     ');
 

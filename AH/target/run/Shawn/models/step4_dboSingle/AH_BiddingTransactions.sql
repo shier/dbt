@@ -17,13 +17,13 @@
    EXEC('create view dbo.AH_BiddingTransactions__dbt_tmp_temp_view as
     
 Select
-	cast([TransactionID] as nvarchar(30)) [TransactionID],
+	cast([TransactionID] as nvarchar(30)) [TransactionId],
 	cast([Maxmindscore] as decimal(5,2)) [MaxMindScore],
 	cast([Amount] as decimal(24,2)) [Amount],
-	cast([ID] as int) [ID],
-	cast([ListingActionID] as int) [ListingActionID],
-	cast([CreditCardID] as int) [CreditCardID],
-	cast([Active] as bit) [IsActive] 
+	cast([ID] as int) [Id],
+	cast([ListingActionID] as int) [ListingActionId],
+	cast([CreditCardID] as int) [CreditCardId],
+	cast([Active] as bit) [Active] 
 From stg.[AH_BiddingTransactions_FinalView]
     ');
 

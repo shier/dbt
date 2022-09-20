@@ -17,7 +17,7 @@
    EXEC('create view dbo.AH_Model__dbt_tmp_temp_view as
     
 Select
-	cast([ID] as int) [ID],
+	cast([ID] as int) [Id],
 	cast([CreatedOn] as datetime) [CreatedOn],
 	cast([UpdatedOn] as datetime) [UpdatedOn],
 	cast([DeletedOn] as datetime) [DeletedOn] 

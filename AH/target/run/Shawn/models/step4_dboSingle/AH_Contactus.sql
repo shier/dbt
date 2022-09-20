@@ -21,7 +21,7 @@ Select
 	cast([FirstName] as nvarchar(4000)) [FirstName],
 	cast([LastName] as nvarchar(4000)) [LastName],
 	cast([Message] as nvarchar(4000)) [Message],
-	cast([ID] as int) [ID] 
+	cast([ID] as int) [Id] 
 From stg.[AH_Contactus_FinalView]
     ');
 

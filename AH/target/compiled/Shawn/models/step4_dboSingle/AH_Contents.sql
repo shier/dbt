@@ -1,9 +1,9 @@
 
 Select
-	cast([ID] as int) [ID],
+	cast([ID] as int) [Id],
 	cast([DisplayOrder] as int) [DisplayOrder],
-	cast([Usehtmleditor] as bit) [Usehtmleditor],
-	cast([Userdefined] as bit) [Userdefined],
+	cast([Usehtmleditor] as bit) [UseHTMLEditor],
+	cast([Userdefined] as bit) [UserDefined],
 	cast([CreatedOn] as datetime) [CreatedOn],
 	cast([UpdatedOn] as datetime) [UpdatedOn],
 	cast([DeletedOn] as datetime) [DeletedOn],

@@ -17,13 +17,13 @@
    EXEC('create view dbo.AH_Mediavariations__dbt_tmp_temp_view as
     
 Select
-	cast([CreatedOn] as datetime) [Created_RWXMediaVariations],
-	cast([UpdatedOn] as datetime) [UpdatedDate_RWXMediaVariations],
-	cast([DeletedOn] as datetime) [DeletedDate_RWXMediaVariations],
-	cast([ID] as int) [ID],
-	cast([MediaassetID] as int) [MediaAssetID_RWX_MediaVariations],
-	cast([MediaID] as int) [MediaID],
-	cast([Name] as nvarchar(500)) [Name_RWXMediaVariations] 
+	cast([CreatedOn] as datetime) [CreatedOn],
+	cast([UpdatedOn] as datetime) [UpdatedOn],
+	cast([DeletedOn] as datetime) [DeletedOn],
+	cast([ID] as int) [Id],
+	cast([MediaassetID] as int) [MediaAssetId],
+	cast([MediaID] as int) [MediaId],
+	cast([Name] as nvarchar(500)) [Name] 
 From stg.[AH_Mediavariations_FinalView]
     ');
 

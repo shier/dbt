@@ -1,8 +1,8 @@
 
 Select
-	cast([ID] as int) [ID],
-	cast([UserID] as int) [UserID],
-	cast([ListingID] as int) [ListingID],
+	cast([ID] as int) [Id],
+	cast([UserID] as int) [UserId],
+	cast([ListingID] as int) [ListingId],
 	cast([CreatedOn] as datetime) [CreatedOn],
 	cast([UpdatedOn] as datetime) [UpdatedOn],
 	cast([DeletedOn] as datetime) [DeletedOn],

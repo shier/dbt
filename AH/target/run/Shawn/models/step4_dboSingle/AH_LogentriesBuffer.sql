@@ -25,10 +25,10 @@ Select
 	cast([Severity] as nvarchar(4000)) [Severity],
 	cast([Actor] as nvarchar(4000)) [Actor],
 	cast([ExceptionClass] as nvarchar(4000)) [ExceptionClass],
-	cast([Stacktrace] as nvarchar(4000)) [Stacktrace],
-	cast([SqlDaTestamp] as datetime) [SqlDaTestamp],
-	cast([EntryDaTestamp] as datetime) [EntryDaTestamp],
-	cast([ID] as int) [ID],
+	cast([Stacktrace] as nvarchar(4000)) [StackTrace],
+	cast([SqlDaTestamp] as datetime) [SQLDateStamp],
+	cast([EntryDaTestamp] as datetime) [EntryDateStamp],
+	cast([ID] as int) [Id],
 	cast([Priority] as int) [Priority],
 	cast([EventID] as int) [EventID] 
 From stg.[AH_LogentriesBuffer_FinalView]

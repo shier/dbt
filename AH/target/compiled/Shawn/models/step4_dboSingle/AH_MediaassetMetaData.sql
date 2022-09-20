@@ -1,9 +1,9 @@
 
 Select
-	cast([ID] as int) [ID_RWXMediaAssetMetaData],
-	cast([MediaassetID] as int) [MediaAssetID],
-	cast([MediaMetaDataID] as int) [MediaMetaDataID_RWXMediaAssetMetaData],
-	cast([CreatedOn] as datetime) [Created_RWXMediaAssetMetaData],
-	cast([UpdatedOn] as datetime) [UpdatedDate_RWXMediaAssetMetaData],
-	cast([DeletedOn] as datetime) [DeletedDate_RWXMediaAssetMetaData] 
+	cast([ID] as int) [Id],
+	cast([MediaassetID] as int) [MediaAssetId],
+	cast([MediaMetaDataID] as int) [MediaMetaDataId],
+	cast([CreatedOn] as datetime) [CreatedOn],
+	cast([UpdatedOn] as datetime) [UpdatedOn],
+	cast([DeletedOn] as datetime) [DeletedOn] 
 From stg.[AH_MediaassetMetaData_FinalView]

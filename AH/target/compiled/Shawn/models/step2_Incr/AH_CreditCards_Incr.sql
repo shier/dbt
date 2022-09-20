@@ -12,6 +12,6 @@ Select * From hashData
 	where not exists 
 	(
 		select dbt_scd_id 
-		from "BJAC_DW_PROD"."dbo_stg"."AH_CreditCards_Incr" compareData
+		from "BJAC_DW_PROD"."stg"."AH_CreditCards_Incr" compareData
 		where hashData.dbt_scd_id=compareData.dbt_scd_id
 	)

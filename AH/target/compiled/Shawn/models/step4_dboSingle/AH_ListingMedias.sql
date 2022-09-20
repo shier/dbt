@@ -1,10 +1,10 @@
 
 Select
-	cast([CreatedOn] as datetime) [Created],
-	cast([UpdatedOn] as datetime) [UpdatedDate],
-	cast([DeletedOn] as datetime) [DeletedDate],
-	cast([ID] as int) [ID],
-	cast([MediaID] as int) [MediaID],
-	cast([ListingID] as int) [ListingID],
+	cast([CreatedOn] as datetime) [CreatedOn],
+	cast([UpdatedOn] as datetime) [UpdatedOn],
+	cast([DeletedOn] as datetime) [DeletedOn],
+	cast([ID] as int) [Id],
+	cast([MediaID] as int) [MediaId],
+	cast([ListingID] as int) [ListingId],
 	cast([DisplayOrder] as int) [DisplayOrder] 
 From stg.[AH_ListingMedias_FinalView]

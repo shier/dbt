@@ -24,8 +24,8 @@ Select
 	cast([UpdatedOn] as datetime) [UpdatedOn],
 	cast([DeletedOn] as datetime) [DeletedOn],
 	cast([Amount] as numeric(19,4)) [Amount],
-	cast([PayToproceed] as bit) [PayToproceed],
-	cast([ID] as int) [ID] 
+	cast([PayToproceed] as bit) [PayToProceed],
+	cast([ID] as int) [Id] 
 From stg.[AH_Locations_FinalView]
     ');
 

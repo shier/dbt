@@ -1,6 +1,6 @@
 
 Select
-	cast([ID] as int) [ID],
+	cast([ID] as int) [Id],
 	cast([CreateDate] as datetime) [CreateDate],
 	cast([ModifyDate] as datetime) [ModifyDate],
 	cast([ZipCode] as nvarchar(4000)) [ZipCode],

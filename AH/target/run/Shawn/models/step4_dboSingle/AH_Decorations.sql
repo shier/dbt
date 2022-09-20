@@ -17,12 +17,12 @@
    EXEC('create view dbo.AH_Decorations__dbt_tmp_temp_view as
     
 Select
-	cast([PayToproceed] as bit) [PayToproceed],
-	cast([ID] as int) [ID],
+	cast([PayToproceed] as bit) [PayToProceed],
+	cast([ID] as int) [Id],
 	cast([CreatedOn] as datetime) [CreatedOn],
 	cast([UpdatedOn] as datetime) [UpdatedOn],
 	cast([DeletedOn] as datetime) [DeletedOn],
-	cast([ValIDFields] as nvarchar(4000)) [ValIDFields],
+	cast([ValIDFields] as nvarchar(4000)) [ValidFields],
 	cast([Description] as nvarchar(4000)) [Description],
 	cast([LastUpdatedUser] as nvarchar(4000)) [LastUpdatedUser],
 	cast([Name] as nvarchar(4000)) [Name],

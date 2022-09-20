@@ -12,8 +12,8 @@
                   "No", "timestamp", "WCI_ImportedDocument", "WCI_LotNo", "WCI_AuctionID", "WCI_AuctionDocumentNo", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "No", "timestamp", "WCI_ImportedDocument", "WCI_LotNo", "WCI_AuctionID", "WCI_AuctionDocumentNo", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#BC_BJAuctionCompany_SalesCrMemoHeader_8d9d_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#BC_BJAuctionCompany_SalesCrMemoHeader_8d9d_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

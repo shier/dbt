@@ -1,6 +1,6 @@
 
 Select
-	cast([ID] as int) [ID],
+	cast([ID] as int) [Id],
 	cast([Enabled] as bit) [Enabled],
 	cast([CreatedOn] as datetime) [CreatedOn],
 	cast([UpdatedOn] as datetime) [UpdatedOn],

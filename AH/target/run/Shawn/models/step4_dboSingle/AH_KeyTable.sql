@@ -17,7 +17,7 @@
    EXEC('create view dbo.AH_KeyTable__dbt_tmp_temp_view as
     
 Select
-	cast([NextID] as int) [NextID] 
+	cast([NextID] as int) [NextId] 
 From stg.[AH_KeyTable_FinalView]
     ');
 

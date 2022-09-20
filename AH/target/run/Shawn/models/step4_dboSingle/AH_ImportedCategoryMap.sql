@@ -17,8 +17,8 @@
    EXEC('create view dbo.AH_ImportedCategoryMap__dbt_tmp_temp_view as
     
 Select
-	cast([LocalCategoryID] as int) [LocalCategoryID],
-	cast([ForeignCategoryID] as int) [ForeignCategoryID] 
+	cast([LocalCategoryID] as int) [localCategoryId],
+	cast([ForeignCategoryID] as int) [foreignCategoryId] 
 From stg.[AH_ImportedCategoryMap_FinalView]
     ');
 

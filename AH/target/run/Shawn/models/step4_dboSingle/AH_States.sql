@@ -23,8 +23,8 @@ Select
 	cast([UpdatedOn] as datetime) [UpdatedOn],
 	cast([DeletedOn] as datetime) [DeletedOn],
 	cast([Enabled] as bit) [Enabled],
-	cast([ID] as int) [ID],
-	cast([CountryID] as int) [CountryID] 
+	cast([ID] as int) [Id],
+	cast([CountryID] as int) [CountryId] 
 From stg.[AH_States_FinalView]
     ');
 

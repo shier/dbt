@@ -1,5 +1,0 @@
-
-Select
-	[ProfileID],[IsAuthenticated],[LastActivityDate],[LastUpdateddate],[UserName],[ApplicationName],[IsAnonymous] 
-From stg.[Auct_Profiles_Incr] 
-Where [dbt_valid_to] is null

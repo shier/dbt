@@ -5,6 +5,6 @@ Select
 	cast([CreatedOn] as datetime) [CreatedOn],
 	cast([UpdatedOn] as datetime) [UpdatedOn],
 	cast([DeletedOn] as datetime) [DeletedOn],
-	cast([ID] as int) [ID],
-	cast([LineItemID] as int) [LineItemID] 
+	cast([ID] as int) [Id],
+	cast([LineItemID] as int) [LineItemId] 
 From stg.[AH_Properties_FinalView]

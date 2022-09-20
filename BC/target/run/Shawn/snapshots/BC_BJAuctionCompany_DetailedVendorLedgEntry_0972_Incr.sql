@@ -12,8 +12,8 @@
                   "EntryNo", "DocumentNo", "VendorNo", "systemId", "systemCreatedBy", "systemModifiedBy", "InitialEntryGlobalDim_2", "Gen_Bus_PostingGroup", "Gen_Prod_PostingGroup", "VATBus_PostingGroup", "VATProd_PostingGroup", "TaxJurisdictionCode", "CurrencyCode", "UserID", "SourceCode", "JournalBatchName", "ReasonCode", "InitialEntryGlobalDim_1", "timestamp", "Amount", "AmountLCY", "DebitAmount", "CreditAmount", "DebitAmountLCY", "CreditAmountLCY", "RemainingPmt_Disc_Possible", "Max_PaymentTolerance", "InitialDocumentType", "AppliedVend_LedgerEntryNo", "Unapplied", "UnappliedbyEntryNo", "ApplicationNo", "LedgerEntryAmount", "VendorLedgerEntryNo", "EntryType", "DocumentType", "TransactionNo", "UseTax", "PostingDate", "InitialEntryDueDate", "systemCreatedAt", "systemModifiedAt", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "EntryNo", "DocumentNo", "VendorNo", "systemId", "systemCreatedBy", "systemModifiedBy", "InitialEntryGlobalDim_2", "Gen_Bus_PostingGroup", "Gen_Prod_PostingGroup", "VATBus_PostingGroup", "VATProd_PostingGroup", "TaxJurisdictionCode", "CurrencyCode", "UserID", "SourceCode", "JournalBatchName", "ReasonCode", "InitialEntryGlobalDim_1", "timestamp", "Amount", "AmountLCY", "DebitAmount", "CreditAmount", "DebitAmountLCY", "CreditAmountLCY", "RemainingPmt_Disc_Possible", "Max_PaymentTolerance", "InitialDocumentType", "AppliedVend_LedgerEntryNo", "Unapplied", "UnappliedbyEntryNo", "ApplicationNo", "LedgerEntryAmount", "VendorLedgerEntryNo", "EntryType", "DocumentType", "TransactionNo", "UseTax", "PostingDate", "InitialEntryDueDate", "systemCreatedAt", "systemModifiedAt", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#BC_BJAuctionCompany_DetailedVendorLedgEntry_0972_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#BC_BJAuctionCompany_DetailedVendorLedgEntry_0972_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

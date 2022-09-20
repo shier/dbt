@@ -17,8 +17,8 @@
    EXEC('create view dbo.AH_ImportedListingsMap__dbt_tmp_temp_view as
     
 Select
-	cast([ForeignListingID] as int) [ForeignListingID],
-	cast([LoCallistingID] as int) [LoCallistingID] 
+	cast([ForeignListingID] as int) [foreignListingId],
+	cast([LoCallistingID] as int) [localListingId] 
 From stg.[AH_ImportedListingsMap_FinalView]
     ');
 

@@ -17,10 +17,10 @@
    EXEC('create view dbo.CC_CallSourceLog__dbt_tmp_temp_view as
     
 Select
-	cast([IpAddress] as nvarchar(4000)) [IpAddress],
+	cast([IpAddress] as nvarchar(4000)) [IPAddress],
 	cast([Message] as nvarchar(4000)) [Message],
 	cast([UserAgent] as nvarchar(4000)) [UserAgent],
-	cast([AdfDoc] as nvarchar(4000)) [AdfDoc],
+	cast([AdfDoc] as nvarchar(4000)) [ADFDoc],
 	cast([CallSourceLogPK] as int) [CallSourceLogPK],
 	cast([CreateDateUTC] as datetime) [CreateDateUTC],
 	cast([Success] as bit) [Success] 

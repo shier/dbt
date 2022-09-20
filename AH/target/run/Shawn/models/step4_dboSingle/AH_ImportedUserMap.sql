@@ -17,9 +17,9 @@
    EXEC('create view dbo.AH_ImportedUserMap__dbt_tmp_temp_view as
     
 Select
-	cast([LocalUserID] as int) [LocalUserID],
-	cast([ForeignUserID] as int) [ForeignUserID],
-	cast([ImportedUserName] as nvarchar(4000)) [ImportedUserName] 
+	cast([LocalUserID] as int) [localUserId],
+	cast([ForeignUserID] as int) [foreignUserId],
+	cast([ImportedUserName] as nvarchar(4000)) [importedUsername] 
 From stg.[AH_ImportedUserMap_FinalView]
     ');
 

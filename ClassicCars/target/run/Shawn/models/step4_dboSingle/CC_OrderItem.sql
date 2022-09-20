@@ -17,20 +17,20 @@
    EXEC('create view dbo.CC_OrderItem__dbt_tmp_temp_view as
     
 Select
-	cast([CreateDate] as datetime) [Created_OrderItem],
-	cast([ModifyDate] as datetime) [ModifiedDate_OrderItem],
+	cast([CreateDate] as datetime) [CreateDate],
+	cast([ModifyDate] as datetime) [ModifyDate],
 	cast([LastSalesForceActivityDate] as datetime) [LastSalesforceActivityDate],
-	cast([ID] as int) [ID],
-	cast([OrderID] as int) [OrderID],
-	cast([ProductID] as int) [ProductID_OrderItem],
+	cast([ID] as int) [Id],
+	cast([OrderID] as int) [OrderId],
+	cast([ProductID] as int) [ProductId],
 	cast([Quantity] as int) [Quantity],
-	cast([ItemID] as int) [ItemID],
-	cast([IsActive] as bit) [IsActive_OrderItem],
+	cast([ItemID] as int) [ItemId],
+	cast([IsActive] as bit) [IsActive],
 	cast([Price] as money) [Price],
 	cast([StockPrice] as money) [StockPrice],
 	cast([AfterDiscountPrice] as money) [AfterDiscountPrice],
 	cast([ItemInfo] as nvarchar(4000)) [ItemInfo],
-	cast([SalesForceOpportunityID] as nvarchar(50)) [SalesforceOpportunityID] 
+	cast([SalesForceOpportunityID] as nvarchar(50)) [SalesforceOpportunityId] 
 From stg.[CC_OrderItem_FinalView]
     ');
 

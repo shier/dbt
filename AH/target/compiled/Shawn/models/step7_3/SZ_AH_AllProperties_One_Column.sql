@@ -18,50 +18,6 @@
         from (
             select listingid as listingid,
                CustomFieldID as customfieldid,
-               cast(EnumNativeValue as nvarchar(4000)) as customfield_valuecolumn
-            from 
-                stg.AH_Listingproperties_FinalView 
-            where 
-                CustomFieldID = 2694972
-
-        ) a 
-        inner join stg.SZ_AH_Properties_FieldIDs b  -- better parameterize this
-        on a.customfieldid = b.id
-        union all
-    
-        
-        
-        
-        select 
-            a.listingid,
-            a.customfieldid,
-            b.name as customfieldname,
-            a.customfield_valuecolumn as customfieldvalue
-        from (
-            select listingid as listingid,
-               CustomFieldID as customfieldid,
-               cast(BoolNativeValue as nvarchar(4000)) as customfield_valuecolumn
-            from 
-                stg.AH_Listingproperties_FinalView 
-            where 
-                CustomFieldID = 3723813
-
-        ) a 
-        inner join stg.SZ_AH_Properties_FieldIDs b  -- better parameterize this
-        on a.customfieldid = b.id
-        union all
-    
-        
-        
-        
-        select 
-            a.listingid,
-            a.customfieldid,
-            b.name as customfieldname,
-            a.customfield_valuecolumn as customfieldvalue
-        from (
-            select listingid as listingid,
-               CustomFieldID as customfieldid,
                cast(BoolNativeValue as nvarchar(4000)) as customfield_valuecolumn
             from 
                 stg.AH_Listingproperties_FinalView 
@@ -854,11 +810,11 @@
         from (
             select listingid as listingid,
                CustomFieldID as customfieldid,
-               cast(DecimalNativeValue as nvarchar(4000)) as customfield_valuecolumn
+               cast(EnumNativeValue as nvarchar(4000)) as customfield_valuecolumn
             from 
                 stg.AH_Listingproperties_FinalView 
             where 
-                CustomFieldID = 2694977
+                CustomFieldID = 2694972
 
         ) a 
         inner join stg.SZ_AH_Properties_FieldIDs b  -- better parameterize this
@@ -880,7 +836,7 @@
             from 
                 stg.AH_Listingproperties_FinalView 
             where 
-                CustomFieldID = 3730851
+                CustomFieldID = 3723813
 
         ) a 
         inner join stg.SZ_AH_Properties_FieldIDs b  -- better parameterize this
@@ -1690,11 +1646,11 @@
         from (
             select listingid as listingid,
                CustomFieldID as customfieldid,
-               cast(BoolNativeValue as nvarchar(4000)) as customfield_valuecolumn
+               cast(DecimalNativeValue as nvarchar(4000)) as customfield_valuecolumn
             from 
                 stg.AH_Listingproperties_FinalView 
             where 
-                CustomFieldID = 3708441
+                CustomFieldID = 2694977
 
         ) a 
         inner join stg.SZ_AH_Properties_FieldIDs b  -- better parameterize this
@@ -1716,7 +1672,7 @@
             from 
                 stg.AH_Listingproperties_FinalView 
             where 
-                CustomFieldID = 3737940
+                CustomFieldID = 3730851
 
         ) a 
         inner join stg.SZ_AH_Properties_FieldIDs b  -- better parameterize this
@@ -2508,7 +2464,7 @@
             from 
                 stg.AH_Listingproperties_FinalView 
             where 
-                CustomFieldID = 3716724
+                CustomFieldID = 3708441
 
         ) a 
         inner join stg.SZ_AH_Properties_FieldIDs b  -- better parameterize this
@@ -2530,7 +2486,7 @@
             from 
                 stg.AH_Listingproperties_FinalView 
             where 
-                CustomFieldID = 3744978
+                CustomFieldID = 3737940
 
         ) a 
         inner join stg.SZ_AH_Properties_FieldIDs b  -- better parameterize this
@@ -3301,6 +3257,50 @@
                 stg.AH_Listingproperties_FinalView 
             where 
                 CustomFieldID = 2545215
+
+        ) a 
+        inner join stg.SZ_AH_Properties_FieldIDs b  -- better parameterize this
+        on a.customfieldid = b.id
+        union all
+    
+        
+        
+        
+        select 
+            a.listingid,
+            a.customfieldid,
+            b.name as customfieldname,
+            a.customfield_valuecolumn as customfieldvalue
+        from (
+            select listingid as listingid,
+               CustomFieldID as customfieldid,
+               cast(BoolNativeValue as nvarchar(4000)) as customfield_valuecolumn
+            from 
+                stg.AH_Listingproperties_FinalView 
+            where 
+                CustomFieldID = 3716724
+
+        ) a 
+        inner join stg.SZ_AH_Properties_FieldIDs b  -- better parameterize this
+        on a.customfieldid = b.id
+        union all
+    
+        
+        
+        
+        select 
+            a.listingid,
+            a.customfieldid,
+            b.name as customfieldname,
+            a.customfield_valuecolumn as customfieldvalue
+        from (
+            select listingid as listingid,
+               CustomFieldID as customfieldid,
+               cast(BoolNativeValue as nvarchar(4000)) as customfield_valuecolumn
+            from 
+                stg.AH_Listingproperties_FinalView 
+            where 
+                CustomFieldID = 3744978
 
         ) a 
         inner join stg.SZ_AH_Properties_FieldIDs b  -- better parameterize this

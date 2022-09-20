@@ -4,6 +4,6 @@ Select
 	cast([UpdatedOn] as datetime) [UpdatedOn],
 	cast([DeletedOn] as datetime) [DeletedOn],
 	cast([CreatedOn] as datetime) [CreatedOn],
-	cast([ID] as int) [ID],
-	cast([UserID] as int) [UserID] 
+	cast([ID] as int) [Id],
+	cast([UserID] as int) [UserId] 
 From stg.[AH_UserOptOut_FinalView]

@@ -1,5 +1,0 @@
-
-Select
-	PURCHASEAUCTIONID PurchaseAuctionID,
-	COMPEDAUCTIONID CompedAuctionID
-From Auct_AuctionPurchaseComp_Raw

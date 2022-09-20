@@ -4,7 +4,7 @@ Select
 	cast([DeletedOn] as datetime) [DeletedOn],
 	cast([CreatedOn] as datetime) [CreatedOn],
 	cast([DisplayOrder] as int) [DisplayOrder],
-	cast([ID] as int) [ID],
-	cast([MediaID] as int) [MediaID],
-	cast([EventID] as int) [EventID] 
+	cast([ID] as int) [Id],
+	cast([MediaID] as int) [MediaId],
+	cast([EventID] as int) [EventId] 
 From stg.[AH_AuctionEventMedias_FinalView]

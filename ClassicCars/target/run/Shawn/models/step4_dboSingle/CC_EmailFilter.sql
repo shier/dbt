@@ -17,8 +17,8 @@
    EXEC('create view dbo.CC_EmailFilter__dbt_tmp_temp_view as
     
 Select
-	cast([ID] as int) [ID],
-	cast([FilterCodeID] as int) [FilterCodeID],
+	cast([ID] as int) [Id],
+	cast([FilterCodeID] as int) [FilterCodeId],
 	cast([CreateDate] as datetime) [CreateDate],
 	cast([ModifyDate] as datetime) [ModifyDate],
 	cast([IsActive] as bit) [IsActive],

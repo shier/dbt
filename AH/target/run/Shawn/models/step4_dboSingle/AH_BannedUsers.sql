@@ -17,13 +17,13 @@
    EXEC('create view dbo.AH_BannedUsers__dbt_tmp_temp_view as
     
 Select
-	cast([Lastip] as nvarchar(4000)) [Lastip],
+	cast([Lastip] as nvarchar(4000)) [LastIP],
 	cast([UserName] as nvarchar(4000)) [UserName],
 	cast([FName] as nvarchar(4000)) [FName],
 	cast([LName] as nvarchar(4000)) [LName],
 	cast([IsLockedOut] as bit) [IsLockedOut],
-	cast([ID] as int) [ID],
-	cast([UserID] as int) [UserID] 
+	cast([ID] as int) [Id],
+	cast([UserID] as int) [UserId] 
 From stg.[AH_BannedUsers_FinalView]
     ');
 

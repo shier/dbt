@@ -17,12 +17,12 @@
    EXEC('create view dbo.AH_Roles__dbt_tmp_temp_view as
     
 Select
-	cast([ID] as int) [RoleID],
-	cast([CreatedOn] as datetime) [Created_RWXRoles],
-	cast([UpdatedOn] as datetime) [UpdatedDate_RWXRoles],
-	cast([DeletedOn] as datetime) [DeletedDate_RWXRoles],
-	cast([LastUpdatedUser] as nvarchar(500)) [LastUpdatedUser_RWXRoles],
-	cast([Name] as nvarchar(500)) [Role] 
+	cast([ID] as int) [Id],
+	cast([CreatedOn] as datetime) [CreatedOn],
+	cast([UpdatedOn] as datetime) [UpdatedOn],
+	cast([DeletedOn] as datetime) [DeletedOn],
+	cast([LastUpdatedUser] as nvarchar(500)) [LastUpdatedUser],
+	cast([Name] as nvarchar(500)) [Name] 
 From stg.[AH_Roles_FinalView]
     ');
 

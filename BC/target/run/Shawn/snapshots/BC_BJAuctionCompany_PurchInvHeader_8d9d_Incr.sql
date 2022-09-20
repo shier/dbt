@@ -12,8 +12,8 @@
                   "No", "WCI_AuctionDocumentNo", "WCI_LotNo", "WCI_AuctionID", "WCI_AssignedUserIDBJ", "timestamp", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "No", "WCI_AuctionDocumentNo", "WCI_LotNo", "WCI_AuctionID", "WCI_AssignedUserIDBJ", "timestamp", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#BC_BJAuctionCompany_PurchInvHeader_8d9d_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#BC_BJAuctionCompany_PurchInvHeader_8d9d_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

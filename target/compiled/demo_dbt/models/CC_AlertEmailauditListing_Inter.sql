@@ -1,6 +1,0 @@
-
-Select
-	AlertEmailAuditListingPK AlertEmailauditListingpk,
-	AlertEmailAuditFK AlertEmailauditfk,
-	ListingId ListingID
-From CC_AlertEmailauditListing_Raw

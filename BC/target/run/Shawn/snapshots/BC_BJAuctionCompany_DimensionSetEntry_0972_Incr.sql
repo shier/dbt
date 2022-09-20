@@ -12,8 +12,8 @@
                   "systemId", "systemCreatedAt", "systemModifiedAt", "DimensionSetID", "DimensionValueID", "GlobalDimensionNo", "timestamp", "DimensionCode", "DimensionValueCode", "systemCreatedBy", "systemModifiedBy", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
                   )
             select "systemId", "systemCreatedAt", "systemModifiedAt", "DimensionSetID", "DimensionValueID", "GlobalDimensionNo", "timestamp", "DimensionCode", "DimensionValueCode", "systemCreatedBy", "systemModifiedBy", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id"
-            from "BJAC_DW_PROD"."stg"."#BC_BJAuctionCompany_DimensionSetEntry_0972_Incr__dbt_tmp" 
-            where dbt_change_type = ''insert'' ; 
+            from "BJAC_DW_PROD"."stg"."#BC_BJAuctionCompany_DimensionSetEntry_0972_Incr__dbt_tmp"
+            where dbt_change_type = ''insert'' ;
            COMMIT TRANSACTION;
            ');
 

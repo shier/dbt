@@ -7,7 +7,7 @@ Select
 	cast([CreatedOn] as datetime) [CreatedOn],
 	cast([UpdatedOn] as datetime) [UpdatedOn],
 	cast([DeletedOn] as datetime) [DeletedOn],
-	cast([ID] as int) [ID],
-	cast([ListingTypeID] as int) [ListingTypeID],
-	cast([EventID] as int) [EventID] 
+	cast([ID] as int) [Id],
+	cast([ListingTypeID] as int) [ListingTypeId],
+	cast([EventID] as int) [EventId] 
 From stg.[AH_Feeproperties_FinalView]

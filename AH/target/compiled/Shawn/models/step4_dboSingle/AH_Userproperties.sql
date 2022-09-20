@@ -1,16 +1,16 @@
 
 Select
-	cast([ID] as int) [ID_RWXUserProperties],
-	cast([IntnativeValue] as int) [IntnativeValue],
-	cast([UserID] as int) [UserID],
-	cast([CustomFieldID] as int) [CustomFieldID],
-	cast([BoolnativeValue] as bit) [HasBoolNativeValue],
-	cast([CreatedOn] as datetime) [Created_RWXUserProperties],
-	cast([UpdatedOn] as datetime) [UpdatedDate_RWXUserProperties],
-	cast([DeletedOn] as datetime) [DeletedDate_RWXUserProperties],
-	cast([DateTimenativeValue] as datetime) [DateTimenativeValue],
+	cast([ID] as int) [Id],
+	cast([IntnativeValue] as int) [IntNativeValue],
+	cast([UserID] as int) [UserId],
+	cast([CustomFieldID] as int) [CustomFieldId],
+	cast([BoolnativeValue] as bit) [BoolNativeValue],
+	cast([CreatedOn] as datetime) [CreatedOn],
+	cast([UpdatedOn] as datetime) [UpdatedOn],
+	cast([DeletedOn] as datetime) [DeletedOn],
+	cast([DateTimenativeValue] as datetime) [DateTimeNativeValue],
 	cast([StringnativeValue] as nvarchar(4000)) [StringNativeValue],
-	cast([EnumnativeValue] as nvarchar(4000)) [EnumnativeValue],
-	cast([LastUpdatedUser] as nvarchar(500)) [LastUpdatedUser_RWXUserProperties],
-	cast([DecimalnativeValue] as numeric(19,4)) [DecimalnativeValue] 
+	cast([EnumnativeValue] as nvarchar(4000)) [EnumNativeValue],
+	cast([LastUpdatedUser] as nvarchar(500)) [LastUpdatedUser],
+	cast([DecimalnativeValue] as numeric(19,4)) [DecimalNativeValue] 
 From stg.[AH_Userproperties_FinalView]

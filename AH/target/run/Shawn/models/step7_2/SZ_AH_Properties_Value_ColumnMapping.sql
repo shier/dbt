@@ -1,20 +1,20 @@
 
   
-  if object_id ('"dbo_stg"."SZ_AH_Properties_Value_ColumnMapping__dbt_tmp_temp_view"','V') is not null
+  if object_id ('"stg"."SZ_AH_Properties_Value_ColumnMapping__dbt_tmp_temp_view"','V') is not null
     begin
-    drop view "dbo_stg"."SZ_AH_Properties_Value_ColumnMapping__dbt_tmp_temp_view"
+    drop view "stg"."SZ_AH_Properties_Value_ColumnMapping__dbt_tmp_temp_view"
     end
 
 
    
     
-  if object_id ('"dbo_stg"."SZ_AH_Properties_Value_ColumnMapping__dbt_tmp"','U') is not null
+  if object_id ('"stg"."SZ_AH_Properties_Value_ColumnMapping__dbt_tmp"','U') is not null
     begin
-    drop table "dbo_stg"."SZ_AH_Properties_Value_ColumnMapping__dbt_tmp"
+    drop table "stg"."SZ_AH_Properties_Value_ColumnMapping__dbt_tmp"
     end
 
 
-   EXEC('create view dbo_stg.SZ_AH_Properties_Value_ColumnMapping__dbt_tmp_temp_view as
+   EXEC('create view stg.SZ_AH_Properties_Value_ColumnMapping__dbt_tmp_temp_view as
     
 
 
@@ -3778,18 +3778,18 @@
 
     ');
 
-  CREATE TABLE "dbo_stg"."SZ_AH_Properties_Value_ColumnMapping__dbt_tmp"
+  CREATE TABLE "stg"."SZ_AH_Properties_Value_ColumnMapping__dbt_tmp"
     WITH(
       DISTRIBUTION = ROUND_ROBIN,
       CLUSTERED COLUMNSTORE INDEX
       )
-    AS (SELECT * FROM dbo_stg.SZ_AH_Properties_Value_ColumnMapping__dbt_tmp_temp_view)
+    AS (SELECT * FROM stg.SZ_AH_Properties_Value_ColumnMapping__dbt_tmp_temp_view)
 
    
   
-  if object_id ('"dbo_stg"."SZ_AH_Properties_Value_ColumnMapping__dbt_tmp_temp_view"','V') is not null
+  if object_id ('"stg"."SZ_AH_Properties_Value_ColumnMapping__dbt_tmp_temp_view"','V') is not null
     begin
-    drop view "dbo_stg"."SZ_AH_Properties_Value_ColumnMapping__dbt_tmp_temp_view"
+    drop view "stg"."SZ_AH_Properties_Value_ColumnMapping__dbt_tmp_temp_view"
     end
 
 

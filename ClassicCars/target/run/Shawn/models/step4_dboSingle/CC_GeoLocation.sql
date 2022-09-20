@@ -21,7 +21,7 @@ Select
 	cast([CreateDateUTC] as datetime) [CreateDateUTC],
 	cast([Latitude] as float) [Latitude],
 	cast([Longitude] as float) [Longitude],
-	cast([IpAddress] as nvarchar(4000)) [IpAddress],
+	cast([IpAddress] as nvarchar(4000)) [IPAddress],
 	cast([CountryCode] as nvarchar(4000)) [CountryCode],
 	cast([RegionCode] as nvarchar(4000)) [RegionCode],
 	cast([RegionName] as nvarchar(4000)) [RegionName],

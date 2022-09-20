@@ -1,20 +1,20 @@
 
   
-  if object_id ('"dbo_stg"."AH_ListingActions_FT_tmp__dbt_tmp_temp_view"','V') is not null
+  if object_id ('"stg"."AH_ListingActions_FT_tmp__dbt_tmp_temp_view"','V') is not null
     begin
-    drop view "dbo_stg"."AH_ListingActions_FT_tmp__dbt_tmp_temp_view"
+    drop view "stg"."AH_ListingActions_FT_tmp__dbt_tmp_temp_view"
     end
 
 
    
     
-  if object_id ('"dbo_stg"."AH_ListingActions_FT_tmp__dbt_tmp"','U') is not null
+  if object_id ('"stg"."AH_ListingActions_FT_tmp__dbt_tmp"','U') is not null
     begin
-    drop table "dbo_stg"."AH_ListingActions_FT_tmp__dbt_tmp"
+    drop table "stg"."AH_ListingActions_FT_tmp__dbt_tmp"
     end
 
 
-   EXEC('create view dbo_stg.AH_ListingActions_FT_tmp__dbt_tmp_temp_view as
+   EXEC('create view stg.AH_ListingActions_FT_tmp__dbt_tmp_temp_view as
     
 SELECT
 		la.[ListingActionID],
@@ -37,18 +37,18 @@ FROM	[stg].[AH_ListingActions_FT_stg] la
 left join [dbo].[AH_Buyers_DM] b on la.UserID=b.UserID
     ');
 
-  CREATE TABLE "dbo_stg"."AH_ListingActions_FT_tmp__dbt_tmp"
+  CREATE TABLE "stg"."AH_ListingActions_FT_tmp__dbt_tmp"
     WITH(
       DISTRIBUTION = ROUND_ROBIN,
       CLUSTERED COLUMNSTORE INDEX
       )
-    AS (SELECT * FROM dbo_stg.AH_ListingActions_FT_tmp__dbt_tmp_temp_view)
+    AS (SELECT * FROM stg.AH_ListingActions_FT_tmp__dbt_tmp_temp_view)
 
    
   
-  if object_id ('"dbo_stg"."AH_ListingActions_FT_tmp__dbt_tmp_temp_view"','V') is not null
+  if object_id ('"stg"."AH_ListingActions_FT_tmp__dbt_tmp_temp_view"','V') is not null
     begin
-    drop view "dbo_stg"."AH_ListingActions_FT_tmp__dbt_tmp_temp_view"
+    drop view "stg"."AH_ListingActions_FT_tmp__dbt_tmp_temp_view"
     end
 
 

@@ -17,8 +17,8 @@
    EXEC('create view dbo.CC_VehicleType__dbt_tmp_temp_view as
     
 Select
-	cast([Description] as nvarchar(1000)) [CarType],
-	cast([ID] as int) [ID] 
+	cast([Description] as nvarchar(1000)) [Description],
+	cast([ID] as int) [Id] 
 From stg.[CC_VehicleType_FinalView]
     ');
 

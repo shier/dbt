@@ -1,9 +1,9 @@
 
 Select
-	cast([CreatedOn] as datetime) [Created_RWXMedia],
-	cast([UpdatedOn] as datetime) [UpdatedDate_RWXMedia],
-	cast([DeletedOn] as datetime) [DeletedDate_RWXMedia],
-	cast([ID] as int) [MediaID],
+	cast([CreatedOn] as datetime) [CreatedOn],
+	cast([UpdatedOn] as datetime) [UpdatedOn],
+	cast([DeletedOn] as datetime) [DeletedOn],
+	cast([ID] as int) [Id],
 	cast([GUID] as uniqueidentifier) [GUID],
 	cast([DefaultvariationName] as nvarchar(500)) [DefaultVariationName],
 	cast([Loader] as nvarchar(500)) [Loader],

@@ -18,7 +18,7 @@
     
 Select
 	cast([Enabled] as bit) [Enabled],
-	cast([ID] as int) [ID],
+	cast([ID] as int) [Id],
 	cast([UpdatedOn] as datetime) [UpdatedOn],
 	cast([DeletedOn] as datetime) [DeletedOn],
 	cast([CreatedOn] as datetime) [CreatedOn],

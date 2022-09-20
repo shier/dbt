@@ -17,14 +17,14 @@
    EXEC('create view dbo.AH_Countries__dbt_tmp_temp_view as
     
 Select
-	cast([Name] as nvarchar(500)) [Country],
+	cast([Name] as nvarchar(500)) [Name],
 	cast([Code] as char(5)) [Code],
-	cast([CreatedOn] as datetime) [Created_RWXCountries],
-	cast([UpdatedOn] as datetime) [UpdatedDate_RWXCountries],
-	cast([DeletedOn] as datetime) [DeletedDate_RWXCountries],
-	cast([ID] as int) [CountryID],
-	cast([Enabled] as bit) [IsEnabled],
-	cast([StateRequired] as bit) [IsStateRequired] 
+	cast([CreatedOn] as datetime) [CreatedOn],
+	cast([UpdatedOn] as datetime) [UpdatedOn],
+	cast([DeletedOn] as datetime) [DeletedOn],
+	cast([ID] as int) [Id],
+	cast([Enabled] as bit) [Enabled],
+	cast([StateRequired] as bit) [StateRequired] 
 From stg.[AH_Countries_FinalView]
     ');
 

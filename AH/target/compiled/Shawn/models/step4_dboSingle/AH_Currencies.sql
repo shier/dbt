@@ -5,6 +5,6 @@ Select
 	cast([CreatedOn] as datetime) [CreatedOn],
 	cast([UpdatedOn] as datetime) [UpdatedOn],
 	cast([DeletedOn] as datetime) [DeletedOn],
-	cast([ID] as int) [ID],
-	cast([ConVersiontousd] as numeric(19,4)) [ConVersiontousd] 
+	cast([ID] as int) [Id],
+	cast([ConVersiontousd] as numeric(19,4)) [ConversionToUSD] 
 From stg.[AH_Currencies_FinalView]

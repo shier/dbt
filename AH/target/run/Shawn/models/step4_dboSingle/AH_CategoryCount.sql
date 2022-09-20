@@ -17,9 +17,9 @@
    EXEC('create view dbo.AH_CategoryCount__dbt_tmp_temp_view as
     
 Select
-	cast([ID] as int) [ID],
+	cast([ID] as int) [Id],
 	cast([Count] as int) [Count],
-	cast([CategoryID] as int) [CategoryID] 
+	cast([CategoryID] as int) [CategoryId] 
 From stg.[AH_CategoryCount_FinalView]
     ');
 

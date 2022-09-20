@@ -2,7 +2,7 @@
 Select
 	cast([CreateDate] as datetime) [CreateDate],
 	cast([ModifyDate] as datetime) [ModifyDate],
-	cast([ID] as int) [ID],
+	cast([ID] as int) [Id],
 	cast([BadMake] as nvarchar(4000)) [BadMake],
 	cast([BadModel] as nvarchar(4000)) [BadModel],
 	cast([GoodMake] as nvarchar(4000)) [GoodMake],

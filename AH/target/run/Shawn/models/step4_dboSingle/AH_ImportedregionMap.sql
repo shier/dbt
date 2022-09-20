@@ -17,9 +17,9 @@
    EXEC('create view dbo.AH_ImportedregionMap__dbt_tmp_temp_view as
     
 Select
-	cast([LocalregionID] as int) [LocalregionID],
-	cast([ForeignregionID] as int) [ForeignregionID],
-	cast([Foreignregiontier] as int) [Foreignregiontier] 
+	cast([LocalregionID] as int) [localRegionId],
+	cast([ForeignregionID] as int) [foreignRegionId],
+	cast([Foreignregiontier] as int) [foreignRegionTier] 
 From stg.[AH_ImportedregionMap_FinalView]
     ');
 

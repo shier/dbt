@@ -17,9 +17,9 @@
    EXEC('create view dbo.AH_UserLogins__dbt_tmp_temp_view as
     
 Select
-	cast([LoginprovIDEr] as nvarchar(4000)) [LoginprovIDEr],
-	cast([ProvIDErKey] as nvarchar(4000)) [ProvIDErKey],
-	cast([UserID] as int) [UserID] 
+	cast([LoginprovIDEr] as nvarchar(4000)) [LoginProvider],
+	cast([ProvIDErKey] as nvarchar(4000)) [ProviderKey],
+	cast([UserID] as int) [UserId] 
 From stg.[AH_UserLogins_FinalView]
     ');
 

@@ -1,15 +1,15 @@
 
 Select
 	cast([IsBID] as bit) [IsBid],
-	cast([Approved] as bit) [IsApproved],
-	cast([ParentID] as int) [ParentID],
+	cast([Approved] as bit) [Approved],
+	cast([ParentID] as int) [parentId],
 	cast([ReportCount] as int) [ReportCount],
-	cast([ID] as int) [CommentID],
-	cast([UserID] as int) [UserID],
-	cast([ListingID] as int) [ListingID],
-	cast([CreatedOn] as datetime) [Created],
-	cast([UpdatedOn] as datetime) [UpdatedDate],
-	cast([DeletedOn] as datetime) [DeletedDate],
-	cast([UserName] as nvarchar(500)) [Name],
+	cast([ID] as int) [Id],
+	cast([UserID] as int) [UserId],
+	cast([ListingID] as int) [ListingId],
+	cast([CreatedOn] as datetime) [CreatedOn],
+	cast([UpdatedOn] as datetime) [UpdatedOn],
+	cast([DeletedOn] as datetime) [DeletedOn],
+	cast([UserName] as nvarchar(500)) [UserName],
 	cast([Comment] as nvarchar(4000)) [Comment] 
 From stg.[AH_ListingComments_FinalView]

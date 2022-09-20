@@ -1,5 +1,5 @@
 
 Select
-	cast([Description] as nvarchar(50)) [ListingStatus],
-	cast([ID] as int) [ID] 
+	cast([Description] as nvarchar(50)) [Description],
+	cast([ID] as int) [Id] 
 From stg.[CC_ListingStatus_FinalView]
