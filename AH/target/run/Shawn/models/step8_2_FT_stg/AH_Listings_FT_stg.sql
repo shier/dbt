@@ -186,7 +186,7 @@ SELECT
 		lp.[Specialist_Section_Comp4_Price],
 		lp.[VehicleStoryDescriptionExterior]
 from [stg].[AH_Listings_FinalView] l
-left join dbo.SZ_AH_Properties_Pivot lp on l.ID=lp.ListingID
+left join stg.AH_SZ_Properties_Pivot lp on l.ID=lp.ListingID
 left join [stg].[AH_ListingTypes_FinalView] lt on l.ListingTypeID=lt.ID
     ');
 

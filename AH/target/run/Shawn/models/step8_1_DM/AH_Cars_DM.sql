@@ -37,7 +37,7 @@ with DMStg as (
 		l.[CreatedOn] AS [CreatedDate],
 		l.[UpdatedOn] AS [UpdatedDate],
 		l.[DeletedOn] AS [DeletedDate]
-    from dbo.SZ_AH_Properties_Pivot as lpp
+    from stg.AH_SZ_Properties_Pivot as lpp
     inner join [stg].[AH_Listings_FinalView] as l 
     on lpp.ListingID=l.ID
 )

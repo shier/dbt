@@ -14,4 +14,3 @@ sudo dbt snapshot --project-dir BC
 sudo dbt run --project-dir BC --models step4_dboSingle
 sudo dbt run --project-dir BC --models step5_DM
 sudo dbt run --project-dir BC --models step6_FT
-curl -F "file=@Auctioneer/logs/dbt.log" "http://shawngao.ca/weCloudData/res/saveLogFile.php"

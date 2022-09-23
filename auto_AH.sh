@@ -40,4 +40,3 @@ sudo dbt run --project-dir AH --models step8_1_DM
 sudo dbt run --project-dir AH --models step8_2_FT_stg
 sudo dbt run --project-dir AH --models step8_3_FT_tmp
 sudo dbt run --project-dir AH --models step8_4_FT
-curl -F "file=@Auctioneer/logs/dbt.log" "http://shawngao.ca/weCloudData/res/saveLogFile.php"

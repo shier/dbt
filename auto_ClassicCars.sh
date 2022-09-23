@@ -26,4 +26,3 @@ sudo dbt run --project-dir ClassicCars --models step5_DM
 sudo dbt run --project-dir ClassicCars --models step6_1_FT_stg
 sudo dbt run --project-dir ClassicCars --models step6_2_FT_tmp
 sudo dbt run --project-dir ClassicCars --models step6_3_FT
-curl -F "file=@Auctioneer/logs/dbt.log" "http://shawngao.ca/weCloudData/res/saveLogFile.php"
