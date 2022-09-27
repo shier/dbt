@@ -165,7 +165,7 @@
                         count(DateTimeNativeValue) as DateTimeNativeValue,
                         count(EnumNativeValue) as EnumNativeValue
                     from stg.AH_Listingproperties_FinalView 
-                    where CustomFieldID = concat('''',19367902,'''')
+                    where CustomFieldID = concat('''',673475,'''')
                     group by CustomFieldID) pvt 
                 UNPIVOT
                 (ValueCount for ValueColumn in (BoolNativeValue,StringNativeValue,IntNativeValue,DecimalNativeValue,DateTimeNativeValue,EnumNativeValue) ) as unpvt
@@ -190,7 +190,7 @@
                         count(DateTimeNativeValue) as DateTimeNativeValue,
                         count(EnumNativeValue) as EnumNativeValue
                     from stg.AH_Listingproperties_FinalView 
-                    where CustomFieldID = concat('''',673475,'''')
+                    where CustomFieldID = concat('''',19367902,'''')
                     group by CustomFieldID) pvt 
                 UNPIVOT
                 (ValueCount for ValueColumn in (BoolNativeValue,StringNativeValue,IntNativeValue,DecimalNativeValue,DateTimeNativeValue,EnumNativeValue) ) as unpvt
@@ -440,7 +440,7 @@
                         count(DateTimeNativeValue) as DateTimeNativeValue,
                         count(EnumNativeValue) as EnumNativeValue
                     from stg.AH_Listingproperties_FinalView 
-                    where CustomFieldID = concat('''',3744978,'''')
+                    where CustomFieldID = concat('''',161222,'''')
                     group by CustomFieldID) pvt 
                 UNPIVOT
                 (ValueCount for ValueColumn in (BoolNativeValue,StringNativeValue,IntNativeValue,DecimalNativeValue,DateTimeNativeValue,EnumNativeValue) ) as unpvt
@@ -465,7 +465,7 @@
                         count(DateTimeNativeValue) as DateTimeNativeValue,
                         count(EnumNativeValue) as EnumNativeValue
                     from stg.AH_Listingproperties_FinalView 
-                    where CustomFieldID = concat('''',161222,'''')
+                    where CustomFieldID = concat('''',3744978,'''')
                     group by CustomFieldID) pvt 
                 UNPIVOT
                 (ValueCount for ValueColumn in (BoolNativeValue,StringNativeValue,IntNativeValue,DecimalNativeValue,DateTimeNativeValue,EnumNativeValue) ) as unpvt
@@ -565,6 +565,31 @@
                         count(DateTimeNativeValue) as DateTimeNativeValue,
                         count(EnumNativeValue) as EnumNativeValue
                     from stg.AH_Listingproperties_FinalView 
+                    where CustomFieldID = concat('''',673487,'''')
+                    group by CustomFieldID) pvt 
+                UNPIVOT
+                (ValueCount for ValueColumn in (BoolNativeValue,StringNativeValue,IntNativeValue,DecimalNativeValue,DateTimeNativeValue,EnumNativeValue) ) as unpvt
+            ) t
+        where rn = 1
+
+        union all
+    
+        select CustomFieldID as customfieldid,
+               ValueColumn as value_columnname
+        from 
+            (select CustomFieldID, 
+                ValueColumn, 
+                ValueCount,
+                ROW_NUMBER() over (order by ValueCount desc) as rn
+            from 
+                (select CustomFieldID, 
+                        count(BoolNativeValue) as BoolNativeValue,
+                        count(StringNativeValue) as StringNativeValue,
+                        count(IntNativeValue) as IntNativeValue,
+                        count(DecimalNativeValue) as DecimalNativeValue,
+                        count(DateTimeNativeValue) as DateTimeNativeValue,
+                        count(EnumNativeValue) as EnumNativeValue
+                    from stg.AH_Listingproperties_FinalView 
                     where CustomFieldID = concat('''',15658044,'''')
                     group by CustomFieldID) pvt 
                 UNPIVOT
@@ -591,31 +616,6 @@
                         count(EnumNativeValue) as EnumNativeValue
                     from stg.AH_Listingproperties_FinalView 
                     where CustomFieldID = concat('''',161214,'''')
-                    group by CustomFieldID) pvt 
-                UNPIVOT
-                (ValueCount for ValueColumn in (BoolNativeValue,StringNativeValue,IntNativeValue,DecimalNativeValue,DateTimeNativeValue,EnumNativeValue) ) as unpvt
-            ) t
-        where rn = 1
-
-        union all
-    
-        select CustomFieldID as customfieldid,
-               ValueColumn as value_columnname
-        from 
-            (select CustomFieldID, 
-                ValueColumn, 
-                ValueCount,
-                ROW_NUMBER() over (order by ValueCount desc) as rn
-            from 
-                (select CustomFieldID, 
-                        count(BoolNativeValue) as BoolNativeValue,
-                        count(StringNativeValue) as StringNativeValue,
-                        count(IntNativeValue) as IntNativeValue,
-                        count(DecimalNativeValue) as DecimalNativeValue,
-                        count(DateTimeNativeValue) as DateTimeNativeValue,
-                        count(EnumNativeValue) as EnumNativeValue
-                    from stg.AH_Listingproperties_FinalView 
-                    where CustomFieldID = concat('''',673487,'''')
                     group by CustomFieldID) pvt 
                 UNPIVOT
                 (ValueCount for ValueColumn in (BoolNativeValue,StringNativeValue,IntNativeValue,DecimalNativeValue,DateTimeNativeValue,EnumNativeValue) ) as unpvt
@@ -1915,7 +1915,7 @@
                         count(DateTimeNativeValue) as DateTimeNativeValue,
                         count(EnumNativeValue) as EnumNativeValue
                     from stg.AH_Listingproperties_FinalView 
-                    where CustomFieldID = concat('''',161226,'''')
+                    where CustomFieldID = concat('''',10045185,'''')
                     group by CustomFieldID) pvt 
                 UNPIVOT
                 (ValueCount for ValueColumn in (BoolNativeValue,StringNativeValue,IntNativeValue,DecimalNativeValue,DateTimeNativeValue,EnumNativeValue) ) as unpvt
@@ -1940,7 +1940,7 @@
                         count(DateTimeNativeValue) as DateTimeNativeValue,
                         count(EnumNativeValue) as EnumNativeValue
                     from stg.AH_Listingproperties_FinalView 
-                    where CustomFieldID = concat('''',10045185,'''')
+                    where CustomFieldID = concat('''',161226,'''')
                     group by CustomFieldID) pvt 
                 UNPIVOT
                 (ValueCount for ValueColumn in (BoolNativeValue,StringNativeValue,IntNativeValue,DecimalNativeValue,DateTimeNativeValue,EnumNativeValue) ) as unpvt
@@ -2415,7 +2415,7 @@
                         count(DateTimeNativeValue) as DateTimeNativeValue,
                         count(EnumNativeValue) as EnumNativeValue
                     from stg.AH_Listingproperties_FinalView 
-                    where CustomFieldID = concat('''',26431196,'''')
+                    where CustomFieldID = concat('''',161212,'''')
                     group by CustomFieldID) pvt 
                 UNPIVOT
                 (ValueCount for ValueColumn in (BoolNativeValue,StringNativeValue,IntNativeValue,DecimalNativeValue,DateTimeNativeValue,EnumNativeValue) ) as unpvt
@@ -2440,7 +2440,7 @@
                         count(DateTimeNativeValue) as DateTimeNativeValue,
                         count(EnumNativeValue) as EnumNativeValue
                     from stg.AH_Listingproperties_FinalView 
-                    where CustomFieldID = concat('''',161212,'''')
+                    where CustomFieldID = concat('''',26431196,'''')
                     group by CustomFieldID) pvt 
                 UNPIVOT
                 (ValueCount for ValueColumn in (BoolNativeValue,StringNativeValue,IntNativeValue,DecimalNativeValue,DateTimeNativeValue,EnumNativeValue) ) as unpvt
@@ -3290,31 +3290,6 @@
                         count(DateTimeNativeValue) as DateTimeNativeValue,
                         count(EnumNativeValue) as EnumNativeValue
                     from stg.AH_Listingproperties_FinalView 
-                    where CustomFieldID = concat('''',26431194,'''')
-                    group by CustomFieldID) pvt 
-                UNPIVOT
-                (ValueCount for ValueColumn in (BoolNativeValue,StringNativeValue,IntNativeValue,DecimalNativeValue,DateTimeNativeValue,EnumNativeValue) ) as unpvt
-            ) t
-        where rn = 1
-
-        union all
-    
-        select CustomFieldID as customfieldid,
-               ValueColumn as value_columnname
-        from 
-            (select CustomFieldID, 
-                ValueColumn, 
-                ValueCount,
-                ROW_NUMBER() over (order by ValueCount desc) as rn
-            from 
-                (select CustomFieldID, 
-                        count(BoolNativeValue) as BoolNativeValue,
-                        count(StringNativeValue) as StringNativeValue,
-                        count(IntNativeValue) as IntNativeValue,
-                        count(DecimalNativeValue) as DecimalNativeValue,
-                        count(DateTimeNativeValue) as DateTimeNativeValue,
-                        count(EnumNativeValue) as EnumNativeValue
-                    from stg.AH_Listingproperties_FinalView 
                     where CustomFieldID = concat('''',161210,'''')
                     group by CustomFieldID) pvt 
                 UNPIVOT
@@ -3340,7 +3315,7 @@
                         count(DateTimeNativeValue) as DateTimeNativeValue,
                         count(EnumNativeValue) as EnumNativeValue
                     from stg.AH_Listingproperties_FinalView 
-                    where CustomFieldID = concat('''',161018,'''')
+                    where CustomFieldID = concat('''',26431194,'''')
                     group by CustomFieldID) pvt 
                 UNPIVOT
                 (ValueCount for ValueColumn in (BoolNativeValue,StringNativeValue,IntNativeValue,DecimalNativeValue,DateTimeNativeValue,EnumNativeValue) ) as unpvt
@@ -3366,6 +3341,31 @@
                         count(EnumNativeValue) as EnumNativeValue
                     from stg.AH_Listingproperties_FinalView 
                     where CustomFieldID = concat('''',3708441,'''')
+                    group by CustomFieldID) pvt 
+                UNPIVOT
+                (ValueCount for ValueColumn in (BoolNativeValue,StringNativeValue,IntNativeValue,DecimalNativeValue,DateTimeNativeValue,EnumNativeValue) ) as unpvt
+            ) t
+        where rn = 1
+
+        union all
+    
+        select CustomFieldID as customfieldid,
+               ValueColumn as value_columnname
+        from 
+            (select CustomFieldID, 
+                ValueColumn, 
+                ValueCount,
+                ROW_NUMBER() over (order by ValueCount desc) as rn
+            from 
+                (select CustomFieldID, 
+                        count(BoolNativeValue) as BoolNativeValue,
+                        count(StringNativeValue) as StringNativeValue,
+                        count(IntNativeValue) as IntNativeValue,
+                        count(DecimalNativeValue) as DecimalNativeValue,
+                        count(DateTimeNativeValue) as DateTimeNativeValue,
+                        count(EnumNativeValue) as EnumNativeValue
+                    from stg.AH_Listingproperties_FinalView 
+                    where CustomFieldID = concat('''',161018,'''')
                     group by CustomFieldID) pvt 
                 UNPIVOT
                 (ValueCount for ValueColumn in (BoolNativeValue,StringNativeValue,IntNativeValue,DecimalNativeValue,DateTimeNativeValue,EnumNativeValue) ) as unpvt
@@ -3515,31 +3515,6 @@
                         count(DateTimeNativeValue) as DateTimeNativeValue,
                         count(EnumNativeValue) as EnumNativeValue
                     from stg.AH_Listingproperties_FinalView 
-                    where CustomFieldID = concat('''',161213,'''')
-                    group by CustomFieldID) pvt 
-                UNPIVOT
-                (ValueCount for ValueColumn in (BoolNativeValue,StringNativeValue,IntNativeValue,DecimalNativeValue,DateTimeNativeValue,EnumNativeValue) ) as unpvt
-            ) t
-        where rn = 1
-
-        union all
-    
-        select CustomFieldID as customfieldid,
-               ValueColumn as value_columnname
-        from 
-            (select CustomFieldID, 
-                ValueColumn, 
-                ValueCount,
-                ROW_NUMBER() over (order by ValueCount desc) as rn
-            from 
-                (select CustomFieldID, 
-                        count(BoolNativeValue) as BoolNativeValue,
-                        count(StringNativeValue) as StringNativeValue,
-                        count(IntNativeValue) as IntNativeValue,
-                        count(DecimalNativeValue) as DecimalNativeValue,
-                        count(DateTimeNativeValue) as DateTimeNativeValue,
-                        count(EnumNativeValue) as EnumNativeValue
-                    from stg.AH_Listingproperties_FinalView 
                     where CustomFieldID = concat('''',673489,'''')
                     group by CustomFieldID) pvt 
                 UNPIVOT
@@ -3566,6 +3541,31 @@
                         count(EnumNativeValue) as EnumNativeValue
                     from stg.AH_Listingproperties_FinalView 
                     where CustomFieldID = concat('''',161219,'''')
+                    group by CustomFieldID) pvt 
+                UNPIVOT
+                (ValueCount for ValueColumn in (BoolNativeValue,StringNativeValue,IntNativeValue,DecimalNativeValue,DateTimeNativeValue,EnumNativeValue) ) as unpvt
+            ) t
+        where rn = 1
+
+        union all
+    
+        select CustomFieldID as customfieldid,
+               ValueColumn as value_columnname
+        from 
+            (select CustomFieldID, 
+                ValueColumn, 
+                ValueCount,
+                ROW_NUMBER() over (order by ValueCount desc) as rn
+            from 
+                (select CustomFieldID, 
+                        count(BoolNativeValue) as BoolNativeValue,
+                        count(StringNativeValue) as StringNativeValue,
+                        count(IntNativeValue) as IntNativeValue,
+                        count(DecimalNativeValue) as DecimalNativeValue,
+                        count(DateTimeNativeValue) as DateTimeNativeValue,
+                        count(EnumNativeValue) as EnumNativeValue
+                    from stg.AH_Listingproperties_FinalView 
+                    where CustomFieldID = concat('''',161213,'''')
                     group by CustomFieldID) pvt 
                 UNPIVOT
                 (ValueCount for ValueColumn in (BoolNativeValue,StringNativeValue,IntNativeValue,DecimalNativeValue,DateTimeNativeValue,EnumNativeValue) ) as unpvt
